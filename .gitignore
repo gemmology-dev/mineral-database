@@ -27,6 +27,6 @@ ENV/
 htmlcov/
 .mypy_cache/
 
-# Build artifacts
-*.db
+# Build artifacts (except packaged database)
 *.sqlite
+!src/mineral_database/data/minerals.db
