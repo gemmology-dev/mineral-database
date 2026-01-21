@@ -5,7 +5,7 @@ High-level query functions for the mineral database.
 """
 
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any
 
 from .db import (
     get_all_categories,
@@ -13,14 +13,14 @@ from .db import (
     get_category_presets,
     get_connection,
     get_mineral_by_id,
+    get_mineral_models,
     get_minerals_by_system,
     search_minerals,
 )
-from .models import INFO_GROUPS, Mineral, format_property_value, get_property_label
-
+from .models import INFO_GROUPS, Mineral
 
 # Module-level database path (can be overridden)
-_db_path: Optional[Path] = None
+_db_path: Path | None = None
 
 
 def set_database_path(path: Path) -> None:
@@ -33,7 +33,7 @@ def set_database_path(path: Path) -> None:
     _db_path = path
 
 
-def get_preset(name: str) -> Optional[Dict[str, Any]]:
+def get_preset(name: str) -> dict[str, Any] | None:
     """Get a crystal preset by name.
 
     This is the primary compatibility function matching the original API.
@@ -51,7 +51,7 @@ def get_preset(name: str) -> Optional[Dict[str, Any]]:
     return None
 
 
-def get_mineral(name: str) -> Optional[Mineral]:
+def get_mineral(name: str) -> Mineral | None:
     """Get a Mineral object by name.
 
     Args:
@@ -64,7 +64,7 @@ def get_mineral(name: str) -> Optional[Mineral]:
         return get_mineral_by_id(conn, name.lower())
 
 
-def list_presets(category: Optional[str] = None) -> List[str]:
+def list_presets(category: str | None = None) -> list[str]:
     """List available preset names.
 
     Args:
@@ -88,14 +88,14 @@ def list_presets(category: Optional[str] = None) -> List[str]:
         return sorted([m.id for m in minerals])
 
 
-def list_preset_categories() -> List[str]:
+def list_preset_categories() -> list[str]:
     """List available preset categories."""
     with get_connection(_db_path) as conn:
         categories = get_all_categories(conn)
         return sorted(categories.keys())
 
 
-def search_presets(query: str) -> List[str]:
+def search_presets(query: str) -> list[str]:
     """Search presets by name, mineral name, or chemistry.
 
     Args:
@@ -130,11 +130,11 @@ def search_presets(query: str) -> List[str]:
 
 
 def filter_minerals(
-    system: Optional[str] = None,
-    min_hardness: Optional[float] = None,
-    max_hardness: Optional[float] = None,
+    system: str | None = None,
+    min_hardness: float | None = None,
+    max_hardness: float | None = None,
     has_twin: bool = False,
-) -> List[str]:
+) -> list[str]:
     """Filter minerals by various criteria.
 
     Args:
@@ -174,7 +174,7 @@ def filter_minerals(
     return results
 
 
-def get_presets_by_form(form_name: str) -> List[str]:
+def get_presets_by_form(form_name: str) -> list[str]:
     """Get presets that include a specific crystal form.
 
     Args:
@@ -195,7 +195,7 @@ def get_presets_by_form(form_name: str) -> List[str]:
     return results
 
 
-def get_info_properties(preset_name: str, group_or_keys: str) -> Dict[str, Any]:
+def get_info_properties(preset_name: str, group_or_keys: str) -> dict[str, Any]:
     """Get specific properties from a preset for info panel display.
 
     Args:
@@ -226,7 +226,7 @@ def get_info_properties(preset_name: str, group_or_keys: str) -> Dict[str, Any]:
     return result
 
 
-def get_systems() -> List[str]:
+def get_systems() -> list[str]:
     """Get list of crystal systems with presets.
 
     Returns:
@@ -249,3 +249,67 @@ def count_presets() -> int:
     with get_connection(_db_path) as conn:
         minerals = get_all_minerals(conn)
         return len(minerals)
+
+
+# Model query functions for pre-generated 3D visualizations
+
+
+def get_model_svg(mineral_id: str) -> str | None:
+    """Get the pre-generated SVG for a mineral.
+
+    Args:
+        mineral_id: Mineral preset ID (case-insensitive)
+
+    Returns:
+        SVG markup string or None if not generated
+    """
+    with get_connection(_db_path) as conn:
+        models = get_mineral_models(conn, mineral_id)
+        return models.get('model_svg')
+
+
+def get_model_stl(mineral_id: str) -> bytes | None:
+    """Get the pre-generated STL binary for a mineral.
+
+    Args:
+        mineral_id: Mineral preset ID (case-insensitive)
+
+    Returns:
+        Binary STL data or None if not generated
+    """
+    with get_connection(_db_path) as conn:
+        models = get_mineral_models(conn, mineral_id)
+        return models.get('model_stl')
+
+
+def get_model_gltf(mineral_id: str) -> dict | None:
+    """Get the pre-generated glTF for a mineral.
+
+    Args:
+        mineral_id: Mineral preset ID (case-insensitive)
+
+    Returns:
+        glTF dictionary or None if not generated
+    """
+    import json
+
+    with get_connection(_db_path) as conn:
+        models = get_mineral_models(conn, mineral_id)
+        gltf_str = models.get('model_gltf')
+        if gltf_str:
+            return json.loads(gltf_str)
+        return None
+
+
+def get_models_generated_at(mineral_id: str) -> str | None:
+    """Get the timestamp when models were generated for a mineral.
+
+    Args:
+        mineral_id: Mineral preset ID (case-insensitive)
+
+    Returns:
+        ISO timestamp string or None if not generated
+    """
+    with get_connection(_db_path) as conn:
+        models = get_mineral_models(conn, mineral_id)
+        return models.get('models_generated_at')

@@ -4,28 +4,24 @@ Test suite for mineral-database.
 Tests the database queries, models, and compatibility layer.
 """
 
-import pytest
-from pathlib import Path
 
 from mineral_database import (
     CRYSTAL_PRESETS,
-    PRESET_CATEGORIES,
     INFO_GROUPS,
     Mineral,
-    get_preset,
-    get_mineral,
-    list_presets,
-    list_preset_categories,
-    search_presets,
-    filter_minerals,
-    get_presets_by_form,
-    get_info_properties,
-    get_systems,
     count_presets,
+    filter_minerals,
     format_property_value,
+    get_info_properties,
+    get_mineral,
+    get_preset,
+    get_presets_by_form,
     get_property_label,
+    get_systems,
+    list_preset_categories,
+    list_presets,
+    search_presets,
 )
-
 
 # =============================================================================
 # Mineral Model Tests
@@ -252,10 +248,13 @@ class TestFormatting:
         assert 'Blue' in formatted
 
     def test_format_list_truncated(self):
-        """Test formatting long lists."""
-        items = ['A', 'B', 'C', 'D', 'E']
+        """Test formatting long lists triggers truncation."""
+        # Use 10+ items to ensure truncation is triggered (threshold is 3)
+        items = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']
         formatted = format_property_value('test', items)
         assert '...' in formatted
+        # Should only show first 3 items
+        assert formatted == 'A, B, C...'
 
     def test_format_none(self):
         """Test formatting None."""

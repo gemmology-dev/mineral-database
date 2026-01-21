@@ -7,12 +7,10 @@ Command-line interface for the mineral database.
 import argparse
 import json
 import sys
-from typing import Optional
 
 from . import __version__
 from .queries import (
     count_presets,
-    get_info_properties,
     get_preset,
     list_preset_categories,
     list_presets,
@@ -80,7 +78,7 @@ Examples:
     return parser
 
 
-def main(args: Optional[list] = None) -> int:
+def main(args: list[str] | None = None) -> int:
     """Main entry point for the CLI."""
     parser = create_parser()
     parsed_args = parser.parse_args(args)
