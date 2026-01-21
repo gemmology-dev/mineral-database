@@ -45,6 +45,10 @@ from .queries import (
     filter_minerals,
     get_info_properties,
     get_mineral,
+    get_model_gltf,
+    get_model_stl,
+    get_model_svg,
+    get_models_generated_at,
     get_preset,
     get_presets_by_form,
     get_systems,
@@ -69,6 +73,11 @@ __all__ = [
     "get_systems",
     "count_presets",
     "set_database_path",
+    # Model functions
+    "get_model_svg",
+    "get_model_stl",
+    "get_model_gltf",
+    "get_models_generated_at",
     # Data classes
     "Mineral",
     "INFO_GROUPS",

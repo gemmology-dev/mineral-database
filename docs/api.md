@@ -217,6 +217,69 @@ value = format_property_value('hardness', 9)   # '9'
 
 ::: mineral_database.format_property_value
 
+## Pre-generated Models
+
+Functions for accessing pre-generated 3D visualizations stored in the database.
+
+### get_model_svg
+
+Get pre-generated SVG visualization.
+
+```python
+from mineral_database import get_model_svg
+
+svg = get_model_svg('diamond')
+if svg:
+    with open('diamond.svg', 'w') as f:
+        f.write(svg)
+```
+
+::: mineral_database.get_model_svg
+
+### get_model_stl
+
+Get pre-generated binary STL for 3D printing.
+
+```python
+from mineral_database import get_model_stl
+
+stl = get_model_stl('quartz')
+if stl:
+    with open('quartz.stl', 'wb') as f:
+        f.write(stl)
+```
+
+::: mineral_database.get_model_stl
+
+### get_model_gltf
+
+Get pre-generated glTF for web display.
+
+```python
+from mineral_database import get_model_gltf
+import json
+
+gltf = get_model_gltf('ruby')
+if gltf:
+    with open('ruby.gltf', 'w') as f:
+        json.dump(gltf, f)
+```
+
+::: mineral_database.get_model_gltf
+
+### get_models_generated_at
+
+Check when models were generated.
+
+```python
+from mineral_database import get_models_generated_at
+
+timestamp = get_models_generated_at('emerald')
+# Returns ISO timestamp or None
+```
+
+::: mineral_database.get_models_generated_at
+
 ## Backwards Compatibility
 
 ### CRYSTAL_PRESETS
