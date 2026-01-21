@@ -55,6 +55,11 @@ dev = [
     "pyyaml>=6.0"
 ]
 yaml = ["pyyaml>=6.0"]
+docs = [
+    "mkdocs>=1.5",
+    "mkdocs-material>=9.0",
+    "mkdocstrings[python]>=0.24"
+]
 
 [project.scripts]
 mineral-db = "mineral_database.cli:main"
