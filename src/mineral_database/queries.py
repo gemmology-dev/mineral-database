@@ -267,7 +267,8 @@ def get_model_svg(mineral_id: str) -> str | None:
     """
     with get_connection(_db_path) as conn:
         models = get_mineral_models(conn, mineral_id)
-        return models.get("model_svg")
+        value = models.get("model_svg")
+        return str(value) if value is not None else None
 
 
 def get_model_stl(mineral_id: str) -> bytes | None:
@@ -281,10 +282,13 @@ def get_model_stl(mineral_id: str) -> bytes | None:
     """
     with get_connection(_db_path) as conn:
         models = get_mineral_models(conn, mineral_id)
-        return models.get("model_stl")
+        value = models.get("model_stl")
+        if isinstance(value, bytes):
+            return value
+        return None
 
 
-def get_model_gltf(mineral_id: str) -> dict | None:
+def get_model_gltf(mineral_id: str) -> dict[str, object] | None:
     """Get the pre-generated glTF for a mineral.
 
     Args:
@@ -298,8 +302,9 @@ def get_model_gltf(mineral_id: str) -> dict | None:
     with get_connection(_db_path) as conn:
         models = get_mineral_models(conn, mineral_id)
         gltf_str = models.get("model_gltf")
-        if gltf_str:
-            return json.loads(gltf_str)
+        if gltf_str and isinstance(gltf_str, str):
+            result: dict[str, object] = json.loads(gltf_str)
+            return result
         return None
 
 
@@ -314,4 +319,5 @@ def get_models_generated_at(mineral_id: str) -> str | None:
     """
     with get_connection(_db_path) as conn:
         models = get_mineral_models(conn, mineral_id)
-        return models.get("models_generated_at")
+        value = models.get("models_generated_at")
+        return str(value) if value is not None else None
