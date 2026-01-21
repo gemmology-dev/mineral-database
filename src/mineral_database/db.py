@@ -6,19 +6,18 @@ SQLite database access layer for the mineral database.
 
 import json
 import sqlite3
+from collections.abc import Generator
 from contextlib import contextmanager
 from pathlib import Path
-from typing import Any, Dict, Generator, List, Optional, Union
 
 from .models import Mineral
-
 
 # Path to the compiled database
 _DB_PATH = Path(__file__).parent / 'data' / 'minerals.db'
 
 
 @contextmanager
-def get_connection(db_path: Optional[Path] = None) -> Generator[sqlite3.Connection, None, None]:
+def get_connection(db_path: Path | None = None) -> Generator[sqlite3.Connection, None, None]:
     """Get a database connection.
 
     Args:
@@ -36,7 +35,7 @@ def get_connection(db_path: Optional[Path] = None) -> Generator[sqlite3.Connecti
         conn.close()
 
 
-def init_database(db_path: Optional[Path] = None) -> None:
+def init_database(db_path: Path | None = None) -> None:
     """Initialize the database schema.
 
     Args:
@@ -69,7 +68,12 @@ def init_database(db_path: Optional[Path] = None) -> None:
         forms_json TEXT,
         colors_json TEXT,
         treatments_json TEXT,
-        inclusions_json TEXT
+        inclusions_json TEXT,
+        -- Pre-generated 3D model data
+        model_svg TEXT,           -- SVG markup (~2-10 KB)
+        model_stl BLOB,           -- Binary STL (~4-8 KB)
+        model_gltf TEXT,          -- glTF JSON (~6-10 KB)
+        models_generated_at TEXT  -- ISO timestamp
     );
 
     -- Categories table for preset groupings
@@ -184,7 +188,7 @@ def row_to_mineral(row: sqlite3.Row) -> Mineral:
     sg_str = row['sg']
     if sg_str:
         try:
-            sg: Optional[Union[float, str]] = float(sg_str)
+            sg: float | str | None = float(sg_str)
         except ValueError:
             sg = sg_str
     else:
@@ -194,7 +198,7 @@ def row_to_mineral(row: sqlite3.Row) -> Mineral:
     ri_str = row['ri']
     if ri_str:
         try:
-            ri: Optional[Union[float, str]] = float(ri_str)
+            ri: float | str | None = float(ri_str)
         except ValueError:
             ri = ri_str
     else:
@@ -229,7 +233,7 @@ def row_to_mineral(row: sqlite3.Row) -> Mineral:
     )
 
 
-def get_mineral_by_id(conn: sqlite3.Connection, mineral_id: str) -> Optional[Mineral]:
+def get_mineral_by_id(conn: sqlite3.Connection, mineral_id: str) -> Mineral | None:
     """Get a mineral by its ID.
 
     Args:
@@ -246,7 +250,7 @@ def get_mineral_by_id(conn: sqlite3.Connection, mineral_id: str) -> Optional[Min
     return None
 
 
-def get_all_minerals(conn: sqlite3.Connection) -> List[Mineral]:
+def get_all_minerals(conn: sqlite3.Connection) -> list[Mineral]:
     """Get all minerals from the database.
 
     Args:
@@ -259,7 +263,7 @@ def get_all_minerals(conn: sqlite3.Connection) -> List[Mineral]:
     return [row_to_mineral(row) for row in cursor.fetchall()]
 
 
-def get_minerals_by_system(conn: sqlite3.Connection, system: str) -> List[Mineral]:
+def get_minerals_by_system(conn: sqlite3.Connection, system: str) -> list[Mineral]:
     """Get minerals by crystal system.
 
     Args:
@@ -276,7 +280,7 @@ def get_minerals_by_system(conn: sqlite3.Connection, system: str) -> List[Minera
     return [row_to_mineral(row) for row in cursor.fetchall()]
 
 
-def search_minerals(conn: sqlite3.Connection, query: str) -> List[Mineral]:
+def search_minerals(conn: sqlite3.Connection, query: str) -> list[Mineral]:
     """Search minerals using full-text search.
 
     Args:
@@ -296,7 +300,7 @@ def search_minerals(conn: sqlite3.Connection, query: str) -> List[Mineral]:
     return [row_to_mineral(row) for row in cursor.fetchall()]
 
 
-def insert_category(conn: sqlite3.Connection, name: str, presets: List[str]) -> None:
+def insert_category(conn: sqlite3.Connection, name: str, presets: list[str]) -> None:
     """Insert or update a category.
 
     Args:
@@ -310,7 +314,74 @@ def insert_category(conn: sqlite3.Connection, name: str, presets: List[str]) -> 
     )
 
 
-def get_category_presets(conn: sqlite3.Connection, name: str) -> List[str]:
+def update_mineral_models(
+    conn: sqlite3.Connection,
+    mineral_id: str,
+    svg: str | None = None,
+    stl: bytes | None = None,
+    gltf: str | None = None,
+    generated_at: str | None = None,
+) -> None:
+    """Update the 3D model data for a mineral.
+
+    Args:
+        conn: Database connection
+        mineral_id: Mineral ID
+        svg: SVG markup string
+        stl: Binary STL data
+        gltf: glTF JSON string
+        generated_at: ISO timestamp when models were generated
+    """
+    conn.execute(
+        """
+        UPDATE minerals SET
+            model_svg = ?,
+            model_stl = ?,
+            model_gltf = ?,
+            models_generated_at = ?
+        WHERE id = ?
+        """,
+        (svg, stl, gltf, generated_at, mineral_id.lower())
+    )
+
+
+def get_mineral_models(
+    conn: sqlite3.Connection,
+    mineral_id: str
+) -> dict[str, str | bytes | None]:
+    """Get the 3D model data for a mineral.
+
+    Args:
+        conn: Database connection
+        mineral_id: Mineral ID
+
+    Returns:
+        Dictionary with model_svg, model_stl, model_gltf, models_generated_at
+    """
+    cursor = conn.execute(
+        """
+        SELECT model_svg, model_stl, model_gltf, models_generated_at
+        FROM minerals WHERE id = ?
+        """,
+        (mineral_id.lower(),)
+    )
+    row = cursor.fetchone()
+    if row:
+        return {
+            'model_svg': row['model_svg'],
+            'model_stl': row['model_stl'],
+            'model_gltf': row['model_gltf'],
+            'models_generated_at': row['models_generated_at'],
+        }
+    return {
+        'model_svg': None,
+        'model_stl': None,
+        'model_gltf': None,
+        'models_generated_at': None,
+    }
+
+
+def get_category_presets(conn: sqlite3.Connection, name: str) -> list[str]:
     """Get preset IDs for a category.
 
     Args:
@@ -323,11 +394,11 @@ def get_category_presets(conn: sqlite3.Connection, name: str) -> List[str]:
     cursor = conn.execute('SELECT presets_json FROM categories WHERE name = ?', (name,))
     row = cursor.fetchone()
     if row:
-        return json.loads(row['presets_json'])
+        return list(json.loads(row['presets_json']))
     return []
 
 
-def get_all_categories(conn: sqlite3.Connection) -> Dict[str, List[str]]:
+def get_all_categories(conn: sqlite3.Connection) -> dict[str, list[str]]:
     """Get all categories and their presets.
 
     Args:

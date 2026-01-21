@@ -21,6 +21,25 @@ __author__ = "Fabian Schuh"
 __email__ = "fabian@gemmology.dev"
 
 # Core query functions
+# Backwards compatibility: CRYSTAL_PRESETS dict-like access
+from .compat import CRYSTAL_PRESETS, PRESET_CATEGORIES
+
+# Database utilities (for advanced use)
+from .db import (
+    get_connection,
+    init_database,
+    insert_mineral,
+    row_to_mineral,
+)
+
+# Data classes
+from .models import (
+    INFO_GROUPS,
+    PROPERTY_LABELS,
+    Mineral,
+    format_property_value,
+    get_property_label,
+)
 from .queries import (
     count_presets,
     filter_minerals,
@@ -34,26 +53,6 @@ from .queries import (
     search_presets,
     set_database_path,
 )
-
-# Data classes
-from .models import (
-    INFO_GROUPS,
-    PROPERTY_LABELS,
-    Mineral,
-    format_property_value,
-    get_property_label,
-)
-
-# Database utilities (for advanced use)
-from .db import (
-    get_connection,
-    init_database,
-    insert_mineral,
-    row_to_mineral,
-)
-
-# Backwards compatibility: CRYSTAL_PRESETS dict-like access
-from .compat import CRYSTAL_PRESETS, PRESET_CATEGORIES
 
 __all__ = [
     # Version

@@ -5,9 +5,10 @@ Provides dict-like CRYSTAL_PRESETS and PRESET_CATEGORIES for
 code migrating from the original crystal_presets.py module.
 """
 
-from typing import Any, Dict, Iterator, List, Optional
+from collections.abc import Iterator
+from typing import Any
 
-from .queries import get_mineral, get_preset, list_preset_categories, list_presets
+from .queries import get_preset, list_preset_categories, list_presets
 
 
 class PresetDict:
@@ -20,14 +21,14 @@ class PresetDict:
         for name in CRYSTAL_PRESETS:
     """
 
-    def __getitem__(self, key: str) -> Dict[str, Any]:
+    def __getitem__(self, key: str) -> dict[str, Any]:
         """Get preset by key."""
         preset = get_preset(key)
         if preset is None:
             raise KeyError(key)
         return preset
 
-    def get(self, key: str, default: Optional[Dict[str, Any]] = None) -> Optional[Dict[str, Any]]:
+    def get(self, key: str, default: dict[str, Any] | None = None) -> dict[str, Any] | None:
         """Get preset with default."""
         preset = get_preset(key)
         return preset if preset is not None else default
@@ -40,17 +41,17 @@ class PresetDict:
         """Iterate over preset names."""
         return iter(list_presets())
 
-    def keys(self) -> List[str]:
+    def keys(self) -> list[str]:
         """Get all preset names."""
         return list_presets()
 
-    def values(self) -> List[Dict[str, Any]]:
+    def values(self) -> list[dict[str, Any]]:
         """Get all preset values."""
-        return [get_preset(name) for name in list_presets() if get_preset(name)]
+        return [preset for name in list_presets() if (preset := get_preset(name)) is not None]
 
-    def items(self) -> List[tuple]:
+    def items(self) -> list[tuple[str, dict[str, Any]]]:
         """Get all preset (name, value) pairs."""
-        return [(name, get_preset(name)) for name in list_presets() if get_preset(name)]
+        return [(name, preset) for name in list_presets() if (preset := get_preset(name)) is not None]
 
     def __len__(self) -> int:
         """Get number of presets."""
@@ -65,14 +66,14 @@ class CategoryDict:
         for category in PRESET_CATEGORIES:
     """
 
-    def __getitem__(self, key: str) -> List[str]:
+    def __getitem__(self, key: str) -> list[str]:
         """Get presets in category."""
         presets = list_presets(key)
         if not presets:
             raise KeyError(key)
         return presets
 
-    def get(self, key: str, default: Optional[List[str]] = None) -> Optional[List[str]]:
+    def get(self, key: str, default: list[str] | None = None) -> list[str] | None:
         """Get category presets with default."""
         presets = list_presets(key)
         return presets if presets else default
@@ -85,7 +86,7 @@ class CategoryDict:
         """Iterate over category names."""
         return iter(list_preset_categories())
 
-    def keys(self) -> List[str]:
+    def keys(self) -> list[str]:
         """Get all category names."""
         return list_preset_categories()
 

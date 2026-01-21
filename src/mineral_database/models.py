@@ -5,7 +5,7 @@ Data classes representing minerals and their properties.
 """
 
 from dataclasses import dataclass, field
-from typing import Any, Dict, List, Optional, Union
+from typing import Any
 
 
 @dataclass
@@ -50,35 +50,35 @@ class Mineral:
     system: str
     point_group: str
     chemistry: str
-    hardness: Union[int, float, str]
+    hardness: int | float | str
     description: str
 
     # Common optional fields
-    localities: List[str] = field(default_factory=list)
-    forms: List[str] = field(default_factory=list)
+    localities: list[str] = field(default_factory=list)
+    forms: list[str] = field(default_factory=list)
 
     # Gemmological properties
-    sg: Optional[Union[float, str]] = None
-    ri: Optional[Union[float, str]] = None
-    birefringence: Optional[float] = None
-    optical_character: Optional[str] = None
-    dispersion: Optional[float] = None
-    lustre: Optional[str] = None
-    cleavage: Optional[str] = None
-    fracture: Optional[str] = None
-    pleochroism: Optional[str] = None
-    colors: List[str] = field(default_factory=list)
-    treatments: List[str] = field(default_factory=list)
-    inclusions: List[str] = field(default_factory=list)
+    sg: float | str | None = None
+    ri: float | str | None = None
+    birefringence: float | None = None
+    optical_character: str | None = None
+    dispersion: float | None = None
+    lustre: str | None = None
+    cleavage: str | None = None
+    fracture: str | None = None
+    pleochroism: str | None = None
+    colors: list[str] = field(default_factory=list)
+    treatments: list[str] = field(default_factory=list)
+    inclusions: list[str] = field(default_factory=list)
 
     # Special properties
-    twin_law: Optional[str] = None
-    phenomenon: Optional[str] = None
-    note: Optional[str] = None
+    twin_law: str | None = None
+    phenomenon: str | None = None
+    note: str | None = None
 
-    def to_dict(self) -> Dict[str, Any]:
+    def to_dict(self) -> dict[str, Any]:
         """Convert to dictionary representation."""
-        result = {
+        result: dict[str, Any] = {
             'id': self.id,
             'name': self.name,
             'cdl': self.cdl,
@@ -115,7 +115,7 @@ class Mineral:
         return result
 
     @classmethod
-    def from_dict(cls, id: str, data: Dict[str, Any]) -> 'Mineral':
+    def from_dict(cls, id: str, data: dict[str, Any]) -> 'Mineral':
         """Create Mineral from dictionary.
 
         Args:

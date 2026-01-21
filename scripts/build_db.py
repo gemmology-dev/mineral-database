@@ -7,15 +7,13 @@ the legacy crystal_presets.py dictionary format.
 """
 
 import argparse
-import json
-import sqlite3
 import sys
 from pathlib import Path
 
 # Add parent directory to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent / 'src'))
 
-from mineral_database.db import get_connection, init_database, insert_mineral, insert_category
+from mineral_database.db import get_connection, init_database, insert_category, insert_mineral
 from mineral_database.models import Mineral
 
 
@@ -139,8 +137,12 @@ Examples:
                         help='Output file/directory')
     parser.add_argument('-v', '--verbose', action='store_true',
                         help='Verbose output')
+    parser.add_argument('--with-models', action='store_true',
+                        help='Generate SVG/STL/glTF models for each mineral')
 
     args = parser.parse_args()
+
+    db_created = False
 
     if args.from_yaml:
         if not args.from_yaml.is_dir():
@@ -148,6 +150,7 @@ Examples:
             sys.exit(1)
         count = import_from_yaml(args.from_yaml, args.output)
         print(f"Imported {count} presets from YAML to {args.output}")
+        db_created = True
 
     elif args.from_legacy:
         if not args.from_legacy.exists():
@@ -165,6 +168,7 @@ Examples:
 
         count = import_from_python_dict(presets, categories, args.output)
         print(f"Imported {count} presets from legacy module to {args.output}")
+        db_created = True
 
     elif args.export_yaml:
         if not args.export_yaml.exists():
@@ -176,6 +180,17 @@ Examples:
     else:
         parser.print_help()
         sys.exit(1)
+
+    # Generate models if requested
+    if args.with_models and db_created:
+        print("\nGenerating 3D models...")
+        try:
+            from generate_models import generate_all_models
+            success, failure = generate_all_models(args.output, verbose=args.verbose)
+            print(f"Model generation complete: {success} success, {failure} failures")
+        except ImportError as e:
+            print(f"Warning: Could not generate models. Missing dependencies: {e}")
+            print("Install with: pip install cdl-parser crystal-geometry crystal-renderer")
 
 
 if __name__ == '__main__':
