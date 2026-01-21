@@ -13,7 +13,7 @@ from pathlib import Path
 from .models import Mineral
 
 # Path to the compiled database
-_DB_PATH = Path(__file__).parent / 'data' / 'minerals.db'
+_DB_PATH = Path(__file__).parent / "data" / "minerals.db"
 
 
 @contextmanager
@@ -136,33 +136,36 @@ def insert_mineral(conn: sqlite3.Connection, mineral: Mineral) -> None:
     )
     """
 
-    conn.execute(sql, (
-        mineral.id,
-        mineral.name,
-        mineral.cdl,
-        mineral.system,
-        mineral.point_group,
-        mineral.chemistry,
-        str(mineral.hardness),
-        mineral.description,
-        str(mineral.sg) if mineral.sg else None,
-        str(mineral.ri) if mineral.ri else None,
-        mineral.birefringence,
-        mineral.optical_character,
-        mineral.dispersion,
-        mineral.lustre,
-        mineral.cleavage,
-        mineral.fracture,
-        mineral.pleochroism,
-        mineral.twin_law,
-        mineral.phenomenon,
-        mineral.note,
-        json.dumps(mineral.localities) if mineral.localities else '[]',
-        json.dumps(mineral.forms) if mineral.forms else '[]',
-        json.dumps(mineral.colors) if mineral.colors else '[]',
-        json.dumps(mineral.treatments) if mineral.treatments else '[]',
-        json.dumps(mineral.inclusions) if mineral.inclusions else '[]',
-    ))
+    conn.execute(
+        sql,
+        (
+            mineral.id,
+            mineral.name,
+            mineral.cdl,
+            mineral.system,
+            mineral.point_group,
+            mineral.chemistry,
+            str(mineral.hardness),
+            mineral.description,
+            str(mineral.sg) if mineral.sg else None,
+            str(mineral.ri) if mineral.ri else None,
+            mineral.birefringence,
+            mineral.optical_character,
+            mineral.dispersion,
+            mineral.lustre,
+            mineral.cleavage,
+            mineral.fracture,
+            mineral.pleochroism,
+            mineral.twin_law,
+            mineral.phenomenon,
+            mineral.note,
+            json.dumps(mineral.localities) if mineral.localities else "[]",
+            json.dumps(mineral.forms) if mineral.forms else "[]",
+            json.dumps(mineral.colors) if mineral.colors else "[]",
+            json.dumps(mineral.treatments) if mineral.treatments else "[]",
+            json.dumps(mineral.inclusions) if mineral.inclusions else "[]",
+        ),
+    )
 
 
 def row_to_mineral(row: sqlite3.Row) -> Mineral:
@@ -175,9 +178,9 @@ def row_to_mineral(row: sqlite3.Row) -> Mineral:
         Mineral instance
     """
     # Parse hardness (may be int, float, or range string)
-    hardness_str = row['hardness']
+    hardness_str = row["hardness"]
     try:
-        if '.' in str(hardness_str):
+        if "." in str(hardness_str):
             hardness = float(hardness_str)
         else:
             hardness = int(hardness_str)
@@ -185,7 +188,7 @@ def row_to_mineral(row: sqlite3.Row) -> Mineral:
         hardness = hardness_str
 
     # Parse SG
-    sg_str = row['sg']
+    sg_str = row["sg"]
     if sg_str:
         try:
             sg: float | str | None = float(sg_str)
@@ -195,7 +198,7 @@ def row_to_mineral(row: sqlite3.Row) -> Mineral:
         sg = None
 
     # Parse RI
-    ri_str = row['ri']
+    ri_str = row["ri"]
     if ri_str:
         try:
             ri: float | str | None = float(ri_str)
@@ -205,31 +208,31 @@ def row_to_mineral(row: sqlite3.Row) -> Mineral:
         ri = None
 
     return Mineral(
-        id=row['id'],
-        name=row['name'],
-        cdl=row['cdl'],
-        system=row['system'],
-        point_group=row['point_group'],
-        chemistry=row['chemistry'],
+        id=row["id"],
+        name=row["name"],
+        cdl=row["cdl"],
+        system=row["system"],
+        point_group=row["point_group"],
+        chemistry=row["chemistry"],
         hardness=hardness,
-        description=row['description'] or '',
-        localities=json.loads(row['localities_json'] or '[]'),
-        forms=json.loads(row['forms_json'] or '[]'),
+        description=row["description"] or "",
+        localities=json.loads(row["localities_json"] or "[]"),
+        forms=json.loads(row["forms_json"] or "[]"),
         sg=sg,
         ri=ri,
-        birefringence=row['birefringence'],
-        optical_character=row['optical_character'],
-        dispersion=row['dispersion'],
-        lustre=row['lustre'],
-        cleavage=row['cleavage'],
-        fracture=row['fracture'],
-        pleochroism=row['pleochroism'],
-        colors=json.loads(row['colors_json'] or '[]'),
-        treatments=json.loads(row['treatments_json'] or '[]'),
-        inclusions=json.loads(row['inclusions_json'] or '[]'),
-        twin_law=row['twin_law'],
-        phenomenon=row['phenomenon'],
-        note=row['note'],
+        birefringence=row["birefringence"],
+        optical_character=row["optical_character"],
+        dispersion=row["dispersion"],
+        lustre=row["lustre"],
+        cleavage=row["cleavage"],
+        fracture=row["fracture"],
+        pleochroism=row["pleochroism"],
+        colors=json.loads(row["colors_json"] or "[]"),
+        treatments=json.loads(row["treatments_json"] or "[]"),
+        inclusions=json.loads(row["inclusions_json"] or "[]"),
+        twin_law=row["twin_law"],
+        phenomenon=row["phenomenon"],
+        note=row["note"],
     )
 
 
@@ -243,7 +246,7 @@ def get_mineral_by_id(conn: sqlite3.Connection, mineral_id: str) -> Mineral | No
     Returns:
         Mineral or None if not found
     """
-    cursor = conn.execute('SELECT * FROM minerals WHERE id = ?', (mineral_id.lower(),))
+    cursor = conn.execute("SELECT * FROM minerals WHERE id = ?", (mineral_id.lower(),))
     row = cursor.fetchone()
     if row:
         return row_to_mineral(row)
@@ -259,7 +262,7 @@ def get_all_minerals(conn: sqlite3.Connection) -> list[Mineral]:
     Returns:
         List of all minerals
     """
-    cursor = conn.execute('SELECT * FROM minerals ORDER BY id')
+    cursor = conn.execute("SELECT * FROM minerals ORDER BY id")
     return [row_to_mineral(row) for row in cursor.fetchall()]
 
 
@@ -273,10 +276,7 @@ def get_minerals_by_system(conn: sqlite3.Connection, system: str) -> list[Minera
     Returns:
         List of minerals in that system
     """
-    cursor = conn.execute(
-        'SELECT * FROM minerals WHERE system = ? ORDER BY id',
-        (system.lower(),)
-    )
+    cursor = conn.execute("SELECT * FROM minerals WHERE system = ? ORDER BY id", (system.lower(),))
     return [row_to_mineral(row) for row in cursor.fetchall()]
 
 
@@ -291,12 +291,15 @@ def search_minerals(conn: sqlite3.Connection, query: str) -> list[Mineral]:
         List of matching minerals
     """
     # Use FTS5 search
-    cursor = conn.execute("""
+    cursor = conn.execute(
+        """
         SELECT m.* FROM minerals m
         JOIN minerals_fts fts ON m.id = fts.id
         WHERE minerals_fts MATCH ?
         ORDER BY rank
-    """, (query,))
+    """,
+        (query,),
+    )
     return [row_to_mineral(row) for row in cursor.fetchall()]
 
 
@@ -309,8 +312,8 @@ def insert_category(conn: sqlite3.Connection, name: str, presets: list[str]) -> 
         presets: List of preset IDs in this category
     """
     conn.execute(
-        'INSERT OR REPLACE INTO categories (name, presets_json) VALUES (?, ?)',
-        (name, json.dumps(presets))
+        "INSERT OR REPLACE INTO categories (name, presets_json) VALUES (?, ?)",
+        (name, json.dumps(presets)),
     )
 
 
@@ -341,14 +344,11 @@ def update_mineral_models(
             models_generated_at = ?
         WHERE id = ?
         """,
-        (svg, stl, gltf, generated_at, mineral_id.lower())
+        (svg, stl, gltf, generated_at, mineral_id.lower()),
     )
 
 
-def get_mineral_models(
-    conn: sqlite3.Connection,
-    mineral_id: str
-) -> dict[str, str | bytes | None]:
+def get_mineral_models(conn: sqlite3.Connection, mineral_id: str) -> dict[str, str | bytes | None]:
     """Get the 3D model data for a mineral.
 
     Args:
@@ -363,21 +363,21 @@ def get_mineral_models(
         SELECT model_svg, model_stl, model_gltf, models_generated_at
         FROM minerals WHERE id = ?
         """,
-        (mineral_id.lower(),)
+        (mineral_id.lower(),),
     )
     row = cursor.fetchone()
     if row:
         return {
-            'model_svg': row['model_svg'],
-            'model_stl': row['model_stl'],
-            'model_gltf': row['model_gltf'],
-            'models_generated_at': row['models_generated_at'],
+            "model_svg": row["model_svg"],
+            "model_stl": row["model_stl"],
+            "model_gltf": row["model_gltf"],
+            "models_generated_at": row["models_generated_at"],
         }
     return {
-        'model_svg': None,
-        'model_stl': None,
-        'model_gltf': None,
-        'models_generated_at': None,
+        "model_svg": None,
+        "model_stl": None,
+        "model_gltf": None,
+        "models_generated_at": None,
     }
 
 
@@ -391,10 +391,10 @@ def get_category_presets(conn: sqlite3.Connection, name: str) -> list[str]:
     Returns:
         List of preset IDs
     """
-    cursor = conn.execute('SELECT presets_json FROM categories WHERE name = ?', (name,))
+    cursor = conn.execute("SELECT presets_json FROM categories WHERE name = ?", (name,))
     row = cursor.fetchone()
     if row:
-        return list(json.loads(row['presets_json']))
+        return list(json.loads(row["presets_json"]))
     return []
 
 
@@ -407,5 +407,5 @@ def get_all_categories(conn: sqlite3.Connection) -> dict[str, list[str]]:
     Returns:
         Dict mapping category name to list of preset IDs
     """
-    cursor = conn.execute('SELECT name, presets_json FROM categories')
-    return {row['name']: json.loads(row['presets_json']) for row in cursor.fetchall()}
+    cursor = conn.execute("SELECT name, presets_json FROM categories")
+    return {row["name"]: json.loads(row["presets_json"]) for row in cursor.fetchall()}

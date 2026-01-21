@@ -120,10 +120,12 @@ def search_presets(query: str) -> list[str]:
             # Simple fallback search
             all_minerals = get_all_minerals(conn)
             for mineral in all_minerals:
-                if (query in mineral.id.lower() or
-                    query in mineral.name.lower() or
-                    query in mineral.chemistry.lower() or
-                    query in mineral.description.lower()):
+                if (
+                    query in mineral.id.lower()
+                    or query in mineral.name.lower()
+                    or query in mineral.chemistry.lower()
+                    or query in mineral.description.lower()
+                ):
                     results.append(mineral.id)
 
     return results
@@ -157,7 +159,7 @@ def filter_minerals(
         for mineral in minerals:
             # Check hardness
             try:
-                hardness = float(str(mineral.hardness).split('-')[0])
+                hardness = float(str(mineral.hardness).split("-")[0])
                 if min_hardness and hardness < min_hardness:
                     continue
                 if max_hardness and hardness > max_hardness:
@@ -214,7 +216,7 @@ def get_info_properties(preset_name: str, group_or_keys: str) -> dict[str, Any]:
     if group_or_keys in INFO_GROUPS:
         keys = INFO_GROUPS[group_or_keys]
     else:
-        keys = [k.strip() for k in group_or_keys.split(',')]
+        keys = [k.strip() for k in group_or_keys.split(",")]
 
     # Extract properties
     result = {}
@@ -265,7 +267,7 @@ def get_model_svg(mineral_id: str) -> str | None:
     """
     with get_connection(_db_path) as conn:
         models = get_mineral_models(conn, mineral_id)
-        return models.get('model_svg')
+        return models.get("model_svg")
 
 
 def get_model_stl(mineral_id: str) -> bytes | None:
@@ -279,7 +281,7 @@ def get_model_stl(mineral_id: str) -> bytes | None:
     """
     with get_connection(_db_path) as conn:
         models = get_mineral_models(conn, mineral_id)
-        return models.get('model_stl')
+        return models.get("model_stl")
 
 
 def get_model_gltf(mineral_id: str) -> dict | None:
@@ -295,7 +297,7 @@ def get_model_gltf(mineral_id: str) -> dict | None:
 
     with get_connection(_db_path) as conn:
         models = get_mineral_models(conn, mineral_id)
-        gltf_str = models.get('model_gltf')
+        gltf_str = models.get("model_gltf")
         if gltf_str:
             return json.loads(gltf_str)
         return None
@@ -312,4 +314,4 @@ def get_models_generated_at(mineral_id: str) -> str | None:
     """
     with get_connection(_db_path) as conn:
         models = get_mineral_models(conn, mineral_id)
-        return models.get('models_generated_at')
+        return models.get("models_generated_at")

@@ -18,18 +18,17 @@ import argparse
 import json
 import re
 import sys
-from dataclasses import asdict, dataclass, field
+from dataclasses import dataclass, field
 from pathlib import Path
 
 # Add parent directory to path for imports
-sys.path.insert(0, str(Path(__file__).parent.parent / 'src'))
+sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
 from mineral_database.db import get_all_minerals, get_connection
 
 # CDL parser imports
 try:
     from cdl_parser import (
-        CRYSTAL_SYSTEMS,
         MODIFICATION_TYPES,
         POINT_GROUPS,
         parse_cdl,
@@ -43,6 +42,7 @@ except ImportError:
 @dataclass
 class ParsedForm:
     """A parsed crystal form."""
+
     miller: str  # e.g., "{111}" or "{10-10}"
     miller_tuple: tuple  # e.g., (1, 1, 1) or (1, 0, -1, 0)
     scale: float
@@ -52,6 +52,7 @@ class ParsedForm:
 @dataclass
 class ParsedCDL:
     """Fully parsed CDL description."""
+
     system: str
     point_group: str
     forms: list[ParsedForm]
@@ -62,6 +63,7 @@ class ParsedCDL:
 @dataclass
 class ValidationResult:
     """Validation result for a single mineral."""
+
     mineral_id: str
     name: str
     cdl: str
@@ -84,7 +86,12 @@ def format_miller(miller) -> tuple[str, tuple]:
     """Format Miller index as string and tuple."""
     if miller.i is not None:
         # 4-index notation
-        return f"{{{miller.h}{miller.k}{miller.i}{miller.l}}}", (miller.h, miller.k, miller.i, miller.l)
+        return f"{{{miller.h}{miller.k}{miller.i}{miller.l}}}", (
+            miller.h,
+            miller.k,
+            miller.i,
+            miller.l,
+        )
     else:
         # 3-index notation
         return f"{{{miller.h}{miller.k}{miller.l}}}", (miller.h, miller.k, miller.l)
@@ -110,20 +117,22 @@ def parse_and_validate(
     )
 
     # Handle amorphous materials
-    if db_system == 'amorphous' or 'amorphous' in cdl.lower():
+    if db_system == "amorphous" or "amorphous" in cdl.lower():
         result.warnings.append("Amorphous material - standard CDL validation not applicable")
         return result
 
     # Check for unrecognized tokens after pipe (modifications/twins)
     # Parser may silently ignore invalid modifications
-    if '|' in cdl:
-        after_pipe = cdl.split('|', 1)[1].strip()
+    if "|" in cdl:
+        after_pipe = cdl.split("|", 1)[1].strip()
         # Check for anything that looks like a modification but isn't valid
-        mod_pattern = re.findall(r'(\w+)\s*\(', after_pipe)
+        mod_pattern = re.findall(r"(\w+)\s*\(", after_pipe)
         for mod_name in mod_pattern:
             mod_lower = mod_name.lower()
-            if mod_lower not in MODIFICATION_TYPES and mod_lower != 'twin':
-                result.errors.append(f"Unrecognized modification '{mod_name}' (valid: {sorted(MODIFICATION_TYPES)})")
+            if mod_lower not in MODIFICATION_TYPES and mod_lower != "twin":
+                result.errors.append(
+                    f"Unrecognized modification '{mod_name}' (valid: {sorted(MODIFICATION_TYPES)})"
+                )
 
     # Phase 1: Parse validation
     valid, error = validate_cdl(cdl)
@@ -142,28 +151,32 @@ def parse_and_validate(
     forms = []
     for form in desc.forms:
         miller_str, miller_tuple = format_miller(form.miller)
-        forms.append(ParsedForm(
-            miller=miller_str,
-            miller_tuple=miller_tuple,
-            scale=form.scale,
-            name=form.name,
-        ))
+        forms.append(
+            ParsedForm(
+                miller=miller_str,
+                miller_tuple=miller_tuple,
+                scale=form.scale,
+                name=form.name,
+            )
+        )
 
     modifications = []
     for mod in desc.modifications:
-        modifications.append({
-            'type': mod.type,
-            'params': mod.params,
-        })
+        modifications.append(
+            {
+                "type": mod.type,
+                "params": mod.params,
+            }
+        )
 
     twin = None
     if desc.twin:
         twin = {
-            'law': desc.twin.law,
-            'axis': desc.twin.axis,
-            'angle': desc.twin.angle,
-            'type': desc.twin.twin_type,
-            'count': desc.twin.count,
+            "law": desc.twin.law,
+            "axis": desc.twin.axis,
+            "angle": desc.twin.angle,
+            "type": desc.twin.twin_type,
+            "count": desc.twin.count,
         }
 
     result.parsed = ParsedCDL(
@@ -196,7 +209,7 @@ def parse_and_validate(
             )
 
     # Phase 5: Miller index notation check
-    uses_4_index = desc.system in ('hexagonal', 'trigonal')
+    uses_4_index = desc.system in ("hexagonal", "trigonal")
     for form in desc.forms:
         miller = form.miller
         has_i_index = miller.i is not None
@@ -281,31 +294,31 @@ def print_mineral_entry(r: ValidationResult) -> None:
     print(f"DB System: {r.db_system} | DB Point Group: {r.db_point_group}")
 
     if r.parsed:
-        print(f"\nParsed:")
+        print("\nParsed:")
         print(f"  System: {r.parsed.system}")
         print(f"  Point Group: {r.parsed.point_group}")
-        print(f"  Forms:")
+        print("  Forms:")
         for form in r.parsed.forms:
             name_part = f" ({form.name})" if form.name else ""
             print(f"    {form.miller}{name_part} @ {form.scale}")
         if r.parsed.modifications:
-            print(f"  Modifications:")
+            print("  Modifications:")
             for mod in r.parsed.modifications:
                 print(f"    {mod['type']}({mod['params']})")
         if r.parsed.twin:
             twin = r.parsed.twin
-            if twin['law']:
+            if twin["law"]:
                 print(f"  Twin: {twin['law']} law")
             else:
                 print(f"  Twin: axis={twin['axis']}, angle={twin['angle']}")
 
     if r.errors:
-        print(f"\n  ERRORS:")
+        print("\n  ERRORS:")
         for err in r.errors:
             print(f"    ❌ {err}")
 
     if r.warnings:
-        print(f"\n  WARNINGS:")
+        print("\n  WARNINGS:")
         for warn in r.warnings:
             print(f"    ⚠️  {warn}")
 
@@ -345,30 +358,30 @@ def export_json(results: list[ValidationResult], output_path: Path) -> None:
     data = []
     for r in results:
         entry = {
-            'id': r.mineral_id,
-            'name': r.name,
-            'cdl': r.cdl,
-            'db_system': r.db_system,
-            'db_point_group': r.db_point_group,
-            'is_valid': r.is_valid,
-            'errors': r.errors,
-            'warnings': r.warnings,
+            "id": r.mineral_id,
+            "name": r.name,
+            "cdl": r.cdl,
+            "db_system": r.db_system,
+            "db_point_group": r.db_point_group,
+            "is_valid": r.is_valid,
+            "errors": r.errors,
+            "warnings": r.warnings,
         }
         if r.parsed:
-            entry['parsed'] = {
-                'system': r.parsed.system,
-                'point_group': r.parsed.point_group,
-                'forms': [
+            entry["parsed"] = {
+                "system": r.parsed.system,
+                "point_group": r.parsed.point_group,
+                "forms": [
                     {
-                        'miller': f.miller,
-                        'miller_tuple': f.miller_tuple,
-                        'scale': f.scale,
-                        'name': f.name,
+                        "miller": f.miller,
+                        "miller_tuple": f.miller_tuple,
+                        "scale": f.scale,
+                        "name": f.name,
                     }
                     for f in r.parsed.forms
                 ],
-                'modifications': r.parsed.modifications,
-                'twin': r.parsed.twin,
+                "modifications": r.parsed.modifications,
+                "twin": r.parsed.twin,
             }
         data.append(entry)
 
@@ -378,7 +391,7 @@ def export_json(results: list[ValidationResult], output_path: Path) -> None:
 
 def main():
     parser = argparse.ArgumentParser(
-        description='Validate CDL notation in mineral database and output detailed report',
+        description="Validate CDL notation in mineral database and output detailed report",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
@@ -386,36 +399,36 @@ Examples:
   %(prog)s --summary                # Show summary table only
   %(prog)s --errors-only            # Show only entries with errors
   %(prog)s --json report.json       # Export to JSON for analysis
-        """
+        """,
     )
 
     parser.add_argument(
-        'database',
+        "database",
         type=Path,
-        nargs='?',
-        default=Path(__file__).parent.parent / 'src' / 'mineral_database' / 'data' / 'minerals.db',
-        help='Path to mineral database (default: src/mineral_database/data/minerals.db)',
+        nargs="?",
+        default=Path(__file__).parent.parent / "src" / "mineral_database" / "data" / "minerals.db",
+        help="Path to mineral database (default: src/mineral_database/data/minerals.db)",
     )
     parser.add_argument(
-        '--summary',
-        action='store_true',
-        help='Show summary table instead of full report',
+        "--summary",
+        action="store_true",
+        help="Show summary table instead of full report",
     )
     parser.add_argument(
-        '--errors-only',
-        action='store_true',
-        help='Only show entries with errors',
+        "--errors-only",
+        action="store_true",
+        help="Only show entries with errors",
     )
     parser.add_argument(
-        '--warnings-only',
-        action='store_true',
-        help='Only show entries with warnings (excluding errors)',
+        "--warnings-only",
+        action="store_true",
+        help="Only show entries with warnings (excluding errors)",
     )
     parser.add_argument(
-        '--json',
+        "--json",
         type=Path,
-        metavar='FILE',
-        help='Export results to JSON file',
+        metavar="FILE",
+        help="Export results to JSON file",
     )
 
     args = parser.parse_args()
@@ -457,5 +470,5 @@ Examples:
     sys.exit(1 if errors else 0)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
