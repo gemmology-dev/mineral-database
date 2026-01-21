@@ -1,5 +1,5 @@
 [project]
-name = "mineral-database"
+name = "gemmology-mineral-database"
 version = "1.0.0"
 description = "Crystal presets database for gemmological and mineralogical visualization"
 readme = "README.md"

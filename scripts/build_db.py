@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 
 # Add parent directory to path for imports
-sys.path.insert(0, str(Path(__file__).parent.parent / 'src'))
+sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
 from mineral_database.db import get_connection, init_database, insert_category, insert_mineral
 from mineral_database.models import Mineral
@@ -65,7 +65,7 @@ def import_from_yaml(yaml_dir: Path, db_path: Path) -> int:
 
     count = 0
     with get_connection(db_path) as conn:
-        for yaml_file in yaml_dir.glob('*.yaml'):
+        for yaml_file in yaml_dir.glob("*.yaml"):
             with open(yaml_file) as f:
                 data = yaml.safe_load(f)
 
@@ -105,10 +105,10 @@ def export_to_yaml(db_path: Path, yaml_dir: Path) -> int:
         for mineral in minerals:
             data = mineral.to_dict()
             # Remove id from data (it's in the filename)
-            del data['id']
+            del data["id"]
 
             yaml_file = yaml_dir / f"{mineral.id}.yaml"
-            with open(yaml_file, 'w') as f:
+            with open(yaml_file, "w") as f:
                 yaml.dump(data, f, default_flow_style=False, allow_unicode=True, sort_keys=False)
             count += 1
 
@@ -117,28 +117,28 @@ def export_to_yaml(db_path: Path, yaml_dir: Path) -> int:
 
 def main():
     parser = argparse.ArgumentParser(
-        description='Build mineral database from source files',
+        description="Build mineral database from source files",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
   %(prog)s --from-yaml data/source/minerals -o data/minerals.db
   %(prog)s --from-legacy crystal_presets.py -o data/minerals.db
   %(prog)s --export-yaml data/minerals.db -o data/source/minerals
-        """
+        """,
     )
 
-    parser.add_argument('--from-yaml', type=Path, metavar='DIR',
-                        help='Import from YAML directory')
-    parser.add_argument('--from-legacy', type=Path, metavar='FILE',
-                        help='Import from legacy crystal_presets.py')
-    parser.add_argument('--export-yaml', type=Path, metavar='DB',
-                        help='Export database to YAML files')
-    parser.add_argument('-o', '--output', type=Path, required=True,
-                        help='Output file/directory')
-    parser.add_argument('-v', '--verbose', action='store_true',
-                        help='Verbose output')
-    parser.add_argument('--with-models', action='store_true',
-                        help='Generate SVG/STL/glTF models for each mineral')
+    parser.add_argument("--from-yaml", type=Path, metavar="DIR", help="Import from YAML directory")
+    parser.add_argument(
+        "--from-legacy", type=Path, metavar="FILE", help="Import from legacy crystal_presets.py"
+    )
+    parser.add_argument(
+        "--export-yaml", type=Path, metavar="DB", help="Export database to YAML files"
+    )
+    parser.add_argument("-o", "--output", type=Path, required=True, help="Output file/directory")
+    parser.add_argument("-v", "--verbose", action="store_true", help="Verbose output")
+    parser.add_argument(
+        "--with-models", action="store_true", help="Generate SVG/STL/glTF models for each mineral"
+    )
 
     args = parser.parse_args()
 
@@ -159,12 +159,13 @@ Examples:
 
         # Import the legacy module
         import importlib.util
+
         spec = importlib.util.spec_from_file_location("crystal_presets", args.from_legacy)
         module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(module)
 
-        presets = getattr(module, 'CRYSTAL_PRESETS', {})
-        categories = getattr(module, 'PRESET_CATEGORIES', {})
+        presets = getattr(module, "CRYSTAL_PRESETS", {})
+        categories = getattr(module, "PRESET_CATEGORIES", {})
 
         count = import_from_python_dict(presets, categories, args.output)
         print(f"Imported {count} presets from legacy module to {args.output}")
@@ -186,6 +187,7 @@ Examples:
         print("\nGenerating 3D models...")
         try:
             from generate_models import generate_all_models
+
             success, failure = generate_all_models(args.output, verbose=args.verbose)
             print(f"Model generation complete: {success} success, {failure} failures")
         except ImportError as e:
@@ -193,5 +195,5 @@ Examples:
             print("Install with: pip install cdl-parser crystal-geometry crystal-renderer")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

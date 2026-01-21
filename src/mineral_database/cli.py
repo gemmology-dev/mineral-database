@@ -21,8 +21,8 @@ from .queries import (
 def create_parser() -> argparse.ArgumentParser:
     """Create the argument parser."""
     parser = argparse.ArgumentParser(
-        prog='mineral-db',
-        description='Mineral Database - Crystal Presets Query Tool',
+        prog="mineral-db",
+        description="Mineral Database - Crystal Presets Query Tool",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
@@ -31,48 +31,36 @@ Examples:
   %(prog)s --info diamond          Show diamond preset info
   %(prog)s --search garnet         Search for garnet-related presets
   %(prog)s --json diamond          Output diamond preset as JSON
-        """
+        """,
     )
 
-    parser.add_argument(
-        '--version',
-        action='version',
-        version=f'%(prog)s {__version__}'
-    )
+    parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
 
     parser.add_argument(
-        '--list', nargs='?', const='all', metavar='CATEGORY',
-        help='List presets (optionally by crystal system or category)'
+        "--list",
+        nargs="?",
+        const="all",
+        metavar="CATEGORY",
+        help="List presets (optionally by crystal system or category)",
     )
 
-    parser.add_argument(
-        '--info', type=str, metavar='NAME',
-        help='Show detailed info for a preset'
-    )
+    parser.add_argument("--info", type=str, metavar="NAME", help="Show detailed info for a preset")
 
     parser.add_argument(
-        '--search', type=str, metavar='QUERY',
-        help='Search presets by name/mineral/chemistry'
+        "--search", type=str, metavar="QUERY", help="Search presets by name/mineral/chemistry"
     )
 
-    parser.add_argument(
-        '--json', type=str, metavar='NAME',
-        help='Output preset as JSON'
-    )
+    parser.add_argument("--json", type=str, metavar="NAME", help="Output preset as JSON")
+
+    parser.add_argument("--categories", action="store_true", help="List preset categories")
+
+    parser.add_argument("--count", action="store_true", help="Show total number of presets")
 
     parser.add_argument(
-        '--categories', action='store_true',
-        help='List preset categories'
-    )
-
-    parser.add_argument(
-        '--count', action='store_true',
-        help='Show total number of presets'
-    )
-
-    parser.add_argument(
-        '--props', type=str, metavar='GROUP',
-        help='Property group for --info (basic, physical, optical, fga, etc.)'
+        "--props",
+        type=str,
+        metavar="GROUP",
+        help="Property group for --info (basic, physical, optical, fga, etc.)",
     )
 
     return parser
@@ -95,7 +83,7 @@ def main(args: list[str] | None = None) -> int:
         return 0
 
     if parsed_args.list:
-        if parsed_args.list == 'all':
+        if parsed_args.list == "all":
             print(f"All Crystal Presets ({count_presets()} total):")
             for cat in list_preset_categories():
                 presets = list_presets(cat)
@@ -128,15 +116,15 @@ def main(args: list[str] | None = None) -> int:
             print(f"  Chemistry:   {preset['chemistry']}")
             print(f"  Hardness:    {preset['hardness']}")
             print(f"  Description: {preset['description']}")
-            if preset.get('localities'):
+            if preset.get("localities"):
                 print(f"  Localities:  {', '.join(preset['localities'])}")
-            if preset.get('forms'):
+            if preset.get("forms"):
                 print(f"  Forms:       {', '.join(preset['forms'])}")
-            if preset.get('sg'):
+            if preset.get("sg"):
                 print(f"  SG:          {preset['sg']}")
-            if preset.get('ri'):
+            if preset.get("ri"):
                 print(f"  RI:          {preset['ri']}")
-            if preset.get('twin_law'):
+            if preset.get("twin_law"):
                 print(f"  Twin Law:    {preset['twin_law']}")
         else:
             print(f"Preset not found: {parsed_args.info}")
@@ -168,5 +156,5 @@ def main(args: list[str] | None = None) -> int:
     return 0
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     sys.exit(main())

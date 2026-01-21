@@ -51,7 +51,9 @@ class PresetDict:
 
     def items(self) -> list[tuple[str, dict[str, Any]]]:
         """Get all preset (name, value) pairs."""
-        return [(name, preset) for name in list_presets() if (preset := get_preset(name)) is not None]
+        return [
+            (name, preset) for name in list_presets() if (preset := get_preset(name)) is not None
+        ]
 
     def __len__(self) -> int:
         """Get number of presets."""
