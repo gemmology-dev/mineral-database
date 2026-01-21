@@ -1,0 +1,36 @@
+{
+  "name": "@gemmology/mineral-data",
+  "version": "1.0.0",
+  "description": "Pre-built SQLite database of 94+ mineral presets with CDL, properties, and 3D models for crystal visualization",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "minerals.db"
+  ],
+  "keywords": [
+    "crystal",
+    "mineralogy",
+    "gemmology",
+    "cdl",
+    "sqlite",
+    "3d-models",
+    "svg",
+    "stl",
+    "gltf"
+  ],
+  "author": "Fabian Schuh <fabian@gemmology.dev>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gemmology-dev/mineral-database.git"
+  },
+  "homepage": "https://gemmology.dev",
+  "bugs": {
+    "url": "https://github.com/gemmology-dev/mineral-database/issues"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}
