@@ -1,5 +1,5 @@
 name: Tourmaline (Watermelon)
-cdl: trigonal[3m]:{10-10}@1.0 + {0001}@0.5 + {10-11}@0.6
+cdl: trigonal[3m]:{10-10}@1.0 + {0001}@1.2 + {10-11}@0.8
 system: trigonal
 point_group: 3m
 chemistry: Complex borosilicate
