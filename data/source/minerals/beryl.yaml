@@ -1,0 +1,59 @@
+name: Beryl
+cdl: hexagonal[6/mmm]:{10-10}@1.0 + {0001}@1.0
+system: hexagonal
+point_group: 6/mmm
+chemistry: Be3Al2Si6O18
+hardness: 7.5-8
+description: >
+  Beryllium aluminium silicate that produces several important gem varieties
+  including emerald, aquamarine, morganite, heliodor, goshenite, and red beryl.
+  Despite sharing the same basic chemistry and structure, beryl varieties differ
+  dramatically in value based on colour, clarity, and origin. Typically forms
+  hexagonal prismatic crystals.
+localities:
+  - Colombia
+  - Brazil
+  - Zambia
+  - Pakistan
+  - Madagascar
+  - Afghanistan
+  - Russia (Urals)
+  - Nigeria
+forms:
+  - hexagonal_prism
+  - pinacoid
+  - dihexagonal_prism
+  - hexagonal_dipyramid
+colors:
+  - Green (emerald)
+  - Blue (aquamarine)
+  - Pink (morganite)
+  - Yellow (heliodor)
+  - Colorless (goshenite)
+  - Red (red beryl)
+sg: 2.67-2.78
+ri: 1.577-1.583
+birefringence: 0.005-0.009
+optical_character: Uniaxial -
+pleochroism: Weak to distinct (varies by variety)
+lustre: Vitreous
+cleavage: Imperfect basal (rarely seen)
+fracture: Conchoidal to uneven
+treatments:
+  - Oiling (emerald)
+  - Heat treatment (aquamarine, morganite)
+  - Fracture filling (emerald)
+inclusions:
+  - Three-phase (Colombian emerald)
+  - Actinolite needles (Zambian emerald)
+  - Rain/parallel tubes (aquamarine)
+  - Liquid feathers
+  - Two-phase inclusions
+  - Mineral crystals
+varieties:
+  - Emerald (Cr/V - green)
+  - Aquamarine (Fe2+ - blue)
+  - Morganite (Mn - pink)
+  - Heliodor (Fe3+ - yellow)
+  - Goshenite (colorless)
+  - Red Beryl (Mn3+ - red)

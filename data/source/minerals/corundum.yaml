@@ -1,0 +1,42 @@
+name: Corundum
+cdl: trigonal[-3m]:{10-10}@1.0 + {10-11}@0.8 + {0001}@0.6
+system: trigonal
+point_group: -3m
+chemistry: Al2O3
+hardness: 9
+description: Generic corundum with hexagonal prism, dipyramid and basal pinacoid - second hardest natural mineral
+localities:
+- Myanmar
+- Sri Lanka
+- Kashmir
+- Madagascar
+- Thailand
+- Tanzania
+forms:
+- prism
+- dipyramid
+- pinacoid
+sg: '3.99-4.01'
+ri: '1.762-1.770'
+birefringence: 0.008
+optical_character: Uniaxial -
+dispersion: 0.018
+lustre: Vitreous to adamantine
+cleavage: None (parting on twin planes)
+fracture: Conchoidal to uneven
+pleochroism: Distinct to strong (depends on colour)
+colors:
+- All colours except red (sapphire)
+- Red (ruby)
+- Colourless (white sapphire)
+treatments:
+- Heat treatment
+- Beryllium diffusion
+- Lead glass filling
+- Lattice diffusion
+inclusions:
+- Rutile silk (three-direction needles)
+- Fingerprints (healed fractures)
+- Hexagonal colour zoning
+- Crystal inclusions (calcite, apatite, zircon)
+- Negative crystals

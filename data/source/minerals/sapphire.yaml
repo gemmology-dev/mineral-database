@@ -1,0 +1,46 @@
+name: Sapphire
+cdl: trigonal[-3m]:{10-10}@1.0 + {10-11}@0.7 | elongate(c:1.8)
+system: trigonal
+point_group: -3m
+chemistry: Al2O3:Fe,Ti
+hardness: 9
+description: Elongated barrel-shaped habit
+localities:
+- Kashmir, India
+- Myanmar (Mogok)
+- Sri Lanka (Ceylon)
+- Madagascar
+- Australia
+- Montana, USA
+forms:
+- prism
+- dipyramid
+sg: '3.99-4.01'
+ri: '1.762-1.770'
+birefringence: 0.008
+optical_character: Uniaxial -
+dispersion: 0.018
+lustre: Vitreous to adamantine
+cleavage: None (parting along twin planes)
+fracture: Conchoidal to uneven
+pleochroism: Distinct to strong (varies with colour)
+colors:
+- Blue
+- Yellow
+- Pink
+- Orange
+- Green
+- Purple
+- Colorless
+- Padparadscha (pink-orange)
+treatments:
+- Heat treatment
+- Beryllium diffusion
+- Lead glass filling
+- Flux healing
+inclusions:
+- Rutile silk
+- Fingerprints
+- Crystal inclusions (calcite, apatite, zircon)
+- Hexagonal zoning
+- Negative crystals

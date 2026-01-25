@@ -1,0 +1,35 @@
+name: Rhodonite
+cdl: triclinic[-1]:{110}@1.0 + {010}@0.8 + {001}@0.6
+system: triclinic
+point_group: '-1'
+chemistry: (Mn,Fe,Mg,Ca)SiO3
+hardness: 5.5-6.5
+description: Manganese inosilicate - rose-red colour with characteristic black manganese oxide veins
+localities:
+- Australia (New South Wales)
+- Russia (Ural Mountains)
+- Peru
+- Sweden
+- USA (Massachusetts - state gem)
+- Brazil
+forms:
+- prism
+- pinacoid
+sg: '3.40-3.74'
+ri: '1.711-1.751'
+birefringence: 0.011-0.014
+optical_character: Biaxial +
+dispersion: Low
+lustre: Vitreous to pearly
+cleavage: Perfect prismatic {110}, nearly 90 degrees
+fracture: Conchoidal to uneven
+pleochroism: Weak (yellowish-red, pinkish-red, pale yellowish-red)
+colors:
+- Rose red
+- Pink
+- Brownish-red (oxidized)
+inclusions:
+- Black manganese oxide veins
+- Colour zoning
+- Fracture networks
+note: Rose-red colour from Mn2+; black veining from manganese oxide alteration; official gem of Massachusetts

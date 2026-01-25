@@ -1,0 +1,40 @@
+name: Staurolite (60 Degree Cross Twin)
+cdl: orthorhombic[mmm]:{110}@1.0 + {010}@0.6 + {001}@0.3 | twin(staurolite_60)
+system: orthorhombic
+point_group: mmm
+chemistry: Fe2Al9O6(SiO4)4(O,OH)2
+hardness: 7-7.5
+description: >
+  Cruciform penetration twin at approximately 60 degrees, forming an X-shaped
+  cross pattern. Known as "fairy crosses" or "fairy stones" in folklore,
+  these distinctive twins have been carried as good luck charms for centuries.
+  More common than the 90-degree cross twin variety. Found in metamorphic
+  schists and gneisses.
+localities:
+  - Georgia (USA)
+  - Virginia (USA)
+  - Russia (Kola Peninsula)
+  - France (Brittany)
+  - Switzerland
+  - Brazil
+forms:
+  - prism
+  - pinacoid
+  - twin
+colors:
+  - Reddish-brown
+  - Yellowish-brown
+  - Brown
+  - Dark brown
+  - Black
+sg: 3.65-3.79
+ri: 1.736-1.762
+birefringence: 0.009-0.015
+optical_character: Biaxial +
+pleochroism: Trichroic - yellow, reddish-brown, dark red
+dispersion: 0.021
+lustre: Vitreous to resinous
+cleavage: Poor {010}
+fracture: Subconchoidal to uneven
+twin_law: 60 degree cross (staurolite law)
+note: Rarely faceted as a gemstone due to opacity; primarily a collector mineral

@@ -1,0 +1,50 @@
+name: Garnet (Dodecahedron)
+cdl: cubic[m3m]:{110}
+system: cubic
+point_group: m3m
+chemistry: X3Y2(SiO4)3
+hardness: 6.5-7.5
+description: >
+  Pure rhombic dodecahedral habit - the most common crystal form for garnets.
+  The dodecahedron {110} displays twelve rhomb-shaped faces meeting at
+  identical angles. This habit is particularly common in almandine and
+  pyrope garnets, often showing slightly curved face striations.
+localities:
+  - India
+  - Sri Lanka
+  - Madagascar
+  - Tanzania
+  - Brazil
+  - Mozambique
+  - Kenya
+  - Russia (Urals)
+  - Namibia
+forms:
+  - dodecahedron
+colors:
+  - Red (almandine, pyrope)
+  - Orange (spessartine, hessonite)
+  - Yellow (grossular, topazolite)
+  - Green (demantoid, tsavorite, uvarovite)
+  - Purple (rhodolite)
+  - Brown (hessonite)
+  - Pink (rhodolite, malaya)
+  - Color-change (rare pyrope-spessartine)
+treatments:
+  - Heat treatment (rare)
+  - Surface coating (rare)
+inclusions:
+  - Silk (rutile needles)
+  - Crystals
+  - Fingerprints
+  - Growth tubes
+  - Horsetail (demantoid)
+  - Roiled appearance (hessonite)
+sg: 3.50-4.30
+ri: 1.73-1.89
+optical_character: Isotropic
+pleochroism: None (isotropic)
+dispersion: 0.027-0.057
+lustre: Vitreous to resinous
+cleavage: None
+fracture: Conchoidal to uneven

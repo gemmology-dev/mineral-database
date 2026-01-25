@@ -1,0 +1,42 @@
+name: Diamond (Cube)
+cdl: cubic[m3m]:{100}
+system: cubic
+point_group: m3m
+chemistry: C
+hardness: 10
+description: >
+  Cubic habit diamond - a less common crystal form typically found in
+  industrial-grade diamonds from the Democratic Republic of Congo. Cube faces
+  often show characteristic etch patterns and growth features. Pure cubic
+  diamonds are rarer than octahedral specimens as gem material.
+localities:
+  - Democratic Republic of Congo
+  - Brazil
+  - Australia
+forms:
+  - cube
+colors:
+  - Colorless
+  - Yellow
+  - Brown
+  - Blue
+  - Pink
+treatments:
+  - HPHT
+  - Irradiation
+  - Coating
+  - Fracture filling
+inclusions:
+  - Feathers
+  - Crystals
+  - Clouds
+  - Pinpoints
+  - Needles
+sg: 3.52
+ri: 2.417
+optical_character: Isotropic
+dispersion: 0.044
+lustre: Adamantine
+cleavage: Perfect {111}
+fracture: Conchoidal
+pleochroism: None (isotropic)

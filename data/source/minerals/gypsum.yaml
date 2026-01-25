@@ -1,0 +1,46 @@
+name: Gypsum
+cdl: monoclinic[2/m]:{010}@1.0 + {100}@0.7 + {001}@0.8 + {111}@0.5
+system: monoclinic
+point_group: 2/m
+chemistry: CaSO4.2H2O
+hardness: 2
+description: >
+  Hydrated calcium sulfate - one of the softest minerals used as a hardness
+  standard. Gypsum forms large tabular crystals, often with characteristic
+  swallowtail twinning. The giant gypsum crystals of the Naica Mine in
+  Mexico (up to 12 meters long) are among the largest crystals ever found.
+  Varieties include transparent selenite, fibrous satin spar, and fine-
+  grained alabaster.
+localities:
+  - Mexico (Naica - giant crystals)
+  - Morocco
+  - USA (Oklahoma, Utah)
+  - Spain
+  - England
+  - Australia
+forms:
+  - pinacoid
+  - prism
+  - tabular crystals
+colors:
+  - Colorless (selenite)
+  - White
+  - Gray
+  - Yellow
+  - Brown
+  - Pink
+  - Orange
+sg: 2.31-2.33
+ri: 1.520-1.530
+birefringence: 0.009-0.010
+optical_character: Biaxial +
+pleochroism: None
+lustre: Vitreous to pearly (on cleavage surfaces)
+cleavage: Perfect {010}, good {100} and {011}
+fracture: Conchoidal to splintery
+varieties:
+  - Selenite (transparent crystals)
+  - Satin spar (fibrous, silky)
+  - Alabaster (massive, fine-grained)
+  - Desert rose (rosette aggregates)
+note: Can be scratched with fingernail; slightly soluble in water; dehydrates to anhydrite when heated

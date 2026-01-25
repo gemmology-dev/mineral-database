@@ -1,0 +1,37 @@
+name: Ruby
+cdl: trigonal[-3m]:{10-11}@1.0 + {0001}@0.4
+system: trigonal
+point_group: -3m
+chemistry: Al2O3:Cr
+hardness: 9
+description: Tabular habit with prominent dipyramid
+localities:
+- Myanmar
+- Mozambique
+- Thailand
+- Madagascar
+forms:
+- dipyramid
+- pinacoid
+colors:
+- Red
+- Pinkish-red
+- Purplish-red
+treatments:
+- Heat treatment
+- Glass filling
+- Flux healing
+inclusions:
+- Silk
+- Crystals
+- Fingerprints
+- Color zoning
+sg: 4.0
+ri: 1.762-1.770
+birefringence: 0.008
+optical_character: Uniaxial -
+dispersion: 0.018
+lustre: Vitreous to adamantine
+cleavage: None (parting on {0001})
+fracture: Conchoidal to uneven
+pleochroism: Strong (purplish-red/orange-red)

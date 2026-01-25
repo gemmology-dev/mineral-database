@@ -1,0 +1,51 @@
+name: Spinel (Macle Twin)
+cdl: cubic[m3m]:{111}@1.0 + {100}@0.25 | twin(spinel_law)
+system: cubic
+point_group: m3m
+chemistry: MgAl2O4
+hardness: 8
+description: >
+  Classic spinel law twin forming a flattened triangular habit - the type
+  example for this twin law. Contact twinning on {111} produces the
+  characteristic "macle" shape, a flattened octahedron appearing nearly
+  triangular in outline. This twin law is named after the mineral spinel
+  and is also observed in diamond and franklinite.
+localities:
+  - Myanmar (Mogok)
+  - Sri Lanka
+  - Tanzania (Mahenge)
+  - Vietnam (Luc Yen)
+  - Tajikistan
+  - Madagascar
+forms:
+  - octahedron
+  - twin
+colors:
+  - Red
+  - Blue (cobalt)
+  - Pink
+  - Orange (flame spinel)
+  - Purple
+  - Violet
+  - Grey
+  - Black
+  - Colorless
+  - Colour-change
+treatments:
+  - Heat treatment (rare)
+inclusions:
+  - Octahedral crystals
+  - Fingerprints (healed fractures)
+  - Swallowtail twins
+  - Zircon with halos
+  - Spinel crystals
+sg: 3.58-3.61
+ri: 1.712-1.720
+birefringence: null
+optical_character: Isotropic
+dispersion: 0.020
+lustre: Vitreous
+cleavage: Imperfect octahedral (rarely seen)
+fracture: Conchoidal
+pleochroism: None (isotropic)
+twin_law: Spinel Law (macle)

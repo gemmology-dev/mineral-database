@@ -1,0 +1,40 @@
+name: Aragonite
+cdl: orthorhombic[mmm]:{110}@1.0 + {010}@0.7 + {011}@0.6 + {021}@0.4
+system: orthorhombic
+point_group: mmm
+chemistry: CaCO3
+hardness: 3.5-4
+description: >
+  Calcium carbonate polymorph forming orthorhombic crystals - the less stable
+  but higher-pressure form compared to trigonal calcite. Pseudohexagonal
+  cyclic twins are extremely common, creating apparently hexagonal crystals.
+  Aragonite is the primary constituent of nacre (mother-of-pearl) in mollusks
+  and forms the skeleton of coral. Converts to calcite when heated to 400C.
+localities:
+  - Spain (Aragon - type locality)
+  - Morocco (spectacular twins)
+  - Namibia (blue)
+  - Mexico
+  - USA (various)
+  - Worldwide in caves and hot springs
+forms:
+  - prism
+  - pinacoid
+  - pseudohexagonal twins
+colors:
+  - Colorless
+  - White
+  - Blue
+  - Yellow
+  - Green
+  - Brown
+  - Orange (flos ferri variety)
+sg: 2.93-2.95
+ri: 1.530-1.685
+birefringence: 0.155
+optical_character: Biaxial -
+pleochroism: None
+lustre: Vitreous to resinous
+cleavage: Good {010}, poor {110} and {011}
+fracture: Subconchoidal to splintery
+note: Extremely high birefringence; dissolves in dilute HCl with effervescence; forms nacre in shells

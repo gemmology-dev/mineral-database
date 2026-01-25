@@ -1,0 +1,47 @@
+name: Quartz (Japan Law Twin)
+cdl: trigonal[32]:{10-10}@1.0 + {11-20}@0.9 + {10-11}@0.7 + {0001}@0.5 | twin(japan)
+system: trigonal
+point_group: '32'
+chemistry: SiO2
+hardness: 7
+description: >
+  Two quartz crystals joined at an angle of 84 degrees 33 minutes, forming a
+  distinctive heart or V-shaped habit. Japan Law twins are contact twins with
+  composition plane {11-22}. Named for classic specimens from Yamanashi
+  Prefecture, Japan. Highly prized by mineral collectors for their geometric
+  beauty and relative rarity.
+localities:
+  - Japan (Yamanashi)
+  - Brazil
+  - Alps (Switzerland, Austria)
+  - Arkansas (USA)
+  - Madagascar
+forms:
+  - prism
+  - rhombohedron
+  - twin
+colors:
+  - Colourless (rock crystal)
+  - White (milky)
+  - Smoky
+  - Amethyst (purple)
+treatments:
+  - Heat treatment
+  - Irradiation
+  - Coating
+inclusions:
+  - Two-phase fluid inclusions
+  - Negative crystals
+  - Rutile needles
+  - Tourmaline crystals
+  - Various mineral inclusions
+sg: 2.65
+ri: 1.544-1.553
+birefringence: 0.009
+optical_character: Uniaxial +
+dispersion: 0.013
+lustre: Vitreous
+cleavage: None
+fracture: Conchoidal
+pleochroism: None (in colourless)
+twin_law: Japan Law

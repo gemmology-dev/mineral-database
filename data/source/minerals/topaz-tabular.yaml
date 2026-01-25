@@ -1,0 +1,16 @@
+name: Topaz (Tabular)
+cdl: orthorhombic[mmm]:{001}@1.0 + {110}@0.3 + {120}@0.2 | elongate(c:0.4)
+system: orthorhombic
+point_group: mmm
+chemistry: Al2SiO4(F,OH)2
+hardness: 8
+description: Flat tabular habit with dominant basal pinacoid (common in Pakistani
+  material)
+localities:
+- Pakistan
+- Brazil
+- Russia
+forms:
+- pinacoid
+- prism
+cleavage: Perfect {001}

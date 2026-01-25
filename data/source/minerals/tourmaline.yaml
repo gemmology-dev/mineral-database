@@ -1,0 +1,49 @@
+name: Tourmaline
+cdl: trigonal[3m]:{10-10}@1.0 + {0001}@2.0 + {10-11}@0.8
+system: trigonal
+point_group: 3m
+chemistry: Complex borosilicate
+hardness: 7-7.5
+description: Prismatic hexagonal with dipyramid terminations
+localities:
+- Brazil
+- Afghanistan
+- Nigeria
+- Madagascar
+- Mozambique
+- USA (California, Maine)
+forms:
+- prism
+- pinacoid
+- dipyramid
+sg: '3.01-3.11'
+ri: '1.620-1.640'
+birefringence: 0.018
+optical_character: Uniaxial -
+dispersion: 0.017
+lustre: Vitreous
+cleavage: Indistinct
+fracture: Uneven to conchoidal
+pleochroism: Strong (often dark to light of same hue)
+colors:
+- Pink (Rubellite)
+- Red
+- Blue (Indicolite)
+- Green (Verdelite)
+- Yellow
+- Orange
+- Purple
+- Colorless (Achroite)
+- Bi-color
+- Watermelon (pink core, green rim)
+- Paraíba (neon blue-green)
+treatments:
+- Heat treatment
+- Irradiation
+- Fracture filling (rare)
+inclusions:
+- Growth tubes parallel to c-axis
+- Thread-like inclusions
+- Colour zoning
+- Liquid feathers
+- Crystal inclusions

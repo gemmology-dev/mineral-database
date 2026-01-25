@@ -1,0 +1,44 @@
+name: Topaz
+cdl: orthorhombic[mmm]:{110}@1.0 + {120}@0.8 + {001}@0.6
+system: orthorhombic
+point_group: mmm
+chemistry: Al2SiO4(F,OH)2
+hardness: 8
+description: Prismatic with complex dome faces
+localities:
+- Brazil (Ouro Preto)
+- Pakistan
+- Russia (Urals)
+- USA (Utah, Texas)
+- Sri Lanka
+forms:
+- prism
+- dome
+- pinacoid
+sg: '3.50-3.57'
+ri: '1.619-1.627'
+birefringence: 0.008
+optical_character: Biaxial +
+dispersion: 0.014
+lustre: Vitreous
+cleavage: Perfect basal {001}
+fracture: Conchoidal
+pleochroism: Weak to distinct (varies by colour)
+colors:
+- Imperial (orange to pink-orange)
+- Sherry (yellowish-brown to orange-brown)
+- Blue (Sky, Swiss, London)
+- Pink
+- Yellow
+- Golden
+- Colorless
+treatments:
+- Irradiation + heat (blue topaz)
+- Heat treatment (pink from brownish)
+- Coating (surface treatments)
+inclusions:
+- Two-phase inclusions
+- Growth tubes parallel to c-axis
+- Cleavage planes
+- Needle inclusions
+- Crystal inclusions

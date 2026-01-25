@@ -1,0 +1,46 @@
+name: Red Beryl
+cdl: hexagonal[6/mmm]:{10-10}@1.0 + {0001}@0.5 + {11-20}@0.2 | elongate(c:0.6)
+system: hexagonal
+point_group: 6/mmm
+chemistry: Be3Al2(SiO3)6:Mn3+
+hardness: 7.5-8
+description: >
+  Extremely rare red variety of beryl, coloured by manganese (Mn3+). Also known
+  as bixbite or scarlet emerald. Found in commercial quantities only in the
+  Wah Wah Mountains of Utah, making it one of the world's rarest gemstones.
+  Clean stones over 1 carat are exceptionally rare, and fine specimens can
+  exceed ruby prices per carat. Typically forms small, stubby to tabular crystals.
+localities:
+  - Wah Wah Mountains, Utah (USA)
+  - Thomas Range, Utah (USA)
+  - New Mexico (USA)
+forms:
+  - hexagonal_prism
+  - pinacoid
+  - dihexagonal_prism
+colors:
+  - Red
+  - Raspberry red
+  - Purplish-red
+  - Deep red
+sg: 2.66-2.70
+ri: 1.564-1.574
+birefringence: 0.005-0.009
+optical_character: Uniaxial -
+pleochroism: Moderate to strong (purplish-red to orange-red)
+lustre: Vitreous
+cleavage: Imperfect basal
+fracture: Conchoidal to uneven
+treatments:
+  - Generally not treated (rarity)
+inclusions:
+  - Two-phase inclusions
+  - Bixbyite crystite crystals
+  - Growth tubes
+  - Liquid feathers
+chromophore: Manganese (Mn3+)
+variety_of: Beryl
+notes: >
+  Red beryl is far rarer than emerald. Synthetic red beryl exists and should
+  be distinguished from natural material. Size typically under 1 carat for
+  facet-grade material.

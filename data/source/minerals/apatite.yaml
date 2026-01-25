@@ -1,0 +1,45 @@
+name: Apatite
+cdl: hexagonal[6/mmm]:{10-10}@1.0 + {10-11}@0.8 + {0001}@0.5
+system: hexagonal
+point_group: 6/mmm
+chemistry: Ca5(PO4)3(F,Cl,OH)
+hardness: 5
+description: Hexagonal prism with dipyramid and pinacoid - defines hardness 5 on Mohs scale
+localities:
+- Brazil (Paraiba blue-green)
+- Madagascar (neon blue)
+- Mexico (yellow)
+- Morocco (tabular)
+- Myanmar
+- Tanzania
+forms:
+- hexagonal_prism
+- dipyramid
+- pinacoid
+sg: '3.16-3.22'
+ri: '1.628-1.649'
+birefringence: 0.002-0.008
+optical_character: Uniaxial -
+dispersion: 0.013
+lustre: Vitreous to subresinous
+cleavage: Poor {0001}
+fracture: Conchoidal to uneven
+pleochroism: Weak to moderate in coloured varieties
+colors:
+- Blue (neon, Paraiba-like)
+- Green
+- Yellow
+- Violet
+- Pink
+- Colourless
+varieties:
+- Fluorapatite (most common)
+- Chlorapatite
+- Hydroxylapatite
+treatments:
+- Heat treatment (improves colour)
+inclusions:
+- Liquid-filled tubes
+- Healed fractures
+- Crystals
+note: Called the deceiver stone because its colours and properties mimic tourmaline, topaz, and other gems

@@ -1,0 +1,39 @@
+name: Amazonite
+cdl: triclinic[-1]:{010}@1.0 + {001}@0.9 + {110}@0.7
+system: triclinic
+point_group: '-1'
+chemistry: KAlSi3O8
+hardness: 6-6.5
+description: >
+  Green to blue-green variety of microcline feldspar, named after the Amazon
+  River though not actually found there. The distinctive color was long
+  thought to result from copper, but is now attributed to lead and water in
+  the crystal structure creating color centers. Often displays characteristic
+  white streaks from perthitic albite intergrowths. Popular as a decorative
+  stone and in jewelry.
+localities:
+  - Colorado (USA - Pikes Peak, Crystal Peak)
+  - Brazil
+  - Russia (Kola Peninsula, Urals)
+  - Madagascar
+  - India
+  - Namibia
+forms:
+  - pinacoid
+  - prism
+  - Baveno twins (common)
+colors:
+  - Green
+  - Blue-green
+  - Turquoise blue
+  - With white streaks (perthite)
+sg: 2.56-2.58
+ri: 1.522-1.530
+birefringence: 0.008
+optical_character: Biaxial -
+pleochroism: None
+lustre: Vitreous
+cleavage: Perfect {001} and {010} at approximately 90 degrees
+fracture: Uneven
+variety_of: Microcline (K-feldspar)
+note: Color from Pb+H2O color centers, not copper; often perthitic with white albite streaks

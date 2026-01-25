@@ -1,0 +1,46 @@
+name: Quartz (Dauphine Twin)
+cdl: trigonal[32]:{10-10}@1.0 + {10-11}@0.85 + {10-12}@0.7 + {0001}@0.4 | twin(dauphine)
+system: trigonal
+point_group: '32'
+chemistry: SiO2
+hardness: 7
+description: >
+  Penetration twin with 180 degree rotation about the c-axis (trigonal axis).
+  Dauphine twinning involves interpenetration of two right-handed or two
+  left-handed quartz individuals, resulting in domains with opposite
+  orientation of prism faces. Often detectable only under polarized light
+  or by etching. Named for the Dauphine region of France.
+localities:
+  - Dauphine (France)
+  - Brazil
+  - Alps (Switzerland, Austria)
+  - Madagascar
+  - Arkansas (USA)
+forms:
+  - prism
+  - rhombohedron
+colors:
+  - Colourless (rock crystal)
+  - White (milky)
+  - Smoky
+  - Various
+treatments:
+  - Heat treatment
+  - Irradiation
+  - Coating
+inclusions:
+  - Two-phase fluid inclusions
+  - Negative crystals
+  - Rutile needles
+  - Tourmaline crystals
+  - Various mineral inclusions
+sg: 2.65
+ri: 1.544-1.553
+birefringence: 0.009
+optical_character: Uniaxial +
+dispersion: 0.013
+lustre: Vitreous
+cleavage: None
+fracture: Conchoidal
+pleochroism: None (in colourless)
+twin_law: Dauphine Law

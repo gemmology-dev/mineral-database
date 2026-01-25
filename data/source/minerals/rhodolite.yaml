@@ -1,0 +1,54 @@
+name: Rhodolite
+cdl: cubic[m3m]:{110}@1.0 + {211}@0.7
+system: cubic
+point_group: m3m
+chemistry: (Mg,Fe)3Al2(SiO4)3
+hardness: 7-7.5
+description: >
+  Pyrope-almandine intermediate garnet with a distinctive purplish-red to
+  raspberry colour. The composition is approximately 70% pyrope and 30%
+  almandine. Popular for its attractive lighter red-purple colour that
+  distinguishes it from darker almandine. Name derived from Greek "rhodon"
+  (rose) for its rose-like colour.
+localities:
+  - Tanzania
+  - Sri Lanka
+  - Zimbabwe
+  - Brazil
+  - Madagascar
+  - India
+  - Kenya
+  - Mozambique
+forms:
+  - dodecahedron
+  - trapezohedron
+colors:
+  - Purplish-red
+  - Raspberry
+  - Rose-pink
+  - Pinkish-red
+  - Violet-red
+sg: 3.84
+ri: 1.760
+optical_character: Isotropic
+pleochroism: None (isotropic)
+lustre: Vitreous
+cleavage: None
+fracture: Conchoidal to uneven
+dispersion: 0.027
+treatments:
+  - Generally not treated
+inclusions:
+  - Rutile needles
+  - Apatite crystals
+  - Zircon crystals with halos
+  - Fingerprints
+  - Growth tubes
+chromophore: Iron (Fe2+) and minor Chromium
+variety_of: Garnet Group
+species: Pyrope-Almandine
+notes: >
+  Rhodolite is a varietal name for pyrope-almandine garnets with the
+  characteristic raspberry to purplish-red colour. Distinguished from
+  pure almandine by lighter tone and purple modifier. ADR commonly
+  visible under polariscope.

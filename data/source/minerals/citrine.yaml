@@ -1,0 +1,41 @@
+name: Citrine
+cdl: trigonal[32]:{10-10}@1.0 + {10-11}@0.8 | elongate(c:2.0)
+system: trigonal
+point_group: '32'
+chemistry: SiO2:Fe
+hardness: 7
+description: Yellow to orange variety of quartz, often formed by heat treatment of amethyst
+localities:
+- Brazil
+- Bolivia
+- Madagascar
+- Spain
+- Russia
+forms:
+- prism
+- rhombohedron
+sg: '2.65'
+ri: '1.544-1.553'
+birefringence: 0.009
+optical_character: Uniaxial +
+dispersion: 0.013
+lustre: Vitreous
+cleavage: None
+fracture: Conchoidal
+pleochroism: Weak (yellow shades)
+colors:
+- Pale yellow
+- Golden yellow
+- Orange
+- Madeira (brownish-orange)
+- Honey
+treatments:
+- Heat treatment (from amethyst - most common)
+- Irradiation
+- None (rare natural citrine)
+inclusions:
+- Two-phase fluid inclusions
+- Negative crystals
+- Colour zoning (often absent in heated material)
+- Brazil-law twinning (in natural)
+note: Most commercial citrine is heat-treated amethyst; natural citrine is rare and typically pale yellow

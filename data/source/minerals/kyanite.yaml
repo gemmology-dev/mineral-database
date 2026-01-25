@@ -1,0 +1,40 @@
+name: Kyanite
+cdl: triclinic[-1]:{100}@1.0 + {010}@0.4 + {001}@1.5 + {110}@0.6
+system: triclinic
+point_group: '-1'
+chemistry: Al2SiO5
+hardness: 4-7 (variable)
+description: >
+  Aluminum silicate polymorph (with andalusite and sillimanite) famous for
+  its extreme directional hardness variation - hardness 4-5 parallel to the
+  c-axis but 6-7 perpendicular to it. This anisotropy makes kyanite
+  challenging to cut but is diagnostic. The classic blue color derives from
+  iron and titanium, though green, orange, and colorless varieties exist.
+  Often color-zoned.
+localities:
+  - Nepal (gem quality)
+  - Brazil
+  - Kenya (green)
+  - Switzerland
+  - India
+  - USA (North Carolina)
+forms:
+  - pinacoid
+  - bladed crystals
+colors:
+  - Blue (classic)
+  - Blue with colorless zones
+  - Green
+  - Orange (rare)
+  - Colorless
+  - Gray
+sg: 3.53-3.68
+ri: 1.716-1.731
+birefringence: 0.012-0.017
+optical_character: Biaxial -
+pleochroism: Moderate dichroic (colorless, dark blue, violet-blue in blue material)
+dispersion: 0.020
+lustre: Vitreous to pearly
+cleavage: Perfect {100}, good {010}
+fracture: Splintery
+note: Diagnostic variable hardness; often contains color zoning; parting on {001}; good toughness despite cleavage

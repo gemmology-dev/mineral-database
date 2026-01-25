@@ -1,0 +1,42 @@
+name: Amethyst
+cdl: trigonal[32]:{10-10}@1.0 + {10-11}@1.0 + {01-11}@0.3 | elongate(c:1.5)
+system: trigonal
+point_group: '32'
+chemistry: SiO2:Fe
+hardness: 7
+description: Quartz with both rhombohedra visible
+localities:
+- Brazil
+- Uruguay
+- Zambia
+- Russia
+- Madagascar
+forms:
+- prism
+- rhombohedron_positive
+- rhombohedron_negative
+sg: '2.65'
+ri: '1.544-1.553'
+birefringence: 0.009
+optical_character: Uniaxial +
+dispersion: 0.013
+lustre: Vitreous
+cleavage: None
+fracture: Conchoidal
+pleochroism: Weak (purple, grey-purple)
+colors:
+- Purple
+- Violet
+- Lilac
+- Deep Siberian purple
+treatments:
+- Heat treatment (to citrine)
+- Irradiation
+- Coating
+inclusions:
+- Angular colour zoning
+- Brazil-law twinning
+- Two-phase fluid inclusions
+- Negative crystals
+- Goethite/hematite
+- Tiger stripes (colour banding)

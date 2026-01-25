@@ -1,0 +1,38 @@
+name: Kunzite
+cdl: monoclinic[2/m]:{110}@1.0 + {100}@0.8 + {010}@0.6 + {001}@1.2
+system: monoclinic
+point_group: 2/m
+chemistry: LiAlSi2O6:Mn
+hardness: 6.5
+description: Elongated spodumene crystal
+localities:
+- Afghanistan
+- Brazil
+- Madagascar
+- USA (California)
+- Pakistan
+forms:
+- prism
+- pinacoid
+sg: '3.15-3.21'
+ri: '1.660-1.676'
+birefringence: 0.014-0.016
+optical_character: Biaxial +
+dispersion: 0.017
+lustre: Vitreous
+cleavage: Perfect in two directions
+fracture: Uneven to splintery
+pleochroism: Strong trichroic (pink, purplish-pink, colorless)
+colors:
+- Pink
+- Lilac
+- Violet
+- Colorless
+treatments:
+- Irradiation (to enhance colour)
+inclusions:
+- Growth tubes
+- Etch tubes
+- Healing cracks
+- Liquid inclusions
+- Multi-phase inclusions

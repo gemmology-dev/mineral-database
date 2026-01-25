@@ -1,0 +1,36 @@
+name: Aquamarine
+cdl: hexagonal[6/mmm]:{10-10}@1.0 + {0001}@0.5 | elongate(c:2.5)
+system: hexagonal
+point_group: 6/mmm
+chemistry: Be3Al2(SiO3)6:Fe
+hardness: 7.5-8
+description: Tall hexagonal prism with small pinacoid terminations
+localities:
+- Brazil
+- Pakistan
+- Madagascar
+- Mozambique
+- Nigeria
+forms:
+- hexagonal_prism
+- pinacoid
+sg: '2.67-2.78'
+ri: '1.577-1.583'
+birefringence: 0.006
+optical_character: Uniaxial -
+dispersion: 0.014
+lustre: Vitreous
+cleavage: Imperfect basal (rarely seen)
+fracture: Conchoidal to uneven
+pleochroism: Weak (colourless to pale blue)
+colors:
+- Blue
+- Blue-green
+- Greenish-blue
+- Santa Maria blue (medium-dark saturated)
+treatments:
+- Heat treatment (to reduce green and enhance blue)
+inclusions:
+- Rain (parallel tubes)
+- Two-phase inclusions
+- Crystal inclusions

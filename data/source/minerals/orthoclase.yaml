@@ -1,0 +1,44 @@
+name: Orthoclase
+cdl: monoclinic[2/m]:{010}@1.0 + {001}@0.8 + {100}@0.9 + {110}@0.6
+system: monoclinic
+point_group: 2/m
+chemistry: KAlSi3O8
+hardness: 6-6.5
+description: >
+  Potassium feldspar (K-feldspar) forming prismatic monoclinic crystals,
+  often in granite and pegmatite. The name refers to the nearly 90-degree
+  cleavage angle (Greek "orthos" = right, "klasis" = breaking). Orthoclase
+  is the host mineral for moonstone (with albite exsolution) and includes
+  the transparent yellow variety known as noble orthoclase.
+localities:
+  - Madagascar (gem quality, moonstone)
+  - Italy (Baveno twins)
+  - Germany
+  - USA (various)
+  - Austria
+  - Worldwide in granites
+forms:
+  - prism
+  - pinacoid
+  - Baveno twins
+  - Manebach twins
+colors:
+  - Colorless
+  - White
+  - Cream
+  - Pink
+  - Yellow (noble orthoclase)
+  - Gray
+  - Green
+sg: 2.55-2.63
+ri: 1.518-1.526
+birefringence: 0.005-0.008
+optical_character: Biaxial -
+pleochroism: None to weak
+lustre: Vitreous to pearly
+cleavage: Perfect {001} and {010} at approximately 90 degrees
+fracture: Uneven to conchoidal
+varieties:
+  - Moonstone (with adularescence)
+  - Noble orthoclase (transparent yellow)
+  - Adularia (low-temperature variety)

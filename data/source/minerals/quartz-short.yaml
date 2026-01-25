@@ -1,0 +1,30 @@
+name: Quartz (Short Prism)
+cdl: trigonal[32]:{10-10}@1.0 + {10-11}@1.2
+system: trigonal
+point_group: '32'
+chemistry: SiO2
+hardness: 7
+description: Short prismatic quartz with prominent terminations - common habit in many localities
+localities:
+- Brazil
+- Madagascar
+- USA
+- Alps
+- Worldwide
+forms:
+- prism
+- rhombohedron
+sg: '2.65'
+ri: '1.544-1.553'
+birefringence: 0.009
+optical_character: Uniaxial +
+dispersion: 0.013
+lustre: Vitreous
+cleavage: None
+fracture: Conchoidal
+pleochroism: None
+colors:
+- Colourless
+- White
+- Various
+note: Habit variant with shorter c-axis development relative to rhombohedral faces

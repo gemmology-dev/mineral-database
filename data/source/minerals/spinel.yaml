@@ -1,0 +1,44 @@
+name: Spinel
+cdl: cubic[m3m]:{111}
+system: cubic
+point_group: m3m
+chemistry: MgAl2O4
+hardness: 8
+description: Octahedral habit
+localities:
+- Myanmar (Mogok)
+- Sri Lanka
+- Tanzania (Mahenge)
+- Vietnam (Luc Yen)
+- Tajikistan
+- Madagascar
+forms:
+- octahedron
+sg: '3.58-3.61'
+ri: '1.712-1.720'
+birefringence: null
+optical_character: Isotropic
+dispersion: 0.020
+lustre: Vitreous
+cleavage: Imperfect octahedral (rarely seen)
+fracture: Conchoidal
+pleochroism: None
+colors:
+- Red
+- Blue (cobalt)
+- Pink
+- Orange (flame spinel)
+- Purple
+- Violet
+- Grey
+- Black
+- Colorless
+- Colour-change
+treatments:
+- Heat treatment (rare)
+inclusions:
+- Octahedral crystals
+- Fingerprints (healed fractures)
+- Swallowtail twins
+- Zircon with halos
+- Spinel crystals

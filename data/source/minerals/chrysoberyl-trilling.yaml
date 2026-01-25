@@ -1,0 +1,49 @@
+name: Chrysoberyl (Trilling Twin)
+cdl: orthorhombic[mmm]:{1-10}@1.0 + {110}@0.9 + {010}@0.5 + {001}@0.2 | twin(trilling)
+system: orthorhombic
+point_group: mmm
+chemistry: BeAl2O4
+hardness: 8.5
+description: >
+  Cyclic pseudohexagonal twin composed of three orthorhombic individuals
+  rotated 120 degrees to create apparent hexagonal symmetry. Trillings
+  form characteristically flat, hexagonal-looking crystals with prominent
+  re-entrant angles at the twin boundaries. This twin habit is extremely
+  common in chrysoberyl and helps identify the species.
+localities:
+  - Brazil (Minas Gerais)
+  - Sri Lanka
+  - Madagascar
+  - Tanzania
+  - Russia (Ural - historic alexandrite)
+  - Zimbabwe
+forms:
+  - prism
+  - pinacoid
+  - twin
+colors:
+  - Yellow-green (chrysoberyl)
+  - Golden yellow
+  - Brown
+  - Green
+varieties:
+  - Alexandrite (colour-change)
+  - Cats-eye (chatoyant)
+  - Cymophane (chatoyant)
+treatments:
+  - Generally untreated
+inclusions:
+  - Silk (needle-like, for cats-eye)
+  - Stepped twin planes
+  - Crystal inclusions
+  - Fingerprints
+sg: 3.70-3.78
+ri: 1.746-1.755
+birefringence: 0.008-0.010
+optical_character: Biaxial +
+dispersion: 0.015
+lustre: Vitreous to subadamantine
+cleavage: Good {110}, poor {010}
+fracture: Conchoidal to uneven
+pleochroism: Weak to moderate (yellow-green, green shades)
+twin_law: Cyclic trilling
