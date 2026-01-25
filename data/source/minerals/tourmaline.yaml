@@ -1,5 +1,5 @@
 name: Tourmaline
-cdl: trigonal[3m]:{10-10}@1.0 + {0001}@2.0 + {10-11}@0.8
+cdl: trigonal[32]:{10-10}@1.0 + {10-11}@0.8 | elongate(c:2.5)
 system: trigonal
 point_group: 3m
 chemistry: Complex borosilicate
