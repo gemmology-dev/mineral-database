@@ -1,0 +1,35 @@
+name: Lazurite
+cdl: cubic[m3m]:{110}@1.0 + {100}@0.3
+system: cubic
+point_group: m3m
+chemistry: Na3Ca(Al3Si3O12)S
+hardness: 5-5.5
+description: >
+  The primary blue component of lapis lazuli, lazurite is a sulfur-containing
+  feldspathoid mineral. Well-formed dodecahedral crystals are extremely rare -
+  lazurite typically occurs as massive aggregates within lapis lazuli rock
+  along with pyrite, calcite, and other minerals. The intense blue color
+  results from sulfur radical anions (S3-) trapped in the crystal structure.
+localities:
+  - Afghanistan (Badakhshan - type locality, 6000+ years of mining)
+  - Chile (Andes)
+  - Russia (Lake Baikal)
+  - Myanmar
+  - USA (California, Colorado)
+forms:
+  - dodecahedron
+  - cube
+colors:
+  - Deep blue
+  - Azure blue
+  - Violet-blue
+  - Greenish-blue
+sg: 2.38-2.45
+ri: 1.50
+birefringence: null
+optical_character: Isotropic
+lustre: Vitreous to greasy
+cleavage: Imperfect {110}
+fracture: Uneven
+pleochroism: None (isotropic)
+note: Well-crystallized specimens uncommon; usually occurs massive in lapis lazuli rock

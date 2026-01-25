@@ -1,0 +1,28 @@
+name: Pyrite (Pyritohedron)
+cdl: cubic[23]:{210}
+system: cubic
+point_group: '23'
+chemistry: FeS2
+hardness: 6.5
+description: Pentagonal dodecahedron - the form that gives pyrite its name
+localities:
+- Spain (Navajun)
+- Italy (Elba)
+- Peru
+- USA
+forms:
+- pyritohedron
+sg: '4.95-5.10'
+ri: Metallic (opaque)
+birefringence: null
+optical_character: Isotropic
+dispersion: null
+lustre: Metallic
+cleavage: Poor
+fracture: Conchoidal to uneven
+pleochroism: None
+colors:
+- Brass yellow
+- Pale gold
+streak: Greenish-black
+note: The pyritohedron (pentagonal dodecahedron) is unique to the cubic system with lower symmetry (point group 23)

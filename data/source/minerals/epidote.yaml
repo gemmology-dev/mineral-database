@@ -1,0 +1,38 @@
+name: Epidote
+cdl: monoclinic[2/m]:{100}@1.0 + {001}@0.8 + {010}@0.7 + {110}@0.5
+system: monoclinic
+point_group: 2/m
+chemistry: Ca2(Al,Fe)3(SiO4)3(OH)
+hardness: 6-7
+description: >
+  Calcium-aluminum-iron silicate forming elongated prismatic crystals,
+  typically striated parallel to the b-axis. Epidote displays a distinctive
+  pistachio to yellowish-green color (the "epidote green") and is strongly
+  pleochroic. While occasionally faceted as a collector gem, its perfect
+  cleavage and strong pleochroism make cutting challenging.
+localities:
+  - Austria (Knappenwand - type locality, world-class specimens)
+  - Pakistan (gem crystals)
+  - Peru
+  - USA (Alaska, California)
+  - Brazil
+  - Norway
+forms:
+  - prism
+  - pinacoid
+colors:
+  - Pistachio green
+  - Yellowish-green
+  - Dark green
+  - Brownish-green
+  - Black (iron-rich)
+sg: 3.35-3.50
+ri: 1.729-1.768
+birefringence: 0.019-0.046
+optical_character: Biaxial -
+pleochroism: Strong trichroic (green, brown, yellow)
+dispersion: 0.030
+lustre: Vitreous
+cleavage: Perfect {001}, imperfect {100}
+fracture: Uneven
+note: Variable birefringence depending on iron content; high relief in thin section

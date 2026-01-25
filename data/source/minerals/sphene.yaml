@@ -1,0 +1,41 @@
+name: Sphene (Titanite)
+cdl: monoclinic[2/m]:{100}@1.0 + {110}@0.6 + {111}@0.5 + {001}@0.3
+system: monoclinic
+point_group: 2/m
+chemistry: CaTiSiO5
+hardness: 5-5.5
+description: >
+  Calcium titanium silicate forming characteristic wedge or envelope-shaped
+  crystals (Greek "sphenos" = wedge). Sphene possesses the highest dispersion
+  of any common gemstone (0.051), exceeding even diamond (0.044), producing
+  exceptional fire in well-cut stones. Combined with strong pleochroism and
+  high birefringence, sphene displays remarkable optical effects but is
+  challenging to cut due to its softness and distinct cleavage.
+localities:
+  - Brazil
+  - Madagascar
+  - Pakistan (gem quality)
+  - Austria (Alps)
+  - Canada
+  - Mexico
+forms:
+  - wedge (characteristic)
+  - pinacoid
+  - prism
+colors:
+  - Yellow
+  - Green
+  - Brown
+  - Orange
+  - Red (rare)
+  - Colorless (rare)
+sg: 3.52-3.54
+ri: 1.900-2.034
+birefringence: 0.100-0.160
+optical_character: Biaxial +
+pleochroism: Strong trichroic (colorless/yellow, green/orange, red/brown)
+dispersion: 0.051
+lustre: Adamantine to resinous
+cleavage: Distinct {110}
+fracture: Subconchoidal
+note: Dispersion exceeds diamond; high birefringence causes visible facet doubling; too soft for everyday wear

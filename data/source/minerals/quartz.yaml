@@ -1,0 +1,39 @@
+name: Quartz
+cdl: trigonal[32]:{10-10}@1.0 + {10-11}@0.8 | elongate(c:2.0)
+system: trigonal
+point_group: '32'
+chemistry: SiO2
+hardness: 7
+description: Hexagonal prism with rhombohedral terminations - most abundant mineral in Earth's crust
+localities:
+- Brazil
+- Madagascar
+- USA
+- Alps
+- Worldwide
+forms:
+- prism
+- rhombohedron
+sg: '2.65'
+ri: '1.544-1.553'
+birefringence: 0.009
+optical_character: Uniaxial +
+dispersion: 0.013
+lustre: Vitreous
+cleavage: None
+fracture: Conchoidal
+pleochroism: None (in colourless)
+colors:
+- Colourless (rock crystal)
+- White (milky)
+- Various (see variety gemstones)
+treatments:
+- Heat treatment
+- Irradiation
+- Coating
+inclusions:
+- Two-phase fluid inclusions
+- Negative crystals
+- Rutile needles
+- Tourmaline crystals
+- Various mineral inclusions

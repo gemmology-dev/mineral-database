@@ -1,0 +1,47 @@
+name: Tourmaline (Watermelon)
+cdl: trigonal[3m]:{10-10}@1.0 + {0001}@0.5 + {10-11}@0.6
+system: trigonal
+point_group: 3m
+chemistry: Complex borosilicate
+hardness: 7-7.5
+description: >
+  Bi-colored tourmaline variety displaying a pink core surrounded by a green
+  rim (or occasionally the reverse), resembling a watermelon slice in cross-
+  section. The color zoning results from compositional changes during crystal
+  growth, typically involving variations in manganese and iron content. Prized
+  for slices cut perpendicular to the c-axis showing the characteristic zoning.
+localities:
+  - Brazil (Minas Gerais)
+  - Nigeria
+  - Afghanistan
+  - Madagascar
+  - Maine (USA)
+  - California (USA)
+forms:
+  - prism
+  - pinacoid
+  - dipyramid
+colors:
+  - Pink core/green rim
+  - Green core/pink rim
+  - Multi-zone combinations
+treatments:
+  - Heat treatment
+  - Irradiation
+  - Fracture filling (rare)
+inclusions:
+  - Growth tubes parallel to c-axis
+  - Thread-like inclusions
+  - Colour zoning
+  - Liquid feathers
+  - Crystal inclusions
+sg: 3.01-3.11
+ri: 1.620-1.640
+birefringence: 0.018
+optical_character: Uniaxial -
+dispersion: 0.017
+lustre: Vitreous
+cleavage: Indistinct
+fracture: Uneven to conchoidal
+pleochroism: Strong (often dark to light of same hue)
+note: Best displayed as polished slices cut perpendicular to the c-axis

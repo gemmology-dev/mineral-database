@@ -1,0 +1,39 @@
+name: Corundum (Barrel)
+cdl: trigonal[-3m]:{10-11}@1.2 + {10-10}@0.6 + {0001}@0.2 | elongate(c:1.2)
+system: trigonal
+point_group: -3m
+chemistry: Al2O3
+hardness: 9
+description: Barrel-shaped habit with tapered prism - typical of Mogok (Myanmar) rubies
+localities:
+- Myanmar (Mogok)
+- Thailand
+- Cambodia
+- Vietnam
+forms:
+- dipyramid
+- prism
+- pinacoid
+sg: '3.99-4.01'
+ri: '1.762-1.770'
+birefringence: 0.008
+optical_character: Uniaxial -
+dispersion: 0.018
+lustre: Vitreous to adamantine
+cleavage: None (parting on twin planes)
+fracture: Conchoidal to uneven
+pleochroism: Distinct to strong
+colors:
+- Red (ruby)
+- Pink
+- Pinkish-red
+treatments:
+- Heat treatment
+- Flux healing
+inclusions:
+- Short rutile silk
+- Calcite crystals
+- Apatite hexagonal prisms
+- Swirl patterns (treacle)
+- Fingerprints
+note: Characteristic habit of Mogok rubies; barrel shape formed by dominant dipyramid faces

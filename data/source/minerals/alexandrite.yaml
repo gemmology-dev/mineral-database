@@ -1,0 +1,38 @@
+name: Alexandrite
+cdl: orthorhombic[mmm]:{110}@1.0 + {010}@0.6 + {111}@0.4
+system: orthorhombic
+point_group: mmm
+chemistry: BeAl2O4:Cr
+hardness: 8.5
+description: Color-change chrysoberyl
+localities:
+- Russia (Urals)
+- Brazil
+- Sri Lanka
+- Tanzania
+- India
+forms:
+- prism
+- pinacoid
+sg: '3.71-3.75'
+ri: '1.746-1.755'
+birefringence: 0.008-0.010
+optical_character: Biaxial +
+dispersion: 0.015
+lustre: Vitreous
+cleavage: Good in one direction
+fracture: Conchoidal to uneven
+pleochroism: Strong trichroic (green, orange, purple-red)
+colors:
+- Green to blue-green (daylight)
+- Red to purple-red (incandescent)
+- Yellow-green
+phenomena:
+- Colour change (alexandrite effect)
+treatments: []
+inclusions:
+- Silk (needle inclusions)
+- Fingerprints
+- Cyclic twin planes
+- Crystal inclusions
+- Negative crystals

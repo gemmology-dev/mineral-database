@@ -1,0 +1,37 @@
+name: Cassiterite
+cdl: tetragonal[4/mmm]:{100}@0.8 + {101}@1.0 + {111}@0.4
+system: tetragonal
+point_group: 4/mmm
+chemistry: SnO2
+hardness: 6.5
+description: Short prismatic with dominant dipyramid - primary ore of tin
+localities:
+- Bolivia
+- China (Yunling, Yunnan)
+- Indonesia
+- Malaysia
+- Cornwall (England - historic)
+- Myanmar
+forms:
+- tetragonal_prism
+- tetragonal_dipyramid
+sg: '6.85-7.04'
+ri: '1.997-2.100'
+birefringence: 0.096-0.098
+optical_character: Uniaxial +
+dispersion: 0.071
+lustre: Adamantine to vitreous
+cleavage: Poor prismatic {100}
+fracture: Subconchoidal to uneven
+pleochroism: Variable (none to strong yellow-green, brown, reddish-brown)
+colors:
+- Brown
+- Black
+- Reddish-brown
+- Yellow
+- Colourless (rare - gem quality)
+inclusions:
+- Fractures
+- Twinning
+- Fluid inclusions
+note: Called Andean diamond in Bolivia; dispersion (0.071) is twice that of diamond; faceted gems are rare collectors items

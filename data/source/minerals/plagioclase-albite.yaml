@@ -1,0 +1,37 @@
+name: Plagioclase (Albite Twin)
+cdl: triclinic[-1]:{010}@1.0 + {001}@0.8 + {100}@0.5 + {110}@0.4 | twin(albite)
+system: triclinic
+point_group: '-1'
+chemistry: (Na,Ca)(Al,Si)4O8
+hardness: 6-6.5
+description: >
+  Polysynthetic lamellar twinning on {010}, the most common twinning in
+  plagioclase feldspars. Albite law twins form parallel sets of thin lamellae
+  that create characteristic striations visible on crystal faces and cleavage
+  surfaces. These striations are a key diagnostic feature for identifying
+  plagioclase. The composition plane is {010} with twin axis perpendicular to it.
+localities:
+  - Worldwide occurrence in igneous and metamorphic rocks
+  - Italy
+  - Brazil
+  - Madagascar
+  - Norway
+forms:
+  - pinacoid
+  - prism
+  - twin
+colors:
+  - Colorless
+  - White
+  - Gray
+  - Greenish
+sg: 2.62-2.76
+ri: 1.525-1.590
+birefringence: 0.007-0.013
+optical_character: Biaxial + or -
+pleochroism: None to weak
+lustre: Vitreous to pearly
+cleavage: Perfect in two directions at approximately 90 degrees
+fracture: Uneven to conchoidal
+twin_law: Albite Law (polysynthetic)
+note: Albite twinning striations visible on {010} cleavage distinguish plagioclase from orthoclase

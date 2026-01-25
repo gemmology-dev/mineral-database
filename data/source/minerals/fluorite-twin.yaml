@@ -1,0 +1,32 @@
+name: Fluorite (Interpenetrating Twin)
+cdl: cubic[m3m]:{100}@1.0 + {111}@0.8 | twin(fluorite)
+system: cubic
+point_group: m3m
+chemistry: CaF2
+hardness: 4
+description: Interpenetrating twin with cube and octahedron faces - complex twin morphology
+localities:
+- England
+- China
+- USA (Illinois)
+- Spain
+forms:
+- cube
+- octahedron
+twin_law: fluorite
+sg: '3.18'
+ri: '1.434'
+birefringence: null
+optical_character: Isotropic
+dispersion: 0.007
+lustre: Vitreous
+cleavage: Perfect octahedral {111}
+fracture: Subconchoidal
+pleochroism: None
+colors:
+- Purple
+- Green
+- Blue
+- Multicoloured
+fluorescence: Variable
+note: Twin showing both cube and octahedron modification; creates complex geometry

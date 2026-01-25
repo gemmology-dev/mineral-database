@@ -1,0 +1,33 @@
+name: Calcite (Nailhead Spar)
+cdl: trigonal[-3m]:{0001}@1.0 + {10-11}@0.4
+system: trigonal
+point_group: -3m
+chemistry: CaCO3
+hardness: 3
+description: Nailhead spar - dominant basal pinacoid with small rhombohedral termination
+localities:
+- England (Cumberland, Derbyshire)
+- USA
+- Germany
+- Mexico
+forms:
+- pinacoid
+- rhombohedron
+sg: '2.71'
+ri: '1.486-1.658'
+birefringence: 0.172
+optical_character: Uniaxial -
+dispersion: 0.017
+lustre: Vitreous to pearly on pinacoid
+cleavage: Perfect rhombohedral {10-11}
+fracture: Conchoidal
+pleochroism: None
+colors:
+- Colourless
+- White
+- Yellow
+- Grey
+inclusions:
+- Phantoms
+- Fluid inclusions
+note: Flat tabular habit resembles nail head; often found in limestone cavities

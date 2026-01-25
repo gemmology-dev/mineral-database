@@ -1,0 +1,37 @@
+name: Calcite (Rhombohedron)
+cdl: trigonal[-3m]:{10-11}
+system: trigonal
+point_group: -3m
+chemistry: CaCO3
+hardness: 3
+description: Perfect rhombohedral cleavage form - Iceland spar is classic example
+localities:
+- Iceland (historic - Helgustadir)
+- Mexico
+- USA
+- China
+- Brazil
+forms:
+- rhombohedron
+sg: '2.71'
+ri: '1.486-1.658'
+birefringence: 0.172
+optical_character: Uniaxial -
+dispersion: 0.017
+lustre: Vitreous to pearly
+cleavage: Perfect rhombohedral {10-11}
+fracture: Conchoidal
+pleochroism: None
+colors:
+- Colourless (Iceland spar)
+- White
+- Yellow
+- Orange
+- Pink
+- Green
+- Blue
+inclusions:
+- Rainbow inclusions (interference)
+- Fluid inclusions
+- Phantoms
+note: Extreme birefringence (0.172) causes dramatic double refraction - discovered by Bartholin in 1669

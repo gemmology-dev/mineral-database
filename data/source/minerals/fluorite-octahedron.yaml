@@ -1,0 +1,31 @@
+name: Fluorite (Octahedron)
+cdl: cubic[m3m]:{111}
+system: cubic
+point_group: m3m
+chemistry: CaF2
+hardness: 4
+description: Octahedral habit - also the perfect cleavage form of fluorite
+localities:
+- England (Weardale, Derbyshire)
+- USA (Illinois, Ohio)
+- China
+- Spain
+forms:
+- octahedron
+sg: '3.18'
+ri: '1.434'
+birefringence: null
+optical_character: Isotropic
+dispersion: 0.007
+lustre: Vitreous
+cleavage: Perfect octahedral {111}
+fracture: Subconchoidal
+pleochroism: None
+colors:
+- Purple
+- Green
+- Blue
+- Yellow
+- Colourless
+fluorescence: Variable (blue, green, violet)
+note: Octahedral crystals parallel the perfect cleavage; cleaved fragments always octahedral

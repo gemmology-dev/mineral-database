@@ -1,0 +1,42 @@
+name: Zircon
+cdl: tetragonal[4/mmm]:{100}@1.0 + {101}@0.8
+system: tetragonal
+point_group: 4/mmm
+chemistry: ZrSiO4
+hardness: 7.5
+description: Tetragonal prism with dipyramid
+localities:
+- Cambodia (Ratanakiri)
+- Myanmar
+- Sri Lanka
+- Tanzania
+- Vietnam
+- Australia
+forms:
+- tetragonal_prism
+- tetragonal_dipyramid
+sg: '4.6-4.7'
+ri: '1.925-1.984'
+birefringence: 0.059
+optical_character: Uniaxial +
+dispersion: 0.039
+lustre: Adamantine to vitreous
+cleavage: Imperfect
+fracture: Conchoidal
+pleochroism: Weak (varies with colour)
+colors:
+- Blue (heated)
+- Colorless
+- Golden/yellow
+- Brown
+- Green (metamict)
+- Red
+- Orange
+treatments:
+- Heat treatment (to blue, colorless, golden)
+inclusions:
+- Parallel growth lines
+- Doublet reflections (from birefringence)
+- Apatite crystals
+- Monazite crystals
+- Metamict texture (treacle effect)

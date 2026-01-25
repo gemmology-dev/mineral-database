@@ -1,0 +1,45 @@
+name: Turquoise
+cdl: triclinic[-1]:{010}@1.0 + {001}@0.9 + {110}@0.7
+system: triclinic
+point_group: '-1'
+chemistry: CuAl6(PO4)4(OH)8.4H2O
+hardness: 5-6
+description: >
+  Hydrated copper aluminum phosphate prized for millennia for its distinctive
+  sky-blue color. Well-formed crystals are extremely rare - turquoise almost
+  always occurs as cryptocrystalline masses in veins and nodules. Color ranges
+  from sky blue (most valued) through greenish-blue to apple-green depending
+  on copper (blue) vs iron (green) content. Matrix patterns (host rock veining)
+  are valued in some varieties like spiderweb turquoise.
+localities:
+  - Iran (Nishapur - finest Persian blue)
+  - USA (Arizona, Nevada, New Mexico)
+  - Egypt (Sinai - historic)
+  - China (Hubei)
+  - Tibet
+  - Mexico
+forms:
+  - pinacoid
+  - prism
+  - cryptocrystalline masses
+colors:
+  - Sky blue (Persian blue - most valued)
+  - Blue-green
+  - Greenish-blue
+  - Apple green
+  - With matrix patterns
+sg: 2.60-2.85
+ri: 1.61-1.65
+birefringence: 0.040
+optical_character: Biaxial +
+pleochroism: None (typically aggregate)
+lustre: Waxy to sub-vitreous
+cleavage: Good {001}, poor {010}
+fracture: Conchoidal to smooth
+treatments:
+  - Stabilization (most material)
+  - Wax/oil impregnation
+  - Zachery process
+  - Dyeing
+  - Reconstitution
+note: Most commercial turquoise is stabilized; untreated gem-quality material commands premium prices

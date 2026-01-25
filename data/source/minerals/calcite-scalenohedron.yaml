@@ -1,0 +1,34 @@
+name: Calcite (Scalenohedron)
+cdl: trigonal[-3m]:{21-31}
+system: trigonal
+point_group: -3m
+chemistry: CaCO3
+hardness: 3
+description: Dogtooth spar - pointed scalenohedral crystals resembling canine teeth
+localities:
+- USA (Missouri, Tennessee)
+- England (Cumberland)
+- Germany
+- Mexico
+- China
+forms:
+- scalenohedron
+sg: '2.71'
+ri: '1.486-1.658'
+birefringence: 0.172
+optical_character: Uniaxial -
+dispersion: 0.017
+lustre: Vitreous
+cleavage: Perfect rhombohedral {10-11}
+fracture: Conchoidal
+pleochroism: None
+colors:
+- Colourless
+- Yellow (golden dogtooth)
+- White
+- Honey
+inclusions:
+- Phantoms
+- Iron oxide staining
+- Fluid inclusions
+note: Also called dogtooth spar; scalenohedron has 12 scalene triangle faces

@@ -1,0 +1,33 @@
+name: Tanzanite
+cdl: orthorhombic[mmm]:{100}@1.0 + {010}@0.9 + {001}@1.2 + {110}@0.7
+system: orthorhombic
+point_group: mmm
+chemistry: Ca2Al3(SiO4)(Si2O7)O(OH):V
+hardness: 6.5
+description: Prismatic zoisite variety
+localities:
+- Tanzania (Merelani Hills)
+forms:
+- prism
+- pinacoid
+sg: '3.10-3.38'
+ri: '1.691-1.700'
+birefringence: 0.008-0.013
+optical_character: Biaxial +
+dispersion: 0.021
+lustre: Vitreous
+cleavage: Perfect in one direction
+fracture: Uneven to conchoidal
+pleochroism: Strong trichroic (blue, purple/violet, brown/burgundy)
+colors:
+- Violet-blue
+- Blue
+- Purple
+- Burgundy (untreated)
+treatments:
+- Heat treatment (universal, removes brown)
+inclusions:
+- Growth tubes
+- Negative crystals
+- Fingerprint inclusions
+- Stress cracks (from cleavage)

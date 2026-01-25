@@ -1,0 +1,37 @@
+name: Cuprite
+cdl: cubic[m3m]:{111}@1.0 + {100}@0.5
+system: cubic
+point_group: m3m
+chemistry: Cu2O
+hardness: 3.5-4
+description: >
+  Copper oxide mineral forming deep red octahedral crystals with exceptional
+  adamantine lustre. Cuprite has one of the highest refractive indices of any
+  gemstone (2.848), exceeding diamond. Rare transparent crystals from the
+  now-depleted Onganja mine in Namibia are highly prized collector gems.
+  Too soft for jewelry use but stunning as cabinet specimens.
+localities:
+  - Namibia (Onganja - historic gem source)
+  - Arizona (USA - Bisbee, Morenci)
+  - Australia
+  - Democratic Republic of Congo
+  - Cornwall (England - historic)
+forms:
+  - octahedron
+  - cube
+  - dodecahedron
+colors:
+  - Deep red
+  - Brownish-red
+  - Purplish-red
+  - Nearly black (dark crystals)
+sg: 6.0-6.14
+ri: 2.848
+birefringence: null
+optical_character: Isotropic
+dispersion: null
+lustre: Adamantine to sub-metallic
+cleavage: Imperfect {111}
+fracture: Conchoidal to uneven
+pleochroism: None (isotropic)
+note: RI over refractometer limit; extremely high SG aids identification

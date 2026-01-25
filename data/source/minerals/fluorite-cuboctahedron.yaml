@@ -1,0 +1,33 @@
+name: Fluorite (Cuboctahedron)
+cdl: cubic[m3m]:{100}@1.0 + {111}@1.0
+system: cubic
+point_group: m3m
+chemistry: CaF2
+hardness: 4
+description: Cube equally truncated by octahedron - balanced combination form
+localities:
+- China
+- Mexico
+- England
+- Spain
+- Morocco
+forms:
+- cube
+- octahedron
+sg: '3.18'
+ri: '1.434'
+birefringence: null
+optical_character: Isotropic
+dispersion: 0.007
+lustre: Vitreous
+cleavage: Perfect octahedral {111}
+fracture: Subconchoidal
+pleochroism: None
+colors:
+- Purple
+- Green
+- Blue
+- Yellow
+- Colourless
+fluorescence: Variable
+note: Equal development of cube and octahedron creates 14-faced Archimedean solid

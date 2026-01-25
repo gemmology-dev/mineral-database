@@ -1,0 +1,40 @@
+name: Sodalite
+cdl: cubic[m3m]:{110}@1.0 + {100}@0.5
+system: cubic
+point_group: m3m
+chemistry: Na8(Al6Si6O24)Cl2
+hardness: 5.5-6
+description: >
+  Blue feldspathoid mineral, a member of the sodalite group. Unlike lapis
+  lazuli (which contains lazurite), sodalite typically displays a more
+  uniform royal blue color often with white calcite veining. Well-formed
+  crystals are rare - sodalite usually occurs as massive aggregates.
+  Hackmanite, a sulfur-rich variety, exhibits remarkable tenebrescence.
+localities:
+  - Brazil
+  - Canada (Bancroft, Ontario)
+  - Namibia
+  - Bolivia
+  - India
+  - Myanmar
+forms:
+  - dodecahedron
+  - cube
+colors:
+  - Royal blue
+  - Blue
+  - White
+  - Gray
+  - Pink
+  - Green (rare)
+sg: 2.27-2.33
+ri: 1.483-1.487
+birefringence: null
+optical_character: Isotropic
+lustre: Vitreous to greasy
+cleavage: Poor {110}
+fracture: Conchoidal to uneven
+pleochroism: None (isotropic)
+varieties:
+  - Hackmanite (tenebrescent variety)
+note: Distinguished from lapis lazuli by absence of pyrite and uniform color; hackmanite shows photochromism

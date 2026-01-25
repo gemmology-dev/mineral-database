@@ -1,0 +1,36 @@
+name: Galena
+cdl: cubic[m3m]:{100}@1.0 + {111}@0.3
+system: cubic
+point_group: m3m
+chemistry: PbS
+hardness: 2.5
+description: >
+  Lead sulfide mineral displaying perfect cubic cleavage - the type example
+  of cubic cleavage in mineralogy. Galena has a brilliant metallic lustre
+  when fresh but tarnishes to dull grey. It is the primary ore of lead and
+  an important source of silver. The combination of high density, perfect
+  cleavage, and metallic lustre makes it easily identifiable.
+localities:
+  - Missouri (USA - Tri-State district)
+  - England (Pennines)
+  - Australia (Broken Hill)
+  - Mexico
+  - Peru
+  - Germany
+forms:
+  - cube
+  - octahedron
+  - cubo-octahedron
+colors:
+  - Lead-grey
+  - Silver-grey (fresh)
+  - Dull grey (tarnished)
+sg: 7.4-7.6
+ri: null
+birefringence: null
+optical_character: Isotropic
+lustre: Metallic (brilliant when fresh)
+cleavage: Perfect {100} (three directions at 90 degrees)
+fracture: Subconchoidal (rarely seen due to perfect cleavage)
+pleochroism: None
+note: Opaque mineral; exceptionally high SG due to lead content; toxic - wash hands after handling

@@ -1,0 +1,45 @@
+name: Beryl (Tabular)
+cdl: hexagonal[6/mmm]:{0001}@1.0 + {10-10}@0.6 + {11-20}@0.2
+system: hexagonal
+point_group: 6/mmm
+chemistry: Be3Al2Si6O18
+hardness: 7.5-8
+description: >
+  Tabular habit variant of beryl with dominant basal pinacoid giving a flat,
+  plate-like appearance. This habit is less common than the typical elongated
+  prismatic form. Often seen in morganite and some emerald crystals from
+  specific localities.
+localities:
+  - Colombia
+  - Brazil
+  - Pakistan
+  - Afghanistan
+  - Madagascar
+forms:
+  - pinacoid
+  - hexagonal_prism
+  - dihexagonal_prism
+colors:
+  - Green (emerald)
+  - Blue (aquamarine)
+  - Pink (morganite)
+  - Yellow (heliodor)
+  - Colorless (goshenite)
+sg: 2.67-2.78
+ri: 1.577-1.583
+birefringence: 0.005-0.009
+optical_character: Uniaxial -
+pleochroism: Weak to distinct (varies by variety)
+lustre: Vitreous
+cleavage: Imperfect basal
+fracture: Conchoidal to uneven
+treatments:
+  - Oiling (emerald)
+  - Heat treatment (aquamarine, morganite)
+inclusions:
+  - Three-phase (Colombian emerald)
+  - Liquid feathers
+  - Two-phase inclusions
+  - Growth tubes
+variety_of: Beryl
+habit_variant: tabular

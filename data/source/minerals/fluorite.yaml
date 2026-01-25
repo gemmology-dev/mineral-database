@@ -1,0 +1,42 @@
+name: Fluorite
+cdl: cubic[m3m]:{100}
+system: cubic
+point_group: m3m
+chemistry: CaF2
+hardness: 4
+description: Perfect cubic habit - defines hardness 4 on Mohs scale
+localities:
+- China
+- Mexico
+- England (Derbyshire, Durham)
+- USA (Illinois)
+- Spain
+- Morocco
+forms:
+- cube
+sg: '3.18'
+ri: '1.434'
+birefringence: null
+optical_character: Isotropic
+dispersion: 0.007
+lustre: Vitreous
+cleavage: Perfect octahedral {111}
+fracture: Subconchoidal to uneven
+pleochroism: None
+colors:
+- Purple (most common)
+- Green
+- Blue
+- Yellow
+- Pink
+- Colourless
+- Multicoloured (zoned)
+treatments:
+- Irradiation (rare)
+- Coating (rare)
+inclusions:
+- Colour zoning
+- Two-phase fluid inclusions
+- Solid inclusions
+fluorescence: Often strong (blue, green, or violet) - source of the term 'fluorescence'
+note: Fluorite is the mineral that gives its name to the phenomenon of fluorescence

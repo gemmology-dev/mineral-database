@@ -1,0 +1,34 @@
+name: Quartz (Scepter)
+cdl: trigonal[32]:{10-11}@1.0 + {01-11}@0.9 + {10-10}@0.3 + {0001}@0.2 | elongate(c:0.8)
+system: trigonal
+point_group: '32'
+chemistry: SiO2
+hardness: 7
+description: Overgrowth habit with enlarged head on thin stem - formed by two-stage crystal growth
+localities:
+- Madagascar
+- Namibia
+- Afghanistan
+- Brazil
+- Alps
+forms:
+- rhombohedron
+- prism
+sg: '2.65'
+ri: '1.544-1.553'
+birefringence: 0.009
+optical_character: Uniaxial +
+dispersion: 0.013
+lustre: Vitreous
+cleavage: None
+fracture: Conchoidal
+pleochroism: None
+colors:
+- Colourless
+- Smoky
+- Amethyst (purple scepter tips)
+inclusions:
+- Growth boundary between generations
+- Phantom crystals
+- Two-phase fluid inclusions
+note: True scepter morphology requires two crystal generations; often prized by collectors

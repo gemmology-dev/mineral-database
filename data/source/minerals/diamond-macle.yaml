@@ -1,0 +1,46 @@
+name: Diamond (Macle/Spinel Twin)
+cdl: cubic[m3m]:{111}@1.0 + {100}@0.3 | twin(spinel_law)
+system: cubic
+point_group: m3m
+chemistry: C
+hardness: 10
+description: >
+  Flattened triangular twin on {111}, also called "macle" - a spinel-law
+  contact twin resulting in a distinctive triangular or slightly heart-shaped
+  outline. Macles are historically significant in diamond cutting as their
+  shape and twin plane orientation require specialized sawing techniques.
+  Common in South African and Russian deposits.
+localities:
+  - South Africa
+  - Russia
+  - Australia
+  - Botswana
+forms:
+  - octahedron
+  - twin
+colors:
+  - Colorless
+  - Yellow
+  - Brown
+  - Blue
+  - Pink
+treatments:
+  - HPHT
+  - Irradiation
+  - Coating
+  - Fracture filling
+inclusions:
+  - Feathers
+  - Crystals
+  - Clouds
+  - Pinpoints
+  - Needles
+sg: 3.52
+ri: 2.417
+optical_character: Isotropic
+dispersion: 0.044
+lustre: Adamantine
+cleavage: Perfect {111}
+fracture: Conchoidal
+pleochroism: None (isotropic)
+twin_law: Spinel Law (macle)

@@ -1,0 +1,42 @@
+name: Gypsum (Swallowtail Twin)
+cdl: monoclinic[2/m]:{010}@1.0 + {100}@0.95 + {001}@0.7 + {110}@0.4 | twin(gypsum_swallow)
+system: monoclinic
+point_group: 2/m
+chemistry: CaSO4.2H2O
+hardness: 2
+description: >
+  Contact twin on {100} creating the distinctive swallowtail or fishtail
+  shape - one of the most recognizable twin forms in mineralogy. The
+  re-entrant angle between the two individuals creates the characteristic
+  notched appearance. Swallowtail gypsum twins are common in evaporite
+  deposits and are prized by mineral collectors.
+localities:
+  - Mexico (Naica - giant crystals)
+  - Morocco
+  - Australia
+  - Oklahoma (USA)
+  - Spain
+forms:
+  - pinacoid
+  - prism
+  - twin
+colors:
+  - Colorless
+  - White
+  - Gray
+  - Yellow
+  - Brown
+  - Pink
+sg: 2.31-2.33
+ri: 1.520-1.530
+birefringence: 0.009-0.010
+optical_character: Biaxial +
+pleochroism: None
+lustre: Vitreous to pearly (on cleavage)
+cleavage: Perfect {010}, good {100} and {011}
+fracture: Conchoidal to splintery
+twin_law: Swallowtail twin (contact twin on {100})
+varieties:
+  - Selenite (transparent crystals)
+  - Satin spar (fibrous)
+  - Alabaster (massive fine-grained)

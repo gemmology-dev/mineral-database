@@ -1,0 +1,33 @@
+name: Quartz (Faden)
+cdl: trigonal[32]:{0001}@1.0 + {10-10}@0.2 + {10-11}@0.3 | elongate(c:0.4)
+system: trigonal
+point_group: '32'
+chemistry: SiO2
+hardness: 7
+description: Tabular crystals with characteristic white thread-like inclusion (faden = thread in German)
+localities:
+- Pakistan
+- Afghanistan
+- Alps
+- Colombia
+forms:
+- pinacoid
+- prism
+- rhombohedron
+sg: '2.65'
+ri: '1.544-1.553'
+birefringence: 0.009
+optical_character: Uniaxial +
+dispersion: 0.013
+lustre: Vitreous
+cleavage: None
+fracture: Conchoidal
+pleochroism: None
+colors:
+- Colourless
+- White (thread)
+inclusions:
+- White faden thread (healed fracture zone)
+- Two-phase fluid inclusions
+- Growth hillocks
+note: Faden formed by repeated fracturing and healing during tectonic activity; thread marks original fracture plane

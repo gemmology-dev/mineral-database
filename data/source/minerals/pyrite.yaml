@@ -1,0 +1,32 @@
+name: Pyrite
+cdl: cubic[m3m]:{100}
+system: cubic
+point_group: m3m
+chemistry: FeS2
+hardness: 6.5
+description: Cubic habit with characteristic striated faces - the most common sulfide mineral
+localities:
+- Spain (Navajun, La Rioja)
+- Italy (Elba, Traversella)
+- Peru
+- USA (Illinois, Colorado)
+forms:
+- cube
+sg: '4.95-5.10'
+ri: Metallic (opaque)
+birefringence: null
+optical_character: Isotropic
+dispersion: null
+lustre: Metallic
+cleavage: Poor {100}
+fracture: Conchoidal to uneven
+pleochroism: None
+colors:
+- Brass yellow
+- Pale gold
+- Tarnished (iridescent)
+streak: Greenish-black to brownish-black
+inclusions:
+- Growth striations
+- Inclusions of gold
+note: Called fools gold due to superficial resemblance to gold; much lighter (SG 5 vs 19.3) and harder than gold

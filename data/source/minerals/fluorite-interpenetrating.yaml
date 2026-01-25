@@ -1,0 +1,31 @@
+name: Fluorite (Interpenetrating Cubes)
+cdl: cubic[m3m]:{100}@1.0 | twin(fluorite)
+system: cubic
+point_group: m3m
+chemistry: CaF2
+hardness: 4
+description: Two cubes interpenetrating at 60 degree rotation - classic fluorite twin
+localities:
+- England (Weardale)
+- China
+- USA (Illinois)
+- Spain
+forms:
+- cube
+twin_law: fluorite
+sg: '3.18'
+ri: '1.434'
+birefringence: null
+optical_character: Isotropic
+dispersion: 0.007
+lustre: Vitreous
+cleavage: Perfect octahedral {111}
+fracture: Subconchoidal
+pleochroism: None
+colors:
+- Purple
+- Green
+- Blue
+- Yellow
+fluorescence: Variable
+note: Penetration twin with 60 degree rotation around [111] axis; highly prized by collectors

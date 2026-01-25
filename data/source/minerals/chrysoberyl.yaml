@@ -1,0 +1,44 @@
+name: Chrysoberyl
+cdl: orthorhombic[mmm]:{110}@1.0 + {010}@0.8 + {111}@0.5
+system: orthorhombic
+point_group: mmm
+chemistry: BeAl2O4
+hardness: 8.5
+description: Tabular orthorhombic crystals often showing pseudohexagonal trillings - third hardest gemstone
+localities:
+- Brazil (Minas Gerais)
+- Sri Lanka
+- Madagascar
+- Tanzania
+- Russia (Ural - historic alexandrite)
+- Zimbabwe
+forms:
+- prism
+- pinacoid
+- dipyramid
+sg: '3.70-3.78'
+ri: '1.746-1.755'
+birefringence: 0.008-0.010
+optical_character: Biaxial +
+dispersion: 0.015
+lustre: Vitreous to subadamantine
+cleavage: Good {110}, poor {010}
+fracture: Conchoidal to uneven
+pleochroism: Weak to moderate (yellow-green, green shades)
+colors:
+- Yellow-green (chrysoberyl)
+- Golden yellow
+- Brown
+- Green
+varieties:
+- Alexandrite (colour-change)
+- Cats-eye (chatoyant)
+- Cymophane (chatoyant)
+treatments:
+- Generally untreated
+inclusions:
+- Silk (needle-like, for cats-eye)
+- Stepped twin planes
+- Crystal inclusions
+- Fingerprints
+note: Pseudohexagonal trillings common due to cyclic twinning; cats-eye chrysoberyl is the finest chatoyant gem

@@ -1,0 +1,38 @@
+name: Azurite
+cdl: monoclinic[2/m]:{001}@1.0 + {110}@0.8 + {100}@0.7 + {011}@0.5 + {111}@0.4
+system: monoclinic
+point_group: 2/m
+chemistry: Cu3(CO3)2(OH)2
+hardness: 3.5-4
+description: >
+  Copper carbonate hydroxide mineral with an intense deep azure blue color
+  that has made it prized since antiquity as a pigment (known as "mountain
+  blue"). Unlike malachite, azurite forms well-developed prismatic crystals.
+  The two minerals often occur together, with azurite commonly altering to
+  malachite (pseudomorphs). Crystal specimens from Morocco and Namibia are
+  particularly sought after.
+localities:
+  - Morocco (Touissit, Mibladen - world-class crystals)
+  - Namibia (Tsumeb)
+  - Arizona (USA - Bisbee, Morenci)
+  - Australia
+  - France (Chessy - historic "chessylite")
+  - Russia
+forms:
+  - prism
+  - pinacoid
+  - tabular crystals
+colors:
+  - Azure blue
+  - Deep blue
+  - Dark blue
+  - Light blue
+sg: 3.77-3.89
+ri: 1.730-1.838
+birefringence: 0.108-0.110
+optical_character: Biaxial +
+pleochroism: Strong (light blue to dark blue shades)
+lustre: Vitreous (crystals) to earthy (massive)
+cleavage: Perfect {011}, fair {100}
+fracture: Conchoidal
+note: Alters readily to malachite; reacts with dilute HCl; distinguished from lazurite by crystal form and higher SG

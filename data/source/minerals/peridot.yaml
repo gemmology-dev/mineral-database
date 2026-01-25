@@ -1,0 +1,40 @@
+name: Peridot
+cdl: orthorhombic[mmm]:{110}@1.0 + {010}@0.7 + {021}@0.5
+system: orthorhombic
+point_group: mmm
+chemistry: (Mg,Fe)2SiO4
+hardness: 6.5
+description: Short prismatic with wedge terminations
+localities:
+- Myanmar (Mogok)
+- Pakistan (Kashmir)
+- China (Changbai)
+- Arizona, USA
+- Egypt (Zabargad)
+- Vietnam
+- Ethiopia
+forms:
+- prism
+- pinacoid
+- dome
+sg: '3.27-3.37'
+ri: '1.654-1.690'
+birefringence: 0.035-0.038
+optical_character: Biaxial +
+dispersion: 0.020
+lustre: Vitreous to oily
+cleavage: Poor
+fracture: Conchoidal
+pleochroism: Weak (yellowish-green, green, greenish-yellow)
+colors:
+- Yellow-green
+- Olive green
+- Lime green
+- Brownish-green
+treatments: []
+inclusions:
+- Lily pad inclusions (diagnostic)
+- Chromite crystals
+- Needle inclusions
+- Negative crystals
+- Healing feathers

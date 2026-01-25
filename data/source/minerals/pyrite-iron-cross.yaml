@@ -1,0 +1,30 @@
+name: Pyrite (Iron Cross Twin)
+cdl: cubic[23]:{210}@1.0 + {100}@0.3 | twin(iron_cross)
+system: cubic
+point_group: '23'
+chemistry: FeS2
+hardness: 6.5
+description: Iron cross twin - penetration twin of two pyritohedra at 90 degrees showing cross pattern
+localities:
+- Spain (Navajun)
+- Italy
+- Peru
+- Germany
+forms:
+- pyritohedron
+- cube
+twin_law: iron_cross
+sg: '4.95-5.10'
+ri: Metallic (opaque)
+birefringence: null
+optical_character: Isotropic
+dispersion: null
+lustre: Metallic
+cleavage: Poor
+fracture: Conchoidal to uneven
+pleochroism: None
+colors:
+- Brass yellow
+- Pale gold
+streak: Greenish-black
+note: Named for cross-shaped pattern visible on twin plane; highly prized by collectors

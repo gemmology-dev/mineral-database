@@ -1,0 +1,39 @@
+name: Orthoclase (Carlsbad Twin)
+cdl: monoclinic[2/m]:{010}@1.0 + {100}@0.95 + {001}@0.7 + {110}@0.4 | twin(carlsbad)
+system: monoclinic
+point_group: 2/m
+chemistry: KAlSi3O8
+hardness: 6-6.5
+description: >
+  Penetration twin with the c-axis as twin axis, creating an apparent
+  symmetrical crystal from two interpenetrating monoclinic individuals.
+  Named for Karlovy Vary (Carlsbad) in the Czech Republic where classic
+  examples occur. Carlsbad twins are very common in granite and related
+  igneous rocks. The twin boundary is often visible as a diagonal plane.
+localities:
+  - Carlsbad (Karlovy Vary, Czech Republic)
+  - Colorado (USA)
+  - Italy
+  - Madagascar
+  - Germany
+  - Worldwide in granites
+forms:
+  - prism
+  - pinacoid
+  - twin
+colors:
+  - Colorless
+  - White
+  - Cream
+  - Pink
+  - Gray
+  - Yellow
+sg: 2.56-2.59
+ri: 1.518-1.526
+birefringence: 0.005-0.008
+optical_character: Biaxial -
+pleochroism: None to weak
+lustre: Vitreous to pearly
+cleavage: Perfect in two directions at approximately 90 degrees
+fracture: Uneven to conchoidal
+twin_law: Carlsbad Law

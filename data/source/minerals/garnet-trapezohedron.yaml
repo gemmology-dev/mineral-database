@@ -1,0 +1,49 @@
+name: Garnet (Trapezohedron)
+cdl: cubic[m3m]:{211}
+system: cubic
+point_group: m3m
+chemistry: X3Y2(SiO4)3
+hardness: 6.5-7.5
+description: >
+  Trapezohedron (icositetrahedron) habit displaying 24 kite-shaped faces.
+  This form {211} is more commonly seen in grossular and andradite garnets
+  than in the pyralspite series. Often occurs in combination with
+  dodecahedral faces in natural specimens. Classic examples from Alpine
+  localities and Italian grossulars.
+localities:
+  - Austria (Alps)
+  - Italy (Piedmont)
+  - Pakistan
+  - Tanzania
+  - Madagascar
+  - Mali
+  - Canada
+forms:
+  - trapezohedron
+colors:
+  - Red (almandine, pyrope)
+  - Orange (spessartine, hessonite)
+  - Yellow (grossular, topazolite)
+  - Green (demantoid, tsavorite, uvarovite)
+  - Purple (rhodolite)
+  - Brown (hessonite)
+  - Pink (rhodolite, malaya)
+  - Color-change (rare pyrope-spessartine)
+treatments:
+  - Heat treatment (rare)
+  - Surface coating (rare)
+inclusions:
+  - Silk (rutile needles)
+  - Crystals
+  - Fingerprints
+  - Growth tubes
+  - Horsetail (demantoid)
+  - Roiled appearance (hessonite)
+sg: 3.50-4.30
+ri: 1.73-1.89
+optical_character: Isotropic
+pleochroism: None (isotropic)
+dispersion: 0.027-0.057
+lustre: Vitreous to resinous
+cleavage: None
+fracture: Conchoidal to uneven

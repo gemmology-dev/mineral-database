@@ -1,0 +1,52 @@
+name: Spessartine
+cdl: cubic[m3m]:{211}@1.0 + {110}@0.6
+system: cubic
+point_group: m3m
+chemistry: Mn3Al2(SiO4)3
+hardness: 7-7.5
+description: >
+  Manganese aluminium garnet known for its vibrant orange to reddish-orange
+  colours. Fine vivid orange specimens are marketed as "Mandarin" or "Fanta"
+  garnet. Nigerian material is particularly prized for its intense orange
+  saturation. Forms a solid solution series with pyrope and almandine.
+localities:
+  - Nigeria
+  - Namibia
+  - Mozambique
+  - Brazil
+  - Madagascar
+  - Tanzania
+  - Sri Lanka
+  - Myanmar
+forms:
+  - trapezohedron
+  - dodecahedron
+colors:
+  - Orange
+  - Reddish-orange
+  - Yellow-orange
+  - Mandarin orange
+  - Red-brown
+sg: 4.12-4.20
+ri: 1.79-1.81
+optical_character: Isotropic
+pleochroism: None (isotropic)
+lustre: Vitreous to resinous
+cleavage: None
+fracture: Conchoidal to uneven
+dispersion: 0.027
+treatments:
+  - Generally not treated
+inclusions:
+  - Wavy liquid feathers
+  - Sugar-like inclusions
+  - Two-phase inclusions
+  - Crystal inclusions
+  - Growth patterns
+chromophore: Manganese (Mn2+)
+variety_of: Garnet Group
+species: Spessartine
+notes: >
+  "Mandarin" or "Fanta" garnet refers specifically to vivid orange spessartine.
+  The high SG (4.12-4.20) helps distinguish from other orange gems.
+  ADR (anomalous double refraction) may be visible under polariscope.

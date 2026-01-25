@@ -1,0 +1,55 @@
+name: Labradorite
+cdl: triclinic[-1]:{010}@1.0 + {001}@0.8 + {110}@0.6
+system: triclinic
+point_group: '-1'
+chemistry: (Ca,Na)(Al,Si)4O8
+hardness: 6-6.5
+description: >
+  Plagioclase feldspar displaying labradorescence - striking plays of colour
+  including blue, green, gold, and purple caused by light interference from
+  lamellar twinning. The colours appear in patches or broad flashes and are
+  best seen on specific crystal orientations. Finnish labradorite showing
+  the full spectral range is marketed as "Spectrolite."
+localities:
+  - Madagascar
+  - Canada (Labrador - type locality)
+  - Finland (Spectrolite)
+  - Mexico
+  - Russia
+  - Australia
+forms:
+  - pinacoid
+  - prism
+colors:
+  - Grey body with blue flash
+  - Grey body with green flash
+  - Grey body with gold flash
+  - Grey body with purple flash
+  - Spectral colours (Spectrolite)
+  - Rainbow flashes
+sg: 2.69-2.72
+ri: 1.559-1.568
+birefringence: 0.008-0.010
+optical_character: Biaxial +
+pleochroism: None to weak
+lustre: Vitreous to pearly
+cleavage: Perfect in two directions at ~90 degrees
+fracture: Uneven to conchoidal
+phenomenon: Labradorescence
+treatments:
+  - Generally not treated
+inclusions:
+  - Twin lamellae (cause of phenomenon)
+  - Exsolution lamellae
+  - Magnetite inclusions
+  - Growth features
+variety_of: Plagioclase feldspar
+species: Labradorite
+notes: >
+  "Spectrolite" is the trade name for Finnish labradorite showing full
+  spectral colours - vivid blues, greens, oranges, and purples across the
+  entire stone. Regular labradorite typically shows one or two dominant
+  colours. "Rainbow moonstone" is actually labradorite, not true orthoclase
+  moonstone. Labradorescence is caused by interference from twin lamellae,
+  distinct from adularescence. Perfect cleavage makes protective settings
+  advisable.

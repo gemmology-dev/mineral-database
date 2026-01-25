@@ -1,0 +1,39 @@
+name: Diamond
+cdl: cubic[m3m]:{111}@1.0 + {110}@0.2
+system: cubic
+point_group: m3m
+chemistry: C
+hardness: 10
+description: Octahedron with minor dodecahedron truncation
+localities:
+- South Africa
+- Russia
+- Australia
+- Botswana
+forms:
+- octahedron
+- dodecahedron
+colors:
+- Colorless
+- Yellow
+- Brown
+- Blue
+- Pink
+treatments:
+- HPHT
+- Irradiation
+- Coating
+- Fracture filling
+inclusions:
+- Feathers
+- Crystals
+- Clouds
+- Pinpoints
+- Needles
+sg: 3.52
+ri: 2.417
+optical_character: Isotropic
+dispersion: 0.044
+lustre: Adamantine
+cleavage: Perfect {111}
+fracture: Conchoidal

@@ -1,0 +1,35 @@
+name: Magnetite
+cdl: cubic[m3m]:{111}
+system: cubic
+point_group: m3m
+chemistry: Fe3O4
+hardness: 5.5-6.5
+description: >
+  Strongly magnetic iron oxide mineral forming perfect octahedral crystals.
+  One of the most magnetic of all naturally-occurring minerals on Earth.
+  Magnetite is opaque with a metallic to sub-metallic lustre and is the
+  primary ore of iron. Its strong magnetism is diagnostic - crystals will
+  attract iron filings and deflect a compass needle.
+localities:
+  - Sweden (Kiruna)
+  - South Africa
+  - USA (Adirondacks, Utah)
+  - Russia
+  - Brazil
+  - Australia
+forms:
+  - octahedron
+  - dodecahedron
+colors:
+  - Black
+  - Grey-black
+  - Iron-black
+sg: 5.17-5.18
+ri: null
+birefringence: null
+optical_character: Isotropic
+lustre: Metallic to sub-metallic
+cleavage: None (parting on {111} common)
+fracture: Subconchoidal to uneven
+pleochroism: None
+note: Opaque mineral - RI not measurable with standard equipment; strongly magnetic

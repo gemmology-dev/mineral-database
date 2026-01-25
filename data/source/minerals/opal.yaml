@@ -1,0 +1,47 @@
+name: Opal
+cdl: amorphous[none]:{}
+system: amorphous
+point_group: none
+chemistry: SiO2.nH2O
+hardness: 5.5-6.5
+description: >
+  AMORPHOUS hydrated silica (mineraloid) - technically not a mineral but a
+  mineraloid due to its lack of crystalline structure. Precious opal displays
+  "play of color" - spectral flashes caused by diffraction of light from
+  ordered arrays of silica spheres. The sphere size determines which colors
+  appear. Common opal lacks this optical phenomenon. Contains 3-21% water,
+  making it vulnerable to crazing in dry conditions.
+localities:
+  - Australia (Lightning Ridge - black; Coober Pedy - white)
+  - Ethiopia (Welo - hydrophane)
+  - Mexico (fire opal)
+  - Brazil
+  - USA (Nevada, Oregon)
+  - Honduras
+forms:
+  - amorphous (no crystal faces)
+  - nodules
+  - veins
+  - replacement forms
+colors:
+  - White body (white opal)
+  - Black body (black opal - most valuable)
+  - Transparent (crystal opal)
+  - Orange-red body (fire opal)
+  - Boulder matrix
+  - Play of color (spectral flashes)
+treatments:
+  - Smoke treatment
+  - Sugar/acid treatment
+  - Polymer impregnation
+  - Doublets and triplets
+sg: 1.98-2.25
+ri: 1.37-1.47
+birefringence: null
+optical_character: Isotropic
+lustre: Vitreous to resinous
+cleavage: None
+fracture: Conchoidal
+pleochroism: None (amorphous)
+phenomenon: Play of color (precious opal)
+note: EDUCATIONAL NOTE - This is a schematic visualization only. Opal has NO true crystal structure; it is amorphous.

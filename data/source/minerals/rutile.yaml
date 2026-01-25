@@ -1,0 +1,34 @@
+name: Rutile
+cdl: tetragonal[4/mmm]:{100}@1.0 + {101}@0.6 | elongate(c:2.0)
+system: tetragonal
+point_group: 4/mmm
+chemistry: TiO2
+hardness: 6
+description: Elongated prismatic habit - the most common natural form of TiO2
+localities:
+- Brazil
+- Switzerland
+- USA (Georgia, Virginia)
+- Norway
+- Australia
+forms:
+- tetragonal_prism
+- tetragonal_dipyramid
+sg: '4.23-4.26'
+ri: '2.616-2.903'
+birefringence: 0.287
+optical_character: Uniaxial +
+dispersion: 0.330
+lustre: Adamantine to metallic
+cleavage: Good prismatic {110}
+fracture: Subconchoidal to uneven
+pleochroism: Distinct (yellowish-brown to reddish-brown)
+colors:
+- Reddish-brown
+- Black
+- Golden
+- Red (in transmitted light)
+inclusions:
+- Twinning (knee twin, contact twin)
+- Oriented overgrowths
+note: Extreme birefringence (0.287) and dispersion (0.330) - among highest of any mineral; synthetic rutile once used as diamond simulant (Titania)
