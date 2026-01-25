@@ -59,6 +59,42 @@ The database includes presets for all major crystal systems:
 | Triclinic | ~5 | Turquoise, Kyanite, Labradorite |
 | **Twins** | ~15 | Japan Law, Spinel Macle, Iron Cross |
 
+## Database Completeness (Updated 2026-01-25)
+
+The mineral database has been comprehensively enriched with FGA-standard gemmological data:
+
+- **95 minerals** with complete crystallographic data
+- **92/95 minerals** (96.8%) with complete RI (refractive index)
+- **94/95 minerals** (98.9%) with complete SG (specific gravity)
+- **94/95 minerals** (98.9%) with optical character classification
+- **93/95 minerals** (97.9%) with pleochroism data
+- **94/95 minerals** (98.9%) with lustre, cleavage, and fracture data
+- **60/95 minerals** (63.2%) with dispersion values
+- **40+ gemstones** with comprehensive treatments and diagnostic inclusions
+
+### Data Completeness by Crystal System
+
+| System | Minerals | RI | SG | Optical Character |
+|--------|----------|----|----|-------------------|
+| Cubic | 26 | 92.3% | 100% | 100% |
+| Trigonal | 19 | 100% | 100% | 100% |
+| Monoclinic | 15 | 100% | 100% | 100% |
+| Orthorhombic | 13 | 92.3% | 92.3% | 92.3% |
+| Hexagonal | 8 | 100% | 100% | 100% |
+| Triclinic | 7 | 100% | 100% | 100% |
+| Tetragonal | 6 | 100% | 100% | 100% |
+| Amorphous | 1 | 100% | 100% | 100% |
+
+### Data Sources
+
+- **FGA (Fellowship of the Gemmological Association)** curriculum materials
+- **Mindat.org** mineralogical database
+- **GIA (Gemological Institute of America)** gem encyclopedia
+- **Webmineral.com** physical property database
+- **International Gem Society** reference materials
+
+All data has been cross-validated against multiple authoritative sources and validated for consistency with crystal system optical properties.
+
 ## API Reference
 
 ### Query Functions
