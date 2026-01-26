@@ -8,7 +8,6 @@ from pathlib import Path
 from typing import Any
 
 from .db import (
-    get_all_categories,
     get_all_minerals,
     get_category_presets,
     get_connection,
@@ -89,10 +88,12 @@ def list_presets(category: str | None = None) -> list[str]:
 
 
 def list_preset_categories() -> list[str]:
-    """List available preset categories."""
+    """List available preset categories (crystal systems)."""
     with get_connection(_db_path) as conn:
-        categories = get_all_categories(conn)
-        return sorted(categories.keys())
+        cursor = conn.execute(
+            "SELECT DISTINCT system FROM minerals WHERE system IS NOT NULL ORDER BY system"
+        )
+        return [row[0] for row in cursor.fetchall()]
 
 
 def search_presets(query: str) -> list[str]:
