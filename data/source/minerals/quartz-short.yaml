@@ -1,5 +1,5 @@
 name: Quartz (Short Prism)
-cdl: trigonal[32]:{10-10}@1.0 + {10-11}@1.2
+cdl: trigonal[32]:{10-10}@1.0 + {10-11}@1.0 + {01-11}@0.6
 system: trigonal
 point_group: '32'
 chemistry: SiO2
