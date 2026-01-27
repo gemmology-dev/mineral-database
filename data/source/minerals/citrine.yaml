@@ -1,5 +1,5 @@
 name: Citrine
-cdl: trigonal[32]:{10-10}@1.0 + {10-11}@0.8 + {01-11}@0.5 | elongate(c:2.0)
+cdl: trigonal[32]:{10-10}@0.5 + {10-11}@1.0 + {01-11}@0.8 | elongate(c:2.0)
 system: trigonal
 point_group: '32'
 chemistry: SiO2:Fe
