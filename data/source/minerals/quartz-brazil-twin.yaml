@@ -1,5 +1,5 @@
 name: Quartz (Brazil Law Twin)
-cdl: trigonal[32]:{10-10}@0.5 + {10-11}@1.0 + {01-11}@0.85 + {0001}@1.2 | elongate(c:2.5) | twin(brazil)
+cdl: trigonal[32]:{10-10}@0.3 + {10-11}@1.5 + {01-11}@1.2 + {0001}@2.0 | elongate(c:3.0) | twin(brazil)
 system: trigonal
 point_group: '32'
 chemistry: SiO2
