@@ -44,3 +44,6 @@ inclusions:
 - Crystal inclusions (calcite, apatite, zircon)
 - Hexagonal zoning
 - Negative crystals
+# Heat treatment temperatures (Source: GEM-A)
+heat_treatment_temp_min: 800
+heat_treatment_temp_max: 1900

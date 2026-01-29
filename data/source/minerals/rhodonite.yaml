@@ -19,7 +19,7 @@ sg: '3.40-3.74'
 ri: '1.711-1.751'
 birefringence: 0.011-0.014
 optical_character: Biaxial +
-dispersion: Low
+dispersion: 0.010  # Source: Low dispersion (IGS)
 lustre: Vitreous to pearly
 cleavage: Perfect prismatic {110}, nearly 90 degrees
 fracture: Conchoidal to uneven

@@ -42,3 +42,6 @@ inclusions:
 - Cleavage planes
 - Needle inclusions
 - Crystal inclusions
+# Heat treatment temperatures (Source: GIA)
+heat_treatment_temp_min: 200
+heat_treatment_temp_max: 600

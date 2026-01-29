@@ -4,6 +4,11 @@ system: orthorhombic
 point_group: mmm
 chemistry: Al2SiO4(F,OH)2
 hardness: 8
+ri: 1.619-1.627  # Source: GIA Gem Encyclopedia
+sg: 3.50-3.57  # Source: GIA Gem Encyclopedia
+birefringence: 0.008  # Source: GIA Gem Encyclopedia
+dispersion: 0.014  # Source: GIA Gem Encyclopedia
+optical_character: Biaxial +
 description: Flat tabular habit with dominant basal pinacoid (common in Pakistani
   material)
 localities:

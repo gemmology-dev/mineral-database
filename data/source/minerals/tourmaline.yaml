@@ -47,3 +47,6 @@ inclusions:
 - Colour zoning
 - Liquid feathers
 - Crystal inclusions
+# Heat treatment temperatures (Source: IGS)
+heat_treatment_temp_min: 250
+heat_treatment_temp_max: 700

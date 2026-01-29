@@ -32,6 +32,7 @@ colors:
 sg: 3.45-3.70
 ri: 1.597-1.817
 birefringence: 0.218-0.220
+dispersion: 0.015  # Source: GIA Gem Encyclopedia
 optical_character: Uniaxial -
 pleochroism: Moderate dichroic (pinkish red to orangy pink)
 lustre: Vitreous to pearly

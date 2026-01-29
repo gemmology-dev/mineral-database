@@ -13,7 +13,13 @@ from pathlib import Path
 # Add parent directory to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
-from mineral_database.db import get_connection, init_database, insert_category, insert_mineral
+from mineral_database.db import (
+    get_connection,
+    init_database,
+    init_reference_tables,
+    insert_category,
+    insert_mineral,
+)
 from mineral_database.models import Mineral
 
 
@@ -32,6 +38,9 @@ def import_from_python_dict(presets_dict: dict, categories_dict: dict, db_path: 
 
     count = 0
     with get_connection(db_path) as conn:
+        # Populate reference tables (shape factors, thresholds)
+        init_reference_tables(conn)
+
         for preset_id, preset_data in presets_dict.items():
             mineral = Mineral.from_dict(preset_id, preset_data)
             insert_mineral(conn, mineral)
@@ -65,6 +74,9 @@ def import_from_yaml(yaml_dir: Path, db_path: Path) -> int:
 
     count = 0
     with get_connection(db_path) as conn:
+        # Populate reference tables (shape factors, thresholds)
+        init_reference_tables(conn)
+
         for yaml_file in yaml_dir.glob("*.yaml"):
             with open(yaml_file) as f:
                 data = yaml.safe_load(f)

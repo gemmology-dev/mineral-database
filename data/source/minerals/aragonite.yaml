@@ -32,6 +32,7 @@ colors:
 sg: 2.93-2.95
 ri: 1.530-1.685
 birefringence: 0.155
+dispersion: 0.014  # Source: Low dispersion (gemdat.org, similar to calcite)
 optical_character: Biaxial -
 pleochroism: None
 lustre: Vitreous to resinous

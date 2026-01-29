@@ -1,6 +1,6 @@
 [project]
 name = "gemmology-mineral-database"
-version = "1.2.5"
+version = "1.3.0"
 description = "Crystal presets database for gemmological and mineralogical visualization"
 readme = "README.md"
 license = { text = "MIT" }

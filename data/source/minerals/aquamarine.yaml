@@ -34,3 +34,6 @@ inclusions:
 - Rain (parallel tubes)
 - Two-phase inclusions
 - Crystal inclusions
+# Heat treatment temperatures (Source: IGS)
+heat_treatment_temp_min: 400
+heat_treatment_temp_max: 450

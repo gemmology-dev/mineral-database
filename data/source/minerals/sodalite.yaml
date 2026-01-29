@@ -30,6 +30,7 @@ colors:
 sg: 2.27-2.33
 ri: 1.483-1.487
 birefringence: null
+dispersion: 0.018  # Source: International Gem Society
 optical_character: Isotropic
 lustre: Vitreous to greasy
 cleavage: Poor {110}

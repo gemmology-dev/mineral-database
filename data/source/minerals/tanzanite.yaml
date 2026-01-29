@@ -31,3 +31,6 @@ inclusions:
 - Negative crystals
 - Fingerprint inclusions
 - Stress cracks (from cleavage)
+# Heat treatment temperatures (Source: GEM-A)
+heat_treatment_temp_min: 400
+heat_treatment_temp_max: 500

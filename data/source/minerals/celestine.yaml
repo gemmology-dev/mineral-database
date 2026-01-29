@@ -31,6 +31,7 @@ colors:
 sg: 3.95-3.97
 ri: 1.619-1.632
 birefringence: 0.010-0.011
+dispersion: 0.016  # Source: moderate r < v, similar to barite (isostructural)
 optical_character: Biaxial +
 pleochroism: Weak in colored specimens (pale blue shades)
 lustre: Vitreous to pearly

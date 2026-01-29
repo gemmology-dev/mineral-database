@@ -40,3 +40,6 @@ inclusions:
 - Apatite crystals
 - Monazite crystals
 - Metamict texture (treacle effect)
+# Heat treatment temperatures (Source: GIA)
+heat_treatment_temp_min: 900
+heat_treatment_temp_max: 1000

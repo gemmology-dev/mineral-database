@@ -26,6 +26,7 @@ colors:
 sg: 2.66-2.70
 ri: 1.564-1.574
 birefringence: 0.005-0.009
+dispersion: 0.014  # Source: GIA Gem Encyclopedia (beryl)
 optical_character: Uniaxial -
 pleochroism: Moderate to strong (purplish-red to orange-red)
 lustre: Vitreous

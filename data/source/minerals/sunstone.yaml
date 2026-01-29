@@ -32,6 +32,7 @@ colors:
 sg: 2.62-2.67
 ri: 1.537-1.547
 birefringence: 0.007-0.010
+dispersion: 0.012  # Source: GIA Gem Encyclopedia (feldspar)
 optical_character: Biaxial +
 pleochroism: Moderate in coloured Oregon material (red to green dichroism)
 lustre: Vitreous

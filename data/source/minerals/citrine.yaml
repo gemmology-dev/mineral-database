@@ -39,3 +39,6 @@ inclusions:
 - Colour zoning (often absent in heated material)
 - Brazil-law twinning (in natural)
 note: Most commercial citrine is heat-treated amethyst; natural citrine is rare and typically pale yellow
+# Heat treatment temperatures (Source: IGS)
+heat_treatment_temp_min: 420
+heat_treatment_temp_max: 550

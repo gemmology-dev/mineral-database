@@ -40,3 +40,6 @@ inclusions:
 - Negative crystals
 - Goethite/hematite
 - Tiger stripes (colour banding)
+# Heat treatment temperatures (Source: IGS)
+heat_treatment_temp_min: 400
+heat_treatment_temp_max: 500

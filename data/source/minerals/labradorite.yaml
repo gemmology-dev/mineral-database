@@ -30,6 +30,7 @@ colors:
 sg: 2.69-2.72
 ri: 1.559-1.568
 birefringence: 0.008-0.010
+dispersion: 0.012  # Source: GIA Gem Encyclopedia
 optical_character: Biaxial +
 pleochroism: None to weak
 lustre: Vitreous to pearly

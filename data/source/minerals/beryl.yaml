@@ -34,6 +34,7 @@ colors:
 sg: 2.67-2.78
 ri: 1.577-1.583
 birefringence: 0.005-0.009
+dispersion: 0.014  # Source: GIA Gem Encyclopedia
 optical_character: Uniaxial -
 pleochroism: Weak to distinct (varies by variety)
 lustre: Vitreous

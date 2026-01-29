@@ -77,6 +77,16 @@ class Mineral:
     phenomenon: str | None = None
     note: str | None = None
 
+    # Calculator-optimized numeric fields (parsed from RI/SG ranges)
+    ri_min: float | None = None
+    ri_max: float | None = None
+    sg_min: float | None = None
+    sg_max: float | None = None
+
+    # Heat treatment temperatures (Celsius, from GIA/GEM-A data)
+    heat_treatment_temp_min: float | None = None
+    heat_treatment_temp_max: float | None = None
+
     def to_dict(self) -> dict[str, Any]:
         """Convert to dictionary representation."""
         result: dict[str, Any] = {
@@ -116,6 +126,12 @@ class Mineral:
             "twin_law",
             "phenomenon",
             "note",
+            "ri_min",
+            "ri_max",
+            "sg_min",
+            "sg_max",
+            "heat_treatment_temp_min",
+            "heat_treatment_temp_max",
         ]
         for key in optional:
             value = getattr(self, key)
@@ -161,6 +177,12 @@ class Mineral:
             twin_law=data.get("twin_law"),
             phenomenon=data.get("phenomenon"),
             note=data.get("note"),
+            ri_min=data.get("ri_min"),
+            ri_max=data.get("ri_max"),
+            sg_min=data.get("sg_min"),
+            sg_max=data.get("sg_max"),
+            heat_treatment_temp_min=data.get("heat_treatment_temp_min"),
+            heat_treatment_temp_max=data.get("heat_treatment_temp_max"),
         )
 
 
@@ -215,6 +237,12 @@ PROPERTY_LABELS = {
     "point_group": "Point Group",
     "forms": "Forms",
     "description": "Habit",
+    "ri_min": "RI Min",
+    "ri_max": "RI Max",
+    "sg_min": "SG Min",
+    "sg_max": "SG Max",
+    "heat_treatment_temp_min": "Heat Treat Min (°C)",
+    "heat_treatment_temp_max": "Heat Treat Max (°C)",
 }
 
 

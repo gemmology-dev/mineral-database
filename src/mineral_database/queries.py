@@ -8,12 +8,20 @@ from pathlib import Path
 from typing import Any
 
 from .db import (
+    classify_value,
+    find_minerals_by_ri,
+    find_minerals_by_sg,
     get_all_minerals,
     get_category_presets,
     get_connection,
+    get_cut_shape_factors,
     get_mineral_by_id,
     get_mineral_models,
     get_minerals_by_system,
+    get_minerals_with_heat_treatment,
+    get_thresholds,
+    get_volume_shape_factors,
+    init_reference_tables,
     search_minerals,
 )
 from .models import INFO_GROUPS, Mineral
@@ -322,3 +330,102 @@ def get_models_generated_at(mineral_id: str) -> str | None:
         models = get_mineral_models(conn, mineral_id)
         value = models.get("models_generated_at")
         return str(value) if value is not None else None
+
+
+# =============================================================================
+# Calculator-optimized query functions
+# =============================================================================
+
+
+def find_by_ri(ri: float, tolerance: float = 0.01) -> list[Mineral]:
+    """Find minerals matching an RI value within tolerance.
+
+    Args:
+        ri: Refractive index value to match
+        tolerance: Acceptable tolerance (default 0.01)
+
+    Returns:
+        List of matching Mineral objects, sorted by closest match
+    """
+    with get_connection(_db_path) as conn:
+        return find_minerals_by_ri(conn, ri, tolerance)
+
+
+def find_by_sg(sg: float, tolerance: float = 0.05) -> list[Mineral]:
+    """Find minerals matching an SG value within tolerance.
+
+    Args:
+        sg: Specific gravity value to match
+        tolerance: Acceptable tolerance (default 0.05)
+
+    Returns:
+        List of matching Mineral objects, sorted by closest match
+    """
+    with get_connection(_db_path) as conn:
+        return find_minerals_by_sg(conn, sg, tolerance)
+
+
+def list_shape_factors() -> list[dict[str, Any]]:
+    """Get all cut shape factors for carat estimation.
+
+    Returns:
+        List of dicts with id, name, factor, description
+    """
+    with get_connection(_db_path) as conn:
+        return get_cut_shape_factors(conn)
+
+
+def list_volume_factors() -> list[dict[str, Any]]:
+    """Get all volume shape factors for rough estimation.
+
+    Returns:
+        List of dicts with id, name, factor
+    """
+    with get_connection(_db_path) as conn:
+        return get_volume_shape_factors(conn)
+
+
+def list_thresholds(category: str) -> list[dict[str, Any]]:
+    """Get classification thresholds for a category.
+
+    Args:
+        category: One of 'birefringence', 'dispersion', 'critical_angle'
+
+    Returns:
+        List of threshold dicts with level, min_value, max_value, description
+    """
+    with get_connection(_db_path) as conn:
+        return get_thresholds(conn, category)
+
+
+def classify(category: str, value: float) -> str | None:
+    """Classify a value based on gemmological thresholds.
+
+    Args:
+        category: One of 'birefringence', 'dispersion', 'critical_angle'
+        value: The value to classify
+
+    Returns:
+        Classification level (e.g., 'low', 'medium', 'high') or None
+    """
+    with get_connection(_db_path) as conn:
+        return classify_value(conn, category, value)
+
+
+def list_heat_treatable() -> list[Mineral]:
+    """Get minerals with heat treatment temperature data.
+
+    Returns:
+        List of Mineral objects with heat treatment info
+    """
+    with get_connection(_db_path) as conn:
+        return get_minerals_with_heat_treatment(conn)
+
+
+def ensure_reference_tables() -> None:
+    """Initialize reference tables if they're empty.
+
+    Call this after database creation to populate shape factors and thresholds.
+    """
+    with get_connection(_db_path) as conn:
+        init_reference_tables(conn)

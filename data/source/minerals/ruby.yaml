@@ -35,3 +35,6 @@ lustre: Vitreous to adamantine
 cleavage: None (parting on {0001})
 fracture: Conchoidal to uneven
 pleochroism: Strong (purplish-red/orange-red)
+# Heat treatment temperatures (Source: GEM-A)
+heat_treatment_temp_min: 800
+heat_treatment_temp_max: 1900

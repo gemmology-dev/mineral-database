@@ -41,8 +41,12 @@ from .models import (
     get_property_label,
 )
 from .queries import (
+    classify,
     count_presets,
+    ensure_reference_tables,
     filter_minerals,
+    find_by_ri,
+    find_by_sg,
     get_info_properties,
     get_mineral,
     get_model_gltf,
@@ -52,8 +56,12 @@ from .queries import (
     get_preset,
     get_presets_by_form,
     get_systems,
+    list_heat_treatable,
     list_preset_categories,
     list_presets,
+    list_shape_factors,
+    list_thresholds,
+    list_volume_factors,
     search_presets,
     set_database_path,
 )
@@ -78,6 +86,15 @@ __all__ = [
     "get_model_stl",
     "get_model_gltf",
     "get_models_generated_at",
+    # Calculator functions (RI/SG lookup, shape factors, thresholds)
+    "find_by_ri",
+    "find_by_sg",
+    "list_shape_factors",
+    "list_volume_factors",
+    "list_thresholds",
+    "classify",
+    "list_heat_treatable",
+    "ensure_reference_tables",
     # Data classes
     "Mineral",
     "INFO_GROUPS",
