@@ -1375,3 +1375,21 @@ def update_expression_models(
         """,
         (svg, stl, gltf, generated_at, expression_id.lower()),
     )
+
+
+def get_all_expressions(conn: sqlite3.Connection) -> list[MineralExpression]:
+    """Get all mineral expressions from the database.
+
+    Args:
+        conn: Database connection
+
+    Returns:
+        List of all mineral expressions
+    """
+    cursor = conn.execute(
+        """
+        SELECT * FROM mineral_expressions
+        ORDER BY family_id, is_primary DESC, sort_order
+        """
+    )
+    return [row_to_expression(row) for row in cursor.fetchall()]

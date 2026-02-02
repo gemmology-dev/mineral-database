@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Generate 3D models for all minerals in the database.
+Generate 3D models for all minerals and expressions in the database.
 
-This script generates SVG, STL, and glTF models for each mineral using
+This script generates SVG, STL, and glTF models for each mineral/expression using
 the CDL parser, crystal geometry engine, and crystal renderer.
 """
 
@@ -17,20 +17,25 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
 from mineral_database.db import (
+    get_all_expressions,
     get_all_minerals,
     get_connection,
+    get_expression_by_id,
+    get_mineral_by_id,
+    update_expression_models,
     update_mineral_models,
 )
 
 
-def generate_models_for_mineral(
-    mineral_id: str, cdl: str, verbose: bool = False
+def generate_models_for_cdl(
+    item_id: str, cdl: str, system: str = "cubic", verbose: bool = False
 ) -> tuple[str | None, bytes | None, str | None]:
-    """Generate SVG, STL, and glTF models for a mineral.
+    """Generate SVG, STL, and glTF models from a CDL expression.
 
     Args:
-        mineral_id: Mineral preset ID
+        item_id: Item ID (for error messages and glTF naming)
         cdl: CDL notation string
+        system: Crystal system (for color selection)
         verbose: Print progress
 
     Returns:
@@ -53,7 +58,7 @@ def generate_models_for_mineral(
         description = parse_cdl(cdl)
         geometry = cdl_to_geometry(description)
     except Exception as e:
-        print(f"  Error parsing CDL for {mineral_id}: {e}")
+        print(f"  Error parsing CDL for {item_id}: {e}")
         return None, None, None
 
     # Generate SVG to string buffer
@@ -151,7 +156,7 @@ def generate_models_for_mineral(
         if verbose:
             print(f"  SVG: {len(svg_string)} bytes")
     except Exception as e:
-        print(f"  Error generating SVG for {mineral_id}: {e}")
+        print(f"  Error generating SVG for {item_id}: {e}")
 
     # Generate STL
     stl_bytes = None
@@ -160,23 +165,98 @@ def generate_models_for_mineral(
         if verbose:
             print(f"  STL: {len(stl_bytes)} bytes")
     except Exception as e:
-        print(f"  Error generating STL for {mineral_id}: {e}")
+        print(f"  Error generating STL for {item_id}: {e}")
 
     # Generate glTF
     gltf_string = None
     try:
-        gltf_dict = geometry_to_gltf(geometry.vertices, geometry.faces, name=mineral_id)
+        gltf_dict = geometry_to_gltf(geometry.vertices, geometry.faces, name=item_id)
         gltf_string = json.dumps(gltf_dict)
         if verbose:
             print(f"  glTF: {len(gltf_string)} bytes")
     except Exception as e:
-        print(f"  Error generating glTF for {mineral_id}: {e}")
+        print(f"  Error generating glTF for {item_id}: {e}")
 
     return svg_string, stl_bytes, gltf_string
 
 
+# Legacy function for backwards compatibility
+def generate_models_for_mineral(
+    mineral_id: str, cdl: str, verbose: bool = False
+) -> tuple[str | None, bytes | None, str | None]:
+    """Generate SVG, STL, and glTF models for a mineral.
+
+    Args:
+        mineral_id: Mineral preset ID
+        cdl: CDL notation string
+        verbose: Print progress
+
+    Returns:
+        Tuple of (svg_string, stl_bytes, gltf_json_string)
+    """
+    return generate_models_for_cdl(mineral_id, cdl, verbose=verbose)
+
+
+def generate_all_expression_models(
+    db_path: Path,
+    output_dir: Path | None = None,
+    verbose: bool = False,
+) -> tuple[int, int]:
+    """Generate models for all expressions in the database.
+
+    Args:
+        db_path: Path to the database file
+        output_dir: Optional directory to output static SVG files
+        verbose: Print progress
+
+    Returns:
+        Tuple of (success_count, failure_count)
+    """
+    success = 0
+    failure = 0
+
+    with get_connection(db_path) as conn:
+        expressions = get_all_expressions(conn)
+        total = len(expressions)
+
+        print(f"Generating models for {total} expressions...")
+
+        for i, expr in enumerate(expressions, 1):
+            print(f"[{i}/{total}] {expr.id}: {expr.name} (family: {expr.family_id})")
+
+            svg, stl, gltf = generate_models_for_cdl(
+                expr.id, expr.cdl, verbose=verbose
+            )
+
+            if svg or stl or gltf:
+                timestamp = datetime.now(timezone.utc).isoformat()
+                update_expression_models(
+                    conn,
+                    expr.id,
+                    svg=svg,
+                    stl=stl,
+                    gltf=gltf,
+                    generated_at=timestamp,
+                )
+
+                # Optionally write static SVG file
+                if output_dir and svg:
+                    svg_path = output_dir / f"{expr.id}.svg"
+                    svg_path.write_text(svg)
+                    if verbose:
+                        print(f"  Wrote {svg_path}")
+
+                success += 1
+            else:
+                failure += 1
+
+        conn.commit()
+
+    return success, failure
+
+
 def generate_all_models(db_path: Path, verbose: bool = False) -> tuple[int, int]:
-    """Generate models for all minerals in the database.
+    """Generate models for all minerals in the database (legacy table).
 
     Args:
         db_path: Path to the database file
@@ -220,20 +300,59 @@ def generate_all_models(db_path: Path, verbose: bool = False) -> tuple[int, int]
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Generate 3D models for minerals in the database",
+        description="Generate 3D models for minerals/expressions in the database",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  %(prog)s data/minerals.db
-  %(prog)s data/minerals.db --verbose
+  # Generate models for all expressions (recommended)
+  %(prog)s data/minerals.db --expressions
+
+  # Generate models for all expressions and output static SVGs
+  %(prog)s data/minerals.db --expressions --output-dir /path/to/crystals/
+
+  # Generate models for a specific expression
+  %(prog)s data/minerals.db --expression fluorite-octahedron
+
+  # Legacy: Generate models for all minerals (old table)
+  %(prog)s data/minerals.db --minerals
+
+  # Legacy: Generate model for a specific mineral
   %(prog)s data/minerals.db --mineral diamond
         """,
     )
 
     parser.add_argument("database", type=Path, help="Path to minerals.db file")
     parser.add_argument("-v", "--verbose", action="store_true", help="Verbose output")
+
+    # Mode selection (mutually exclusive)
+    mode_group = parser.add_mutually_exclusive_group()
+    mode_group.add_argument(
+        "--expressions",
+        action="store_true",
+        help="Generate models for all expressions (new family/expression tables)",
+    )
+    mode_group.add_argument(
+        "--minerals",
+        action="store_true",
+        help="Generate models for all minerals (legacy table)",
+    )
+    mode_group.add_argument(
+        "--expression",
+        type=str,
+        metavar="ID",
+        help="Generate model for a specific expression",
+    )
+    mode_group.add_argument(
+        "-m", "--mineral",
+        type=str,
+        metavar="ID",
+        help="Generate model for a specific mineral (legacy)",
+    )
+
     parser.add_argument(
-        "-m", "--mineral", type=str, help="Generate model for a specific mineral only"
+        "--output-dir",
+        type=Path,
+        help="Output directory for static SVG files (expressions mode only)",
     )
 
     args = parser.parse_args()
@@ -242,11 +361,50 @@ Examples:
         print(f"Error: Database not found: {args.database}")
         sys.exit(1)
 
-    if args.mineral:
-        # Generate model for a single mineral
-        with get_connection(args.database) as conn:
-            from mineral_database.db import get_mineral_by_id
+    # Default to expressions mode if nothing specified
+    if not any([args.expressions, args.minerals, args.expression, args.mineral]):
+        args.expressions = True
 
+    if args.expression:
+        # Generate model for a single expression
+        with get_connection(args.database) as conn:
+            expression = get_expression_by_id(conn, args.expression)
+            if not expression:
+                print(f"Error: Expression not found: {args.expression}")
+                sys.exit(1)
+
+            print(f"Generating models for {expression.id}: {expression.name}")
+            svg, stl, gltf = generate_models_for_cdl(
+                expression.id, expression.cdl, verbose=True
+            )
+
+            if svg or stl or gltf:
+                timestamp = datetime.now(timezone.utc).isoformat()
+                update_expression_models(
+                    conn,
+                    expression.id,
+                    svg=svg,
+                    stl=stl,
+                    gltf=gltf,
+                    generated_at=timestamp,
+                )
+                conn.commit()
+
+                # Optionally write static SVG
+                if args.output_dir and svg:
+                    args.output_dir.mkdir(parents=True, exist_ok=True)
+                    svg_path = args.output_dir / f"{expression.id}.svg"
+                    svg_path.write_text(svg)
+                    print(f"Wrote {svg_path}")
+
+                print(f"Successfully generated models for {expression.id}")
+            else:
+                print(f"Failed to generate any models for {expression.id}")
+                sys.exit(1)
+
+    elif args.mineral:
+        # Generate model for a single mineral (legacy)
+        with get_connection(args.database) as conn:
             mineral = get_mineral_by_id(conn, args.mineral)
             if not mineral:
                 print(f"Error: Mineral not found: {args.mineral}")
@@ -270,8 +428,25 @@ Examples:
             else:
                 print(f"Failed to generate any models for {mineral.id}")
                 sys.exit(1)
+
+    elif args.expressions:
+        # Generate models for all expressions
+        if args.output_dir:
+            args.output_dir.mkdir(parents=True, exist_ok=True)
+            print(f"Static SVGs will be written to: {args.output_dir}")
+
+        success, failure = generate_all_expression_models(
+            args.database,
+            output_dir=args.output_dir,
+            verbose=args.verbose,
+        )
+        print(f"\nGeneration complete: {success} success, {failure} failures")
+
+        if failure > 0:
+            sys.exit(1)
+
     else:
-        # Generate models for all minerals
+        # Generate models for all minerals (legacy)
         success, failure = generate_all_models(args.database, verbose=args.verbose)
         print(f"\nGeneration complete: {success} success, {failure} failures")
 
