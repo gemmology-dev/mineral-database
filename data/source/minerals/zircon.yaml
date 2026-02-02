@@ -24,6 +24,10 @@ lustre: Adamantine to vitreous
 cleavage: Imperfect
 fracture: Conchoidal
 pleochroism: Weak (varies with colour)
+pleochroism_strength: weak
+pleochroism_color1: Body color
+pleochroism_color2: Lighter shade
+pleochroism_notes: Blue zircon shows colorless/blue dichroism; weak in most colors
 colors:
 - Blue (heated)
 - Colorless

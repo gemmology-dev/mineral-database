@@ -1,6 +1,6 @@
 {
   "name": "@gemmology/mineral-data",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Pre-built SQLite database of 94+ mineral presets with CDL, properties, and 3D models for crystal visualization",
   "main": "index.js",
   "types": "index.d.ts",

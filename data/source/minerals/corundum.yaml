@@ -25,6 +25,10 @@ lustre: Vitreous to adamantine
 cleavage: None (parting on twin planes)
 fracture: Conchoidal to uneven
 pleochroism: Distinct to strong (depends on colour)
+pleochroism_strength: strong
+pleochroism_color1: Body color (darker)
+pleochroism_color2: Lighter shade
+pleochroism_notes: Blue sapphire shows violet-blue/greenish-blue; ruby shows purplish-red/orange-red
 colors:
 - All colours except red (sapphire)
 - Red (ruby)

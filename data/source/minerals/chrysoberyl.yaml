@@ -25,6 +25,11 @@ lustre: Vitreous to subadamantine
 cleavage: Good {110}, poor {010}
 fracture: Conchoidal to uneven
 pleochroism: Weak to moderate (yellow-green, green shades)
+pleochroism_strength: moderate
+pleochroism_color1: Yellow
+pleochroism_color2: Yellow-green
+pleochroism_color3: Green
+pleochroism_notes: Trichroic (biaxial); more visible in strongly colored stones
 colors:
 - Yellow-green (chrysoberyl)
 - Golden yellow

@@ -23,6 +23,10 @@ lustre: Adamantine to metallic
 cleavage: Good prismatic {110}
 fracture: Subconchoidal to uneven
 pleochroism: Distinct (yellowish-brown to reddish-brown)
+pleochroism_strength: moderate
+pleochroism_color1: Yellowish-brown
+pleochroism_color2: Reddish-brown
+pleochroism_notes: Distinct dichroism; visible in faceted stones and thin crystals
 colors:
 - Reddish-brown
 - Black

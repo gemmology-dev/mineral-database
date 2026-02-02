@@ -34,6 +34,10 @@ ri: 1.675-1.701
 birefringence: 0.024-0.030
 optical_character: Biaxial +
 pleochroism: Weak to strong dichroic (light green/dark green in chrome diopside)
+pleochroism_strength: moderate
+pleochroism_color1: Light green
+pleochroism_color2: Dark green
+pleochroism_notes: Strong in chrome diopside; weak in other varieties
 dispersion: 0.020
 lustre: Vitreous
 cleavage: Good {110} at 87-93 degrees (characteristic pyroxene cleavage)

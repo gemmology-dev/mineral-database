@@ -23,6 +23,10 @@ lustre: Vitreous to adamantine
 cleavage: None (parting on twin planes)
 fracture: Conchoidal to uneven
 pleochroism: Distinct to strong
+pleochroism_strength: strong
+pleochroism_color1: Purplish-red
+pleochroism_color2: Orange-red
+pleochroism_notes: Strong dichroism characteristic of ruby; helps distinguish from red spinel
 colors:
 - Red (ruby)
 - Pink

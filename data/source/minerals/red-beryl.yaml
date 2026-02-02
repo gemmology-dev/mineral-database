@@ -29,6 +29,10 @@ birefringence: 0.005-0.009
 dispersion: 0.014  # Source: GIA Gem Encyclopedia (beryl)
 optical_character: Uniaxial -
 pleochroism: Moderate to strong (purplish-red to orange-red)
+pleochroism_strength: strong
+pleochroism_color1: Purplish-red
+pleochroism_color2: Orange-red
+pleochroism_notes: Dichroic; similar to ruby but with different hue range
 lustre: Vitreous
 cleavage: Imperfect basal
 fracture: Conchoidal to uneven

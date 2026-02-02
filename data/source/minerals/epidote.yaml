@@ -31,6 +31,11 @@ ri: 1.729-1.768
 birefringence: 0.019-0.046
 optical_character: Biaxial -
 pleochroism: Strong trichroic (green, brown, yellow)
+pleochroism_strength: strong
+pleochroism_color1: Pistachio green
+pleochroism_color2: Brown
+pleochroism_color3: Yellow
+pleochroism_notes: Distinctive trichroism; colors may appear as root beer and olive-green
 dispersion: 0.030
 lustre: Vitreous
 cleavage: Perfect {001}, imperfect {100}

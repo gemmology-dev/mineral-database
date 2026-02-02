@@ -23,6 +23,10 @@ lustre: Vitreous
 cleavage: None
 fracture: Conchoidal
 pleochroism: Weak (yellow shades)
+pleochroism_strength: weak
+pleochroism_color1: Yellow
+pleochroism_color2: Paler yellow
+pleochroism_notes: Subtle dichroism; rarely visible in pale material
 colors:
 - Pale yellow
 - Golden yellow

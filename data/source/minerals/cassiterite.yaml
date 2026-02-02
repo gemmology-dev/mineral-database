@@ -24,6 +24,10 @@ lustre: Adamantine to vitreous
 cleavage: Poor prismatic {100}
 fracture: Subconchoidal to uneven
 pleochroism: Variable (none to strong yellow-green, brown, reddish-brown)
+pleochroism_strength: moderate
+pleochroism_color1: Yellow-green
+pleochroism_color2: Reddish-brown
+pleochroism_notes: Variable; strong in colored material, absent in colorless; dichroic
 colors:
 - Brown
 - Black

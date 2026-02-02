@@ -35,6 +35,10 @@ birefringence: 0.218-0.220
 dispersion: 0.015  # Source: GIA Gem Encyclopedia
 optical_character: Uniaxial -
 pleochroism: Moderate dichroic (pinkish red to orangy pink)
+pleochroism_strength: moderate
+pleochroism_color1: Pinkish-red
+pleochroism_color2: Orangy-pink
+pleochroism_notes: Best seen in transparent faceted material
 lustre: Vitreous to pearly
 cleavage: Perfect {1011} (rhombohedral)
 fracture: Uneven to conchoidal

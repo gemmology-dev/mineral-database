@@ -32,6 +32,10 @@ ri: 1.730-1.838
 birefringence: 0.108-0.110
 optical_character: Biaxial +
 pleochroism: Strong (light blue to dark blue shades)
+pleochroism_strength: strong
+pleochroism_color1: Light blue
+pleochroism_color2: Dark blue
+pleochroism_notes: Dichroic; distinctive azure blue coloration
 lustre: Vitreous (crystals) to earthy (massive)
 cleavage: Perfect {011}, fair {100}
 fracture: Conchoidal

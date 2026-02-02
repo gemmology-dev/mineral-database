@@ -31,6 +31,11 @@ ri: 1.736-1.762
 birefringence: 0.009-0.015
 optical_character: Biaxial +
 pleochroism: Trichroic - yellow, reddish-brown, dark red
+pleochroism_strength: strong
+pleochroism_color1: Yellow
+pleochroism_color2: Reddish-brown
+pleochroism_color3: Dark red
+pleochroism_notes: Trichroic; best seen in translucent crystals
 dispersion: 0.021
 lustre: Vitreous to resinous
 cleavage: Poor {010}

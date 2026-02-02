@@ -32,6 +32,10 @@ birefringence: 0.005-0.009
 dispersion: 0.014  # Source: GIA Gem Encyclopedia (beryl)
 optical_character: Uniaxial -
 pleochroism: Weak (pale yellow to yellow)
+pleochroism_strength: weak
+pleochroism_color1: Yellow
+pleochroism_color2: Pale yellow
+pleochroism_notes: Subtle; similar to other yellow beryls
 lustre: Vitreous
 cleavage: Imperfect basal
 fracture: Conchoidal to uneven

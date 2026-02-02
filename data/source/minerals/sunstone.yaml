@@ -35,6 +35,10 @@ birefringence: 0.007-0.010
 dispersion: 0.012  # Source: GIA Gem Encyclopedia (feldspar)
 optical_character: Biaxial +
 pleochroism: Moderate in coloured Oregon material (red to green dichroism)
+pleochroism_strength: moderate
+pleochroism_color1: Red
+pleochroism_color2: Green
+pleochroism_notes: Oregon copper sunstone only; dramatic red-green dichroism in saturated stones
 lustre: Vitreous
 cleavage: Perfect in two directions at ~90 degrees
 fracture: Uneven to conchoidal
