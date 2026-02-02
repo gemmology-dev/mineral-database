@@ -214,6 +214,7 @@ def generate_all_expression_models(
     """
     success = 0
     failure = 0
+    family_fallbacks: dict[str, str] = {}  # family_id -> primary expression SVG
 
     with get_connection(db_path) as conn:
         expressions = get_all_expressions(conn)
@@ -246,11 +247,24 @@ def generate_all_expression_models(
                     if verbose:
                         print(f"  Wrote {svg_path}")
 
+                    # Track primary expressions for family fallback files
+                    if expr.is_primary and expr.id != expr.family_id:
+                        family_fallbacks[expr.family_id] = svg
+
                 success += 1
             else:
                 failure += 1
 
         conn.commit()
+
+    # Write family fallback SVG files (copy primary expression SVG to family ID)
+    if output_dir and family_fallbacks:
+        print(f"\nCreating {len(family_fallbacks)} family fallback SVG files...")
+        for family_id, svg_content in family_fallbacks.items():
+            family_svg_path = output_dir / f"{family_id}.svg"
+            family_svg_path.write_text(svg_content)
+            if verbose:
+                print(f"  Wrote {family_svg_path} (fallback)")
 
     return success, failure
 
