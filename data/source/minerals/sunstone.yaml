@@ -1,60 +1,57 @@
+id: sunstone
 name: Sunstone
-cdl: triclinic[-1]:{010}@1.0 + {100}@0.9 + {001}@0.7 + {110}@0.5
-system: triclinic
+crystal_system: triclinic
 point_group: '-1'
 chemistry: (Na,Ca)(Al,Si)4O8
 hardness: 6-6.5
-description: >
-  Plagioclase feldspar displaying aventurescence - a glittery, metallic reflection
-  from included reflective platelets. Oregon sunstone is unique in containing
-  copper platelets rather than the hematite or goethite found in other sources.
-  Oregon material can also show strong dichroism and occur in transparent
-  gem-quality crystals. Some specimens display bicolour or tricolour zoning.
-localities:
-  - Oregon (USA)
-  - Norway
-  - India
-  - Tanzania
-  - Russia
-  - Canada
-forms:
-  - pinacoid
-  - prism
-colors:
-  - Orange
-  - Red
-  - Gold
-  - Green (Oregon)
-  - Pink
-  - Colorless
-  - Bicolour
-  - Tricolour
 sg: 2.62-2.67
 ri: 1.537-1.547
 birefringence: 0.007-0.010
-dispersion: 0.012  # Source: GIA Gem Encyclopedia (feldspar)
 optical_character: Biaxial +
+dispersion: 0.012
+lustre: Vitreous
+cleavage: Perfect in two directions at ~90 degrees
+fracture: Uneven to conchoidal
 pleochroism: Moderate in coloured Oregon material (red to green dichroism)
 pleochroism_strength: moderate
 pleochroism_color1: Red
 pleochroism_color2: Green
 pleochroism_notes: Oregon copper sunstone only; dramatic red-green dichroism in saturated stones
-lustre: Vitreous
-cleavage: Perfect in two directions at ~90 degrees
-fracture: Uneven to conchoidal
-phenomenon: Aventurescence
+colors:
+- Orange
+- Red
+- Gold
+- Green (Oregon)
+- Pink
+- Colorless
+- Bicolour
+- Tricolour
 treatments:
-  - Generally not treated
+- Generally not treated
 inclusions:
-  - Copper platelets (Oregon)
-  - Hematite platelets (India, Norway)
-  - Goethite platelets
-  - Schiller inclusions
-variety_of: Plagioclase (oligoclase to labradorite)
-species: Oligoclase/Labradorite
-notes: >
-  Oregon sunstone is the only source of copper-bearing feldspar. The copper
-  creates unique optical effects including strong aventurescence, red body
-  colour, and occasionally red-green dichroism. Non-Oregon sunstones contain
-  hematite or goethite. Feldspar's perfect cleavage requires careful cutting
-  and protective settings.
+- Copper platelets (Oregon)
+- Hematite platelets (India, Norway)
+- Goethite platelets
+- Schiller inclusions
+localities:
+- Oregon (USA)
+- Norway
+- India
+- Tanzania
+- Russia
+- Canada
+phenomenon: Aventurescence
+expressions:
+- slug: default
+  name: Sunstone
+  cdl: triclinic[-1]:{010}@1.0 + {100}@0.9 + {001}@0.7 + {110}@0.5
+  is_primary: true
+  form_description: 'Plagioclase feldspar displaying aventurescence - a glittery, metallic reflection
+    from included reflective platelets. Oregon sunstone is unique in containing copper platelets rather
+    than the hematite or goethite found in other sources. Oregon material can also show strong dichroism
+    and occur in transparent gem-quality crystals. Some specimens display bicolour or tricolour zoning.
+
+    '
+  forms:
+  - pinacoid
+  - prism

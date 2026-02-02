@@ -1,38 +1,43 @@
+id: malachite
 name: Malachite
-cdl: monoclinic[2/m]:{110}@1.0 + {010}@0.7 + {100}@0.5 + {011}@0.4
-system: monoclinic
+crystal_system: monoclinic
 point_group: 2/m
 chemistry: Cu2(CO3)(OH)2
 hardness: 3.5-4
-description: >
-  Copper carbonate hydroxide mineral displaying vivid green color and
-  characteristic banded patterns when cut and polished. Well-formed
-  prismatic crystals are extremely rare - malachite typically occurs in
-  botryoidal, stalactitic, or banded massive forms. The banding results
-  from variations in growth conditions creating alternating light and
-  dark green layers. Historically important as a copper ore and ornamental stone.
-localities:
-  - Democratic Republic of Congo (major source)
-  - Zambia
-  - Australia
-  - Arizona (USA - Bisbee)
-  - Russia (Urals - historic)
-  - Namibia
-forms:
-  - prism
-  - pinacoid
-  - botryoidal masses
-  - banded masses
-colors:
-  - Bright green
-  - Dark green
-  - Banded green (alternating light/dark)
 sg: 3.6-4.0
 ri: 1.655-1.909
 birefringence: 0.245
 optical_character: Biaxial -
-pleochroism: Weak (light green to dark green)
 lustre: Vitreous (crystals), silky to dull (massive)
 cleavage: Perfect {201}, fair {010}
 fracture: Subconchoidal to uneven
-note: Reacts with dilute HCl (effervescence); often found with azurite; crystal specimens rare and valuable
+pleochroism: Weak (light green to dark green)
+colors:
+- Bright green
+- Dark green
+- Banded green (alternating light/dark)
+localities:
+- Democratic Republic of Congo (major source)
+- Zambia
+- Australia
+- Arizona (USA - Bisbee)
+- Russia (Urals - historic)
+- Namibia
+expressions:
+- slug: default
+  name: Malachite
+  cdl: monoclinic[2/m]:{110}@1.0 + {010}@0.7 + {100}@0.5 + {011}@0.4
+  is_primary: true
+  form_description: 'Copper carbonate hydroxide mineral displaying vivid green color and characteristic
+    banded patterns when cut and polished. Well-formed prismatic crystals are extremely rare - malachite
+    typically occurs in botryoidal, stalactitic, or banded massive forms. The banding results from variations
+    in growth conditions creating alternating light and dark green layers. Historically important as a
+    copper ore and ornamental stone.
+
+    '
+  forms:
+  - prism
+  - pinacoid
+  - botryoidal masses
+  - banded masses
+  note: Reacts with dilute HCl (effervescence); often found with azurite; crystal specimens rare and valuable

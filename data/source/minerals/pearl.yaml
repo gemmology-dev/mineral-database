@@ -1,38 +1,9 @@
+id: pearl
 name: Pearl
-cdl: orthorhombic[mmm]:{110}@1.0 + {011}@0.7 + {101}@0.6
-system: orthorhombic
+crystal_system: orthorhombic
 point_group: mmm
 chemistry: CaCO3 (aragonite) + conchiolin
 hardness: 2.5-4.5
-description: >
-  Organic gem produced by mollusks, composed of concentric layers of aragonite
-  (calcium carbonate) crystals bound by conchiolin protein. The characteristic
-  lustre (orient) results from light interference in the nacre layers.
-  Natural pearls form around irritants; cultured pearls are nucleated
-  intentionally. This visualization represents aragonite - actual pearls are
-  layered aggregates without external crystal faces.
-localities:
-  - Persian Gulf (natural, historic)
-  - Japan (Akoya cultured)
-  - Australia (South Sea)
-  - Tahiti (black pearls)
-  - China (freshwater)
-  - Philippines
-forms:
-  - spherical
-  - baroque
-  - button
-  - drop
-  - concentric layers
-colors:
-  - White
-  - Cream
-  - Pink
-  - Gold (South Sea)
-  - Black (Tahitian)
-  - Silver
-  - Blue-grey
-  - Overtones (rose, green, orient)
 sg: 2.60-2.85
 ri: 1.52-1.69
 birefringence: null
@@ -40,9 +11,44 @@ optical_character: Biaxial -
 lustre: Pearly (nacreous)
 fracture: Uneven
 pleochroism: None
+colors:
+- White
+- Cream
+- Pink
+- Gold (South Sea)
+- Black (Tahitian)
+- Silver
+- Blue-grey
+- Overtones (rose, green, orient)
 treatments:
-  - Bleaching
-  - Dyeing
-  - Irradiation (for color)
-  - Coating
-note: Organic gem; visualization shows aragonite crystal - actual pearls are layered nacre without crystal faces
+- Bleaching
+- Dyeing
+- Irradiation (for color)
+- Coating
+localities:
+- Persian Gulf (natural, historic)
+- Japan (Akoya cultured)
+- Australia (South Sea)
+- Tahiti (black pearls)
+- China (freshwater)
+- Philippines
+expressions:
+- slug: default
+  name: Pearl
+  cdl: orthorhombic[mmm]:{110}@1.0 + {011}@0.7 + {101}@0.6
+  is_primary: true
+  form_description: 'Organic gem produced by mollusks, composed of concentric layers of aragonite (calcium
+    carbonate) crystals bound by conchiolin protein. The characteristic lustre (orient) results from light
+    interference in the nacre layers. Natural pearls form around irritants; cultured pearls are nucleated
+    intentionally. This visualization represents aragonite - actual pearls are layered aggregates without
+    external crystal faces.
+
+    '
+  forms:
+  - spherical
+  - baroque
+  - button
+  - drop
+  - concentric layers
+  note: Organic gem; visualization shows aragonite crystal - actual pearls are layered nacre without crystal
+    faces

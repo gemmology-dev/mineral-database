@@ -1,36 +1,41 @@
+id: orpiment
 name: Orpiment
-cdl: monoclinic[2/m]:{010}@1.0 + {100}@0.5 + {001}@0.7 + {110}@0.4
-system: monoclinic
+crystal_system: monoclinic
 point_group: 2/m
 chemistry: As2S3
 hardness: 1.5-2
-description: >
-  Arsenic trisulfide mineral with a bright lemon-yellow to golden-orange
-  color and pearly lustre on cleavage surfaces. The name derives from
-  Latin "auripigmentum" (gold pigment) - orpiment was used historically
-  as a yellow pigment despite its toxicity. Perfect cleavage produces
-  thin, flexible but inelastic sheets. Often found with realgar.
-localities:
-  - China (Hunan)
-  - Peru
-  - Russia (Kamchatka)
-  - Turkey
-  - Romania
-  - Nevada (USA)
-forms:
-  - pinacoid
-  - prism
-  - foliated masses
-colors:
-  - Lemon yellow
-  - Golden yellow
-  - Orange-yellow
 sg: 3.46-3.49
 ri: 2.4-3.0
 birefringence: 0.62
 optical_character: Biaxial -
-pleochroism: Strong dichroic (yellow to greenish-yellow)
 lustre: Resinous to pearly (on cleavage)
 cleavage: Perfect {010} (produces thin flexible sheets)
 fracture: Sectile (can be cut with knife)
-note: CAUTION - contains arsenic; extremely high birefringence; handle with care; wash hands after handling
+pleochroism: Strong dichroic (yellow to greenish-yellow)
+colors:
+- Lemon yellow
+- Golden yellow
+- Orange-yellow
+localities:
+- China (Hunan)
+- Peru
+- Russia (Kamchatka)
+- Turkey
+- Romania
+- Nevada (USA)
+expressions:
+- slug: default
+  name: Orpiment
+  cdl: monoclinic[2/m]:{010}@1.0 + {100}@0.5 + {001}@0.7 + {110}@0.4
+  is_primary: true
+  form_description: 'Arsenic trisulfide mineral with a bright lemon-yellow to golden-orange color and
+    pearly lustre on cleavage surfaces. The name derives from Latin "auripigmentum" (gold pigment) - orpiment
+    was used historically as a yellow pigment despite its toxicity. Perfect cleavage produces thin, flexible
+    but inelastic sheets. Often found with realgar.
+
+    '
+  forms:
+  - pinacoid
+  - prism
+  - foliated masses
+  note: CAUTION - contains arsenic; extremely high birefringence; handle with care; wash hands after handling

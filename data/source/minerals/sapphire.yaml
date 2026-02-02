@@ -1,22 +1,11 @@
+id: sapphire
 name: Sapphire
-cdl: trigonal[-3m]:{10-10}@1.0 + {10-11}@0.7 | elongate(c:1.8)
-system: trigonal
+crystal_system: trigonal
 point_group: -3m
 chemistry: Al2O3:Fe,Ti
 hardness: 9
-description: Elongated barrel-shaped habit
-localities:
-- Kashmir, India
-- Myanmar (Mogok)
-- Sri Lanka (Ceylon)
-- Madagascar
-- Australia
-- Montana, USA
-forms:
-- prism
-- dipyramid
-sg: '3.99-4.01'
-ri: '1.762-1.770'
+sg: 3.99-4.01
+ri: 1.762-1.770
 birefringence: 0.008
 optical_character: Uniaxial -
 dispersion: 0.018
@@ -48,6 +37,19 @@ inclusions:
 - Crystal inclusions (calcite, apatite, zircon)
 - Hexagonal zoning
 - Negative crystals
-# Heat treatment temperatures (Source: GEM-A)
-heat_treatment_temp_min: 800
-heat_treatment_temp_max: 1900
+localities:
+- Kashmir, India
+- Myanmar (Mogok)
+- Sri Lanka (Ceylon)
+- Madagascar
+- Australia
+- Montana, USA
+expressions:
+- slug: default
+  name: Sapphire
+  cdl: trigonal[-3m]:{10-10}@1.0 + {10-11}@0.7 | elongate(c:1.8)
+  is_primary: true
+  form_description: Elongated barrel-shaped habit
+  forms:
+  - prism
+  - dipyramid

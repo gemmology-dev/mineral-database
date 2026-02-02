@@ -1,50 +1,46 @@
+id: demantoid
 name: Demantoid
-cdl: cubic[m3m]:{211}@1.0 + {110}@0.7
-system: cubic
+crystal_system: cubic
 point_group: m3m
 chemistry: Ca3Fe2(SiO4)3:Cr
 hardness: 6.5-7
-description: >
-  Green variety of andradite garnet, known as the "king of garnets" for its
-  exceptional brilliance and fire. Coloured by chromium, demantoid has dispersion
-  (0.057) higher than diamond. Russian Ural material with "horsetail" inclusions
-  is most prized, with these inclusions actually adding value - unusual in
-  the gem world. Fine stones over 1 carat are rare; over 3 carats exceptionally so.
-localities:
-  - Russia (Ural Mountains)
-  - Namibia
-  - Madagascar
-  - Iran
-  - Italy
-forms:
-  - trapezohedron
-  - dodecahedron
-colors:
-  - Vivid green
-  - Yellowish-green
-  - Grass green
-  - Deep green
 sg: 3.82-3.85
 ri: 1.888-1.889
 optical_character: Isotropic
-pleochroism: None (isotropic)
+dispersion: 0.057
 lustre: Adamantine to vitreous
 cleavage: None
 fracture: Conchoidal to uneven
-dispersion: 0.057
+pleochroism: None (isotropic)
+colors:
+- Vivid green
+- Yellowish-green
+- Grass green
+- Deep green
 treatments:
-  - Heat treatment (rare, can improve colour)
-  - Generally not treated
+- Heat treatment (rare, can improve colour)
+- Generally not treated
 inclusions:
-  - Horsetail (byssolite/chrysotile fibres)
-  - Diopside crystals
-  - Magnetite octahedra
-chromophore: Chromium (Cr3+)
-variety_of: Andradite Garnet
-species: Andradite
-spectrum: Chromium absorption at 443nm (distinctive)
-notes: >
-  Horsetail inclusions are diagnostic for Russian (Ural) origin and add
-  significant value. The very high RI (1.888) is distinctive among garnets
-  and most gemstones. Non-Russian demantoid typically lacks horsetails.
-  ADR commonly visible under polariscope.
+- Horsetail (byssolite/chrysotile fibres)
+- Diopside crystals
+- Magnetite octahedra
+localities:
+- Russia (Ural Mountains)
+- Namibia
+- Madagascar
+- Iran
+- Italy
+expressions:
+- slug: default
+  name: Demantoid
+  cdl: cubic[m3m]:{211}@1.0 + {110}@0.7
+  is_primary: true
+  form_description: 'Green variety of andradite garnet, known as the "king of garnets" for its exceptional
+    brilliance and fire. Coloured by chromium, demantoid has dispersion (0.057) higher than diamond. Russian
+    Ural material with "horsetail" inclusions is most prized, with these inclusions actually adding value
+    - unusual in the gem world. Fine stones over 1 carat are rare; over 3 carats exceptionally so.
+
+    '
+  forms:
+  - trapezohedron
+  - dodecahedron

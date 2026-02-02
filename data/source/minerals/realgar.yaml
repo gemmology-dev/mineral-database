@@ -1,38 +1,43 @@
+id: realgar
 name: Realgar
-cdl: monoclinic[2/m]:{110}@1.0 + {010}@0.8 + {120}@0.6 + {011}@0.5 + {101}@0.4
-system: monoclinic
+crystal_system: monoclinic
 point_group: 2/m
 chemistry: As4S4
 hardness: 1.5-2
-description: >
-  Arsenic sulfide mineral with a distinctive red to orange-red color, also
-  known as "ruby sulfur." Realgar forms striking prismatic crystals often
-  striated parallel to the c-axis. It is light-sensitive and gradually
-  degrades to yellow pararealgar powder upon prolonged exposure to light.
-  Museum specimens must be stored in darkness. Contains arsenic - handle
-  with care.
-localities:
-  - China (Hunan, Yunnan)
-  - Romania (Baia Sprie)
-  - Nevada (USA - Getchell Mine)
-  - North Macedonia
-  - Switzerland (Lengenbach)
-  - Washington (USA)
-forms:
-  - prism
-  - pinacoid
-  - striated crystals
-colors:
-  - Red
-  - Orange-red
-  - Vermilion
-  - Deep red
 sg: 3.52-3.56
 ri: 2.538-2.684
 birefringence: 0.166
 optical_character: Biaxial -
-pleochroism: Strong (red to orange-red shades)
 lustre: Resinous to adamantine
 cleavage: Good {010}
 fracture: Conchoidal
-note: CAUTION - contains arsenic; degrades to pararealgar in light; store in darkness; wash hands after handling
+pleochroism: Strong (red to orange-red shades)
+colors:
+- Red
+- Orange-red
+- Vermilion
+- Deep red
+localities:
+- China (Hunan, Yunnan)
+- Romania (Baia Sprie)
+- Nevada (USA - Getchell Mine)
+- North Macedonia
+- Switzerland (Lengenbach)
+- Washington (USA)
+expressions:
+- slug: default
+  name: Realgar
+  cdl: monoclinic[2/m]:{110}@1.0 + {010}@0.8 + {120}@0.6 + {011}@0.5 + {101}@0.4
+  is_primary: true
+  form_description: 'Arsenic sulfide mineral with a distinctive red to orange-red color, also known as
+    "ruby sulfur." Realgar forms striking prismatic crystals often striated parallel to the c-axis. It
+    is light-sensitive and gradually degrades to yellow pararealgar powder upon prolonged exposure to
+    light. Museum specimens must be stored in darkness. Contains arsenic - handle with care.
+
+    '
+  forms:
+  - prism
+  - pinacoid
+  - striated crystals
+  note: CAUTION - contains arsenic; degrades to pararealgar in light; store in darkness; wash hands after
+    handling

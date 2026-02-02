@@ -1,27 +1,14 @@
+id: peridot
 name: Peridot
-cdl: orthorhombic[mmm]:{110}@1.0 + {010}@0.7 + {021}@0.5
-system: orthorhombic
+crystal_system: orthorhombic
 point_group: mmm
 chemistry: (Mg,Fe)2SiO4
 hardness: 6.5
-description: Short prismatic with wedge terminations
-localities:
-- Myanmar (Mogok)
-- Pakistan (Kashmir)
-- China (Changbai)
-- Arizona, USA
-- Egypt (Zabargad)
-- Vietnam
-- Ethiopia
-forms:
-- prism
-- pinacoid
-- dome
-sg: '3.27-3.37'
-ri: '1.654-1.690'
+sg: 3.27-3.37
+ri: 1.654-1.690
 birefringence: 0.035-0.038
 optical_character: Biaxial +
-dispersion: 0.020
+dispersion: 0.02
 lustre: Vitreous to oily
 cleavage: Poor
 fracture: Conchoidal
@@ -43,3 +30,21 @@ inclusions:
 - Needle inclusions
 - Negative crystals
 - Healing feathers
+localities:
+- Myanmar (Mogok)
+- Pakistan (Kashmir)
+- China (Changbai)
+- Arizona, USA
+- Egypt (Zabargad)
+- Vietnam
+- Ethiopia
+expressions:
+- slug: default
+  name: Peridot
+  cdl: orthorhombic[mmm]:{110}@1.0 + {010}@0.7 + {021}@0.5
+  is_primary: true
+  form_description: Short prismatic with wedge terminations
+  forms:
+  - prism
+  - pinacoid
+  - dome

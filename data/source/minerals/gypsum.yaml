@@ -1,47 +1,59 @@
+id: gypsum
 name: Gypsum
-cdl: monoclinic[2/m]:{010}@1.0 + {100}@0.7 + {001}@0.8 + {111}@0.5
-system: monoclinic
+crystal_system: monoclinic
 point_group: 2/m
 chemistry: CaSO4.2H2O
 hardness: 2
-description: >
-  Hydrated calcium sulfate - one of the softest minerals used as a hardness
-  standard. Gypsum forms large tabular crystals, often with characteristic
-  swallowtail twinning. The giant gypsum crystals of the Naica Mine in
-  Mexico (up to 12 meters long) are among the largest crystals ever found.
-  Varieties include transparent selenite, fibrous satin spar, and fine-
-  grained alabaster.
-localities:
-  - Mexico (Naica - giant crystals)
-  - Morocco
-  - USA (Oklahoma, Utah)
-  - Spain
-  - England
-  - Australia
-forms:
-  - pinacoid
-  - prism
-  - tabular crystals
-colors:
-  - Colorless (selenite)
-  - White
-  - Gray
-  - Yellow
-  - Brown
-  - Pink
-  - Orange
 sg: 2.31-2.33
 ri: 1.520-1.530
 birefringence: 0.009-0.010
-dispersion: 0.033  # Source: International Gem Society
 optical_character: Biaxial +
-pleochroism: None
+dispersion: 0.033
 lustre: Vitreous to pearly (on cleavage surfaces)
 cleavage: Perfect {010}, good {100} and {011}
 fracture: Conchoidal to splintery
-varieties:
-  - Selenite (transparent crystals)
-  - Satin spar (fibrous, silky)
-  - Alabaster (massive, fine-grained)
-  - Desert rose (rosette aggregates)
-note: Can be scratched with fingernail; slightly soluble in water; dehydrates to anhydrite when heated
+pleochroism: None
+colors:
+- Colorless (selenite)
+- White
+- Gray
+- Yellow
+- Brown
+- Pink
+- Orange
+localities:
+- Mexico (Naica - giant crystals)
+- Morocco
+- USA (Oklahoma, Utah)
+- Spain
+- England
+- Australia
+expressions:
+- slug: tabular
+  name: Tabular
+  cdl: monoclinic[2/m]:{010}@1.0 + {100}@0.7 + {001}@0.8 + {111}@0.5
+  is_primary: true
+  form_description: 'Hydrated calcium sulfate - one of the softest minerals used as a hardness standard.
+    Gypsum forms large tabular crystals, often with characteristic swallowtail twinning. The giant gypsum
+    crystals of the Naica Mine in Mexico (up to 12 meters long) are among the largest crystals ever found.
+    Varieties include transparent selenite, fibrous satin spar, and fine- grained alabaster.
+
+    '
+  forms:
+  - pinacoid
+  - prism
+  - tabular crystals
+  note: Can be scratched with fingernail; slightly soluble in water; dehydrates to anhydrite when heated
+- slug: swallowtail
+  name: Swallowtail Twin
+  cdl: monoclinic[2/m]:{010}@1.0 + {100}@0.95 + {001}@0.7 + {110}@0.4 | twin(gypsum_swallow)
+  form_description: 'Contact twin on {100} creating the distinctive swallowtail or fishtail shape - one
+    of the most recognizable twin forms in mineralogy. The re-entrant angle between the two individuals
+    creates the characteristic notched appearance. Swallowtail gypsum twins are common in evaporite deposits
+    and are prized by mineral collectors.
+
+    '
+  forms:
+  - pinacoid
+  - prism
+  - twin

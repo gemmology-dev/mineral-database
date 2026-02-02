@@ -1,23 +1,11 @@
+id: corundum
 name: Corundum
-cdl: trigonal[-3m]:{10-10}@1.0 + {10-11}@0.8 + {0001}@0.6
-system: trigonal
+crystal_system: trigonal
 point_group: -3m
 chemistry: Al2O3
 hardness: 9
-description: Generic corundum with hexagonal prism, dipyramid and basal pinacoid - second hardest natural mineral
-localities:
-- Myanmar
-- Sri Lanka
-- Kashmir
-- Madagascar
-- Thailand
-- Tanzania
-forms:
-- prism
-- dipyramid
-- pinacoid
-sg: '3.99-4.01'
-ri: '1.762-1.770'
+sg: 3.99-4.01
+ri: 1.762-1.770
 birefringence: 0.008
 optical_character: Uniaxial -
 dispersion: 0.018
@@ -44,6 +32,30 @@ inclusions:
 - Hexagonal colour zoning
 - Crystal inclusions (calcite, apatite, zircon)
 - Negative crystals
-# Heat treatment temperatures (Source: GEM-A)
-heat_treatment_temp_min: 800
-heat_treatment_temp_max: 1900
+localities:
+- Myanmar
+- Sri Lanka
+- Kashmir
+- Madagascar
+- Thailand
+- Tanzania
+expressions:
+- slug: bipyramid
+  name: Hexagonal Bipyramid
+  cdl: trigonal[-3m]:{10-10}@1.0 + {10-11}@0.8 + {0001}@0.6
+  is_primary: true
+  form_description: Generic corundum with hexagonal prism, dipyramid and basal pinacoid - second hardest
+    natural mineral
+  forms:
+  - prism
+  - dipyramid
+  - pinacoid
+- slug: barrel
+  name: Barrel
+  cdl: trigonal[-3m]:{10-11}@1.2 + {10-10}@0.6 + {0001}@0.2 | elongate(c:1.2)
+  form_description: Barrel-shaped habit with tapered prism - typical of Mogok (Myanmar) rubies
+  forms:
+  - dipyramid
+  - prism
+  - pinacoid
+  note: Characteristic habit of Mogok rubies; barrel shape formed by dominant dipyramid faces

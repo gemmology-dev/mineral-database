@@ -1,19 +1,9 @@
+id: fluorite
 name: Fluorite
-cdl: cubic[m3m]:{100}
-system: cubic
+crystal_system: cubic
 point_group: m3m
 chemistry: CaF2
 hardness: 4
-description: Perfect cubic habit - defines hardness 4 on Mohs scale
-localities:
-- China
-- Mexico
-- England (Derbyshire, Durham)
-- USA (Illinois)
-- Spain
-- Morocco
-forms:
-- cube
 sg: '3.18'
 ri: '1.434'
 birefringence: null
@@ -38,5 +28,50 @@ inclusions:
 - Colour zoning
 - Two-phase fluid inclusions
 - Solid inclusions
+localities:
+- China
+- Mexico
+- England (Derbyshire, Durham)
+- USA (Illinois)
+- Spain
+- Morocco
 fluorescence: Often strong (blue, green, or violet) - source of the term 'fluorescence'
-note: Fluorite is the mineral that gives its name to the phenomenon of fluorescence
+expressions:
+- slug: cube
+  name: Cube
+  cdl: cubic[m3m]:{100}
+  is_primary: true
+  form_description: Perfect cubic habit - defines hardness 4 on Mohs scale
+  forms:
+  - cube
+  note: Fluorite is the mineral that gives its name to the phenomenon of fluorescence
+- slug: octahedron
+  name: Octahedron
+  cdl: cubic[m3m]:{111}
+  form_description: Octahedral habit - also the perfect cleavage form of fluorite
+  forms:
+  - octahedron
+  note: Octahedral crystals parallel the perfect cleavage; cleaved fragments always octahedral
+- slug: cuboctahedron
+  name: Cuboctahedron
+  cdl: cubic[m3m]:{100}@1.0 + {111}@1.0
+  form_description: Cube equally truncated by octahedron - balanced combination form
+  forms:
+  - cube
+  - octahedron
+  note: Equal development of cube and octahedron creates 14-faced Archimedean solid
+- slug: twin
+  name: Penetration Twin
+  cdl: cubic[m3m]:{100}@1.0 + {111}@0.8 | twin(fluorite)
+  form_description: Interpenetrating twin with cube and octahedron faces - complex twin morphology
+  forms:
+  - cube
+  - octahedron
+  note: Twin showing both cube and octahedron modification; creates complex geometry
+- slug: interpenetrating
+  name: Interpenetrating Twin
+  cdl: cubic[m3m]:{100}@1.0 | twin(fluorite)
+  form_description: Two cubes interpenetrating at 60 degree rotation - classic fluorite twin
+  forms:
+  - cube
+  note: Penetration twin with 60 degree rotation around [111] axis; highly prized by collectors

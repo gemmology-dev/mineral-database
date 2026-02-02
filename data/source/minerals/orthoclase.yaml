@@ -1,45 +1,59 @@
+id: orthoclase
 name: Orthoclase
-cdl: monoclinic[2/m]:{010}@1.0 + {001}@0.8 + {100}@0.9 + {110}@0.6
-system: monoclinic
+crystal_system: monoclinic
 point_group: 2/m
 chemistry: KAlSi3O8
 hardness: 6-6.5
-description: >
-  Potassium feldspar (K-feldspar) forming prismatic monoclinic crystals,
-  often in granite and pegmatite. The name refers to the nearly 90-degree
-  cleavage angle (Greek "orthos" = right, "klasis" = breaking). Orthoclase
-  is the host mineral for moonstone (with albite exsolution) and includes
-  the transparent yellow variety known as noble orthoclase.
+sg: 2.55-2.63
+ri: 1.518-1.526
+birefringence: 0.005-0.008
+optical_character: Biaxial -
+dispersion: 0.012
+lustre: Vitreous to pearly
+cleavage: Perfect {001} and {010} at approximately 90 degrees
+fracture: Uneven to conchoidal
+pleochroism: None to weak
+colors:
+- Colorless
+- White
+- Cream
+- Pink
+- Yellow (noble orthoclase)
+- Gray
+- Green
 localities:
-  - Madagascar (gem quality, moonstone)
-  - Italy (Baveno twins)
-  - Germany
-  - USA (various)
-  - Austria
-  - Worldwide in granites
-forms:
+- Madagascar (gem quality, moonstone)
+- Italy (Baveno twins)
+- Germany
+- USA (various)
+- Austria
+- Worldwide in granites
+expressions:
+- slug: prismatic
+  name: Prismatic
+  cdl: monoclinic[2/m]:{010}@1.0 + {001}@0.8 + {100}@0.9 + {110}@0.6
+  is_primary: true
+  form_description: 'Potassium feldspar (K-feldspar) forming prismatic monoclinic crystals, often in granite
+    and pegmatite. The name refers to the nearly 90-degree cleavage angle (Greek "orthos" = right, "klasis"
+    = breaking). Orthoclase is the host mineral for moonstone (with albite exsolution) and includes the
+    transparent yellow variety known as noble orthoclase.
+
+    '
+  forms:
   - prism
   - pinacoid
   - Baveno twins
   - Manebach twins
-colors:
-  - Colorless
-  - White
-  - Cream
-  - Pink
-  - Yellow (noble orthoclase)
-  - Gray
-  - Green
-sg: 2.55-2.63
-ri: 1.518-1.526
-birefringence: 0.005-0.008
-dispersion: 0.012  # Source: GIA Gem Encyclopedia
-optical_character: Biaxial -
-pleochroism: None to weak
-lustre: Vitreous to pearly
-cleavage: Perfect {001} and {010} at approximately 90 degrees
-fracture: Uneven to conchoidal
-varieties:
-  - Moonstone (with adularescence)
-  - Noble orthoclase (transparent yellow)
-  - Adularia (low-temperature variety)
+- slug: carlsbad
+  name: Carlsbad Twin
+  cdl: monoclinic[2/m]:{010}@1.0 + {100}@0.95 + {001}@0.7 + {110}@0.4 | twin(carlsbad)
+  form_description: 'Penetration twin with the c-axis as twin axis, creating an apparent symmetrical crystal
+    from two interpenetrating monoclinic individuals. Named for Karlovy Vary (Carlsbad) in the Czech Republic
+    where classic examples occur. Carlsbad twins are very common in granite and related igneous rocks.
+    The twin boundary is often visible as a diagonal plane.
+
+    '
+  forms:
+  - prism
+  - pinacoid
+  - twin

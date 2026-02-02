@@ -1,23 +1,11 @@
+id: tourmaline
 name: Tourmaline
-cdl: trigonal[32]:{10-10}@1.0 + {10-11}@0.8 | elongate(c:2.5)
-system: trigonal
+crystal_system: trigonal
 point_group: 3m
 chemistry: Complex borosilicate
 hardness: 7-7.5
-description: Prismatic hexagonal with dipyramid terminations
-localities:
-- Brazil
-- Afghanistan
-- Nigeria
-- Madagascar
-- Mozambique
-- USA (California, Maine)
-forms:
-- prism
-- pinacoid
-- dipyramid
-sg: '3.01-3.11'
-ri: '1.620-1.640'
+sg: 3.01-3.11
+ri: 1.620-1.640
 birefringence: 0.018
 optical_character: Uniaxial -
 dispersion: 0.017
@@ -51,6 +39,34 @@ inclusions:
 - Colour zoning
 - Liquid feathers
 - Crystal inclusions
-# Heat treatment temperatures (Source: IGS)
-heat_treatment_temp_min: 250
-heat_treatment_temp_max: 700
+localities:
+- Brazil
+- Afghanistan
+- Nigeria
+- Madagascar
+- Mozambique
+- USA (California, Maine)
+expressions:
+- slug: prism
+  name: Prismatic
+  cdl: trigonal[32]:{10-10}@1.0 + {10-11}@0.8 | elongate(c:2.5)
+  is_primary: true
+  form_description: Prismatic hexagonal with dipyramid terminations
+  forms:
+  - prism
+  - pinacoid
+  - dipyramid
+- slug: watermelon
+  name: Watermelon
+  cdl: trigonal[32]:{10-10}@1.0 + {10-11}@0.8 | elongate(c:1.5)
+  form_description: 'Bi-colored tourmaline variety displaying a pink core surrounded by a green rim (or
+    occasionally the reverse), resembling a watermelon slice in cross- section. The color zoning results
+    from compositional changes during crystal growth, typically involving variations in manganese and
+    iron content. Prized for slices cut perpendicular to the c-axis showing the characteristic zoning.
+
+    '
+  forms:
+  - prism
+  - pinacoid
+  - dipyramid
+  note: Best displayed as polished slices cut perpendicular to the c-axis
