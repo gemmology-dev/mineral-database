@@ -34,6 +34,11 @@ ri: 1.900-2.034
 birefringence: 0.100-0.160
 optical_character: Biaxial +
 pleochroism: Strong trichroic (colorless/yellow, green/orange, red/brown)
+pleochroism_strength: very_strong
+pleochroism_color1: Colorless/Yellow
+pleochroism_color2: Green/Orange
+pleochroism_color3: Red/Brown
+pleochroism_notes: Strongly trichroic; combined with high dispersion creates complex optical effects
 dispersion: 0.051
 lustre: Adamantine to resinous
 cleavage: Distinct {110}

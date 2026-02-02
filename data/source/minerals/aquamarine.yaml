@@ -23,6 +23,10 @@ lustre: Vitreous
 cleavage: Imperfect basal (rarely seen)
 fracture: Conchoidal to uneven
 pleochroism: Weak (colourless to pale blue)
+pleochroism_strength: weak
+pleochroism_color1: Near colorless
+pleochroism_color2: Pale blue
+pleochroism_notes: Often not visible; best seen in well-saturated stones
 colors:
 - Blue
 - Blue-green

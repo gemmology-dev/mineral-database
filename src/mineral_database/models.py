@@ -68,6 +68,12 @@ class Mineral:
     cleavage: str | None = None
     fracture: str | None = None
     pleochroism: str | None = None
+    # Structured pleochroism data for dichroscope lookup
+    pleochroism_strength: str | None = None  # none|weak|moderate|strong|very_strong
+    pleochroism_color1: str | None = None
+    pleochroism_color2: str | None = None
+    pleochroism_color3: str | None = None  # For trichroic gems
+    pleochroism_notes: str | None = None
     colors: list[str] = field(default_factory=list)
     treatments: list[str] = field(default_factory=list)
     inclusions: list[str] = field(default_factory=list)
@@ -123,6 +129,11 @@ class Mineral:
             "cleavage",
             "fracture",
             "pleochroism",
+            "pleochroism_strength",
+            "pleochroism_color1",
+            "pleochroism_color2",
+            "pleochroism_color3",
+            "pleochroism_notes",
             "twin_law",
             "phenomenon",
             "note",
@@ -171,6 +182,11 @@ class Mineral:
             cleavage=data.get("cleavage"),
             fracture=data.get("fracture"),
             pleochroism=data.get("pleochroism"),
+            pleochroism_strength=data.get("pleochroism_strength"),
+            pleochroism_color1=data.get("pleochroism_color1"),
+            pleochroism_color2=data.get("pleochroism_color2"),
+            pleochroism_color3=data.get("pleochroism_color3"),
+            pleochroism_notes=data.get("pleochroism_notes"),
             colors=data.get("colors", []),
             treatments=data.get("treatments", []),
             inclusions=data.get("inclusions", []),

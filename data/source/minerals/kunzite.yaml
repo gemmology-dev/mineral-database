@@ -23,6 +23,11 @@ lustre: Vitreous
 cleavage: Perfect in two directions
 fracture: Uneven to splintery
 pleochroism: Strong trichroic (pink, purplish-pink, colorless)
+pleochroism_strength: strong
+pleochroism_color1: Pink
+pleochroism_color2: Violet/Purplish-pink
+pleochroism_color3: Near colorless
+pleochroism_notes: Strong trichroism; best color seen down c-axis; fades in prolonged light
 colors:
 - Pink
 - Lilac

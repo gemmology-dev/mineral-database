@@ -61,6 +61,12 @@ def init_database(db_path: Path | None = None) -> None:
         cleavage TEXT,
         fracture TEXT,
         pleochroism TEXT,
+        -- Structured pleochroism data for dichroscope lookup
+        pleochroism_strength TEXT,    -- none|weak|moderate|strong|very_strong
+        pleochroism_color1 TEXT,
+        pleochroism_color2 TEXT,
+        pleochroism_color3 TEXT,      -- For trichroic gems
+        pleochroism_notes TEXT,
         twin_law TEXT,
         phenomenon TEXT,
         note TEXT,
@@ -214,12 +220,17 @@ def insert_mineral(conn: sqlite3.Connection, mineral: Mineral) -> None:
     INSERT OR REPLACE INTO minerals (
         id, name, cdl, system, point_group, chemistry, hardness, description,
         sg, ri, birefringence, optical_character, dispersion, lustre, cleavage,
-        fracture, pleochroism, twin_law, phenomenon, note,
+        fracture, pleochroism,
+        pleochroism_strength, pleochroism_color1, pleochroism_color2,
+        pleochroism_color3, pleochroism_notes,
+        twin_law, phenomenon, note,
         localities_json, forms_json, colors_json, treatments_json, inclusions_json,
         ri_min, ri_max, sg_min, sg_max,
         heat_treatment_temp_min, heat_treatment_temp_max
     ) VALUES (
-        ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
+        ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
+        ?, ?, ?, ?, ?,
+        ?, ?, ?,
         ?, ?, ?, ?, ?,
         ?, ?, ?, ?,
         ?, ?
@@ -246,6 +257,11 @@ def insert_mineral(conn: sqlite3.Connection, mineral: Mineral) -> None:
             mineral.cleavage,
             mineral.fracture,
             mineral.pleochroism,
+            mineral.pleochroism_strength,
+            mineral.pleochroism_color1,
+            mineral.pleochroism_color2,
+            mineral.pleochroism_color3,
+            mineral.pleochroism_notes,
             mineral.twin_law,
             mineral.phenomenon,
             mineral.note,
@@ -311,6 +327,13 @@ def row_to_mineral(row: sqlite3.Row) -> Mineral:
     heat_min = row["heat_treatment_temp_min"] if "heat_treatment_temp_min" in row.keys() else None
     heat_max = row["heat_treatment_temp_max"] if "heat_treatment_temp_max" in row.keys() else None
 
+    # Extract pleochroism columns (may not exist in older databases)
+    pleochroism_strength = row["pleochroism_strength"] if "pleochroism_strength" in row.keys() else None
+    pleochroism_color1 = row["pleochroism_color1"] if "pleochroism_color1" in row.keys() else None
+    pleochroism_color2 = row["pleochroism_color2"] if "pleochroism_color2" in row.keys() else None
+    pleochroism_color3 = row["pleochroism_color3"] if "pleochroism_color3" in row.keys() else None
+    pleochroism_notes = row["pleochroism_notes"] if "pleochroism_notes" in row.keys() else None
+
     return Mineral(
         id=row["id"],
         name=row["name"],
@@ -331,6 +354,11 @@ def row_to_mineral(row: sqlite3.Row) -> Mineral:
         cleavage=row["cleavage"],
         fracture=row["fracture"],
         pleochroism=row["pleochroism"],
+        pleochroism_strength=pleochroism_strength,
+        pleochroism_color1=pleochroism_color1,
+        pleochroism_color2=pleochroism_color2,
+        pleochroism_color3=pleochroism_color3,
+        pleochroism_notes=pleochroism_notes,
         colors=json.loads(row["colors_json"] or "[]"),
         treatments=json.loads(row["treatments_json"] or "[]"),
         inclusions=json.loads(row["inclusions_json"] or "[]"),

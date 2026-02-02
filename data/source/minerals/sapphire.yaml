@@ -24,6 +24,10 @@ lustre: Vitreous to adamantine
 cleavage: None (parting along twin planes)
 fracture: Conchoidal to uneven
 pleochroism: Distinct to strong (varies with colour)
+pleochroism_strength: strong
+pleochroism_color1: Violet-blue
+pleochroism_color2: Greenish-blue
+pleochroism_notes: Varies with color saturation; blue sapphire shows distinct dichroism
 colors:
 - Blue
 - Yellow

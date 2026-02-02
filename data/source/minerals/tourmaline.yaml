@@ -25,6 +25,10 @@ lustre: Vitreous
 cleavage: Indistinct
 fracture: Uneven to conchoidal
 pleochroism: Strong (often dark to light of same hue)
+pleochroism_strength: strong
+pleochroism_color1: Dark tone
+pleochroism_color2: Light tone
+pleochroism_notes: Very strong absorption difference; table should be cut perpendicular to c-axis
 colors:
 - Pink (Rubellite)
 - Red

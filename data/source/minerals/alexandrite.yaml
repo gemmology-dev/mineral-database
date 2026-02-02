@@ -23,6 +23,11 @@ lustre: Vitreous
 cleavage: Good in one direction
 fracture: Conchoidal to uneven
 pleochroism: Strong trichroic (green, orange, purple-red)
+pleochroism_strength: very_strong
+pleochroism_color1: Green
+pleochroism_color2: Orange
+pleochroism_color3: Purple-red
+pleochroism_notes: Strong trichroism distinct from color change effect
 colors:
 - Green to blue-green (daylight)
 - Red to purple-red (incandescent)

@@ -19,6 +19,11 @@ lustre: Vitreous
 cleavage: Perfect in one direction
 fracture: Uneven to conchoidal
 pleochroism: Strong trichroic (blue, purple/violet, brown/burgundy)
+pleochroism_strength: very_strong
+pleochroism_color1: Blue
+pleochroism_color2: Purple/Violet
+pleochroism_color3: Bronze/Brown
+pleochroism_notes: Strongly trichroic; all three colors often visible
 colors:
 - Violet-blue
 - Blue

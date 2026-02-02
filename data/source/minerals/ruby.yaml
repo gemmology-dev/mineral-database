@@ -35,6 +35,10 @@ lustre: Vitreous to adamantine
 cleavage: None (parting on {0001})
 fracture: Conchoidal to uneven
 pleochroism: Strong (purplish-red/orange-red)
+pleochroism_strength: strong
+pleochroism_color1: Purplish-red
+pleochroism_color2: Orange-red
+pleochroism_notes: Best seen in thick stones; dichroism key to separating from red spinel
 # Heat treatment temperatures (Source: GEM-A)
 heat_treatment_temp_min: 800
 heat_treatment_temp_max: 1900

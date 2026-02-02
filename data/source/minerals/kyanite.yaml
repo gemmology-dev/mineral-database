@@ -33,6 +33,11 @@ ri: 1.716-1.731
 birefringence: 0.012-0.017
 optical_character: Biaxial -
 pleochroism: Moderate dichroic (colorless, dark blue, violet-blue in blue material)
+pleochroism_strength: moderate
+pleochroism_color1: Near colorless
+pleochroism_color2: Dark blue
+pleochroism_color3: Violet-blue
+pleochroism_notes: Trichroic; color zoning may complicate observation
 dispersion: 0.020
 lustre: Vitreous to pearly
 cleavage: Perfect {100}, good {010}

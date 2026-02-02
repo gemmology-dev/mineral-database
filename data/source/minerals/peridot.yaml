@@ -26,6 +26,11 @@ lustre: Vitreous to oily
 cleavage: Poor
 fracture: Conchoidal
 pleochroism: Weak (yellowish-green, green, greenish-yellow)
+pleochroism_strength: weak
+pleochroism_color1: Yellow-green
+pleochroism_color2: Green
+pleochroism_color3: Greenish-yellow
+pleochroism_notes: Subtle difference; may be difficult to detect
 colors:
 - Yellow-green
 - Olive green
