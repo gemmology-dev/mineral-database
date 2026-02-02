@@ -1,22 +1,11 @@
+id: barite
 name: Barite
-cdl: orthorhombic[mmm]:{001}@1.0 + {210}@0.8 + {110}@0.5
-system: orthorhombic
+crystal_system: orthorhombic
 point_group: mmm
 chemistry: BaSO4
 hardness: 3
-description: Tabular with complex prism faces - heavy spar, notable for high density
-localities:
-- England (Cumberland, Derbyshire)
-- Morocco
-- USA (Colorado, South Dakota)
-- Germany
-- Romania
-- China
-forms:
-- pinacoid
-- prism
-sg: '4.3-4.5'
-ri: '1.636-1.648'
+sg: 4.3-4.5
+ri: 1.636-1.648
 birefringence: 0.012
 optical_character: Biaxial +
 dispersion: 0.016
@@ -31,11 +20,24 @@ colors:
 - Yellow
 - Red
 - Brown
-varieties:
-- Desert rose (bladed rosettes with sand)
-- Honey barite (golden yellow)
 inclusions:
 - Sand inclusions (in desert rose)
 - Fluid inclusions
 - Colour zoning
-note: Exceptionally high specific gravity (4.3-4.5) for a non-metallic mineral; used in drilling mud
+localities:
+- England (Cumberland, Derbyshire)
+- Morocco
+- USA (Colorado, South Dakota)
+- Germany
+- Romania
+- China
+expressions:
+- slug: default
+  name: Barite
+  cdl: orthorhombic[mmm]:{001}@1.0 + {210}@0.8 + {110}@0.5
+  is_primary: true
+  form_description: Tabular with complex prism faces - heavy spar, notable for high density
+  forms:
+  - pinacoid
+  - prism
+  note: Exceptionally high specific gravity (4.3-4.5) for a non-metallic mineral; used in drilling mud

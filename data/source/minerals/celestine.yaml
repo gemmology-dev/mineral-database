@@ -1,40 +1,45 @@
+id: celestine
 name: Celestine
-cdl: orthorhombic[mmm]:{001}@1.0 + {011}@0.8 + {210}@0.5 + {102}@0.4
-system: orthorhombic
+crystal_system: orthorhombic
 point_group: mmm
 chemistry: SrSO4
 hardness: 3-3.5
-description: >
-  Strontium sulfate mineral named for its characteristic celestial blue color
-  (from Latin "caelestis" meaning heavenly). Celestine forms beautiful tabular
-  to prismatic crystals often found in geodes. It is the primary ore of
-  strontium, used in fireworks and flares for its crimson flame color.
-  The world-famous celestine geodes from Madagascar can reach enormous sizes.
-localities:
-  - Madagascar (large geodes)
-  - Ohio (USA - Put-in-Bay)
-  - England (Bristol area)
-  - Poland
-  - Libya
-  - Mexico
-forms:
-  - pinacoid
-  - prism
-  - tabular crystals
-colors:
-  - Celestial blue (pale blue)
-  - Colorless
-  - White
-  - Pale yellow
-  - Pale green
-  - Reddish
 sg: 3.95-3.97
 ri: 1.619-1.632
 birefringence: 0.010-0.011
-dispersion: 0.016  # Source: moderate r < v, similar to barite (isostructural)
 optical_character: Biaxial +
-pleochroism: Weak in colored specimens (pale blue shades)
+dispersion: 0.016
 lustre: Vitreous to pearly
 cleavage: Perfect {001}, good {210}
 fracture: Uneven
-note: Isostructural with barite (BaSO4); distinguished by lower SG and strontium flame test (crimson)
+pleochroism: Weak in colored specimens (pale blue shades)
+colors:
+- Celestial blue (pale blue)
+- Colorless
+- White
+- Pale yellow
+- Pale green
+- Reddish
+localities:
+- Madagascar (large geodes)
+- Ohio (USA - Put-in-Bay)
+- England (Bristol area)
+- Poland
+- Libya
+- Mexico
+expressions:
+- slug: default
+  name: Celestine
+  cdl: orthorhombic[mmm]:{001}@1.0 + {011}@0.8 + {210}@0.5 + {102}@0.4
+  is_primary: true
+  form_description: 'Strontium sulfate mineral named for its characteristic celestial blue color (from
+    Latin "caelestis" meaning heavenly). Celestine forms beautiful tabular to prismatic crystals often
+    found in geodes. It is the primary ore of strontium, used in fireworks and flares for its crimson
+    flame color. The world-famous celestine geodes from Madagascar can reach enormous sizes.
+
+    '
+  forms:
+  - pinacoid
+  - prism
+  - tabular crystals
+  note: Isostructural with barite (BaSO4); distinguished by lower SG and strontium flame test (crimson)

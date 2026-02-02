@@ -1,21 +1,11 @@
+id: quartz
 name: Quartz
-cdl: trigonal[32]:{10-10}@0.5 + {10-11}@1.2 + {01-11}@1.0 | elongate(c:2.0)
-system: trigonal
+crystal_system: trigonal
 point_group: '32'
 chemistry: SiO2
 hardness: 7
-description: Hexagonal prism with rhombohedral terminations - most abundant mineral in Earth's crust
-localities:
-- Brazil
-- Madagascar
-- USA
-- Alps
-- Worldwide
-forms:
-- prism
-- rhombohedron
 sg: '2.65'
-ri: '1.544-1.553'
+ri: 1.544-1.553
 birefringence: 0.009
 optical_character: Uniaxial +
 dispersion: 0.013
@@ -37,3 +27,83 @@ inclusions:
 - Rutile needles
 - Tourmaline crystals
 - Various mineral inclusions
+localities:
+- Brazil
+- Madagascar
+- USA
+- Alps
+- Worldwide
+expressions:
+- slug: prism
+  name: Prismatic
+  cdl: trigonal[32]:{10-10}@0.5 + {10-11}@1.2 + {01-11}@1.0 | elongate(c:2.0)
+  is_primary: true
+  form_description: Hexagonal prism with rhombohedral terminations - most abundant mineral in Earth's
+    crust
+  forms:
+  - prism
+  - rhombohedron
+- slug: short
+  name: Short Prism
+  cdl: trigonal[32]:{10-10}@0.4 + {10-11}@1.2 + {01-11}@1.0
+  form_description: Short prismatic quartz with prominent terminations - common habit in many localities
+  forms:
+  - prism
+  - rhombohedron
+  note: Habit variant with shorter c-axis development relative to rhombohedral faces
+- slug: scepter
+  name: Scepter
+  cdl: trigonal[32]:{10-11}@1.0 + {01-11}@0.9 + {10-10}@0.3 + {0001}@0.2 | elongate(c:0.8)
+  form_description: Overgrowth habit with enlarged head on thin stem - formed by two-stage crystal growth
+  forms:
+  - rhombohedron
+  - prism
+  note: True scepter morphology requires two crystal generations; often prized by collectors
+- slug: faden
+  name: Faden
+  cdl: trigonal[32]:{0001}@1.0 + {10-10}@0.2 + {10-11}@0.3 | elongate(c:0.4)
+  form_description: Tabular crystals with characteristic white thread-like inclusion (faden = thread in
+    German)
+  forms:
+  - pinacoid
+  - prism
+  - rhombohedron
+  note: Faden formed by repeated fracturing and healing during tectonic activity; thread marks original
+    fracture plane
+- slug: japan-twin
+  name: Japan Law Twin
+  cdl: trigonal[32]:{10-10}@0.5 + {10-11}@1.2 + {01-11}@1.0 + {0001}@2.0 | elongate(c:2.0) | twin(japan)
+  form_description: 'Two quartz crystals joined at an angle of 84 degrees 33 minutes, forming a distinctive
+    heart or V-shaped habit. Japan Law twins are contact twins with composition plane {11-22}. Named for
+    classic specimens from Yamanashi Prefecture, Japan. Highly prized by mineral collectors for their
+    geometric beauty and relative rarity.
+
+    '
+  forms:
+  - prism
+  - rhombohedron
+  - twin
+- slug: dauphine-twin
+  name: Dauphine Twin
+  cdl: trigonal[32]:{10-10}@0.5 + {10-11}@1.2 + {01-11}@1.0 + {0001}@2.0 | elongate(c:2.0) | twin(dauphine)
+  form_description: 'Penetration twin with 180 degree rotation about the c-axis (trigonal axis). Dauphine
+    twinning involves interpenetration of two right-handed or two left-handed quartz individuals, resulting
+    in domains with opposite orientation of prism faces. Often detectable only under polarized light or
+    by etching. Named for the Dauphine region of France.
+
+    '
+  forms:
+  - prism
+  - rhombohedron
+- slug: brazil-twin
+  name: Brazil Law Twin
+  cdl: trigonal[32]:{10-10}@0.5 + {10-11}@1.2 + {01-11}@1.0 + {0001}@2.0 | elongate(c:2.0) | twin(brazil)
+  form_description: 'Optical twinning involving interpenetration of left-handed and right-handed quartz
+    individuals - essentially a mirror twin. Brazil Law twins show opposite optical rotation in alternating
+    domains, detectable with polarized light as sectors of different optical handedness. Not visible externally
+    but affects optical properties significantly. Common in natural quartz.
+
+    '
+  forms:
+  - prism
+  - rhombohedron

@@ -1,49 +1,50 @@
+id: diopside
 name: Diopside
-cdl: monoclinic[2/m]:{110}@1.0 + {100}@0.6 + {010}@0.5 + {001}@0.9
-system: monoclinic
+crystal_system: monoclinic
 point_group: 2/m
 chemistry: CaMgSi2O6
 hardness: 5.5-6.5
-description: >
-  Calcium-magnesium pyroxene forming short prismatic crystals with
-  characteristic near-90-degree cleavage angles. Chrome diopside from Russia
-  displays intense emerald-green color rivaling tsavorite and is an important
-  gemstone. Star diopside with four-rayed asterism is also known. The violan
-  variety shows attractive violet-blue color.
-localities:
-  - Russia (Siberia - chrome diopside)
-  - Italy (Piedmont)
-  - Austria (Zillertal)
-  - Tanzania
-  - Madagascar
-  - Pakistan
-  - India (star diopside)
-forms:
-  - prism
-  - pinacoid
-colors:
-  - Green (chrome diopside)
-  - Colorless
-  - Pale green
-  - Dark green
-  - Violet-blue (violan)
-  - Brown
-  - Black
 sg: 3.22-3.38
 ri: 1.675-1.701
 birefringence: 0.024-0.030
 optical_character: Biaxial +
+dispersion: 0.02
+lustre: Vitreous
+cleavage: Good {110} at 87-93 degrees (characteristic pyroxene cleavage)
+fracture: Uneven to conchoidal
 pleochroism: Weak to strong dichroic (light green/dark green in chrome diopside)
 pleochroism_strength: moderate
 pleochroism_color1: Light green
 pleochroism_color2: Dark green
 pleochroism_notes: Strong in chrome diopside; weak in other varieties
-dispersion: 0.020
-lustre: Vitreous
-cleavage: Good {110} at 87-93 degrees (characteristic pyroxene cleavage)
-fracture: Uneven to conchoidal
-varieties:
-  - Chrome diopside (Cr-bearing, emerald green)
-  - Star diopside (asterism)
-  - Violan (blue-violet)
+colors:
+- Green (chrome diopside)
+- Colorless
+- Pale green
+- Dark green
+- Violet-blue (violan)
+- Brown
+- Black
+localities:
+- Russia (Siberia - chrome diopside)
+- Italy (Piedmont)
+- Austria (Zillertal)
+- Tanzania
+- Madagascar
+- Pakistan
+- India (star diopside)
 fluorescence: Strong blue to bluish-white (SWUV)
+expressions:
+- slug: default
+  name: Diopside
+  cdl: monoclinic[2/m]:{110}@1.0 + {100}@0.6 + {010}@0.5 + {001}@0.9
+  is_primary: true
+  form_description: 'Calcium-magnesium pyroxene forming short prismatic crystals with characteristic near-90-degree
+    cleavage angles. Chrome diopside from Russia displays intense emerald-green color rivaling tsavorite
+    and is an important gemstone. Star diopside with four-rayed asterism is also known. The violan variety
+    shows attractive violet-blue color.
+
+    '
+  forms:
+  - prism
+  - pinacoid

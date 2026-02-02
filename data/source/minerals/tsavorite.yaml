@@ -1,48 +1,47 @@
+id: tsavorite
 name: Tsavorite
-cdl: cubic[m3m]:{110}@1.0 + {211}@0.6
-system: cubic
+crystal_system: cubic
 point_group: m3m
 chemistry: Ca3Al2(SiO4)3:V,Cr
 hardness: 7-7.5
-description: >
-  Vivid green variety of grossular garnet, coloured by vanadium and/or chromium.
-  Named by Tiffany's Henry Platt after Tsavo National Park in Kenya. One of
-  the most valuable garnets, fine stones over 2 carats are rare. Unlike emerald,
-  tsavorite typically has excellent clarity and requires no treatment.
-localities:
-  - Kenya (Tsavo)
-  - Tanzania (Merelani)
-  - Madagascar
-  - Pakistan
-forms:
-  - dodecahedron
-  - trapezohedron
-colors:
-  - Vivid green
-  - Yellowish-green
-  - Bluish-green
-  - Medium green
-  - Deep green
 sg: 3.61
-ri: 1.740
+ri: 1.74
 optical_character: Isotropic
-pleochroism: None (isotropic)
+dispersion: 0.028
 lustre: Vitreous
 cleavage: None
 fracture: Conchoidal to uneven
-dispersion: 0.028
+pleochroism: None (isotropic)
+colors:
+- Vivid green
+- Yellowish-green
+- Bluish-green
+- Medium green
+- Deep green
 treatments:
-  - Generally not treated
+- Generally not treated
 inclusions:
-  - Graphite flakes
-  - Actinolite needles
-  - Fingerprints
-  - Growth tubes
-  - Diopside crystals
-chromophore: Vanadium (V3+) and/or Chromium (Cr3+)
-variety_of: Grossular Garnet
-species: Grossular
-notes: >
-  Tsavorite competes with emerald in colour but offers better clarity and
-  durability. The East African Rift deposits remain the primary source.
-  ADR (anomalous double refraction) may be visible under polariscope.
+- Graphite flakes
+- Actinolite needles
+- Fingerprints
+- Growth tubes
+- Diopside crystals
+localities:
+- Kenya (Tsavo)
+- Tanzania (Merelani)
+- Madagascar
+- Pakistan
+expressions:
+- slug: default
+  name: Tsavorite
+  cdl: cubic[m3m]:{110}@1.0 + {211}@0.6
+  is_primary: true
+  form_description: 'Vivid green variety of grossular garnet, coloured by vanadium and/or chromium. Named
+    by Tiffany''s Henry Platt after Tsavo National Park in Kenya. One of the most valuable garnets, fine
+    stones over 2 carats are rare. Unlike emerald, tsavorite typically has excellent clarity and requires
+    no treatment.
+
+    '
+  forms:
+  - dodecahedron
+  - trapezohedron

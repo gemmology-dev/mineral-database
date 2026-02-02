@@ -1,36 +1,9 @@
+id: hiddenite
 name: Hiddenite
-cdl: monoclinic[2/m]:{110}@1.0 + {100}@0.7 + {001}@1.0
-system: monoclinic
+crystal_system: monoclinic
 point_group: 2/m
 chemistry: LiAlSi2O6:Cr
 hardness: 6.5-7
-description: >
-  The green chromium-bearing variety of spodumene, named after William Earl
-  Hidden who discovered it in North Carolina. True hiddenite derives its
-  color from chromium and is extremely rare, with the finest material coming
-  from the type locality in Alexander County, North Carolina. Distinguished
-  from similar-looking stones by its strong pleochroism and perfect cleavage.
-localities:
-  - USA (North Carolina - type locality)
-  - Brazil (light green, may be V-colored)
-  - Madagascar
-  - Afghanistan
-forms:
-  - prism
-  - pinacoid
-colors:
-  - Emerald green (Cr-colored, rare)
-  - Yellow-green
-  - Light green
-  - Blue-green
-treatments:
-  - Irradiation (to enhance colour)
-inclusions:
-  - Growth tubes
-  - Etch tubes
-  - Healing cracks
-  - Liquid inclusions
-  - Multi-phase inclusions
 sg: 3.15-3.21
 ri: 1.660-1.676
 birefringence: 0.014-0.016
@@ -45,5 +18,37 @@ pleochroism_color1: Blue-green
 pleochroism_color2: Emerald green
 pleochroism_color3: Yellow-green
 pleochroism_notes: Trichroic; cutters orient to show best green face-up
-variety_of: Spodumene
-note: True Cr-colored hiddenite is extremely rare and valuable; many stones sold as hiddenite are lighter colored or V-bearing
+colors:
+- Emerald green (Cr-colored, rare)
+- Yellow-green
+- Light green
+- Blue-green
+treatments:
+- Irradiation (to enhance colour)
+inclusions:
+- Growth tubes
+- Etch tubes
+- Healing cracks
+- Liquid inclusions
+- Multi-phase inclusions
+localities:
+- USA (North Carolina - type locality)
+- Brazil (light green, may be V-colored)
+- Madagascar
+- Afghanistan
+expressions:
+- slug: default
+  name: Hiddenite
+  cdl: monoclinic[2/m]:{110}@1.0 + {100}@0.7 + {001}@1.0
+  is_primary: true
+  form_description: 'The green chromium-bearing variety of spodumene, named after William Earl Hidden
+    who discovered it in North Carolina. True hiddenite derives its color from chromium and is extremely
+    rare, with the finest material coming from the type locality in Alexander County, North Carolina.
+    Distinguished from similar-looking stones by its strong pleochroism and perfect cleavage.
+
+    '
+  forms:
+  - prism
+  - pinacoid
+  note: True Cr-colored hiddenite is extremely rare and valuable; many stones sold as hiddenite are lighter
+    colored or V-bearing

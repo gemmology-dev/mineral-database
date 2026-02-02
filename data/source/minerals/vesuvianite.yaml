@@ -1,22 +1,11 @@
+id: vesuvianite
 name: Vesuvianite
-cdl: tetragonal[4/mmm]:{100}@1.0 + {110}@0.8 + {001}@0.6
-system: tetragonal
+crystal_system: tetragonal
 point_group: 4/mmm
 chemistry: Ca19(Al,Mg)13(SiO4)10(Si2O7)4(OH,F)10
 hardness: 6.5
-description: Complex tetragonal prism combination - also known as idocrase
-localities:
-- Italy (Mount Vesuvius - type locality)
-- Canada (Quebec, British Columbia)
-- Russia (Ural Mountains)
-- USA (California)
-- Kenya
-- Pakistan
-forms:
-- tetragonal_prism
-- pinacoid
-sg: '3.32-3.42'
-ri: '1.700-1.752'
+sg: 3.32-3.42
+ri: 1.700-1.752
 birefringence: 0.001-0.025
 optical_character: Uniaxial - (occasionally +)
 dispersion: 0.019
@@ -31,11 +20,24 @@ colors:
 - Brown
 - Blue (cyprine - copper-bearing)
 - Violet
-varieties:
-- Californite (jade-like massive green)
-- Cyprine (blue, copper-bearing)
-- Chrome idocrase (emerald-green)
 inclusions:
 - Colour zoning
 - Crystal inclusions
-note: Named by Werner in 1795 for crystals from Mount Vesuvius; gemologists often use the older name idocrase
+localities:
+- Italy (Mount Vesuvius - type locality)
+- Canada (Quebec, British Columbia)
+- Russia (Ural Mountains)
+- USA (California)
+- Kenya
+- Pakistan
+expressions:
+- slug: default
+  name: Vesuvianite
+  cdl: tetragonal[4/mmm]:{100}@1.0 + {110}@0.8 + {001}@0.6
+  is_primary: true
+  form_description: Complex tetragonal prism combination - also known as idocrase
+  forms:
+  - tetragonal_prism
+  - pinacoid
+  note: Named by Werner in 1795 for crystals from Mount Vesuvius; gemologists often use the older name
+    idocrase

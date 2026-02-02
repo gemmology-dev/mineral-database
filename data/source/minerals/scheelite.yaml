@@ -1,33 +1,9 @@
+id: scheelite
 name: Scheelite
-cdl: tetragonal[4/m]:{112}@1.0 + {011}@0.7 + {001}@0.4
-system: tetragonal
+crystal_system: tetragonal
 point_group: 4/m
 chemistry: CaWO4
 hardness: 4.5-5
-description: >
-  Calcium tungstate mineral known for its brilliant blue-white fluorescence
-  under shortwave UV light - one of the most spectacular fluorescent
-  minerals. Scheelite forms dipyramidal crystals with high lustre approaching
-  diamond. While occasionally faceted for collectors, its softness and
-  distinct cleavage make it unsuitable for jewelry wear.
-localities:
-  - China
-  - Brazil
-  - California (USA - Pine Creek)
-  - Austria
-  - Korea
-  - Bolivia
-forms:
-  - dipyramid
-  - pinacoid
-  - pseudo-octahedral
-colors:
-  - Colorless
-  - White
-  - Yellow
-  - Orange
-  - Brown
-  - Pale green
 sg: 5.9-6.1
 ri: 1.918-1.937
 birefringence: 0.016-0.017
@@ -37,5 +13,34 @@ lustre: Vitreous to adamantine
 cleavage: Distinct {101}, poor {112}
 fracture: Subconchoidal to uneven
 pleochroism: None
+colors:
+- Colorless
+- White
+- Yellow
+- Orange
+- Brown
+- Pale green
+localities:
+- China
+- Brazil
+- California (USA - Pine Creek)
+- Austria
+- Korea
+- Bolivia
 fluorescence: Strong blue-white (SWUV) - diagnostic
-note: Trace molybdenum shifts fluorescence to yellowish-green; important tungsten ore
+expressions:
+- slug: default
+  name: Scheelite
+  cdl: tetragonal[4/m]:{112}@1.0 + {011}@0.7 + {001}@0.4
+  is_primary: true
+  form_description: 'Calcium tungstate mineral known for its brilliant blue-white fluorescence under shortwave
+    UV light - one of the most spectacular fluorescent minerals. Scheelite forms dipyramidal crystals
+    with high lustre approaching diamond. While occasionally faceted for collectors, its softness and
+    distinct cleavage make it unsuitable for jewelry wear.
+
+    '
+  forms:
+  - dipyramid
+  - pinacoid
+  - pseudo-octahedral
+  note: Trace molybdenum shifts fluorescence to yellowish-green; important tungsten ore

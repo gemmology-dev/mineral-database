@@ -1,0 +1,54 @@
+id: calcite
+name: Calcite
+crystal_system: trigonal
+point_group: -3m
+chemistry: CaCO3
+hardness: 3
+sg: '2.71'
+ri: 1.486-1.658
+birefringence: 0.172
+optical_character: Uniaxial -
+dispersion: 0.017
+lustre: Vitreous
+cleavage: Perfect rhombohedral {10-11}
+fracture: Conchoidal
+pleochroism: None
+colors:
+- Colourless
+- Yellow (golden dogtooth)
+- White
+- Honey
+inclusions:
+- Phantoms
+- Iron oxide staining
+- Fluid inclusions
+localities:
+- USA (Missouri, Tennessee)
+- England (Cumberland)
+- Germany
+- Mexico
+- China
+expressions:
+- slug: scalenohedron
+  name: Scalenohedron
+  cdl: trigonal[-3m]:{21-31}
+  is_primary: true
+  form_description: Dogtooth spar - pointed scalenohedral crystals resembling canine teeth
+  forms:
+  - scalenohedron
+  note: Also called dogtooth spar; scalenohedron has 12 scalene triangle faces
+- slug: rhomb
+  name: Rhombohedron
+  cdl: trigonal[-3m]:{10-11}
+  form_description: Perfect rhombohedral cleavage form - Iceland spar is classic example
+  forms:
+  - rhombohedron
+  note: Extreme birefringence (0.172) causes dramatic double refraction - discovered by Bartholin in 1669
+- slug: nailhead
+  name: Nailhead
+  cdl: trigonal[-3m]:{0001}@1.0 + {10-11}@0.4
+  form_description: Nailhead spar - dominant basal pinacoid with small rhombohedral termination
+  forms:
+  - pinacoid
+  - rhombohedron
+  note: Flat tabular habit resembles nail head; often found in limestone cavities

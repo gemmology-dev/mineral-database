@@ -1,75 +1,80 @@
+id: garnet
 name: Garnet
-cdl: cubic[m3m]:{110}@1.0 + {211}@0.6
-system: cubic
+crystal_system: cubic
 point_group: m3m
 chemistry: X3Y2(SiO4)3
 hardness: 6.5-7.5
-description: >
-  Garnet is a group of silicate minerals sharing a common crystal structure
-  but varying in chemical composition. The group produces gems in virtually
-  every colour except true blue, from common red almandine to rare and valuable
-  demantoid. Most gem garnets are solid solutions between end-member compositions.
-  The group divides into pyralspite (Al garnets) and ugrandite (Ca garnets) series.
-localities:
-  - India
-  - Sri Lanka
-  - Madagascar
-  - Tanzania
-  - Brazil
-  - Mozambique
-  - Kenya
-  - Russia (Urals)
-  - Namibia
-forms:
-  - dodecahedron
-  - trapezohedron
-  - combination habits
-colors:
-  - Red (almandine, pyrope)
-  - Orange (spessartine, hessonite)
-  - Yellow (grossular, topazolite)
-  - Green (demantoid, tsavorite, uvarovite)
-  - Purple (rhodolite)
-  - Brown (hessonite)
-  - Pink (rhodolite, malaya)
-  - Color-change (rare pyrope-spessartine)
-treatments:
-  - Heat treatment (rare)
-  - Surface coating (rare)
-inclusions:
-  - Silk (rutile needles)
-  - Crystals
-  - Fingerprints
-  - Growth tubes
-  - Horsetail (demantoid)
-  - Roiled appearance (hessonite)
 sg: 3.50-4.30
 ri: 1.73-1.89
 optical_character: Isotropic
-pleochroism: None (isotropic)
 dispersion: 0.027-0.057
 lustre: Vitreous to resinous
 cleavage: None
 fracture: Conchoidal to uneven
-species:
-  pyralspite_series:
-    - Pyrope (Mg) - red
-    - Almandine (Fe) - red
-    - Spessartine (Mn) - orange
-  ugrandite_series:
-    - Uvarovite (Cr) - green
-    - Grossular (Al) - variable
-    - Andradite (Fe) - green/yellow/black
-varieties:
-  - Rhodolite (pyrope-almandine)
-  - Tsavorite (Cr/V grossular)
-  - Demantoid (Cr andradite)
-  - Hessonite (Fe grossular)
-  - Mandarin/Fanta (spessartine)
-  - Malaya (pyrope-spessartine)
-  - Color-change (pyrope-spessartine)
-notes: >
-  Garnets are singly refractive (isotropic) but commonly show anomalous
-  double refraction (ADR) due to internal strain. This appears as patchy
-  light/dark patterns under polariscope. ADR is particularly common in
-  almandine and is not a sign of misidentification.
+pleochroism: None (isotropic)
+colors:
+- Red (almandine, pyrope)
+- Orange (spessartine, hessonite)
+- Yellow (grossular, topazolite)
+- Green (demantoid, tsavorite, uvarovite)
+- Purple (rhodolite)
+- Brown (hessonite)
+- Pink (rhodolite, malaya)
+- Color-change (rare pyrope-spessartine)
+treatments:
+- Heat treatment (rare)
+- Surface coating (rare)
+inclusions:
+- Silk (rutile needles)
+- Crystals
+- Fingerprints
+- Growth tubes
+- Horsetail (demantoid)
+- Roiled appearance (hessonite)
+localities:
+- India
+- Sri Lanka
+- Madagascar
+- Tanzania
+- Brazil
+- Mozambique
+- Kenya
+- Russia (Urals)
+- Namibia
+expressions:
+- slug: combination
+  name: Combination
+  cdl: cubic[m3m]:{110}@1.0 + {211}@0.6
+  is_primary: true
+  form_description: 'Garnet is a group of silicate minerals sharing a common crystal structure but varying
+    in chemical composition. The group produces gems in virtually every colour except true blue, from
+    common red almandine to rare and valuable demantoid. Most gem garnets are solid solutions between
+    end-member compositions. The group divides into pyralspite (Al garnets) and ugrandite (Ca garnets)
+    series.
+
+    '
+  forms:
+  - dodecahedron
+  - trapezohedron
+  - combination habits
+- slug: dodecahedron
+  name: Rhombic Dodecahedron
+  cdl: cubic[m3m]:{110}
+  form_description: 'Pure rhombic dodecahedral habit - the most common crystal form for garnets. The dodecahedron
+    {110} displays twelve rhomb-shaped faces meeting at identical angles. This habit is particularly common
+    in almandine and pyrope garnets, often showing slightly curved face striations.
+
+    '
+  forms:
+  - dodecahedron
+- slug: trapezohedron
+  name: Trapezohedron
+  cdl: cubic[m3m]:{211}
+  form_description: 'Trapezohedron (icositetrahedron) habit displaying 24 kite-shaped faces. This form
+    {211} is more commonly seen in grossular and andradite garnets than in the pyralspite series. Often
+    occurs in combination with dodecahedral faces in natural specimens. Classic examples from Alpine localities
+    and Italian grossulars.
+
+    '
+  forms:
+  - trapezohedron

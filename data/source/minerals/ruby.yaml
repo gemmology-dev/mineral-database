@@ -1,31 +1,9 @@
+id: ruby
 name: Ruby
-cdl: trigonal[-3m]:{10-11}@1.0 + {0001}@0.4
-system: trigonal
+crystal_system: trigonal
 point_group: -3m
 chemistry: Al2O3:Cr
 hardness: 9
-description: Tabular habit with prominent dipyramid
-localities:
-- Myanmar
-- Mozambique
-- Thailand
-- Madagascar
-forms:
-- dipyramid
-- pinacoid
-colors:
-- Red
-- Pinkish-red
-- Purplish-red
-treatments:
-- Heat treatment
-- Glass filling
-- Flux healing
-inclusions:
-- Silk
-- Crystals
-- Fingerprints
-- Color zoning
 sg: 4.0
 ri: 1.762-1.770
 birefringence: 0.008
@@ -39,6 +17,30 @@ pleochroism_strength: strong
 pleochroism_color1: Purplish-red
 pleochroism_color2: Orange-red
 pleochroism_notes: Best seen in thick stones; dichroism key to separating from red spinel
-# Heat treatment temperatures (Source: GEM-A)
-heat_treatment_temp_min: 800
-heat_treatment_temp_max: 1900
+colors:
+- Red
+- Pinkish-red
+- Purplish-red
+treatments:
+- Heat treatment
+- Glass filling
+- Flux healing
+inclusions:
+- Silk
+- Crystals
+- Fingerprints
+- Color zoning
+localities:
+- Myanmar
+- Mozambique
+- Thailand
+- Madagascar
+expressions:
+- slug: default
+  name: Ruby
+  cdl: trigonal[-3m]:{10-11}@1.0 + {0001}@0.4
+  is_primary: true
+  form_description: Tabular habit with prominent dipyramid
+  forms:
+  - dipyramid
+  - pinacoid

@@ -1,18 +1,16 @@
+id: diamond
 name: Diamond
-cdl: cubic[m3m]:{111}@1.0 + {110}@0.2
-system: cubic
+crystal_system: cubic
 point_group: m3m
 chemistry: C
 hardness: 10
-description: Octahedron with minor dodecahedron truncation
-localities:
-- South Africa
-- Russia
-- Australia
-- Botswana
-forms:
-- octahedron
-- dodecahedron
+sg: 3.52
+ri: 2.417
+optical_character: Isotropic
+dispersion: 0.044
+lustre: Adamantine
+cleavage: Perfect {111}
+fracture: Conchoidal
 colors:
 - Colorless
 - Yellow
@@ -30,10 +28,39 @@ inclusions:
 - Clouds
 - Pinpoints
 - Needles
-sg: 3.52
-ri: 2.417
-optical_character: Isotropic
-dispersion: 0.044
-lustre: Adamantine
-cleavage: Perfect {111}
-fracture: Conchoidal
+localities:
+- South Africa
+- Russia
+- Australia
+- Botswana
+expressions:
+- slug: octahedron
+  name: Octahedron
+  cdl: cubic[m3m]:{111}@1.0 + {110}@0.2
+  is_primary: true
+  form_description: Octahedron with minor dodecahedron truncation
+  forms:
+  - octahedron
+  - dodecahedron
+- slug: cube
+  name: Cube
+  cdl: cubic[m3m]:{100}
+  form_description: 'Cubic habit diamond - a less common crystal form typically found in industrial-grade
+    diamonds from the Democratic Republic of Congo. Cube faces often show characteristic etch patterns
+    and growth features. Pure cubic diamonds are rarer than octahedral specimens as gem material.
+
+    '
+  forms:
+  - cube
+- slug: macle
+  name: Macle Twin
+  cdl: cubic[m3m]:{111}@1.0 + {100}@0.3 | twin(spinel_law)
+  form_description: 'Flattened triangular twin on {111}, also called "macle" - a spinel-law contact twin
+    resulting in a distinctive triangular or slightly heart-shaped outline. Macles are historically significant
+    in diamond cutting as their shape and twin plane orientation require specialized sawing techniques.
+    Common in South African and Russian deposits.
+
+    '
+  forms:
+  - octahedron
+  - twin

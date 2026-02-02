@@ -1,36 +1,41 @@
+id: crocoite
 name: Crocoite
-cdl: monoclinic[2/m]:{110}@1.0 + {100}@0.7 + {001}@0.5 | elongate(c:3.0)
-system: monoclinic
+crystal_system: monoclinic
 point_group: 2/m
 chemistry: PbCrO4
 hardness: 2.5-3
-description: >
-  Lead chromate mineral forming spectacular elongated prismatic crystals
-  with a vivid orange-red to red color. The most highly prized mineral
-  specimens come from Tasmania, Australia, where crystals can reach
-  lengths of 10+ cm. Named from Greek "krokos" (saffron) for its color.
-  Despite its beauty, crocoite is too soft and fragile for jewelry use.
-localities:
-  - Tasmania (Australia - Dundas, Red Lead Mine)
-  - Russia (Urals - historic type locality)
-  - Brazil
-  - Philippines
-  - Zimbabwe
-forms:
-  - prism (elongated)
-  - pinacoid
-colors:
-  - Orange-red
-  - Red
-  - Hyacinth red
-  - Yellow-orange
 sg: 5.97-6.02
 ri: 2.31-2.66
 birefringence: 0.37
 optical_character: Biaxial +
-pleochroism: Weak (red to orange-red)
 dispersion: null
 lustre: Adamantine to vitreous
 cleavage: Distinct {110}
 fracture: Conchoidal to uneven
-note: RI over refractometer limit; extremely high birefringence; contains lead - wash hands after handling
+pleochroism: Weak (red to orange-red)
+colors:
+- Orange-red
+- Red
+- Hyacinth red
+- Yellow-orange
+localities:
+- Tasmania (Australia - Dundas, Red Lead Mine)
+- Russia (Urals - historic type locality)
+- Brazil
+- Philippines
+- Zimbabwe
+expressions:
+- slug: default
+  name: Crocoite
+  cdl: monoclinic[2/m]:{110}@1.0 + {100}@0.7 + {001}@0.5 | elongate(c:3.0)
+  is_primary: true
+  form_description: 'Lead chromate mineral forming spectacular elongated prismatic crystals with a vivid
+    orange-red to red color. The most highly prized mineral specimens come from Tasmania, Australia, where
+    crystals can reach lengths of 10+ cm. Named from Greek "krokos" (saffron) for its color. Despite its
+    beauty, crocoite is too soft and fragile for jewelry use.
+
+    '
+  forms:
+  - prism (elongated)
+  - pinacoid
+  note: RI over refractometer limit; extremely high birefringence; contains lead - wash hands after handling

@@ -1,45 +1,51 @@
+id: rhodochrosite
 name: Rhodochrosite
-cdl: trigonal[-3m]:{10-11}@1.0 + {01-12}@0.3
-system: trigonal
-point_group: '-3m'
+crystal_system: trigonal
+point_group: -3m
 chemistry: MnCO3
 hardness: 3.5-4
-description: >
-  Manganese carbonate mineral prized for its rose-pink to deep red color.
-  The "Alma King" from Colorado's Sweet Home Mine is considered one of the
-  finest mineral specimens ever found. Well-formed rhombohedral crystals are
-  highly sought, but rhodochrosite also occurs in attractive banded massive
-  form. Argentina produces distinctive banded material formed in Inca silver
-  mines ("Rosa del Inca").
-localities:
-  - Colorado (USA - Sweet Home Mine)
-  - Argentina (Capillitas - banded)
-  - South Africa (N'Chwaning)
-  - Peru
-  - Romania
-  - Japan
-forms:
-  - rhombohedron
-  - scalenohedron
-  - banded masses
-colors:
-  - Rose pink
-  - Deep pink
-  - Red
-  - Raspberry red
-  - Banded pink/white
-  - Orange-pink
 sg: 3.45-3.70
 ri: 1.597-1.817
 birefringence: 0.218-0.220
-dispersion: 0.015  # Source: GIA Gem Encyclopedia
 optical_character: Uniaxial -
+dispersion: 0.015
+lustre: Vitreous to pearly
+cleavage: Perfect {1011} (rhombohedral)
+fracture: Uneven to conchoidal
 pleochroism: Moderate dichroic (pinkish red to orangy pink)
 pleochroism_strength: moderate
 pleochroism_color1: Pinkish-red
 pleochroism_color2: Orangy-pink
 pleochroism_notes: Best seen in transparent faceted material
-lustre: Vitreous to pearly
-cleavage: Perfect {1011} (rhombohedral)
-fracture: Uneven to conchoidal
-note: Extremely high birefringence; dissolves in warm dilute HCl with effervescence; too soft for ring use
+colors:
+- Rose pink
+- Deep pink
+- Red
+- Raspberry red
+- Banded pink/white
+- Orange-pink
+localities:
+- Colorado (USA - Sweet Home Mine)
+- Argentina (Capillitas - banded)
+- South Africa (N'Chwaning)
+- Peru
+- Romania
+- Japan
+expressions:
+- slug: default
+  name: Rhodochrosite
+  cdl: trigonal[-3m]:{10-11}@1.0 + {01-12}@0.3
+  is_primary: true
+  form_description: 'Manganese carbonate mineral prized for its rose-pink to deep red color. The "Alma
+    King" from Colorado''s Sweet Home Mine is considered one of the finest mineral specimens ever found.
+    Well-formed rhombohedral crystals are highly sought, but rhodochrosite also occurs in attractive banded
+    massive form. Argentina produces distinctive banded material formed in Inca silver mines ("Rosa del
+    Inca").
+
+    '
+  forms:
+  - rhombohedron
+  - scalenohedron
+  - banded masses
+  note: Extremely high birefringence; dissolves in warm dilute HCl with effervescence; too soft for ring
+    use

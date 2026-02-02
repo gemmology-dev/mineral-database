@@ -1,55 +1,51 @@
+id: moonstone
 name: Moonstone
-cdl: monoclinic[2/m]:{010}@1.0 + {110}@0.8 + {001}@0.7 + {100}@0.5
-system: monoclinic
+crystal_system: monoclinic
 point_group: 2/m
 chemistry: KAlSi3O8
 hardness: 6-6.5
-description: >
-  Feldspar variety displaying adularescence - a soft, billowy glow that appears
-  to float just below the surface. The effect is caused by light scattering from
-  alternating layers of orthoclase and albite that form during cooling (exsolution).
-  Layer thickness determines the colour of the schiller: thin layers (~0.1 microns)
-  produce blue; thicker layers produce white. Fine blue moonstone commands
-  significant premiums.
-localities:
-  - Sri Lanka
-  - India
-  - Myanmar
-  - Tanzania
-  - Madagascar
-  - Australia
-forms:
-  - prism
-  - pinacoid
-colors:
-  - Colorless with blue sheen
-  - White with white sheen
-  - Grey
-  - Peach with white sheen
-  - Rainbow (multicoloured flashes)
 sg: 2.56-2.59
 ri: 1.518-1.526
 birefringence: 0.005-0.008
-dispersion: 0.012  # Source: GIA Gem Encyclopedia
 optical_character: Biaxial -
-pleochroism: None to weak
+dispersion: 0.012
 lustre: Vitreous to pearly
 cleavage: Perfect in two directions at ~90 degrees
 fracture: Uneven to conchoidal
-phenomenon: Adularescence
+pleochroism: None to weak
+colors:
+- Colorless with blue sheen
+- White with white sheen
+- Grey
+- Peach with white sheen
+- Rainbow (multicoloured flashes)
 treatments:
-  - Generally not treated
-  - Surface coating (rare, to enhance sheen)
+- Generally not treated
+- Surface coating (rare, to enhance sheen)
 inclusions:
-  - Centipede inclusions
-  - Stress cracks from cleavage
-  - Exsolution lamellae (cause of phenomenon)
-variety_of: Orthoclase (alkali feldspar)
-species: Orthoclase/Albite
-notes: >
-  Fine blue moonstone with strong adularescence and good transparency
-  commands significant premiums. The blue schiller should appear to float
-  within the stone, moving as the gem is tilted. "Rainbow moonstone" is
-  actually labradorite showing multicoloured flashes, not true orthoclase
-  moonstone. Feldspar's perfect cleavage makes it vulnerable to chipping;
-  protective settings recommended.
+- Centipede inclusions
+- Stress cracks from cleavage
+- Exsolution lamellae (cause of phenomenon)
+localities:
+- Sri Lanka
+- India
+- Myanmar
+- Tanzania
+- Madagascar
+- Australia
+phenomenon: Adularescence
+expressions:
+- slug: default
+  name: Moonstone
+  cdl: monoclinic[2/m]:{010}@1.0 + {110}@0.8 + {001}@0.7 + {100}@0.5
+  is_primary: true
+  form_description: 'Feldspar variety displaying adularescence - a soft, billowy glow that appears to
+    float just below the surface. The effect is caused by light scattering from alternating layers of
+    orthoclase and albite that form during cooling (exsolution). Layer thickness determines the colour
+    of the schiller: thin layers (~0.1 microns) produce blue; thicker layers produce white. Fine blue
+    moonstone commands significant premiums.
+
+    '
+  forms:
+  - prism
+  - pinacoid

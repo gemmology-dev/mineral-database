@@ -1,17 +1,11 @@
+id: tanzanite
 name: Tanzanite
-cdl: orthorhombic[mmm]:{100}@1.0 + {010}@0.9 + {001}@1.2 + {110}@0.7
-system: orthorhombic
+crystal_system: orthorhombic
 point_group: mmm
 chemistry: Ca2Al3(SiO4)(Si2O7)O(OH):V
 hardness: 6.5
-description: Prismatic zoisite variety
-localities:
-- Tanzania (Merelani Hills)
-forms:
-- prism
-- pinacoid
-sg: '3.10-3.38'
-ri: '1.691-1.700'
+sg: 3.10-3.38
+ri: 1.691-1.700
 birefringence: 0.008-0.013
 optical_character: Biaxial +
 dispersion: 0.021
@@ -36,6 +30,14 @@ inclusions:
 - Negative crystals
 - Fingerprint inclusions
 - Stress cracks (from cleavage)
-# Heat treatment temperatures (Source: GEM-A)
-heat_treatment_temp_min: 400
-heat_treatment_temp_max: 500
+localities:
+- Tanzania (Merelani Hills)
+expressions:
+- slug: default
+  name: Tanzanite
+  cdl: orthorhombic[mmm]:{100}@1.0 + {010}@0.9 + {001}@1.2 + {110}@0.7
+  is_primary: true
+  form_description: Prismatic zoisite variety
+  forms:
+  - prism
+  - pinacoid

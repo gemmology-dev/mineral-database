@@ -1,22 +1,11 @@
+id: topaz
 name: Topaz
-cdl: orthorhombic[mmm]:{110}@1.0 + {120}@0.8 + {001}@0.6
-system: orthorhombic
+crystal_system: orthorhombic
 point_group: mmm
 chemistry: Al2SiO4(F,OH)2
 hardness: 8
-description: Prismatic with complex dome faces
-localities:
-- Brazil (Ouro Preto)
-- Pakistan
-- Russia (Urals)
-- USA (Utah, Texas)
-- Sri Lanka
-forms:
-- prism
-- dome
-- pinacoid
-sg: '3.50-3.57'
-ri: '1.619-1.627'
+sg: 3.50-3.57
+ri: 1.619-1.627
 birefringence: 0.008
 optical_character: Biaxial +
 dispersion: 0.014
@@ -46,6 +35,26 @@ inclusions:
 - Cleavage planes
 - Needle inclusions
 - Crystal inclusions
-# Heat treatment temperatures (Source: GIA)
-heat_treatment_temp_min: 200
-heat_treatment_temp_max: 600
+localities:
+- Brazil (Ouro Preto)
+- Pakistan
+- Russia (Urals)
+- USA (Utah, Texas)
+- Sri Lanka
+expressions:
+- slug: prism
+  name: Prismatic
+  cdl: orthorhombic[mmm]:{110}@1.0 + {120}@0.8 + {001}@0.6
+  is_primary: true
+  form_description: Prismatic with complex dome faces
+  forms:
+  - prism
+  - dome
+  - pinacoid
+- slug: tabular
+  name: Tabular
+  cdl: orthorhombic[mmm]:{001}@1.0 + {110}@0.3 + {120}@0.2 | elongate(c:0.4)
+  form_description: Flat tabular habit with dominant basal pinacoid (common in Pakistani material)
+  forms:
+  - pinacoid
+  - prism

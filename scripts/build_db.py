@@ -4,11 +4,16 @@ Build Mineral Database.
 
 Converts YAML source files to SQLite database, or imports from
 the legacy crystal_presets.py dictionary format.
+
+Supports both:
+- Legacy flat YAML format (single mineral per file with `cdl` field)
+- New family+expression format (family properties with `expressions` array)
 """
 
 import argparse
 import sys
 from pathlib import Path
+from typing import Any
 
 # Add parent directory to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
@@ -18,9 +23,11 @@ from mineral_database.db import (
     init_database,
     init_reference_tables,
     insert_category,
+    insert_expression,
+    insert_family,
     insert_mineral,
 )
-from mineral_database.models import Mineral
+from mineral_database.models import Mineral, MineralExpression, MineralFamily
 
 
 def import_from_python_dict(presets_dict: dict, categories_dict: dict, db_path: Path) -> int:
@@ -54,15 +61,153 @@ def import_from_python_dict(presets_dict: dict, categories_dict: dict, db_path: 
     return count
 
 
-def import_from_yaml(yaml_dir: Path, db_path: Path) -> int:
+def _is_family_format(data: dict[str, Any]) -> bool:
+    """Check if YAML data is in the new family+expression format."""
+    return "expressions" in data and isinstance(data["expressions"], list)
+
+
+def _import_family_yaml(
+    family_id: str,
+    data: dict[str, Any],
+    conn,
+    verbose: bool = False,
+) -> tuple[int, int]:
+    """Import a family+expression YAML file.
+
+    Args:
+        family_id: Family identifier (YAML filename stem)
+        data: Parsed YAML data
+        conn: Database connection
+        verbose: Print progress
+
+    Returns:
+        Tuple of (family_count, expression_count)
+    """
+    # Create MineralFamily
+    family = MineralFamily.from_dict(family_id, data)
+    insert_family(conn, family)
+
+    if verbose:
+        print(f"  Family: {family.name} ({family_id})")
+
+    # Create MineralExpressions
+    expression_count = 0
+    for i, expr_data in enumerate(data.get("expressions", [])):
+        slug = expr_data.get("slug", "default")
+        expression_id = f"{family_id}-{slug}" if slug != "default" else family_id
+
+        expression = MineralExpression.from_dict(
+            family_id=family_id,
+            expression_data=expr_data,
+            expression_id=expression_id,
+        )
+        # Set sort order if not specified
+        if expression.sort_order == 0 and not expr_data.get("is_primary"):
+            expression.sort_order = i
+
+        insert_expression(conn, expression)
+        expression_count += 1
+
+        if verbose:
+            primary_mark = " (primary)" if expression.is_primary else ""
+            print(f"    Expression: {expression.name}{primary_mark}")
+
+    # Also insert into legacy minerals table for backwards compatibility
+    for expr_data in data.get("expressions", []):
+        slug = expr_data.get("slug", "default")
+        expression_id = f"{family_id}-{slug}" if slug != "default" else family_id
+
+        # Build a flat mineral dict combining family + expression data
+        mineral_data = {
+            "name": (
+                f"{family.name} ({expr_data.get('name', slug.title())})"
+                if slug != "default"
+                else family.name
+            ),
+            "cdl": expr_data["cdl"],
+            "system": family.crystal_system,
+            "point_group": expr_data.get("point_group") or family.point_group,
+            "chemistry": family.chemistry,
+            "hardness": family.hardness_min,  # Use min for backwards compat
+            "description": expr_data.get("form_description") or family.description,
+            "localities": family.localities,
+            "forms": expr_data.get("forms") or family.forms,
+            "sg": family.sg_min,
+            "ri": family.ri_min,
+            "birefringence": family.birefringence,
+            "optical_character": family.optical_character,
+            "dispersion": family.dispersion,
+            "lustre": family.lustre,
+            "cleavage": family.cleavage,
+            "fracture": family.fracture,
+            "pleochroism": family.pleochroism,
+            "pleochroism_strength": family.pleochroism_strength,
+            "pleochroism_color1": family.pleochroism_color1,
+            "pleochroism_color2": family.pleochroism_color2,
+            "pleochroism_color3": family.pleochroism_color3,
+            "pleochroism_notes": family.pleochroism_notes,
+            "colors": family.colors,
+            "treatments": family.treatments,
+            "inclusions": family.inclusions,
+            "twin_law": family.twin_law,
+            "phenomenon": family.phenomenon,
+            "note": expr_data.get("note") or family.notes,
+            "ri_min": family.ri_min,
+            "ri_max": family.ri_max,
+            "sg_min": family.sg_min,
+            "sg_max": family.sg_max,
+            "heat_treatment_temp_min": family.heat_treatment_temp_min,
+            "heat_treatment_temp_max": family.heat_treatment_temp_max,
+        }
+
+        mineral = Mineral.from_dict(expression_id, mineral_data)
+        insert_mineral(conn, mineral)
+
+    return 1, expression_count
+
+
+def _import_legacy_yaml(
+    mineral_id: str,
+    data: dict[str, Any],
+    conn,
+    verbose: bool = False,
+) -> int:
+    """Import a legacy flat YAML file.
+
+    Args:
+        mineral_id: Mineral identifier (YAML filename stem)
+        data: Parsed YAML data
+        conn: Database connection
+        verbose: Print progress
+
+    Returns:
+        Number of minerals imported (always 1)
+    """
+    mineral = Mineral.from_dict(mineral_id, data)
+    insert_mineral(conn, mineral)
+
+    if verbose:
+        print(f"  Mineral: {mineral.name} ({mineral_id})")
+
+    return 1
+
+
+def import_from_yaml(
+    yaml_dir: Path,
+    db_path: Path,
+    verbose: bool = False,
+) -> tuple[int, int, int]:
     """Import presets from YAML files.
+
+    Supports both legacy flat format and new family+expression format.
 
     Args:
         yaml_dir: Directory containing YAML files
         db_path: Path to output database
+        verbose: Print progress
 
     Returns:
-        Number of presets imported
+        Tuple of (family_count, expression_count, legacy_mineral_count)
     """
     try:
         import yaml
@@ -72,23 +217,30 @@ def import_from_yaml(yaml_dir: Path, db_path: Path) -> int:
 
     init_database(db_path)
 
-    count = 0
+    family_count = 0
+    expression_count = 0
+    legacy_count = 0
+
     with get_connection(db_path) as conn:
         # Populate reference tables (shape factors, thresholds)
         init_reference_tables(conn)
 
-        for yaml_file in yaml_dir.glob("*.yaml"):
+        for yaml_file in sorted(yaml_dir.glob("*.yaml")):
             with open(yaml_file) as f:
                 data = yaml.safe_load(f)
 
-            preset_id = yaml_file.stem
-            mineral = Mineral.from_dict(preset_id, data)
-            insert_mineral(conn, mineral)
-            count += 1
+            file_id = yaml_file.stem
+
+            if _is_family_format(data):
+                fc, ec = _import_family_yaml(file_id, data, conn, verbose)
+                family_count += fc
+                expression_count += ec
+            else:
+                legacy_count += _import_legacy_yaml(file_id, data, conn, verbose)
 
         conn.commit()
 
-    return count
+    return family_count, expression_count, legacy_count
 
 
 def export_to_yaml(db_path: Path, yaml_dir: Path) -> int:
@@ -160,8 +312,16 @@ Examples:
         if not args.from_yaml.is_dir():
             print(f"Error: {args.from_yaml} is not a directory")
             sys.exit(1)
-        count = import_from_yaml(args.from_yaml, args.output)
-        print(f"Imported {count} presets from YAML to {args.output}")
+
+        family_count, expr_count, legacy_count = import_from_yaml(
+            args.from_yaml, args.output, args.verbose
+        )
+
+        if family_count > 0:
+            print(f"Imported {family_count} families with {expr_count} expressions")
+        if legacy_count > 0:
+            print(f"Imported {legacy_count} legacy minerals")
+        print(f"Database written to: {args.output}")
         db_created = True
 
     elif args.from_legacy:

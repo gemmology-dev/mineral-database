@@ -1,22 +1,11 @@
+id: amethyst
 name: Amethyst
-cdl: trigonal[32]:{10-10}@0.5 + {10-11}@1.2 + {01-11}@1.0 | elongate(c:2.0)
-system: trigonal
+crystal_system: trigonal
 point_group: '32'
 chemistry: SiO2:Fe
 hardness: 7
-description: Quartz with both rhombohedra visible
-localities:
-- Brazil
-- Uruguay
-- Zambia
-- Russia
-- Madagascar
-forms:
-- prism
-- rhombohedron_positive
-- rhombohedron_negative
 sg: '2.65'
-ri: '1.544-1.553'
+ri: 1.544-1.553
 birefringence: 0.009
 optical_character: Uniaxial +
 dispersion: 0.013
@@ -44,6 +33,19 @@ inclusions:
 - Negative crystals
 - Goethite/hematite
 - Tiger stripes (colour banding)
-# Heat treatment temperatures (Source: IGS)
-heat_treatment_temp_min: 400
-heat_treatment_temp_max: 500
+localities:
+- Brazil
+- Uruguay
+- Zambia
+- Russia
+- Madagascar
+expressions:
+- slug: default
+  name: Amethyst
+  cdl: trigonal[32]:{10-10}@0.5 + {10-11}@1.2 + {01-11}@1.0 | elongate(c:2.0)
+  is_primary: true
+  form_description: Quartz with both rhombohedra visible
+  forms:
+  - prism
+  - rhombohedron_positive
+  - rhombohedron_negative

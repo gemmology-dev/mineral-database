@@ -1,32 +1,9 @@
+id: halite
 name: Halite
-cdl: cubic[m3m]:{100}@1.0
-system: cubic
+crystal_system: cubic
 point_group: m3m
 chemistry: NaCl
 hardness: 2.5
-description: >
-  Common salt - the naturally occurring mineral form of sodium chloride.
-  Halite forms perfect cubic crystals with three directions of cleavage
-  at right angles. Best known for its distinctive taste (though taste
-  testing is discouraged). Blue halite, colored by radiation-induced
-  F-centers, is particularly prized by collectors.
-localities:
-  - Worldwide in evaporite deposits
-  - Poland (Wieliczka mines)
-  - Pakistan (Khewra Salt Mine)
-  - Germany (Stassfurt)
-  - Utah (USA)
-  - Louisiana (USA - salt domes)
-forms:
-  - cube
-  - hopper crystals
-colors:
-  - Colorless
-  - White
-  - Blue (radiation-induced)
-  - Pink
-  - Orange
-  - Yellow
 sg: 2.17
 ri: 1.544
 birefringence: null
@@ -35,4 +12,32 @@ lustre: Vitreous
 cleavage: Perfect {100} (three directions at 90 degrees)
 fracture: Conchoidal (rarely seen)
 pleochroism: None (isotropic)
-note: Soluble in water; hygroscopic - must be stored in dry conditions; characteristic salty taste
+colors:
+- Colorless
+- White
+- Blue (radiation-induced)
+- Pink
+- Orange
+- Yellow
+localities:
+- Worldwide in evaporite deposits
+- Poland (Wieliczka mines)
+- Pakistan (Khewra Salt Mine)
+- Germany (Stassfurt)
+- Utah (USA)
+- Louisiana (USA - salt domes)
+expressions:
+- slug: default
+  name: Halite
+  cdl: cubic[m3m]:{100}@1.0
+  is_primary: true
+  form_description: 'Common salt - the naturally occurring mineral form of sodium chloride. Halite forms
+    perfect cubic crystals with three directions of cleavage at right angles. Best known for its distinctive
+    taste (though taste testing is discouraged). Blue halite, colored by radiation-induced F-centers,
+    is particularly prized by collectors.
+
+    '
+  forms:
+  - cube
+  - hopper crystals
+  note: Soluble in water; hygroscopic - must be stored in dry conditions; characteristic salty taste

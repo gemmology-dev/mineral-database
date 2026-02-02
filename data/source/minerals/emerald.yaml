@@ -1,31 +1,9 @@
+id: emerald
 name: Emerald
-cdl: hexagonal[6/mmm]:{10-10}@1.0 + {0001}@0.8 | elongate(c:1.5)
-system: hexagonal
+crystal_system: hexagonal
 point_group: 6/mmm
 chemistry: Be3Al2(SiO3)6:Cr
 hardness: 7.5
-description: Elongated hexagonal prism with pinacoid
-localities:
-- Colombia
-- Zambia
-- Brazil
-- Ethiopia
-forms:
-- hexagonal_prism
-- pinacoid
-colors:
-- Green
-- Bluish-green
-- Yellowish-green
-treatments:
-- Oiling
-- Resin filling
-- Surface coating
-inclusions:
-- Jardin
-- Three-phase
-- Crystals
-- Fissures
 sg: 2.72
 ri: 1.577-1.583
 birefringence: 0.006
@@ -39,3 +17,30 @@ pleochroism_strength: moderate
 pleochroism_color1: Blue-green
 pleochroism_color2: Yellow-green
 pleochroism_notes: More visible in darker stones; best seen perpendicular to c-axis
+colors:
+- Green
+- Bluish-green
+- Yellowish-green
+treatments:
+- Oiling
+- Resin filling
+- Surface coating
+inclusions:
+- Jardin
+- Three-phase
+- Crystals
+- Fissures
+localities:
+- Colombia
+- Zambia
+- Brazil
+- Ethiopia
+expressions:
+- slug: default
+  name: Emerald
+  cdl: hexagonal[6/mmm]:{10-10}@1.0 + {0001}@0.8 | elongate(c:1.5)
+  is_primary: true
+  form_description: Elongated hexagonal prism with pinacoid
+  forms:
+  - hexagonal_prism
+  - pinacoid

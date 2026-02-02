@@ -1,51 +1,54 @@
+id: morganite
 name: Morganite
-cdl: hexagonal[6/mmm]:{10-10}@1.0 + {0001}@0.5 + {11-20}@0.2 | elongate(c:0.9)
-system: hexagonal
+crystal_system: hexagonal
 point_group: 6/mmm
 chemistry: Be3Al2(SiO3)6:Mn
 hardness: 7.5-8
-description: >
-  Pink to peach variety of beryl, coloured by manganese (Mn2+/Mn3+). Increasingly
-  popular in fine jewellery, morganite offers excellent clarity and is available
-  in larger sizes than many other coloured gems. Often heat-treated to remove
-  yellow tones and enhance the pink colour.
-localities:
-  - Brazil
-  - Madagascar
-  - Afghanistan
-  - Mozambique
-  - California (USA)
-  - Namibia
-forms:
-  - hexagonal_prism
-  - pinacoid
-  - dihexagonal_prism
-colors:
-  - Pink
-  - Peach
-  - Salmon
-  - Rose
-  - Light pink
-  - Orange-pink
 sg: 2.67-2.78
 ri: 1.577-1.583
 birefringence: 0.005-0.009
-dispersion: 0.014  # Source: GIA Gem Encyclopedia (beryl)
 optical_character: Uniaxial -
+dispersion: 0.014
+lustre: Vitreous
+cleavage: Imperfect basal
+fracture: Conchoidal to uneven
 pleochroism: Weak to moderate (pale pink to deeper pink)
 pleochroism_strength: weak
 pleochroism_color1: Pale pink
 pleochroism_color2: Deeper pink
 pleochroism_notes: Subtle; requires well-saturated stone to observe
-lustre: Vitreous
-cleavage: Imperfect basal
-fracture: Conchoidal to uneven
+colors:
+- Pink
+- Peach
+- Salmon
+- Rose
+- Light pink
+- Orange-pink
 treatments:
-  - Heat treatment (removes yellow, enhances pink)
+- Heat treatment (removes yellow, enhances pink)
 inclusions:
-  - Liquid feathers
-  - Growth tubes
-  - Two-phase inclusions
-  - Mineral crystals
-chromophore: Manganese (Mn2+/Mn3+)
-variety_of: Beryl
+- Liquid feathers
+- Growth tubes
+- Two-phase inclusions
+- Mineral crystals
+localities:
+- Brazil
+- Madagascar
+- Afghanistan
+- Mozambique
+- California (USA)
+- Namibia
+expressions:
+- slug: default
+  name: Morganite
+  cdl: hexagonal[6/mmm]:{10-10}@1.0 + {0001}@0.5 + {11-20}@0.2 | elongate(c:0.9)
+  is_primary: true
+  form_description: 'Pink to peach variety of beryl, coloured by manganese (Mn2+/Mn3+). Increasingly popular
+    in fine jewellery, morganite offers excellent clarity and is available in larger sizes than many other
+    coloured gems. Often heat-treated to remove yellow tones and enhance the pink colour.
+
+    '
+  forms:
+  - hexagonal_prism
+  - pinacoid
+  - dihexagonal_prism

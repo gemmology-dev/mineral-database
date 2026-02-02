@@ -1,21 +1,11 @@
+id: kunzite
 name: Kunzite
-cdl: monoclinic[2/m]:{110}@1.0 + {100}@0.8 + {010}@0.6 + {001}@1.2
-system: monoclinic
+crystal_system: monoclinic
 point_group: 2/m
 chemistry: LiAlSi2O6:Mn
 hardness: 6.5
-description: Elongated spodumene crystal
-localities:
-- Afghanistan
-- Brazil
-- Madagascar
-- USA (California)
-- Pakistan
-forms:
-- prism
-- pinacoid
-sg: '3.15-3.21'
-ri: '1.660-1.676'
+sg: 3.15-3.21
+ri: 1.660-1.676
 birefringence: 0.014-0.016
 optical_character: Biaxial +
 dispersion: 0.017
@@ -41,3 +31,18 @@ inclusions:
 - Healing cracks
 - Liquid inclusions
 - Multi-phase inclusions
+localities:
+- Afghanistan
+- Brazil
+- Madagascar
+- USA (California)
+- Pakistan
+expressions:
+- slug: default
+  name: Kunzite
+  cdl: monoclinic[2/m]:{110}@1.0 + {100}@0.8 + {010}@0.6 + {001}@1.2
+  is_primary: true
+  form_description: Elongated spodumene crystal
+  forms:
+  - prism
+  - pinacoid
