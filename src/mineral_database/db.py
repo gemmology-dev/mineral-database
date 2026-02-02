@@ -10,7 +10,7 @@ from collections.abc import Generator
 from contextlib import contextmanager
 from pathlib import Path
 
-from .models import Mineral
+from .models import Mineral, MineralExpression, MineralFamily
 
 # Path to the compiled database
 _DB_PATH = Path(__file__).parent / "data" / "minerals.db"
@@ -153,6 +153,169 @@ def init_database(db_path: Path | None = None) -> None:
     CREATE INDEX IF NOT EXISTS idx_minerals_ri_max ON minerals(ri_max);
     CREATE INDEX IF NOT EXISTS idx_minerals_sg_min ON minerals(sg_min);
     CREATE INDEX IF NOT EXISTS idx_minerals_sg_max ON minerals(sg_max);
+
+    -- =========================================================================
+    -- Family + Expression Tables (normalized structure)
+    -- =========================================================================
+
+    -- Core family table (shared gemmological properties)
+    CREATE TABLE IF NOT EXISTS mineral_families (
+        id TEXT PRIMARY KEY,           -- 'fluorite', 'quartz', 'diamond'
+        name TEXT NOT NULL,            -- 'Fluorite', 'Quartz', 'Diamond'
+        crystal_system TEXT NOT NULL,  -- 'cubic', 'trigonal', etc.
+        point_group TEXT,              -- Hermann-Mauguin notation
+        chemistry TEXT,
+        category TEXT,
+
+        -- Physical properties (shared across all expressions)
+        hardness_min REAL,
+        hardness_max REAL,
+        sg_min REAL,
+        sg_max REAL,
+
+        -- Optical properties
+        ri_min REAL,
+        ri_max REAL,
+        birefringence REAL,
+        dispersion REAL,
+        optical_character TEXT,
+        pleochroism TEXT,
+        pleochroism_strength TEXT,     -- none|weak|moderate|strong|very_strong
+        pleochroism_color1 TEXT,
+        pleochroism_color2 TEXT,
+        pleochroism_color3 TEXT,
+        pleochroism_notes TEXT,
+
+        -- Physical characteristics
+        lustre TEXT,
+        cleavage TEXT,
+        fracture TEXT,
+
+        -- Educational content
+        description TEXT,
+        notes TEXT,
+        diagnostic_features TEXT,
+        common_inclusions TEXT,
+
+        -- JSON arrays
+        localities_json TEXT,          -- JSON array of localities
+        colors_json TEXT,              -- JSON array of colors
+        treatments_json TEXT,          -- JSON array of treatments
+        inclusions_json TEXT,          -- JSON array of inclusions
+        forms_json TEXT,               -- JSON array of crystal forms
+
+        -- Heat treatment temperatures
+        heat_treatment_temp_min REAL,
+        heat_treatment_temp_max REAL,
+
+        -- Special properties
+        twin_law TEXT,
+        phenomenon TEXT,
+        fluorescence TEXT,
+
+        created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+        updated_at TEXT DEFAULT CURRENT_TIMESTAMP
+    );
+
+    -- Expression table (CDL variants linked to families)
+    CREATE TABLE IF NOT EXISTS mineral_expressions (
+        id TEXT PRIMARY KEY,           -- 'fluorite-octahedron'
+        family_id TEXT NOT NULL REFERENCES mineral_families(id),
+        name TEXT NOT NULL,            -- 'Octahedron' (display name)
+        slug TEXT NOT NULL,            -- 'octahedron' (URL-safe)
+
+        -- Crystal morphology
+        cdl TEXT NOT NULL,             -- CDL expression
+        point_group TEXT,              -- Override if different from family
+        form_description TEXT,         -- 'Regular octahedron bounded by {111} faces'
+        habit TEXT,                    -- 'octahedral', 'cubic', 'tabular'
+        forms_json TEXT,               -- JSON array of forms for this expression
+
+        -- Visual assets
+        svg_path TEXT,
+        gltf_path TEXT,
+        stl_path TEXT,
+        thumbnail_path TEXT,
+
+        -- Pre-generated model data (inline)
+        model_svg TEXT,
+        model_stl BLOB,
+        model_gltf TEXT,
+        models_generated_at TEXT,
+
+        -- Metadata
+        is_primary BOOLEAN DEFAULT FALSE,  -- Primary form for family display
+        sort_order INTEGER DEFAULT 0,
+        note TEXT,                     -- Expression-specific notes
+
+        created_at TEXT DEFAULT CURRENT_TIMESTAMP
+    );
+
+    -- Indexes for family/expression tables
+    CREATE INDEX IF NOT EXISTS idx_expressions_family ON mineral_expressions(family_id);
+    CREATE INDEX IF NOT EXISTS idx_families_system ON mineral_families(crystal_system);
+    CREATE INDEX IF NOT EXISTS idx_expressions_primary ON mineral_expressions(is_primary);
+    CREATE INDEX IF NOT EXISTS idx_families_ri_min ON mineral_families(ri_min);
+    CREATE INDEX IF NOT EXISTS idx_families_ri_max ON mineral_families(ri_max);
+    CREATE INDEX IF NOT EXISTS idx_families_sg_min ON mineral_families(sg_min);
+    CREATE INDEX IF NOT EXISTS idx_families_sg_max ON mineral_families(sg_max);
+
+    -- Backwards compatibility view (maintains existing API)
+    -- This view makes family+expression data look like the flat minerals table
+    CREATE VIEW IF NOT EXISTS minerals_view AS
+    SELECT
+        e.id,
+        f.name || CASE WHEN e.slug != 'default' AND e.slug != f.id THEN ' (' || e.name || ')' ELSE '' END AS name,
+        e.cdl,
+        f.crystal_system AS system,
+        COALESCE(e.point_group, f.point_group) AS point_group,
+        f.chemistry,
+        CASE
+            WHEN f.hardness_min = f.hardness_max THEN CAST(f.hardness_min AS TEXT)
+            ELSE CAST(f.hardness_min AS TEXT) || '-' || CAST(f.hardness_max AS TEXT)
+        END AS hardness,
+        COALESCE(e.form_description, f.description) AS description,
+        CASE
+            WHEN f.sg_min = f.sg_max THEN CAST(f.sg_min AS TEXT)
+            ELSE CAST(f.sg_min AS TEXT) || '-' || CAST(f.sg_max AS TEXT)
+        END AS sg,
+        CASE
+            WHEN f.ri_min = f.ri_max THEN CAST(f.ri_min AS TEXT)
+            ELSE CAST(f.ri_min AS TEXT) || '-' || CAST(f.ri_max AS TEXT)
+        END AS ri,
+        f.birefringence,
+        f.optical_character,
+        f.dispersion,
+        f.lustre,
+        f.cleavage,
+        f.fracture,
+        f.pleochroism,
+        f.pleochroism_strength,
+        f.pleochroism_color1,
+        f.pleochroism_color2,
+        f.pleochroism_color3,
+        f.pleochroism_notes,
+        f.twin_law,
+        f.phenomenon,
+        COALESCE(e.note, f.notes) AS note,
+        f.localities_json,
+        COALESCE(e.forms_json, f.forms_json) AS forms_json,
+        f.colors_json,
+        f.treatments_json,
+        f.inclusions_json,
+        e.model_svg,
+        e.model_stl,
+        e.model_gltf,
+        e.models_generated_at,
+        f.ri_min,
+        f.ri_max,
+        f.sg_min,
+        f.sg_max,
+        f.heat_treatment_temp_min,
+        f.heat_treatment_temp_max,
+        e.family_id
+    FROM mineral_expressions e
+    JOIN mineral_families f ON e.family_id = f.id;
     """
 
     with get_connection(db_path) as conn:
@@ -764,3 +927,451 @@ def get_minerals_with_heat_treatment(conn: sqlite3.Connection) -> list[Mineral]:
         """
     )
     return [row_to_mineral(row) for row in cursor.fetchall()]
+
+
+# =============================================================================
+# Family + Expression Functions (normalized structure)
+# =============================================================================
+
+
+def insert_family(conn: sqlite3.Connection, family: MineralFamily) -> None:
+    """Insert a mineral family into the database.
+
+    Args:
+        conn: Database connection
+        family: MineralFamily to insert
+    """
+    sql = """
+    INSERT OR REPLACE INTO mineral_families (
+        id, name, crystal_system, point_group, chemistry, category,
+        hardness_min, hardness_max, sg_min, sg_max,
+        ri_min, ri_max, birefringence, dispersion, optical_character,
+        pleochroism, pleochroism_strength, pleochroism_color1, pleochroism_color2,
+        pleochroism_color3, pleochroism_notes,
+        lustre, cleavage, fracture,
+        description, notes, diagnostic_features, common_inclusions,
+        localities_json, colors_json, treatments_json, inclusions_json, forms_json,
+        heat_treatment_temp_min, heat_treatment_temp_max,
+        twin_law, phenomenon, fluorescence,
+        updated_at
+    ) VALUES (
+        ?, ?, ?, ?, ?, ?,
+        ?, ?, ?, ?,
+        ?, ?, ?, ?, ?,
+        ?, ?, ?, ?,
+        ?, ?,
+        ?, ?, ?,
+        ?, ?, ?, ?,
+        ?, ?, ?, ?, ?,
+        ?, ?,
+        ?, ?, ?,
+        CURRENT_TIMESTAMP
+    )
+    """
+
+    conn.execute(
+        sql,
+        (
+            family.id,
+            family.name,
+            family.crystal_system,
+            family.point_group,
+            family.chemistry,
+            family.category,
+            family.hardness_min,
+            family.hardness_max,
+            family.sg_min,
+            family.sg_max,
+            family.ri_min,
+            family.ri_max,
+            family.birefringence,
+            family.dispersion,
+            family.optical_character,
+            family.pleochroism,
+            family.pleochroism_strength,
+            family.pleochroism_color1,
+            family.pleochroism_color2,
+            family.pleochroism_color3,
+            family.pleochroism_notes,
+            family.lustre,
+            family.cleavage,
+            family.fracture,
+            family.description,
+            family.notes,
+            family.diagnostic_features,
+            family.common_inclusions,
+            json.dumps(family.localities) if family.localities else "[]",
+            json.dumps(family.colors) if family.colors else "[]",
+            json.dumps(family.treatments) if family.treatments else "[]",
+            json.dumps(family.inclusions) if family.inclusions else "[]",
+            json.dumps(family.forms) if family.forms else "[]",
+            family.heat_treatment_temp_min,
+            family.heat_treatment_temp_max,
+            family.twin_law,
+            family.phenomenon,
+            family.fluorescence,
+        ),
+    )
+
+
+def insert_expression(conn: sqlite3.Connection, expression: MineralExpression) -> None:
+    """Insert a mineral expression into the database.
+
+    Args:
+        conn: Database connection
+        expression: MineralExpression to insert
+    """
+    sql = """
+    INSERT OR REPLACE INTO mineral_expressions (
+        id, family_id, name, slug,
+        cdl, point_group, form_description, habit, forms_json,
+        svg_path, gltf_path, stl_path, thumbnail_path,
+        model_svg, model_stl, model_gltf, models_generated_at,
+        is_primary, sort_order, note
+    ) VALUES (
+        ?, ?, ?, ?,
+        ?, ?, ?, ?, ?,
+        ?, ?, ?, ?,
+        ?, ?, ?, ?,
+        ?, ?, ?
+    )
+    """
+
+    conn.execute(
+        sql,
+        (
+            expression.id,
+            expression.family_id,
+            expression.name,
+            expression.slug,
+            expression.cdl,
+            expression.point_group,
+            expression.form_description,
+            expression.habit,
+            json.dumps(expression.forms) if expression.forms else None,
+            expression.svg_path,
+            expression.gltf_path,
+            expression.stl_path,
+            expression.thumbnail_path,
+            expression.model_svg,
+            expression.model_stl,
+            expression.model_gltf,
+            expression.models_generated_at,
+            expression.is_primary,
+            expression.sort_order,
+            expression.note,
+        ),
+    )
+
+
+def row_to_family(row: sqlite3.Row) -> MineralFamily:
+    """Convert a database row to a MineralFamily object.
+
+    Args:
+        row: Database row
+
+    Returns:
+        MineralFamily instance
+    """
+    return MineralFamily(
+        id=row["id"],
+        name=row["name"],
+        crystal_system=row["crystal_system"],
+        point_group=row["point_group"],
+        chemistry=row["chemistry"],
+        category=row["category"],
+        hardness_min=row["hardness_min"],
+        hardness_max=row["hardness_max"],
+        sg_min=row["sg_min"],
+        sg_max=row["sg_max"],
+        ri_min=row["ri_min"],
+        ri_max=row["ri_max"],
+        birefringence=row["birefringence"],
+        dispersion=row["dispersion"],
+        optical_character=row["optical_character"],
+        pleochroism=row["pleochroism"],
+        pleochroism_strength=row["pleochroism_strength"],
+        pleochroism_color1=row["pleochroism_color1"],
+        pleochroism_color2=row["pleochroism_color2"],
+        pleochroism_color3=row["pleochroism_color3"],
+        pleochroism_notes=row["pleochroism_notes"],
+        lustre=row["lustre"],
+        cleavage=row["cleavage"],
+        fracture=row["fracture"],
+        description=row["description"],
+        notes=row["notes"],
+        diagnostic_features=row["diagnostic_features"],
+        common_inclusions=row["common_inclusions"],
+        localities=json.loads(row["localities_json"] or "[]"),
+        colors=json.loads(row["colors_json"] or "[]"),
+        treatments=json.loads(row["treatments_json"] or "[]"),
+        inclusions=json.loads(row["inclusions_json"] or "[]"),
+        forms=json.loads(row["forms_json"] or "[]"),
+        heat_treatment_temp_min=row["heat_treatment_temp_min"],
+        heat_treatment_temp_max=row["heat_treatment_temp_max"],
+        twin_law=row["twin_law"],
+        phenomenon=row["phenomenon"],
+        fluorescence=row["fluorescence"],
+    )
+
+
+def row_to_expression(row: sqlite3.Row) -> MineralExpression:
+    """Convert a database row to a MineralExpression object.
+
+    Args:
+        row: Database row
+
+    Returns:
+        MineralExpression instance
+    """
+    return MineralExpression(
+        id=row["id"],
+        family_id=row["family_id"],
+        name=row["name"],
+        slug=row["slug"],
+        cdl=row["cdl"],
+        point_group=row["point_group"],
+        form_description=row["form_description"],
+        habit=row["habit"],
+        forms=json.loads(row["forms_json"]) if row["forms_json"] else None,
+        svg_path=row["svg_path"],
+        gltf_path=row["gltf_path"],
+        stl_path=row["stl_path"],
+        thumbnail_path=row["thumbnail_path"],
+        model_svg=row["model_svg"],
+        model_stl=row["model_stl"],
+        model_gltf=row["model_gltf"],
+        models_generated_at=row["models_generated_at"],
+        is_primary=bool(row["is_primary"]),
+        sort_order=row["sort_order"] or 0,
+        note=row["note"],
+    )
+
+
+def get_family_by_id(conn: sqlite3.Connection, family_id: str) -> MineralFamily | None:
+    """Get a mineral family by its ID.
+
+    Args:
+        conn: Database connection
+        family_id: Family ID
+
+    Returns:
+        MineralFamily or None if not found
+    """
+    cursor = conn.execute(
+        "SELECT * FROM mineral_families WHERE id = ?", (family_id.lower(),)
+    )
+    row = cursor.fetchone()
+    if row:
+        return row_to_family(row)
+    return None
+
+
+def get_all_families(conn: sqlite3.Connection) -> list[MineralFamily]:
+    """Get all mineral families from the database.
+
+    Args:
+        conn: Database connection
+
+    Returns:
+        List of all mineral families
+    """
+    cursor = conn.execute("SELECT * FROM mineral_families ORDER BY name")
+    return [row_to_family(row) for row in cursor.fetchall()]
+
+
+def get_families_by_system(conn: sqlite3.Connection, system: str) -> list[MineralFamily]:
+    """Get mineral families by crystal system.
+
+    Args:
+        conn: Database connection
+        system: Crystal system name
+
+    Returns:
+        List of families in that system
+    """
+    cursor = conn.execute(
+        "SELECT * FROM mineral_families WHERE crystal_system = ? ORDER BY name",
+        (system.lower(),),
+    )
+    return [row_to_family(row) for row in cursor.fetchall()]
+
+
+def get_expressions_for_family(
+    conn: sqlite3.Connection, family_id: str
+) -> list[MineralExpression]:
+    """Get all expressions for a mineral family.
+
+    Args:
+        conn: Database connection
+        family_id: Family ID
+
+    Returns:
+        List of expressions ordered by is_primary DESC, sort_order
+    """
+    cursor = conn.execute(
+        """
+        SELECT * FROM mineral_expressions
+        WHERE family_id = ?
+        ORDER BY is_primary DESC, sort_order
+        """,
+        (family_id.lower(),),
+    )
+    return [row_to_expression(row) for row in cursor.fetchall()]
+
+
+def get_expression_by_id(
+    conn: sqlite3.Connection, expression_id: str
+) -> MineralExpression | None:
+    """Get a mineral expression by its ID.
+
+    Args:
+        conn: Database connection
+        expression_id: Expression ID
+
+    Returns:
+        MineralExpression or None if not found
+    """
+    cursor = conn.execute(
+        "SELECT * FROM mineral_expressions WHERE id = ?", (expression_id.lower(),)
+    )
+    row = cursor.fetchone()
+    if row:
+        return row_to_expression(row)
+    return None
+
+
+def get_family_count(conn: sqlite3.Connection) -> int:
+    """Get the total number of mineral families.
+
+    Args:
+        conn: Database connection
+
+    Returns:
+        Number of families
+    """
+    cursor = conn.execute("SELECT COUNT(*) FROM mineral_families")
+    return cursor.fetchone()[0]
+
+
+def get_expression_count(conn: sqlite3.Connection) -> int:
+    """Get the total number of mineral expressions.
+
+    Args:
+        conn: Database connection
+
+    Returns:
+        Number of expressions
+    """
+    cursor = conn.execute("SELECT COUNT(*) FROM mineral_expressions")
+    return cursor.fetchone()[0]
+
+
+def get_families_with_expression_counts(
+    conn: sqlite3.Connection,
+) -> list[tuple[MineralFamily, int]]:
+    """Get all families with their expression counts.
+
+    Args:
+        conn: Database connection
+
+    Returns:
+        List of (family, expression_count) tuples
+    """
+    cursor = conn.execute(
+        """
+        SELECT f.*, COUNT(e.id) as expression_count
+        FROM mineral_families f
+        LEFT JOIN mineral_expressions e ON f.id = e.family_id
+        GROUP BY f.id
+        ORDER BY f.name
+        """
+    )
+    results = []
+    for row in cursor.fetchall():
+        family = row_to_family(row)
+        results.append((family, row["expression_count"]))
+    return results
+
+
+def find_families_by_ri(
+    conn: sqlite3.Connection, ri: float, tolerance: float = 0.01
+) -> list[MineralFamily]:
+    """Find mineral families matching an RI value within tolerance.
+
+    Args:
+        conn: Database connection
+        ri: Refractive index value to match
+        tolerance: Acceptable tolerance (default 0.01)
+
+    Returns:
+        List of matching MineralFamily objects (no duplicates)
+    """
+    cursor = conn.execute(
+        """
+        SELECT * FROM mineral_families
+        WHERE ri_min IS NOT NULL
+          AND ri_max IS NOT NULL
+          AND (ri_min - ? <= ? AND ri_max + ? >= ?)
+        ORDER BY ABS((ri_min + ri_max) / 2 - ?) ASC
+        """,
+        (tolerance, ri, tolerance, ri, ri),
+    )
+    return [row_to_family(row) for row in cursor.fetchall()]
+
+
+def find_families_by_sg(
+    conn: sqlite3.Connection, sg: float, tolerance: float = 0.05
+) -> list[MineralFamily]:
+    """Find mineral families matching an SG value within tolerance.
+
+    Args:
+        conn: Database connection
+        sg: Specific gravity value to match
+        tolerance: Acceptable tolerance (default 0.05)
+
+    Returns:
+        List of matching MineralFamily objects (no duplicates)
+    """
+    cursor = conn.execute(
+        """
+        SELECT * FROM mineral_families
+        WHERE sg_min IS NOT NULL
+          AND sg_max IS NOT NULL
+          AND (sg_min - ? <= ? AND sg_max + ? >= ?)
+        ORDER BY ABS((sg_min + sg_max) / 2 - ?) ASC
+        """,
+        (tolerance, sg, tolerance, sg, sg),
+    )
+    return [row_to_family(row) for row in cursor.fetchall()]
+
+
+def update_expression_models(
+    conn: sqlite3.Connection,
+    expression_id: str,
+    svg: str | None = None,
+    stl: bytes | None = None,
+    gltf: str | None = None,
+    generated_at: str | None = None,
+) -> None:
+    """Update the 3D model data for an expression.
+
+    Args:
+        conn: Database connection
+        expression_id: Expression ID
+        svg: SVG markup string
+        stl: Binary STL data
+        gltf: glTF JSON string
+        generated_at: ISO timestamp when models were generated
+    """
+    conn.execute(
+        """
+        UPDATE mineral_expressions SET
+            model_svg = ?,
+            model_stl = ?,
+            model_gltf = ?,
+            models_generated_at = ?
+        WHERE id = ?
+        """,
+        (svg, stl, gltf, generated_at, expression_id.lower()),
+    )
