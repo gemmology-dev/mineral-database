@@ -28,6 +28,6 @@ fluorescence: Inert
 expressions:
   - slug: faceted
     name: Faceted
-    cdl: ""
+    cdl: "tetragonal[4/mmm]:{110}@1.0 + {100}@0.8 + {101}@0.6"
     is_primary: true
-    form_description: Flame fusion boule, faceted as diamond simulant
+    form_description: Rutile tetragonal prism with dipyramid

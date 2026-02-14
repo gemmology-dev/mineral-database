@@ -25,6 +25,6 @@ fluorescence: Inert to weak greenish
 expressions:
   - slug: cabochon
     name: Cabochon
-    cdl: ""
+    cdl: "triclinic[-1]:{010}@1.0 + {001}@0.9 + {110}@0.7"
     is_primary: true
-    form_description: Produced as cabochon material imitating natural turquoise
+    form_description: Turquoise crystal habit (triclinic pinacoidal)

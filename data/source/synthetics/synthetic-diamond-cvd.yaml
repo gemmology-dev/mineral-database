@@ -28,6 +28,6 @@ fluorescence: Often strong orange or red phosphorescence
 expressions:
   - slug: plate
     name: CVD Plate
-    cdl: ""
+    cdl: "cubic[m3m]:{100}@1.0 + {111}@0.3"
     is_primary: true
-    form_description: Tabular plate grown layer by layer on diamond seed
+    form_description: Tabular {100}-dominant growth habit from CVD process

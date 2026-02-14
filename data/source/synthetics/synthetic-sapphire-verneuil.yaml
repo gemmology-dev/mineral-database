@@ -30,6 +30,6 @@ fluorescence: Inert to weak (varies by colour)
 expressions:
   - slug: boule
     name: Boule
-    cdl: ""
+    cdl: "trigonal[-3m]:{10-10}@1.0 + {10-11}@0.7 | elongate(c:1.8)"
     is_primary: true
-    form_description: Cylindrical boule from flame fusion growth
+    form_description: Corundum crystal habit (growth form is cylindrical boule)

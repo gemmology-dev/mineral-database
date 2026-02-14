@@ -28,6 +28,6 @@ fluorescence: Variable (blue shows strong red under LW UV due to cobalt)
 expressions:
   - slug: boule
     name: Boule
-    cdl: ""
+    cdl: "cubic[m3m]:{111}"
     is_primary: true
-    form_description: Cylindrical boule from flame fusion growth
+    form_description: Spinel octahedral habit (growth form is cylindrical boule)

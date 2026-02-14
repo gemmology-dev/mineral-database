@@ -28,6 +28,6 @@ fluorescence: Weak orange (LW UV)
 expressions:
   - slug: faceted
     name: Faceted
-    cdl: ""
+    cdl: "hexagonal[6mm]:{10-10}@1.0 + {0001}@0.6"
     is_primary: true
-    form_description: Produced as faceted gemstones, various cuts
+    form_description: Hexagonal prism terminated by pinacoid

@@ -28,6 +28,6 @@ fluorescence: Weak orange
 expressions:
   - slug: faceted
     name: Faceted
-    cdl: ""
+    cdl: "cubic[m3m]:{110}@1.0 + {211}@0.6"
     is_primary: true
-    form_description: Faceted as diamond simulant, now rarely encountered
+    form_description: Garnet-type crystal habit (dodecahedron + trapezohedron)

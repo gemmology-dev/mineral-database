@@ -27,6 +27,6 @@ fluorescence: Variable
 expressions:
   - slug: faceted
     name: Faceted
-    cdl: ""
+    cdl: "cubic[m3m]:{110}@1.0 + {211}@0.8"
     is_primary: true
-    form_description: Typically faceted as diamond simulant
+    form_description: Garnet-type crystal habit (dodecahedron + trapezohedron)

@@ -28,6 +28,6 @@ fluorescence: Variable, often yellowish-green (LW UV)
 expressions:
   - slug: brilliant
     name: Faceted (Brilliant Cut)
-    cdl: ""
+    cdl: "cubic[m3m]:{111}@1.0 + {100}@0.8"
     is_primary: true
-    form_description: Typically faceted in brilliant or mixed cuts
+    form_description: Fluorite-type crystal habit (octahedron modified by cube)
