@@ -36,7 +36,7 @@ localities:
 expressions:
 - slug: prism
   name: Prismatic
-  cdl: trigonal[32]:{10-10}@0.5 + {10-11}@1.2 + {01-11}@1.0 | elongate(c:2.0)
+  cdl: trigonal[32]:{10-10}@0.5[striation:horizontal] + {10-11}@1.2 + {01-11}@1.0 | elongate(c:2.0)
   is_primary: true
   form_description: Hexagonal prism with rhombohedral terminations - most abundant mineral in Earth's
     crust
@@ -53,7 +53,7 @@ expressions:
   note: Habit variant with shorter c-axis development relative to rhombohedral faces
 - slug: scepter
   name: Scepter
-  cdl: trigonal[32]:{10-11}@1.0 + {01-11}@0.9 + {10-10}@0.3 + {0001}@0.2 | elongate(c:0.8)
+  cdl: trigonal[32]:{10-11}@1.0 + {01-11}@0.9 + {10-10}@0.3 + {0001}@0.2 | elongate(c:0.8) | [phantom:2]
   form_description: Overgrowth habit with enlarged head on thin stem - formed by two-stage crystal growth
   forms:
   - rhombohedron
@@ -61,7 +61,7 @@ expressions:
   note: True scepter morphology requires two crystal generations; often prized by collectors
 - slug: faden
   name: Faden
-  cdl: trigonal[32]:{0001}@1.0 + {10-10}@0.2 + {10-11}@0.3 | elongate(c:0.4)
+  cdl: trigonal[32]:{0001}@1.0 + {10-10}@0.2 + {10-11}@0.3 | elongate(c:0.4) | [inclusion:thread]
   form_description: Tabular crystals with characteristic white thread-like inclusion (faden = thread in
     German)
   forms:
