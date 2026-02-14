@@ -59,7 +59,7 @@ expressions:
   - combination habits
 - slug: dodecahedron
   name: Rhombic Dodecahedron
-  cdl: cubic[m3m]:{110}
+  cdl: cubic[m3m]:{110}[striation:curved]
   form_description: 'Pure rhombic dodecahedral habit - the most common crystal form for garnets. The dodecahedron
     {110} displays twelve rhomb-shaped faces meeting at identical angles. This habit is particularly common
     in almandine and pyrope garnets, often showing slightly curved face striations.

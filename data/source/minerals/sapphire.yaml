@@ -47,7 +47,7 @@ localities:
 expressions:
 - slug: default
   name: Sapphire
-  cdl: trigonal[-3m]:{10-10}@1.0 + {10-11}@0.7 | elongate(c:1.8)
+  cdl: trigonal[-3m]:{10-10}@1.0[striation:horizontal] + {10-11}@0.7 | elongate(c:1.8) | [silk:dense]
   is_primary: true
   form_description: Elongated barrel-shaped habit
   forms:

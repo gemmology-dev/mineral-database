@@ -36,7 +36,7 @@ localities:
 expressions:
 - slug: octahedron
   name: Octahedron
-  cdl: cubic[m3m]:{111}@1.0 + {110}@0.2
+  cdl: cubic[m3m]:{111}@1.0[trigon:dense] + {110}@0.2
   is_primary: true
   form_description: Octahedron with minor dodecahedron truncation
   forms:
@@ -44,7 +44,7 @@ expressions:
   - dodecahedron
 - slug: cube
   name: Cube
-  cdl: cubic[m3m]:{100}
+  cdl: cubic[m3m]:{100}[etch_pit:square]
   form_description: 'Cubic habit diamond - a less common crystal form typically found in industrial-grade
     diamonds from the Democratic Republic of Congo. Cube faces often show characteristic etch patterns
     and growth features. Pure cubic diamonds are rarer than octahedral specimens as gem material.
@@ -54,7 +54,7 @@ expressions:
   - cube
 - slug: macle
   name: Macle Twin
-  cdl: cubic[m3m]:{111}@1.0 + {100}@0.3 | twin(spinel_law)
+  cdl: cubic[m3m]:{111}@1.0[trigon:sparse] + {100}@0.3 | twin(spinel_law)
   form_description: 'Flattened triangular twin on {111}, also called "macle" - a spinel-law contact twin
     resulting in a distinctive triangular or slightly heart-shaped outline. Macles are historically significant
     in diamond cutting as their shape and twin plane orientation require specialized sawing techniques.
