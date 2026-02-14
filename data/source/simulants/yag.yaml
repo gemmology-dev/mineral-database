@@ -1,0 +1,32 @@
+id: yag
+name: YAG (Yttrium Aluminium Garnet)
+crystal_system: cubic
+point_group: m3m
+chemistry: Y3Al5O12
+category: diamond simulant
+origin: simulant
+growth_method: czochralski
+natural_counterpart_id: diamond
+target_minerals: [diamond]
+year_first_produced: 1960
+diagnostic_synthetic_features: >
+  Lower RI than diamond (1.833 vs 2.417), lower dispersion (0.028 vs 0.044),
+  lower hardness (8 vs 10), singly refractive, thermal probe reads non-diamond
+hardness: 8
+sg: 4.55
+ri: 1.833
+birefringence: 0
+optical_character: Isotropic
+dispersion: 0.028
+lustre: Vitreous to sub-adamantine
+cleavage: None
+fracture: Conchoidal
+colors: [Colourless, Green, Yellow, Blue (by doping)]
+inclusions: [Gas bubbles, Undissolved particles]
+fluorescence: Variable
+expressions:
+  - slug: faceted
+    name: Faceted
+    cdl: ""
+    is_primary: true
+    form_description: Typically faceted as diamond simulant

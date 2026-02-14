@@ -158,6 +158,9 @@ def _import_family_yaml(
             "sg_max": family.sg_max,
             "heat_treatment_temp_min": family.heat_treatment_temp_min,
             "heat_treatment_temp_max": family.heat_treatment_temp_max,
+            "origin": family.origin,
+            "growth_method": family.growth_method,
+            "natural_counterpart_id": family.natural_counterpart_id,
         }
 
         mineral = Mineral.from_dict(expression_id, mineral_data)
@@ -200,9 +203,11 @@ def import_from_yaml(
     """Import presets from YAML files.
 
     Supports both legacy flat format and new family+expression format.
+    Scans the given directory and also checks for synthetics/, simulants/,
+    and composites/ subdirectories.
 
     Args:
-        yaml_dir: Directory containing YAML files
+        yaml_dir: Directory containing YAML files (e.g., data/source/minerals/)
         db_path: Path to output database
         verbose: Print progress
 
@@ -221,22 +226,39 @@ def import_from_yaml(
     expression_count = 0
     legacy_count = 0
 
+    # Collect all directories to scan: the main dir + sibling directories
+    # for synthetics, simulants, composites
+    scan_dirs: list[tuple[Path, str]] = [(yaml_dir, "minerals")]
+    parent = yaml_dir.parent
+    for subdir_name in ("synthetics", "simulants", "composites"):
+        subdir = parent / subdir_name
+        if subdir.is_dir():
+            scan_dirs.append((subdir, subdir_name))
+
     with get_connection(db_path) as conn:
         # Populate reference tables (shape factors, thresholds)
         init_reference_tables(conn)
 
-        for yaml_file in sorted(yaml_dir.glob("*.yaml")):
-            with open(yaml_file) as f:
-                data = yaml.safe_load(f)
+        for scan_dir, category_label in scan_dirs:
+            yaml_files = sorted(scan_dir.glob("*.yaml"))
+            if yaml_files and verbose:
+                print(f"\n--- {category_label} ({len(yaml_files)} files) ---")
 
-            file_id = yaml_file.stem
+            for yaml_file in yaml_files:
+                with open(yaml_file) as f:
+                    data = yaml.safe_load(f)
 
-            if _is_family_format(data):
-                fc, ec = _import_family_yaml(file_id, data, conn, verbose)
-                family_count += fc
-                expression_count += ec
-            else:
-                legacy_count += _import_legacy_yaml(file_id, data, conn, verbose)
+                if data is None:
+                    continue
+
+                file_id = yaml_file.stem
+
+                if _is_family_format(data):
+                    fc, ec = _import_family_yaml(file_id, data, conn, verbose)
+                    family_count += fc
+                    expression_count += ec
+                else:
+                    legacy_count += _import_legacy_yaml(file_id, data, conn, verbose)
 
         conn.commit()
 
@@ -291,7 +313,12 @@ Examples:
         """,
     )
 
-    parser.add_argument("--from-yaml", type=Path, metavar="DIR", help="Import from YAML directory")
+    parser.add_argument(
+        "--from-yaml",
+        type=Path,
+        metavar="DIR",
+        help="Import from YAML directory (also scans sibling synthetics/, simulants/, composites/)",
+    )
     parser.add_argument(
         "--from-legacy", type=Path, metavar="FILE", help="Import from legacy crystal_presets.py"
     )

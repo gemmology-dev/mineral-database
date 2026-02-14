@@ -1,0 +1,32 @@
+id: synthetic-quartz-hydrothermal
+name: Hydrothermal Quartz
+crystal_system: trigonal
+point_group: "32"
+chemistry: SiO2
+category: synthetic quartz
+origin: synthetic
+growth_method: hydrothermal
+natural_counterpart_id: quartz
+year_first_produced: 1950
+diagnostic_synthetic_features: >
+  Breadcrumb-like inclusions along seed plate, extremely clean,
+  seed plate visible, absence of natural inclusions (e.g., no liquid-gas
+  inclusions, no acicular rutile), twinning follows seed
+hardness: 7
+sg: 2.65
+ri: "1.544-1.553"
+birefringence: 0.009
+optical_character: Uniaxial +
+dispersion: 0.013
+lustre: Vitreous
+cleavage: None
+fracture: Conchoidal
+colors: [Colourless, Amethyst, Citrine, Smoky, Ametrine]
+inclusions: [Seed plate, Breadcrumb inclusions, Two-phase inclusions along seed]
+fluorescence: Inert
+expressions:
+  - slug: crystal
+    name: Crystal
+    cdl: "trigonal[32]:{10-10}@1.0 + {10-11}@0.8 + {01-11}@0.6"
+    is_primary: true
+    form_description: Prismatic crystal from hydrothermal growth

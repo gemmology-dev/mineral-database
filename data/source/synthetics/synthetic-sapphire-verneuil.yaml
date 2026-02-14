@@ -1,0 +1,35 @@
+id: synthetic-sapphire-verneuil
+name: Synthetic Sapphire (Verneuil)
+crystal_system: trigonal
+point_group: "-3m"
+chemistry: Al2O3:Fe,Ti
+category: synthetic corundum
+origin: synthetic
+growth_method: flame_fusion
+natural_counterpart_id: sapphire
+year_first_produced: 1910
+diagnostic_synthetic_features: >
+  Curved striae, spherical gas bubbles, uniform colour,
+  no natural inclusions (silk, zoning)
+hardness: 9
+sg: "3.99-4.01"
+ri: "1.762-1.770"
+birefringence: 0.008
+optical_character: Uniaxial -
+dispersion: 0.018
+lustre: Vitreous to adamantine
+cleavage: None (parting on {0001} and {10-11})
+fracture: Conchoidal
+pleochroism: Strong dichroism - violetish-blue / greenish-blue
+pleochroism_strength: strong
+pleochroism_color1: violetish-blue
+pleochroism_color2: greenish-blue
+colors: [Blue, Colourless, Yellow, Green, Pink]
+inclusions: [Curved striae, Gas bubbles, Unmelted alumina]
+fluorescence: Inert to weak (varies by colour)
+expressions:
+  - slug: boule
+    name: Boule
+    cdl: ""
+    is_primary: true
+    form_description: Cylindrical boule from flame fusion growth

@@ -1,0 +1,30 @@
+id: synthetic-turquoise-gilson
+name: Gilson Turquoise
+crystal_system: triclinic
+point_group: "-1"
+chemistry: CuAl6(PO4)4(OH)8*4H2O
+category: turquoise simulant
+origin: simulant
+growth_method: gilson
+natural_counterpart_id: turquoise
+manufacturer: Gilson
+year_first_produced: 1972
+diagnostic_synthetic_features: >
+  More porous than natural, lower SG (2.4 vs 2.6-2.8), distinctive
+  blue appearance under magnification (lacks natural matrix patterns),
+  may absorb dye unevenly, spiderweb pattern may appear too regular
+hardness: "5-6"
+sg: "2.4-2.5"
+ri: "1.60-1.61"
+birefringence: 0.040
+optical_character: Biaxial +
+lustre: Waxy to dull
+colors: [Blue, Greenish-blue, with optional dark matrix]
+inclusions: [Regular porosity pattern, Absence of natural matrix]
+fluorescence: Inert to weak greenish
+expressions:
+  - slug: cabochon
+    name: Cabochon
+    cdl: ""
+    is_primary: true
+    form_description: Produced as cabochon material imitating natural turquoise

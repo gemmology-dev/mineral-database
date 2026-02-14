@@ -1,0 +1,26 @@
+id: opal-triplet
+name: Opal Triplet
+crystal_system: amorphous
+point_group: null
+chemistry: SiO2*nH2O between dome cap and dark backing
+category: assembled stone
+origin: composite
+natural_counterpart_id: opal
+diagnostic_synthetic_features: >
+  Three-layer construction visible from side, dome cap (quartz or glass)
+  creates glassy appearance, flat back with dark backing, play of colour
+  may appear slightly muted under dome, cannot be immersed (adhesive dissolves)
+hardness: "5.5-7"
+sg: "1.9-2.1"
+ri: "1.44-1.55"
+optical_character: Isotropic
+phenomenon: Play of colour
+lustre: Vitreous (glass-like from dome cap)
+colors: [Black opal appearance, Various play of colour]
+inclusions: [Three-layer construction, Dome cap, Junction planes, Dark backing]
+expressions:
+  - slug: cabochon
+    name: Cabochon
+    cdl: ""
+    is_primary: true
+    form_description: Thin opal slice between quartz/glass dome and dark backing

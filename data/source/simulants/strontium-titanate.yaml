@@ -1,0 +1,33 @@
+id: strontium-titanate
+name: Strontium Titanate
+crystal_system: cubic
+point_group: m3m
+chemistry: SrTiO3
+category: diamond simulant
+origin: simulant
+growth_method: flame_fusion
+natural_counterpart_id: diamond
+target_minerals: [diamond]
+year_first_produced: 1953
+diagnostic_synthetic_features: >
+  Extremely high dispersion (0.190), spectral fire far exceeds diamond,
+  low hardness (5.5), easily scratched, thermal probe reads non-diamond,
+  very rare in modern trade
+hardness: 5.5
+sg: 5.13
+ri: 2.409
+birefringence: 0
+optical_character: Isotropic
+dispersion: 0.190
+lustre: Adamantine
+cleavage: None
+fracture: Conchoidal
+colors: [Colourless]
+inclusions: [Gas bubbles]
+fluorescence: Inert
+expressions:
+  - slug: faceted
+    name: Faceted
+    cdl: ""
+    is_primary: true
+    form_description: Flame fusion boule, faceted as diamond simulant

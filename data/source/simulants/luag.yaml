@@ -1,0 +1,33 @@
+id: luag
+name: LuAG (Lutetium Aluminium Garnet)
+crystal_system: cubic
+point_group: m3m
+chemistry: Lu3Al5O12
+category: diamond simulant
+origin: simulant
+growth_method: czochralski
+natural_counterpart_id: diamond
+target_minerals: [diamond]
+year_first_produced: 2000
+diagnostic_synthetic_features: >
+  Higher RI than YAG (1.84 vs 1.833), higher hardness than most simulants (8.5),
+  singly refractive, thermal probe reads non-diamond,
+  rare in trade, primarily a collector/research material
+hardness: 8.5
+sg: 6.73
+ri: 1.84
+birefringence: 0
+optical_character: Isotropic
+dispersion: 0.028
+lustre: Vitreous to sub-adamantine
+cleavage: None
+fracture: Conchoidal
+colors: [Colourless]
+inclusions: [Gas bubbles]
+fluorescence: Weak
+expressions:
+  - slug: faceted
+    name: Faceted
+    cdl: ""
+    is_primary: true
+    form_description: Czochralski-grown, faceted as diamond simulant

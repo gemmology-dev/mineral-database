@@ -1,0 +1,31 @@
+id: synthetic-lapis-gilson
+name: Gilson Lapis Lazuli
+crystal_system: cubic
+point_group: m3m
+chemistry: Synthetic lazurite composite
+category: lapis simulant
+origin: simulant
+growth_method: gilson
+natural_counterpart_id: lapis-lazuli
+manufacturer: Gilson
+year_first_produced: 1976
+diagnostic_synthetic_features: >
+  Lacks pyrite inclusions (gold flecks) or contains artificial metallic
+  flecks, slightly different SG from natural (2.3-2.4 vs 2.7-2.9),
+  slightly different RI, uniform deep blue colour, granular texture
+  under magnification
+hardness: "5-5.5"
+sg: "2.3-2.4"
+ri: "1.50-1.52"
+birefringence: 0
+optical_character: Isotropic
+lustre: Vitreous to dull
+colors: [Deep blue, Ultramarine blue]
+inclusions: [Uniform granular texture, Artificial metallic flecks (optional)]
+fluorescence: Inert
+expressions:
+  - slug: cabochon
+    name: Cabochon
+    cdl: ""
+    is_primary: true
+    form_description: Produced as cabochon and bead material

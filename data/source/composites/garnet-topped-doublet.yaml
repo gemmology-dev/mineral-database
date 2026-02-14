@@ -1,0 +1,25 @@
+id: garnet-topped-doublet
+name: Garnet-Topped Doublet
+crystal_system: cubic
+point_group: m3m
+chemistry: Variable (almandine garnet crown + glass pavilion)
+category: assembled stone
+origin: composite
+diagnostic_synthetic_features: >
+  Visible junction plane between crown and pavilion (red ring when immersed),
+  garnet crown may show garnet spectrum, pavilion is glass (gas bubbles, swirl marks),
+  different lustre between crown and pavilion, flattened bubbles near junction
+hardness: "6.5-7"
+sg: "3.0-3.5"
+ri: "1.73-1.78"
+birefringence: 0
+optical_character: Isotropic (crown)
+lustre: Vitreous
+colors: [Red, Blue, Green (pavilion colour determines face-up colour)]
+inclusions: [Junction plane, Gas bubbles in pavilion, Red ring in immersion]
+expressions:
+  - slug: doublet
+    name: Doublet
+    cdl: ""
+    is_primary: true
+    form_description: Almandine garnet crown fused to coloured glass pavilion

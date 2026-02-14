@@ -1,0 +1,35 @@
+id: synthetic-sapphire-flux
+name: Flux-Grown Sapphire
+crystal_system: trigonal
+point_group: "-3m"
+chemistry: Al2O3:Fe,Ti
+category: synthetic corundum
+origin: synthetic
+growth_method: flux
+natural_counterpart_id: sapphire
+manufacturer: Chatham
+year_first_produced: 1970
+diagnostic_synthetic_features: >
+  Flux remnants (wispy veils), platinum platelets, characteristic
+  flux fingerprint inclusions, no natural silk
+hardness: 9
+sg: "3.99-4.01"
+ri: "1.762-1.770"
+birefringence: 0.008
+optical_character: Uniaxial -
+dispersion: 0.018
+lustre: Vitreous to adamantine
+fracture: Conchoidal
+pleochroism: Strong dichroism
+pleochroism_strength: strong
+pleochroism_color1: violetish-blue
+pleochroism_color2: greenish-blue
+colors: [Blue, Padparadscha, Yellow]
+inclusions: [Flux remnants, Platinum platelets, Flux fingerprints]
+fluorescence: Inert to weak
+expressions:
+  - slug: crystal
+    name: Crystal
+    cdl: "trigonal[-3m]:{10-10}@1.0 + {10-11}@0.8 + {0001}@0.5"
+    is_primary: true
+    form_description: Tabular crystal from flux growth

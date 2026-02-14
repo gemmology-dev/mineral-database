@@ -1,0 +1,26 @@
+id: opal-doublet
+name: Opal Doublet
+crystal_system: amorphous
+point_group: null
+chemistry: SiO2*nH2O on dark backing
+category: assembled stone
+origin: composite
+natural_counterpart_id: opal
+diagnostic_synthetic_features: >
+  Visible dark backing when viewed from side, flat back, slightly different
+  appearance from solid opal, adhesive layer may be visible at junction,
+  profile view shows two-layer construction
+hardness: "5.5-6.5"
+sg: "1.9-2.1"
+ri: "1.44-1.46"
+optical_character: Isotropic (amorphous)
+phenomenon: Play of colour
+lustre: Vitreous to resinous
+colors: [Black opal appearance, Various play of colour]
+inclusions: [Junction plane, Dark backing visible from side, Adhesive layer]
+expressions:
+  - slug: cabochon
+    name: Cabochon
+    cdl: ""
+    is_primary: true
+    form_description: Thin slice of precious opal cemented to dark backing

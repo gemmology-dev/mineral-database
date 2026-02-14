@@ -11,9 +11,14 @@ import sys
 from . import __version__
 from .queries import (
     count_presets,
+    get_counterparts,
+    get_family,
     get_preset,
+    list_by_origin,
     list_preset_categories,
     list_presets,
+    list_simulants,
+    list_synthetics,
     search_presets,
 )
 
@@ -60,7 +65,38 @@ Examples:
         "--props",
         type=str,
         metavar="GROUP",
-        help="Property group for --info (basic, physical, optical, fga, etc.)",
+        help="Property group for --info (basic, physical, optical, fga, synthetic, etc.)",
+    )
+
+    parser.add_argument(
+        "--synthetics",
+        nargs="?",
+        const="all",
+        metavar="METHOD",
+        help="List synthetic materials (optionally filter by growth method: flux, cvd, hpht, etc.)",
+    )
+
+    parser.add_argument(
+        "--simulants",
+        nargs="?",
+        const="all",
+        metavar="TARGET",
+        help="List simulant materials (optionally filter by target mineral, e.g., diamond)",
+    )
+
+    parser.add_argument(
+        "--counterparts",
+        type=str,
+        metavar="NAME",
+        help="List all synthetics and simulants for a natural mineral",
+    )
+
+    parser.add_argument(
+        "--origin",
+        type=str,
+        metavar="TYPE",
+        choices=["natural", "synthetic", "simulant", "composite"],
+        help="Filter --list by origin type",
     )
 
     return parser
@@ -82,8 +118,71 @@ def main(args: list[str] | None = None) -> int:
             print(f"  {cat:15} ({len(presets)} presets)")
         return 0
 
+    if parsed_args.synthetics:
+        method = None if parsed_args.synthetics == "all" else parsed_args.synthetics
+        ids = list_synthetics(method)
+        if ids:
+            label = f"Synthetic Minerals ({parsed_args.synthetics})" if method else "All Synthetic Minerals"
+            print(f"{label} ({len(ids)} total):")
+            for fid in ids:
+                family = get_family(fid)
+                if family:
+                    method_str = f" [{family.growth_method}]" if family.growth_method else ""
+                    print(f"  {fid:40} - {family.name}{method_str}")
+        else:
+            print("No synthetic minerals found.")
+        return 0
+
+    if parsed_args.simulants:
+        target = None if parsed_args.simulants == "all" else parsed_args.simulants
+        ids = list_simulants(target)
+        if ids:
+            label = f"Simulants for {parsed_args.simulants}" if target else "All Simulants"
+            print(f"{label} ({len(ids)} total):")
+            for fid in ids:
+                family = get_family(fid)
+                if family:
+                    counterpart = f" → {family.natural_counterpart_id}" if family.natural_counterpart_id else ""
+                    print(f"  {fid:40} - {family.name}{counterpart}")
+        else:
+            print("No simulants found.")
+        return 0
+
+    if parsed_args.counterparts:
+        result = get_counterparts(parsed_args.counterparts)
+        print(f"Counterparts for '{parsed_args.counterparts}':")
+        if result["synthetics"]:
+            print("\n  Synthetics:")
+            for fid in result["synthetics"]:
+                family = get_family(fid)
+                if family:
+                    method_str = f" [{family.growth_method}]" if family.growth_method else ""
+                    print(f"    {fid:38} - {family.name}{method_str}")
+        else:
+            print("\n  Synthetics: none")
+        if result["simulants"]:
+            print("\n  Simulants:")
+            for fid in result["simulants"]:
+                family = get_family(fid)
+                if family:
+                    print(f"    {fid:38} - {family.name}")
+        else:
+            print("\n  Simulants: none")
+        return 0
+
     if parsed_args.list:
-        if parsed_args.list == "all":
+        if parsed_args.origin:
+            # Filter by origin
+            ids = list_by_origin(parsed_args.origin)
+            if ids:
+                print(f"{parsed_args.origin.title()} Minerals ({len(ids)} total):")
+                for fid in ids:
+                    family = get_family(fid)
+                    if family:
+                        print(f"  {fid:40} - {family.name}")
+            else:
+                print(f"No {parsed_args.origin} minerals found.")
+        elif parsed_args.list == "all":
             print(f"All Crystal Presets ({count_presets()} total):")
             for cat in list_preset_categories():
                 presets = list_presets(cat)
@@ -92,7 +191,8 @@ def main(args: list[str] | None = None) -> int:
                     for name in presets:
                         preset = get_preset(name)
                         if preset:
-                            print(f"    {name:25} - {preset['name']}")
+                            origin_tag = f" [{preset['origin']}]" if preset.get("origin", "natural") != "natural" else ""
+                            print(f"    {name:25} - {preset['name']}{origin_tag}")
         else:
             presets = list_presets(parsed_args.list)
             if presets:
@@ -100,7 +200,8 @@ def main(args: list[str] | None = None) -> int:
                 for name in presets:
                     preset = get_preset(name)
                     if preset:
-                        print(f"  {name:25} - {preset['name']}")
+                        origin_tag = f" [{preset['origin']}]" if preset.get("origin", "natural") != "natural" else ""
+                        print(f"  {name:25} - {preset['name']}{origin_tag}")
             else:
                 print(f"No presets found for category: {parsed_args.list}")
         return 0
@@ -126,6 +227,23 @@ def main(args: list[str] | None = None) -> int:
                 print(f"  RI:          {preset['ri']}")
             if preset.get("twin_law"):
                 print(f"  Twin Law:    {preset['twin_law']}")
+            # Synthetic/simulant fields
+            origin = preset.get("origin", "natural")
+            if origin != "natural":
+                print(f"  Origin:      {origin}")
+            if preset.get("growth_method"):
+                print(f"  Growth:      {preset['growth_method']}")
+            if preset.get("natural_counterpart_id"):
+                print(f"  Counterpart: {preset['natural_counterpart_id']}")
+            # Family-level fields (try loading family data)
+            family = get_family(parsed_args.info)
+            if family:
+                if family.manufacturer:
+                    print(f"  Manufacturer: {family.manufacturer}")
+                if family.year_first_produced:
+                    print(f"  Year First:  {family.year_first_produced}")
+                if family.diagnostic_synthetic_features:
+                    print(f"  Diagnostics: {family.diagnostic_synthetic_features.strip()}")
         else:
             print(f"Preset not found: {parsed_args.info}")
             return 1

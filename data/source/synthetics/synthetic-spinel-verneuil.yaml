@@ -1,0 +1,33 @@
+id: synthetic-spinel-verneuil
+name: Synthetic Spinel (Verneuil)
+crystal_system: cubic
+point_group: m3m
+chemistry: MgAl2O4
+category: synthetic spinel
+origin: synthetic
+growth_method: flame_fusion
+natural_counterpart_id: spinel
+year_first_produced: 1926
+diagnostic_synthetic_features: >
+  Anomalous birefringence (ADR) in polariscope due to strain,
+  RI much higher than natural (1.727 vs 1.712-1.717), gas bubbles,
+  curved striae, often used as simulant for other gems (blue for sapphire,
+  red for ruby, colourless for diamond)
+hardness: 8
+sg: 3.64
+ri: 1.727
+birefringence: 0
+optical_character: Isotropic (with anomalous birefringence)
+dispersion: 0.020
+lustre: Vitreous
+cleavage: None
+fracture: Conchoidal
+colors: [Blue, Red, Colourless, Green, Yellow, Pink]
+inclusions: [Gas bubbles, Curved striae, Strain patterns]
+fluorescence: Variable (blue shows strong red under LW UV due to cobalt)
+expressions:
+  - slug: boule
+    name: Boule
+    cdl: ""
+    is_primary: true
+    form_description: Cylindrical boule from flame fusion growth

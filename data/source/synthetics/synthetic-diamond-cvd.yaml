@@ -1,0 +1,33 @@
+id: synthetic-diamond-cvd
+name: CVD Diamond
+crystal_system: cubic
+point_group: m3m
+chemistry: C
+category: synthetic diamond
+origin: synthetic
+growth_method: cvd
+natural_counterpart_id: diamond
+manufacturer: Various (Element Six, Diamond Foundry, WD Lab Grown)
+year_first_produced: 1952
+diagnostic_synthetic_features: >
+  Tabular growth morphology, silicon-vacancy (SiV) centres at 737nm,
+  lack of nitrogen aggregates (Type IIa), phosphorescence (some),
+  inscribed girdle, strain patterns differ from natural
+hardness: 10
+sg: 3.52
+ri: 2.417
+birefringence: 0
+optical_character: Isotropic
+dispersion: 0.044
+lustre: Adamantine
+cleavage: Perfect octahedral {111}
+fracture: Conchoidal
+colors: [Colourless, Near-colourless, Brown, Blue (rare)]
+inclusions: [Graphite inclusions (dark spots), Non-diamond carbon, Point defects]
+fluorescence: Often strong orange or red phosphorescence
+expressions:
+  - slug: plate
+    name: CVD Plate
+    cdl: ""
+    is_primary: true
+    form_description: Tabular plate grown layer by layer on diamond seed

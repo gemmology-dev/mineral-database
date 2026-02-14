@@ -11,20 +11,27 @@ from .db import (
     classify_value,
     find_minerals_by_ri,
     find_minerals_by_sg,
+    get_all_families,
     get_all_minerals,
     get_category_presets,
     get_connection,
     get_cut_shape_factors,
+    get_families_by_growth_method,
+    get_families_by_origin,
+    get_family_by_id,
     get_mineral_by_id,
     get_mineral_models,
     get_minerals_by_system,
     get_minerals_with_heat_treatment,
+    get_natural_counterpart,
+    get_simulants_for_natural,
+    get_synthetics_for_natural,
     get_thresholds,
     get_volume_shape_factors,
     init_reference_tables,
     search_minerals,
 )
-from .models import INFO_GROUPS, Mineral
+from .models import INFO_GROUPS, Mineral, MineralFamily
 
 # Module-level database path (can be overridden)
 _db_path: Path | None = None
@@ -429,3 +436,89 @@ def ensure_reference_tables() -> None:
     """
     with get_connection(_db_path) as conn:
         init_reference_tables(conn)
+
+
+# =============================================================================
+# Synthetic / Simulant Query Functions
+# =============================================================================
+
+
+def list_synthetics(growth_method: str | None = None) -> list[str]:
+    """List all synthetic mineral family IDs.
+
+    Args:
+        growth_method: Optional filter by growth method
+            (flame_fusion, flux, hydrothermal, cvd, hpht, czochralski, etc.)
+
+    Returns:
+        List of synthetic family IDs
+    """
+    with get_connection(_db_path) as conn:
+        if growth_method:
+            families = get_families_by_growth_method(conn, growth_method)
+        else:
+            families = get_families_by_origin(conn, "synthetic")
+        return [f.id for f in families]
+
+
+def list_simulants(target: str | None = None) -> list[str]:
+    """List all simulant mineral family IDs.
+
+    Args:
+        target: Optional natural mineral to find simulants for
+
+    Returns:
+        List of simulant family IDs
+    """
+    with get_connection(_db_path) as conn:
+        if target:
+            families = get_simulants_for_natural(conn, target)
+        else:
+            families = get_families_by_origin(conn, "simulant")
+        return [f.id for f in families]
+
+
+def get_counterparts(name: str) -> dict[str, list[str]]:
+    """Get all synthetic and simulant counterparts for a natural mineral.
+
+    Args:
+        name: Natural mineral family ID
+
+    Returns:
+        Dict with 'synthetics' and 'simulants' keys, each containing
+        a list of family IDs
+    """
+    with get_connection(_db_path) as conn:
+        synthetics = get_synthetics_for_natural(conn, name)
+        simulants = get_simulants_for_natural(conn, name)
+        return {
+            "synthetics": [f.id for f in synthetics],
+            "simulants": [f.id for f in simulants],
+        }
+
+
+def list_by_origin(origin: str) -> list[str]:
+    """List all mineral family IDs filtered by origin.
+
+    Args:
+        origin: Origin type (natural, synthetic, simulant, composite)
+
+    Returns:
+        List of family IDs
+    """
+    with get_connection(_db_path) as conn:
+        families = get_families_by_origin(conn, origin)
+        return [f.id for f in families]
+
+
+def get_family(name: str) -> MineralFamily | None:
+    """Get a MineralFamily object by ID.
+
+    Args:
+        name: Family ID (case-insensitive)
+
+    Returns:
+        MineralFamily object or None
+    """
+    with get_connection(_db_path) as conn:
+        return get_family_by_id(conn, name.lower())

@@ -1,0 +1,33 @@
+id: ggg
+name: GGG (Gadolinium Gallium Garnet)
+crystal_system: cubic
+point_group: m3m
+chemistry: Gd3Ga5O12
+category: diamond simulant
+origin: simulant
+growth_method: czochralski
+natural_counterpart_id: diamond
+target_minerals: [diamond]
+year_first_produced: 1973
+diagnostic_synthetic_features: >
+  Very high SG (7.05), easily distinguished by heft test,
+  lower hardness (6.5), thermal probe reads non-diamond,
+  rarely seen in modern trade (superseded by CZ)
+hardness: 6.5
+sg: 7.05
+ri: "2.02-2.03"
+birefringence: 0
+optical_character: Isotropic
+dispersion: 0.045
+lustre: Adamantine
+cleavage: None
+fracture: Conchoidal
+colors: [Colourless]
+inclusions: [Gas bubbles]
+fluorescence: Weak orange
+expressions:
+  - slug: faceted
+    name: Faceted
+    cdl: ""
+    is_primary: true
+    form_description: Faceted as diamond simulant, now rarely encountered

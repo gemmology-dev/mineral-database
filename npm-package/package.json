@@ -1,7 +1,7 @@
 {
   "name": "@gemmology/mineral-data",
-  "version": "1.7.0",
-  "description": "Pre-built SQLite database of 68 mineral families with 95 expressions, including pre-generated SVG, STL, and glTF models for crystal visualization",
+  "version": "1.8.0",
+  "description": "Pre-built SQLite database of 96 mineral families (68 natural + 15 synthetic + 9 simulant + 4 composite) with 123 expressions, including pre-generated SVG, STL, and glTF models for crystal visualization",
   "main": "index.js",
   "types": "index.d.ts",
   "files": [

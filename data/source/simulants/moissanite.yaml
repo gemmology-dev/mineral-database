@@ -1,0 +1,33 @@
+id: moissanite
+name: Moissanite
+crystal_system: hexagonal
+point_group: 6mm
+chemistry: SiC (silicon carbide)
+category: diamond simulant
+origin: simulant
+natural_counterpart_id: diamond
+target_minerals: [diamond]
+manufacturer: Charles & Colvard (primary)
+year_first_produced: 1998
+diagnostic_synthetic_features: >
+  Very high birefringence (0.043) causing visible doubling of back facets,
+  higher dispersion than diamond (0.104 vs 0.044), needle-like inclusions
+  parallel to c-axis, reads as diamond on thermal probe (high thermal conductivity)
+hardness: "9.25-9.5"
+sg: "3.21-3.22"
+ri: "2.648-2.691"
+birefringence: 0.043
+optical_character: Uniaxial +
+dispersion: 0.104
+lustre: Adamantine
+cleavage: Indistinct
+fracture: Conchoidal
+colors: [Near-colourless, Slightly tinted, Green-grey (older production)]
+inclusions: [Needle-like inclusions parallel to c-axis, White stringy inclusions]
+fluorescence: Weak orange (LW UV)
+expressions:
+  - slug: faceted
+    name: Faceted
+    cdl: ""
+    is_primary: true
+    form_description: Produced as faceted gemstones, various cuts

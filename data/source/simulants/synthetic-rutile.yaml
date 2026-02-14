@@ -1,0 +1,33 @@
+id: synthetic-rutile
+name: Synthetic Rutile
+crystal_system: tetragonal
+point_group: 4/mmm
+chemistry: TiO2
+category: diamond simulant
+origin: simulant
+growth_method: flame_fusion
+natural_counterpart_id: diamond
+target_minerals: [diamond]
+year_first_produced: 1948
+diagnostic_synthetic_features: >
+  Extreme birefringence (0.287) causing obvious doubling of back facets,
+  very high dispersion (0.330), yellowish body colour in most specimens,
+  low hardness (6-6.5), very rare in modern trade
+hardness: "6-6.5"
+sg: 4.25
+ri: "2.616-2.903"
+birefringence: 0.287
+optical_character: Uniaxial +
+dispersion: 0.330
+lustre: Adamantine to sub-metallic
+cleavage: Distinct on {110}
+fracture: Conchoidal to sub-conchoidal
+colors: [Yellowish, Nearly colourless (boron-doped)]
+inclusions: [Gas bubbles, Unmelted feed powder]
+fluorescence: Inert
+expressions:
+  - slug: faceted
+    name: Faceted
+    cdl: ""
+    is_primary: true
+    form_description: Flame fusion boule, faceted as diamond simulant

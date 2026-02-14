@@ -1,0 +1,28 @@
+id: glass-simulant
+name: Glass (Paste)
+crystal_system: amorphous
+point_group: null
+chemistry: SiO2 + various metal oxides (lead, barium)
+category: general simulant
+origin: simulant
+diagnostic_synthetic_features: >
+  Gas bubbles (round, elongated, or clustered), swirl marks (flow lines),
+  conchoidal fracture with vitreous lustre, warm to touch (low thermal
+  conductivity), may show orange flash under Chelsea filter, single
+  refractive, hardness only 5-6
+hardness: "5-6"
+sg: "2.3-4.5"
+ri: "1.50-1.70"
+birefringence: 0
+optical_character: Isotropic (amorphous)
+lustre: Vitreous
+fracture: Conchoidal
+colors: [All colours (by metal oxide doping)]
+inclusions: [Gas bubbles, Swirl marks (flow lines), Devitrification patches]
+fluorescence: Variable
+expressions:
+  - slug: faceted
+    name: Faceted
+    cdl: ""
+    is_primary: true
+    form_description: Moulded or faceted glass simulant

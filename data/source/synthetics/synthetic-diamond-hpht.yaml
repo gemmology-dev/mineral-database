@@ -1,0 +1,33 @@
+id: synthetic-diamond-hpht
+name: HPHT Diamond
+crystal_system: cubic
+point_group: m3m
+chemistry: C
+category: synthetic diamond
+origin: synthetic
+growth_method: hpht
+natural_counterpart_id: diamond
+manufacturer: Various (De Beers/Element Six, Gemesis, New Diamond Technology)
+year_first_produced: 1954
+diagnostic_synthetic_features: >
+  Cuboctahedral growth sectors, metallic flux inclusions (Fe, Ni, Co),
+  magnetic attraction (some), colour zoning follows growth sectors,
+  Type Ib nitrogen (single substitutional), cross-shaped fluorescence pattern
+hardness: 10
+sg: 3.52
+ri: 2.417
+birefringence: 0
+optical_character: Isotropic
+dispersion: 0.044
+lustre: Adamantine
+cleavage: Perfect octahedral {111}
+fracture: Conchoidal
+colors: [Yellow, Colourless, Blue, Green, Orange]
+inclusions: [Metallic flux inclusions (Fe/Ni/Co), Dark metallic spots, Graining]
+fluorescence: Often greenish-yellow (SW UV), cross-shaped pattern under DiamondView
+expressions:
+  - slug: cuboctahedron
+    name: Cuboctahedron
+    cdl: "cubic[m3m]:{111}@1.0 + {100}@1.0"
+    is_primary: true
+    form_description: Cuboctahedral growth morphology typical of HPHT synthesis

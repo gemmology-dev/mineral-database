@@ -1,0 +1,37 @@
+id: synthetic-ruby-flux
+name: Flux-Grown Ruby
+crystal_system: trigonal
+point_group: "-3m"
+chemistry: Al2O3:Cr
+category: synthetic corundum
+origin: synthetic
+growth_method: flux
+natural_counterpart_id: ruby
+manufacturer: Chatham, Kashan, Knischka, Ramaura
+year_first_produced: 1960
+diagnostic_synthetic_features: >
+  Flux remnants (wispy veils, fingerprints of flux), platinum platelets
+  from crucible, characteristic flux feather inclusions, may contain
+  twisted veils resembling natural silk
+hardness: 9
+sg: "3.99-4.01"
+ri: "1.762-1.770"
+birefringence: 0.008
+optical_character: Uniaxial -
+dispersion: 0.018
+lustre: Vitreous to adamantine
+cleavage: None (parting on {0001} and {10-11})
+fracture: Conchoidal
+pleochroism: Strong dichroism
+pleochroism_strength: strong
+pleochroism_color1: purplish-red
+pleochroism_color2: orangey-red
+colors: [Red, Pinkish-red]
+inclusions: [Flux remnants (wispy veils), Platinum platelets, Flux fingerprints]
+fluorescence: Strong red (LW and SW UV)
+expressions:
+  - slug: crystal
+    name: Crystal
+    cdl: "trigonal[-3m]:{10-10}@1.0 + {10-11}@0.8 + {0001}@0.5"
+    is_primary: true
+    form_description: Tabular to prismatic crystal from flux growth

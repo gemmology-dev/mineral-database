@@ -1,0 +1,34 @@
+id: synthetic-opal-gilson
+name: Gilson Opal
+crystal_system: amorphous
+point_group: null
+chemistry: SiO2*nH2O
+category: synthetic opal
+origin: synthetic
+growth_method: gilson
+natural_counterpart_id: opal
+manufacturer: Gilson
+year_first_produced: 1974
+diagnostic_synthetic_features: >
+  Lizard skin or chicken wire pattern under magnification,
+  columnar structure visible from side, no potch (body colour layer),
+  very regular play of colour, lower SG than natural
+hardness: "5.5-6"
+sg: "2.05-2.15"
+ri: "1.44-1.46"
+birefringence: 0
+optical_character: Isotropic (amorphous)
+dispersion: 0
+lustre: Vitreous to resinous
+cleavage: None
+fracture: Conchoidal
+phenomenon: Play of colour
+colors: [White opal, Black opal, Fire opal]
+inclusions: [Columnar structure, Lizard skin pattern]
+fluorescence: Variable
+expressions:
+  - slug: cabochon
+    name: Cabochon
+    cdl: ""
+    is_primary: true
+    form_description: Produced as cabochon material showing play of colour

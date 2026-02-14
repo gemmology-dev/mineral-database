@@ -1,0 +1,38 @@
+id: synthetic-emerald-flux
+name: Flux-Grown Emerald
+crystal_system: hexagonal
+point_group: 6/mmm
+chemistry: Be3Al2(SiO3)6:Cr
+category: synthetic beryl
+origin: synthetic
+growth_method: flux
+natural_counterpart_id: emerald
+manufacturer: Chatham, Gilson, Lennix
+year_first_produced: 1935
+diagnostic_synthetic_features: >
+  Flux inclusions (wispy veils, fingerprints), phenakite crystals,
+  platinum platelets, lower SG than natural (2.65-2.66 vs 2.67-2.78),
+  lower RI than natural (1.560-1.563 vs 1.565-1.602), strong red
+  fluorescence under Chelsea filter
+hardness: 7.5
+sg: "2.65-2.66"
+ri: "1.560-1.563"
+birefringence: 0.003
+optical_character: Uniaxial -
+dispersion: 0.014
+lustre: Vitreous
+cleavage: Imperfect basal
+fracture: Conchoidal
+pleochroism: Moderate to strong dichroism
+pleochroism_strength: strong
+pleochroism_color1: bluish-green
+pleochroism_color2: yellowish-green
+colors: [Green, Bluish-green]
+inclusions: [Flux veils, Phenakite crystals, Platinum platelets, Wispy flux remnants]
+fluorescence: Usually strong red (LW UV), weak to inert (SW UV)
+expressions:
+  - slug: crystal
+    name: Crystal
+    cdl: "hexagonal[6/mmm]:{10-10}@1.0 + {0001}@0.3"
+    is_primary: true
+    form_description: Prismatic crystal from flux growth

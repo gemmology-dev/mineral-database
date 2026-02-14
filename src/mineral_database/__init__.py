@@ -16,7 +16,7 @@ Example:
     >>> cubic_presets = list_presets('cubic')
 """
 
-__version__ = "1.0.0"
+__version__ = "1.4.0"
 __author__ = "Fabian Schuh"
 __email__ = "fabian@gemmology.dev"
 
@@ -37,6 +37,7 @@ from .models import (
     INFO_GROUPS,
     PROPERTY_LABELS,
     Mineral,
+    MineralFamily,
     format_property_value,
     get_property_label,
 )
@@ -47,6 +48,8 @@ from .queries import (
     filter_minerals,
     find_by_ri,
     find_by_sg,
+    get_counterparts,
+    get_family,
     get_info_properties,
     get_mineral,
     get_model_gltf,
@@ -56,10 +59,13 @@ from .queries import (
     get_preset,
     get_presets_by_form,
     get_systems,
+    list_by_origin,
     list_heat_treatable,
     list_preset_categories,
     list_presets,
     list_shape_factors,
+    list_simulants,
+    list_synthetics,
     list_thresholds,
     list_volume_factors,
     search_presets,
@@ -95,8 +101,15 @@ __all__ = [
     "classify",
     "list_heat_treatable",
     "ensure_reference_tables",
+    # Synthetic/simulant query functions
+    "list_synthetics",
+    "list_simulants",
+    "get_counterparts",
+    "list_by_origin",
+    "get_family",
     # Data classes
     "Mineral",
+    "MineralFamily",
     "INFO_GROUPS",
     "PROPERTY_LABELS",
     "format_property_value",

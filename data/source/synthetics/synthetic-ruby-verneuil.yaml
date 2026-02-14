@@ -1,0 +1,35 @@
+id: synthetic-ruby-verneuil
+name: Synthetic Ruby (Verneuil)
+crystal_system: trigonal
+point_group: "-3m"
+chemistry: Al2O3:Cr
+category: synthetic corundum
+origin: synthetic
+growth_method: flame_fusion
+natural_counterpart_id: ruby
+year_first_produced: 1902
+diagnostic_synthetic_features: >
+  Curved striae, spherical gas bubbles, uniform colour distribution,
+  no natural inclusions (silk, rutile needles)
+hardness: 9
+sg: "3.99-4.01"
+ri: "1.762-1.770"
+birefringence: 0.008
+optical_character: Uniaxial -
+dispersion: 0.018
+lustre: Vitreous to adamantine
+cleavage: None (parting on {0001} and {10-11})
+fracture: Conchoidal
+pleochroism: Strong dichroism - purplish-red / orangey-red
+pleochroism_strength: strong
+pleochroism_color1: purplish-red
+pleochroism_color2: orangey-red
+colors: [Red, Pinkish-red]
+inclusions: [Curved striae, Gas bubbles, Unmelted alumina powder]
+fluorescence: Strong red (LW and SW UV)
+expressions:
+  - slug: boule
+    name: Boule
+    cdl: ""
+    is_primary: true
+    form_description: Cylindrical boule from flame fusion growth

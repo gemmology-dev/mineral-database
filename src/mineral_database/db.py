@@ -48,8 +48,8 @@ def init_database(db_path: Path | None = None) -> None:
         name TEXT NOT NULL,
         cdl TEXT NOT NULL,
         system TEXT NOT NULL,
-        point_group TEXT NOT NULL,
-        chemistry TEXT NOT NULL,
+        point_group TEXT,
+        chemistry TEXT,
         hardness TEXT,
         description TEXT,
         sg TEXT,
@@ -87,7 +87,11 @@ def init_database(db_path: Path | None = None) -> None:
         sg_max REAL,              -- Maximum SG (e.g., 4.01)
         -- Heat treatment temperatures (Celsius)
         heat_treatment_temp_min REAL,  -- Min treatment temp (e.g., 800)
-        heat_treatment_temp_max REAL   -- Max treatment temp (e.g., 1900)
+        heat_treatment_temp_max REAL,  -- Max treatment temp (e.g., 1900)
+        -- Synthetic/simulant classification
+        origin TEXT NOT NULL DEFAULT 'natural',
+        growth_method TEXT,
+        natural_counterpart_id TEXT
     );
 
     -- Categories table for preset groupings
@@ -98,27 +102,27 @@ def init_database(db_path: Path | None = None) -> None:
 
     -- Full-text search index
     CREATE VIRTUAL TABLE IF NOT EXISTS minerals_fts USING fts5(
-        id, name, chemistry, description, localities,
+        id, name, chemistry, description, localities, origin, growth_method,
         content='minerals',
         content_rowid='rowid'
     );
 
     -- Triggers to keep FTS index in sync
     CREATE TRIGGER IF NOT EXISTS minerals_ai AFTER INSERT ON minerals BEGIN
-        INSERT INTO minerals_fts(rowid, id, name, chemistry, description, localities)
-        VALUES (new.rowid, new.id, new.name, new.chemistry, new.description, new.localities_json);
+        INSERT INTO minerals_fts(rowid, id, name, chemistry, description, localities, origin, growth_method)
+        VALUES (new.rowid, new.id, new.name, new.chemistry, new.description, new.localities_json, new.origin, new.growth_method);
     END;
 
     CREATE TRIGGER IF NOT EXISTS minerals_ad AFTER DELETE ON minerals BEGIN
-        INSERT INTO minerals_fts(minerals_fts, rowid, id, name, chemistry, description, localities)
-        VALUES ('delete', old.rowid, old.id, old.name, old.chemistry, old.description, old.localities_json);
+        INSERT INTO minerals_fts(minerals_fts, rowid, id, name, chemistry, description, localities, origin, growth_method)
+        VALUES ('delete', old.rowid, old.id, old.name, old.chemistry, old.description, old.localities_json, old.origin, old.growth_method);
     END;
 
     CREATE TRIGGER IF NOT EXISTS minerals_au AFTER UPDATE ON minerals BEGIN
-        INSERT INTO minerals_fts(minerals_fts, rowid, id, name, chemistry, description, localities)
-        VALUES ('delete', old.rowid, old.id, old.name, old.chemistry, old.description, old.localities_json);
-        INSERT INTO minerals_fts(rowid, id, name, chemistry, description, localities)
-        VALUES (new.rowid, new.id, new.name, new.chemistry, new.description, new.localities_json);
+        INSERT INTO minerals_fts(minerals_fts, rowid, id, name, chemistry, description, localities, origin, growth_method)
+        VALUES ('delete', old.rowid, old.id, old.name, old.chemistry, old.description, old.localities_json, old.origin, old.growth_method);
+        INSERT INTO minerals_fts(rowid, id, name, chemistry, description, localities, origin, growth_method)
+        VALUES (new.rowid, new.id, new.name, new.chemistry, new.description, new.localities_json, new.origin, new.growth_method);
     END;
 
     -- Cut shape factors for carat estimation
@@ -213,6 +217,15 @@ def init_database(db_path: Path | None = None) -> None:
         phenomenon TEXT,
         fluorescence TEXT,
 
+        -- Synthetic/simulant classification
+        origin TEXT NOT NULL DEFAULT 'natural',    -- natural|synthetic|simulant|composite
+        growth_method TEXT,                        -- flame_fusion|flux|hydrothermal|cvd|hpht|czochralski|skull_melting|gilson
+        natural_counterpart_id TEXT,               -- FK to natural family this imitates/replicates
+        target_minerals_json TEXT,                 -- JSON array of family IDs (for simulants targeting multiple gems)
+        manufacturer TEXT,                         -- e.g. 'Chatham', 'Kashan', 'Element Six'
+        year_first_produced INTEGER,               -- e.g. 1902
+        diagnostic_synthetic_features TEXT,         -- key identification features
+
         created_at TEXT DEFAULT CURRENT_TIMESTAMP,
         updated_at TEXT DEFAULT CURRENT_TIMESTAMP
     );
@@ -259,6 +272,8 @@ def init_database(db_path: Path | None = None) -> None:
     CREATE INDEX IF NOT EXISTS idx_families_ri_max ON mineral_families(ri_max);
     CREATE INDEX IF NOT EXISTS idx_families_sg_min ON mineral_families(sg_min);
     CREATE INDEX IF NOT EXISTS idx_families_sg_max ON mineral_families(sg_max);
+    CREATE INDEX IF NOT EXISTS idx_families_origin ON mineral_families(origin);
+    CREATE INDEX IF NOT EXISTS idx_families_growth_method ON mineral_families(growth_method);
 
     -- Backwards compatibility view (maintains existing API)
     -- This view makes family+expression data look like the flat minerals table
@@ -313,7 +328,11 @@ def init_database(db_path: Path | None = None) -> None:
         f.sg_max,
         f.heat_treatment_temp_min,
         f.heat_treatment_temp_max,
-        e.family_id
+        e.family_id,
+        f.origin,
+        f.growth_method,
+        f.natural_counterpart_id,
+        f.diagnostic_synthetic_features
     FROM mineral_expressions e
     JOIN mineral_families f ON e.family_id = f.id;
     """
@@ -389,14 +408,16 @@ def insert_mineral(conn: sqlite3.Connection, mineral: Mineral) -> None:
         twin_law, phenomenon, note,
         localities_json, forms_json, colors_json, treatments_json, inclusions_json,
         ri_min, ri_max, sg_min, sg_max,
-        heat_treatment_temp_min, heat_treatment_temp_max
+        heat_treatment_temp_min, heat_treatment_temp_max,
+        origin, growth_method, natural_counterpart_id
     ) VALUES (
         ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
         ?, ?, ?, ?, ?,
         ?, ?, ?,
         ?, ?, ?, ?, ?,
         ?, ?, ?, ?,
-        ?, ?
+        ?, ?,
+        ?, ?, ?
     )
     """
 
@@ -439,6 +460,9 @@ def insert_mineral(conn: sqlite3.Connection, mineral: Mineral) -> None:
             sg_max,
             mineral.heat_treatment_temp_min,
             mineral.heat_treatment_temp_max,
+            mineral.origin,
+            mineral.growth_method,
+            mineral.natural_counterpart_id,
         ),
     )
 
@@ -497,6 +521,11 @@ def row_to_mineral(row: sqlite3.Row) -> Mineral:
     pleochroism_color3 = row["pleochroism_color3"] if "pleochroism_color3" in row.keys() else None
     pleochroism_notes = row["pleochroism_notes"] if "pleochroism_notes" in row.keys() else None
 
+    # Extract synthetic/simulant columns (may not exist in older databases)
+    origin = row["origin"] if "origin" in row.keys() else "natural"
+    growth_method = row["growth_method"] if "growth_method" in row.keys() else None
+    natural_counterpart_id = row["natural_counterpart_id"] if "natural_counterpart_id" in row.keys() else None
+
     return Mineral(
         id=row["id"],
         name=row["name"],
@@ -534,6 +563,9 @@ def row_to_mineral(row: sqlite3.Row) -> Mineral:
         sg_max=sg_max,
         heat_treatment_temp_min=heat_min,
         heat_treatment_temp_max=heat_max,
+        origin=origin,
+        growth_method=growth_method,
+        natural_counterpart_id=natural_counterpart_id,
     )
 
 
@@ -953,6 +985,8 @@ def insert_family(conn: sqlite3.Connection, family: MineralFamily) -> None:
         localities_json, colors_json, treatments_json, inclusions_json, forms_json,
         heat_treatment_temp_min, heat_treatment_temp_max,
         twin_law, phenomenon, fluorescence,
+        origin, growth_method, natural_counterpart_id, target_minerals_json,
+        manufacturer, year_first_produced, diagnostic_synthetic_features,
         updated_at
     ) VALUES (
         ?, ?, ?, ?, ?, ?,
@@ -964,6 +998,8 @@ def insert_family(conn: sqlite3.Connection, family: MineralFamily) -> None:
         ?, ?, ?, ?,
         ?, ?, ?, ?, ?,
         ?, ?,
+        ?, ?, ?,
+        ?, ?, ?, ?,
         ?, ?, ?,
         CURRENT_TIMESTAMP
     )
@@ -1010,6 +1046,13 @@ def insert_family(conn: sqlite3.Connection, family: MineralFamily) -> None:
             family.twin_law,
             family.phenomenon,
             family.fluorescence,
+            family.origin,
+            family.growth_method,
+            family.natural_counterpart_id,
+            json.dumps(family.target_minerals) if family.target_minerals else None,
+            family.manufacturer,
+            family.year_first_produced,
+            family.diagnostic_synthetic_features,
         ),
     )
 
@@ -1112,6 +1155,13 @@ def row_to_family(row: sqlite3.Row) -> MineralFamily:
         twin_law=row["twin_law"],
         phenomenon=row["phenomenon"],
         fluorescence=row["fluorescence"],
+        origin=row["origin"] if "origin" in row.keys() else "natural",
+        growth_method=row["growth_method"] if "growth_method" in row.keys() else None,
+        natural_counterpart_id=row["natural_counterpart_id"] if "natural_counterpart_id" in row.keys() else None,
+        target_minerals=json.loads(row["target_minerals_json"] or "[]") if "target_minerals_json" in row.keys() else [],
+        manufacturer=row["manufacturer"] if "manufacturer" in row.keys() else None,
+        year_first_produced=row["year_first_produced"] if "year_first_produced" in row.keys() else None,
+        diagnostic_synthetic_features=row["diagnostic_synthetic_features"] if "diagnostic_synthetic_features" in row.keys() else None,
     )
 
 
@@ -1393,3 +1443,116 @@ def get_all_expressions(conn: sqlite3.Connection) -> list[MineralExpression]:
         """
     )
     return [row_to_expression(row) for row in cursor.fetchall()]
+
+
+# =============================================================================
+# Synthetic / Simulant Query Functions
+# =============================================================================
+
+
+def get_families_by_origin(
+    conn: sqlite3.Connection, origin: str
+) -> list[MineralFamily]:
+    """Get mineral families filtered by origin.
+
+    Args:
+        conn: Database connection
+        origin: Origin type (natural, synthetic, simulant, composite)
+
+    Returns:
+        List of matching MineralFamily objects
+    """
+    cursor = conn.execute(
+        "SELECT * FROM mineral_families WHERE origin = ? ORDER BY name",
+        (origin.lower(),),
+    )
+    return [row_to_family(row) for row in cursor.fetchall()]
+
+
+def get_synthetics_for_natural(
+    conn: sqlite3.Connection, natural_id: str
+) -> list[MineralFamily]:
+    """Get all synthetic versions of a natural mineral.
+
+    Args:
+        conn: Database connection
+        natural_id: ID of the natural mineral family
+
+    Returns:
+        List of synthetic MineralFamily objects
+    """
+    cursor = conn.execute(
+        """
+        SELECT * FROM mineral_families
+        WHERE origin = 'synthetic' AND natural_counterpart_id = ?
+        ORDER BY name
+        """,
+        (natural_id.lower(),),
+    )
+    return [row_to_family(row) for row in cursor.fetchall()]
+
+
+def get_simulants_for_natural(
+    conn: sqlite3.Connection, natural_id: str
+) -> list[MineralFamily]:
+    """Get all simulants that imitate a natural mineral.
+
+    Args:
+        conn: Database connection
+        natural_id: ID of the natural mineral family
+
+    Returns:
+        List of simulant MineralFamily objects
+    """
+    cursor = conn.execute(
+        """
+        SELECT * FROM mineral_families
+        WHERE (origin = 'simulant' OR origin = 'composite')
+          AND (natural_counterpart_id = ?
+               OR target_minerals_json LIKE ?)
+        ORDER BY name
+        """,
+        (natural_id.lower(), f'%"{natural_id.lower()}"%'),
+    )
+    return [row_to_family(row) for row in cursor.fetchall()]
+
+
+def get_natural_counterpart(
+    conn: sqlite3.Connection, family_id: str
+) -> MineralFamily | None:
+    """Get the natural counterpart for a synthetic or simulant.
+
+    Args:
+        conn: Database connection
+        family_id: ID of the synthetic/simulant family
+
+    Returns:
+        Natural MineralFamily or None
+    """
+    cursor = conn.execute(
+        "SELECT natural_counterpart_id FROM mineral_families WHERE id = ?",
+        (family_id.lower(),),
+    )
+    row = cursor.fetchone()
+    if row and row["natural_counterpart_id"]:
+        return get_family_by_id(conn, row["natural_counterpart_id"])
+    return None
+
+
+def get_families_by_growth_method(
+    conn: sqlite3.Connection, method: str
+) -> list[MineralFamily]:
+    """Get mineral families by growth method.
+
+    Args:
+        conn: Database connection
+        method: Growth method (flame_fusion, flux, hydrothermal, cvd, hpht, etc.)
+
+    Returns:
+        List of matching MineralFamily objects
+    """
+    cursor = conn.execute(
+        "SELECT * FROM mineral_families WHERE growth_method = ? ORDER BY name",
+        (method.lower(),),
+    )
+    return [row_to_family(row) for row in cursor.fetchall()]

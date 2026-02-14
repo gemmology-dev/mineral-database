@@ -1,0 +1,38 @@
+id: synthetic-emerald-hydrothermal
+name: Hydrothermal Emerald
+crystal_system: hexagonal
+point_group: 6/mmm
+chemistry: Be3Al2(SiO3)6:Cr,V
+category: synthetic beryl
+origin: synthetic
+growth_method: hydrothermal
+natural_counterpart_id: emerald
+manufacturer: Biron, Tairus, Regency
+year_first_produced: 1960
+diagnostic_synthetic_features: >
+  Nail-head spicules, chevron growth zoning (seed plate visible),
+  two-phase inclusions along seed plate, higher RI than flux emerald
+  (1.568-1.573), breadcrumb-like inclusions, may show strong red
+  fluorescence
+hardness: 7.5
+sg: "2.68-2.70"
+ri: "1.568-1.573"
+birefringence: 0.005
+optical_character: Uniaxial -
+dispersion: 0.014
+lustre: Vitreous
+cleavage: Imperfect basal
+fracture: Conchoidal
+pleochroism: Moderate to strong dichroism
+pleochroism_strength: strong
+pleochroism_color1: bluish-green
+pleochroism_color2: yellowish-green
+colors: [Green, Bluish-green]
+inclusions: [Nail-head spicules, Chevron growth zoning, Seed plate, Two-phase inclusions]
+fluorescence: Variable, often red (LW UV)
+expressions:
+  - slug: crystal
+    name: Crystal
+    cdl: "hexagonal[6/mmm]:{10-10}@1.0 + {10-11}@0.6 + {0001}@0.3"
+    is_primary: true
+    form_description: Prismatic crystal from hydrothermal growth

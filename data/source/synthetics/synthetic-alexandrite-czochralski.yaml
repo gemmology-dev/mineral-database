@@ -1,0 +1,38 @@
+id: synthetic-alexandrite-czochralski
+name: Synthetic Alexandrite
+crystal_system: orthorhombic
+point_group: mmm
+chemistry: BeAl2O4:Cr
+category: synthetic chrysoberyl
+origin: synthetic
+growth_method: czochralski
+natural_counterpart_id: alexandrite
+manufacturer: Creative Crystals, Seiko
+year_first_produced: 1972
+diagnostic_synthetic_features: >
+  Curved striae, gas bubbles (Czochralski method), too-perfect colour change,
+  no natural inclusions, may show strong red fluorescence
+hardness: 8.5
+sg: 3.71
+ri: "1.744-1.755"
+birefringence: 0.011
+optical_character: Biaxial +
+dispersion: 0.015
+lustre: Vitreous
+cleavage: Distinct on {110}, poor on {010}
+fracture: Conchoidal
+pleochroism: Very strong trichroism
+pleochroism_strength: very_strong
+pleochroism_color1: green
+pleochroism_color2: orange
+pleochroism_color3: purple-red
+colors: [Green (daylight), Red (incandescent)]
+phenomenon: Colour change (alexandrite effect)
+inclusions: [Curved striae, Gas bubbles, Iridescent platelets]
+fluorescence: Strong red (LW UV)
+expressions:
+  - slug: boule
+    name: Czochralski Boule
+    cdl: ""
+    is_primary: true
+    form_description: Cylindrical boule from Czochralski pulling method

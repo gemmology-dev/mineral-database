@@ -1,0 +1,26 @@
+id: synthetic-coral
+name: Synthetic Coral
+crystal_system: trigonal
+point_group: "-3m"
+chemistry: CaCO3 (calcite-based imitation)
+category: coral simulant
+origin: simulant
+natural_counterpart_id: coral
+diagnostic_synthetic_features: >
+  Lacks natural organic growth patterns and wood-grain structure,
+  uniform colour without natural colour variation, effervesces with HCl,
+  lower SG than natural precious coral, may show moulding marks
+hardness: "3-3.5"
+sg: "2.4-2.6"
+ri: "1.48-1.65"
+optical_character: Aggregate
+lustre: Dull to waxy
+colors: [Red, Pink, Orange, White]
+inclusions: [Uniform structure, Absence of growth patterns, Mould marks]
+fluorescence: Variable
+expressions:
+  - slug: cabochon
+    name: Cabochon
+    cdl: ""
+    is_primary: true
+    form_description: Moulded or carved imitation coral

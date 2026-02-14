@@ -1,0 +1,35 @@
+id: synthetic-paraiba
+name: Lab-Grown Paraíba Tourmaline
+crystal_system: trigonal
+point_group: 3m
+chemistry: Na(Li,Al)3Al6(BO3)3Si6O18(OH)4:Cu
+category: synthetic tourmaline
+origin: synthetic
+growth_method: hydrothermal
+natural_counterpart_id: tourmaline
+year_first_produced: 2010
+diagnostic_synthetic_features: >
+  Extremely rare and difficult to produce, very clean compared to natural
+  Paraíba, seed plate may be visible, copper content matches natural
+  but lacks typical natural inclusions (liquid-filled tubes, trichites)
+hardness: "7-7.5"
+sg: "3.05-3.10"
+ri: "1.620-1.640"
+birefringence: 0.018
+optical_character: Uniaxial -
+dispersion: 0.017
+lustre: Vitreous
+fracture: Conchoidal
+pleochroism: Moderate dichroism
+pleochroism_strength: moderate
+pleochroism_color1: blue-green
+pleochroism_color2: light green
+colors: [Neon blue, Blue-green, Green]
+inclusions: [Seed plate, Growth tubes, Very clean compared to natural]
+fluorescence: Inert to weak blue (LW UV)
+expressions:
+  - slug: crystal
+    name: Crystal
+    cdl: "trigonal[3m]:{10-10}@1.0 + {01-11}@0.7"
+    is_primary: true
+    form_description: Prismatic crystal from hydrothermal growth

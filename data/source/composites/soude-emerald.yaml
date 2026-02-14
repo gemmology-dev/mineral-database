@@ -1,0 +1,26 @@
+id: soude-emerald
+name: Soudé Emerald
+crystal_system: hexagonal
+point_group: 6/mmm
+chemistry: Be3Al2Si6O18 (colourless beryl) + green cement
+category: assembled stone
+origin: composite
+natural_counterpart_id: emerald
+diagnostic_synthetic_features: >
+  Green colour concentrated at junction plane (visible from side in immersion),
+  colourless crown and pavilion, green flash at junction when rocked,
+  no dichroism in crown/pavilion sections, bubble-like inclusions in cement layer
+hardness: 7.5
+sg: "2.68-2.72"
+ri: "1.570-1.580"
+birefringence: 0.006
+optical_character: Uniaxial -
+lustre: Vitreous
+colors: [Green (face-up only)]
+inclusions: [Green cement layer at junction, Bubbles in cement, Colourless sections]
+expressions:
+  - slug: doublet
+    name: Doublet
+    cdl: ""
+    is_primary: true
+    form_description: Colourless beryl sections cemented with green adhesive

@@ -93,6 +93,11 @@ class Mineral:
     heat_treatment_temp_min: float | None = None
     heat_treatment_temp_max: float | None = None
 
+    # Synthetic/simulant classification
+    origin: str = "natural"  # natural|synthetic|simulant|composite
+    growth_method: str | None = None
+    natural_counterpart_id: str | None = None
+
     def to_dict(self) -> dict[str, Any]:
         """Convert to dictionary representation."""
         result: dict[str, Any] = {
@@ -104,6 +109,7 @@ class Mineral:
             "chemistry": self.chemistry,
             "hardness": self.hardness,
             "description": self.description,
+            "origin": self.origin,
         }
 
         # Add non-empty lists
@@ -143,6 +149,8 @@ class Mineral:
             "sg_max",
             "heat_treatment_temp_min",
             "heat_treatment_temp_max",
+            "growth_method",
+            "natural_counterpart_id",
         ]
         for key in optional:
             value = getattr(self, key)
@@ -199,6 +207,9 @@ class Mineral:
             sg_max=data.get("sg_max"),
             heat_treatment_temp_min=data.get("heat_treatment_temp_min"),
             heat_treatment_temp_max=data.get("heat_treatment_temp_max"),
+            origin=data.get("origin", "natural"),
+            growth_method=data.get("growth_method"),
+            natural_counterpart_id=data.get("natural_counterpart_id"),
         )
 
 
@@ -296,12 +307,22 @@ class MineralFamily:
     phenomenon: str | None = None
     fluorescence: str | None = None
 
+    # Synthetic/simulant classification
+    origin: str = "natural"  # natural|synthetic|simulant|composite
+    growth_method: str | None = None
+    natural_counterpart_id: str | None = None
+    target_minerals: list[str] = field(default_factory=list)
+    manufacturer: str | None = None
+    year_first_produced: int | None = None
+    diagnostic_synthetic_features: str | None = None
+
     def to_dict(self) -> dict[str, Any]:
         """Convert to dictionary representation."""
         result: dict[str, Any] = {
             "id": self.id,
             "name": self.name,
             "crystal_system": self.crystal_system,
+            "origin": self.origin,
         }
 
         # Add optional scalar fields
@@ -315,6 +336,8 @@ class MineralFamily:
             "description", "notes", "diagnostic_features", "common_inclusions",
             "heat_treatment_temp_min", "heat_treatment_temp_max",
             "twin_law", "phenomenon", "fluorescence",
+            "growth_method", "natural_counterpart_id",
+            "manufacturer", "year_first_produced", "diagnostic_synthetic_features",
         ]
         for key in optional:
             value = getattr(self, key)
@@ -322,7 +345,7 @@ class MineralFamily:
                 result[key] = value
 
         # Add non-empty lists
-        for key in ["localities", "colors", "treatments", "inclusions", "forms"]:
+        for key in ["localities", "colors", "treatments", "inclusions", "forms", "target_minerals"]:
             value = getattr(self, key)
             if value:
                 result[key] = value
@@ -434,6 +457,13 @@ class MineralFamily:
             twin_law=data.get("twin_law"),
             phenomenon=data.get("phenomenon"),
             fluorescence=data.get("fluorescence"),
+            origin=data.get("origin", "natural"),
+            growth_method=data.get("growth_method"),
+            natural_counterpart_id=data.get("natural_counterpart_id"),
+            target_minerals=data.get("target_minerals", []),
+            manufacturer=data.get("manufacturer"),
+            year_first_produced=data.get("year_first_produced"),
+            diagnostic_synthetic_features=data.get("diagnostic_synthetic_features"),
         )
 
 
@@ -543,7 +573,7 @@ class MineralExpression:
             family_id=family_id,
             name=expression_data.get("name", slug.replace("-", " ").title()),
             slug=slug,
-            cdl=expression_data["cdl"],
+            cdl=expression_data.get("cdl") or "",
             point_group=expression_data.get("point_group"),
             form_description=expression_data.get("form_description", expression_data.get("description")),
             habit=expression_data.get("habit"),
@@ -585,6 +615,15 @@ INFO_GROUPS = {
         "cleavage",
         "pleochroism",
     ],
+    "synthetic": [
+        "name",
+        "origin",
+        "growth_method",
+        "natural_counterpart_id",
+        "manufacturer",
+        "year_first_produced",
+        "diagnostic_synthetic_features",
+    ],
 }
 
 # Property display labels
@@ -615,6 +654,13 @@ PROPERTY_LABELS = {
     "sg_max": "SG Max",
     "heat_treatment_temp_min": "Heat Treat Min (°C)",
     "heat_treatment_temp_max": "Heat Treat Max (°C)",
+    "origin": "Origin",
+    "growth_method": "Growth Method",
+    "natural_counterpart_id": "Natural Counterpart",
+    "target_minerals": "Target Minerals",
+    "manufacturer": "Manufacturer",
+    "year_first_produced": "Year First Produced",
+    "diagnostic_synthetic_features": "Diagnostic Features (Synthetic)",
 }
 
 
