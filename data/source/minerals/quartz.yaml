@@ -36,46 +36,65 @@ localities:
 expressions:
 - slug: prism
   name: Prismatic
-  cdl: trigonal[32]:{10-10}@0.5[striation:horizontal] + {10-11}@1.2 + {01-11}@1.0 | elongate(c:2.0)
+  cdl: |
+    #! Species: Quartz
+    #! System: Trigonal (32)
+    #! Habit: Hexagonal prism with rhombohedral terminations
+    trigonal[32]:{10-10}@0.5[striation:horizontal] + {10-11}@1.2 + {01-11}@1.0 | elongate(c:2.0)
   is_primary: true
-  form_description: Hexagonal prism with rhombohedral terminations - most abundant mineral in Earth's
-    crust
+  form_description: Hexagonal prism with rhombohedral terminations and horizontal striations on prism
+    faces — most abundant mineral in Earth's crust
   forms:
   - prism
   - rhombohedron
 - slug: short
   name: Short Prism
-  cdl: trigonal[32]:{10-10}@0.4 + {10-11}@1.2 + {01-11}@1.0
-  form_description: Short prismatic quartz with prominent terminations - common habit in many localities
+  cdl: |
+    #! Species: Quartz
+    #! System: Trigonal (32)
+    #! Habit: Short prismatic with prominent terminations
+    trigonal[32]:{10-10}@0.4 + {10-11}@1.2 + {01-11}@1.0
+  form_description: Short prismatic quartz with prominent terminations — common habit in many localities
   forms:
   - prism
   - rhombohedron
   note: Habit variant with shorter c-axis development relative to rhombohedral faces
 - slug: scepter
   name: Scepter
-  cdl: trigonal[32]:{10-11}@1.0 + {01-11}@0.9 + {10-10}@0.3 + {0001}@0.2 | elongate(c:0.8) | [phantom:2]
-  form_description: Overgrowth habit with enlarged head on thin stem - formed by two-stage crystal growth
+  cdl: |
+    #! Species: Quartz
+    #! System: Trigonal (32)
+    #! Habit: Scepter overgrowth — enlarged head on thin stem
+    trigonal[32]:({10-10}@1.0 + {10-11}@0.8) > ({10-10}@0.5 + {10-11}@0.4)
+  form_description: 'Scepter quartz with nested overgrowth — an enlarged termination growing on a thinner
+    stem crystal. Formed by two-stage crystal growth where conditions changed between growth episodes.
+    Prized by collectors for their distinctive morphology.'
   forms:
-  - rhombohedron
   - prism
-  note: True scepter morphology requires two crystal generations; often prized by collectors
+  - rhombohedron
+  note: True scepter morphology requires two crystal generations; modelled as nested growth (>)
 - slug: phantom
   name: Phantom
-  cdl: trigonal[32]:{10-10}@0.5 + {10-11}@1.2 + {01-11}@1.0 | elongate(c:2.0) | [phantom:3]
-  form_description: 'Quartz crystal containing visible phantom outlines - ghost-like images of earlier
+  cdl: |
+    #! Species: Quartz
+    #! System: Trigonal (32)
+    #! Habit: Prismatic with internal phantom outlines
+    trigonal[32]:({10-10}@1.0 + {10-11}@0.8) > ({10-10}@1.0 + {10-11}@0.8)
+  form_description: 'Quartz crystal containing visible phantom outlines — ghost-like images of earlier
     growth stages within the crystal. Each phantom records a pause in crystal growth followed by resumption.
     Phantoms may appear as green (chlorite), red (hematite), white (clay), or smoky outlines depending
-    on the mineral that settled on the crystal surface during the growth interruption. Multiple phantoms
-    indicate several growth episodes.
-
-    '
+    on the mineral that settled on the crystal surface during the growth interruption.'
   forms:
   - prism
   - rhombohedron
-  note: Number indicates visible phantom layers; chlorite phantoms (green) are most sought after by collectors
+  note: Modelled as nested growth; chlorite phantoms (green) are most sought after by collectors
 - slug: faden
   name: Faden
-  cdl: trigonal[32]:{0001}@1.0 + {10-10}@0.2 + {10-11}@0.3 | elongate(c:0.4) | [inclusion:thread]
+  cdl: |
+    #! Species: Quartz
+    #! System: Trigonal (32)
+    #! Habit: Tabular with thread-like inclusion
+    trigonal[32]:{0001}@1.0 + {10-10}@0.2 + {10-11}@0.3 | elongate(c:0.4) | [inclusion:thread]
   form_description: Tabular crystals with characteristic white thread-like inclusion (faden = thread in
     German)
   forms:
@@ -86,38 +105,71 @@ expressions:
     fracture plane
 - slug: japan-twin
   name: Japan Law Twin
-  cdl: trigonal[32]:{10-10}@0.5 + {10-11}@1.2 + {01-11}@1.0 + {0001}@2.0 | elongate(c:2.0) | twin(japan)
+  cdl: |
+    #! Species: Quartz
+    #! System: Trigonal (32)
+    #! Habit: Japan Law contact twin at 84°33'
+    trigonal[32]:{10-10}@0.5 + {10-11}@1.2 + {01-11}@1.0 + {0001}@2.0 | elongate(c:2.0) | twin(japan)
   form_description: 'Two quartz crystals joined at an angle of 84 degrees 33 minutes, forming a distinctive
     heart or V-shaped habit. Japan Law twins are contact twins with composition plane {11-22}. Named for
-    classic specimens from Yamanashi Prefecture, Japan. Highly prized by mineral collectors for their
-    geometric beauty and relative rarity.
-
-    '
+    classic specimens from Yamanashi Prefecture, Japan.'
   forms:
   - prism
   - rhombohedron
   - twin
 - slug: dauphine-twin
   name: Dauphine Twin
-  cdl: trigonal[32]:{10-10}@0.5 + {10-11}@1.2 + {01-11}@1.0 + {0001}@2.0 | elongate(c:2.0) | twin(dauphine)
-  form_description: 'Penetration twin with 180 degree rotation about the c-axis (trigonal axis). Dauphine
-    twinning involves interpenetration of two right-handed or two left-handed quartz individuals, resulting
-    in domains with opposite orientation of prism faces. Often detectable only under polarized light or
-    by etching. Named for the Dauphine region of France.
-
-    '
+  cdl: |
+    #! Species: Quartz
+    #! System: Trigonal (32)
+    #! Habit: Dauphine penetration twin (180° on c-axis)
+    trigonal[32]:{10-10}@0.5 + {10-11}@1.2 + {01-11}@1.0 + {0001}@2.0 | elongate(c:2.0) | twin(dauphine)
+  form_description: 'Penetration twin with 180 degree rotation about the c-axis. Dauphine twinning involves
+    interpenetration of two right-handed or two left-handed quartz individuals, resulting in domains with
+    opposite orientation of prism faces. Often detectable only under polarized light or by etching.'
   forms:
   - prism
   - rhombohedron
 - slug: brazil-twin
   name: Brazil Law Twin
-  cdl: trigonal[32]:{10-10}@0.5 + {10-11}@1.2 + {01-11}@1.0 + {0001}@2.0 | elongate(c:2.0) | twin(brazil)
+  cdl: |
+    #! Species: Quartz
+    #! System: Trigonal (32)
+    #! Habit: Brazil Law mirror twin (left/right-handed)
+    trigonal[32]:{10-10}@0.5 + {10-11}@1.2 + {01-11}@1.0 + {0001}@2.0 | elongate(c:2.0) | twin(brazil)
   form_description: 'Optical twinning involving interpenetration of left-handed and right-handed quartz
-    individuals - essentially a mirror twin. Brazil Law twins show opposite optical rotation in alternating
-    domains, detectable with polarized light as sectors of different optical handedness. Not visible externally
-    but affects optical properties significantly. Common in natural quartz.
-
-    '
+    individuals — essentially a mirror twin. Shows opposite optical rotation in alternating domains,
+    detectable with polarized light. Not visible externally but affects optical properties significantly.'
   forms:
   - prism
   - rhombohedron
+- slug: cluster
+  name: Crystal Cluster
+  cdl: |
+    #! Species: Quartz
+    #! System: Trigonal (32)
+    #! Habit: Aggregate cluster of 12 crystals
+    trigonal[32]:{10-10}@1.0 + {10-11}@0.8 ~ cluster[12]
+  form_description: 'Cluster of multiple quartz crystals growing from a common base — the most common
+    presentation of quartz in nature. Crystal clusters form when multiple nucleation points develop
+    on a substrate, producing a group of sub-parallel to randomly oriented crystals.'
+  forms:
+  - prism
+  - rhombohedron
+  - cluster
+  note: Aggregate of 12 individual crystals; common in geodes and hydrothermal veins
+- slug: amethyst-geode
+  name: Amethyst Geode (druse)
+  cdl: |
+    #! Species: Quartz (amethyst)
+    #! System: Trigonal (32)
+    #! Habit: Druse lining of ~50 crystals
+    trigonal[32]:{10-10}@1.0 + {10-11}@0.8 ~ druse[50]
+  form_description: 'Amethyst geode interior lined with drusy crystals — a cavity in volcanic rock lined
+    with inward-pointing amethyst crystals. Brazilian and Uruguayan geodes can reach several metres in
+    diameter. The purple colour comes from iron impurities and natural irradiation.'
+  forms:
+  - prism
+  - rhombohedron
+  - druse
+  note: Aggregate druse lining; classic presentation for amethyst from Brazil and Uruguay

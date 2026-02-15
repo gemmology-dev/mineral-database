@@ -32,19 +32,35 @@ localities:
 - Tibet
 - Mexico
 expressions:
-- slug: default
-  name: Turquoise
-  cdl: triclinic[-1]:{010}@1.0 + {001}@0.9 + {110}@0.7
+- slug: massive
+  name: Massive (typical)
+  cdl: |
+    #! Species: Turquoise
+    #! System: Amorphous (cryptocrystalline)
+    #! Habit: Massive and nodular aggregates
+    amorphous[cryptocrystalline]:{massive, nodular}[colour:blue]
   is_primary: true
   form_description: 'Hydrated copper aluminum phosphate prized for millennia for its distinctive sky-blue
-    color. Well-formed crystals are extremely rare - turquoise almost always occurs as cryptocrystalline
-    masses in veins and nodules. Color ranges from sky blue (most valued) through greenish-blue to apple-green
-    depending on copper (blue) vs iron (green) content. Matrix patterns (host rock veining) are valued
-    in some varieties like spiderweb turquoise.
-
-    '
+    color. Almost always occurs as cryptocrystalline masses in veins and nodules. Color ranges from sky
+    blue (most valued) through greenish-blue to apple-green depending on copper (blue) vs iron (green)
+    content. Matrix patterns (host rock veining) are valued in some varieties like spiderweb turquoise.'
+  forms:
+  - massive
+  - nodular
+  - veins
+  note: Most commercial turquoise is stabilized; untreated gem-quality material commands premium prices
+- slug: crystal
+  name: Crystal form (rare)
+  cdl: |
+    #! Species: Turquoise
+    #! System: Triclinic (-1)
+    #! Habit: Prismatic crystals (extremely rare)
+    triclinic[-1]:{010}@1.0 + {001}@0.9 + {110}@0.7
+  is_primary: false
+  form_description: 'Well-formed triclinic crystals of turquoise are extremely rare. When found, they
+    occur as tiny prismatic to tabular crystals rarely exceeding a few millimetres. The vast majority
+    of turquoise is cryptocrystalline massive material.'
   forms:
   - pinacoid
   - prism
-  - cryptocrystalline masses
-  note: Most commercial turquoise is stabilized; untreated gem-quality material commands premium prices
+  note: Extremely rare crystal form; the vast majority of turquoise is cryptocrystalline massive

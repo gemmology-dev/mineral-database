@@ -38,9 +38,13 @@ localities:
 expressions:
 - slug: default
   name: Emerald
-  cdl: hexagonal[6/mmm]:{10-10}@1.0 + {0001}@0.8 | elongate(c:1.5)
+  cdl: |
+    #! Species: Emerald (Beryl)
+    #! System: Hexagonal (6/mmm)
+    #! Habit: Elongated hexagonal prism with jardin inclusions
+    hexagonal[6/mmm]:{10-10}@1.0[inclusion:jardine] + {0001}@0.8 | elongate(c:1.5)
   is_primary: true
-  form_description: Elongated hexagonal prism with pinacoid
+  form_description: Elongated hexagonal prism with pinacoid and diagnostic jardin (garden-like) inclusions
   forms:
   - hexagonal_prism
   - pinacoid

@@ -43,7 +43,11 @@ localities:
 expressions:
 - slug: prism
   name: Hexagonal Prism
-  cdl: hexagonal[6/mmm]:{10-10}@1.0 + {0001}@1.0
+  cdl: |
+    #! Species: Beryl
+    #! System: Hexagonal (6/mmm)
+    #! Habit: Hexagonal prismatic
+    hexagonal[6/mmm]:{10-10}@1.0 + {0001}@1.0
   is_primary: true
   form_description: 'Beryllium aluminium silicate that produces several important gem varieties including
     emerald, aquamarine, morganite, heliodor, goshenite, and red beryl. Despite sharing the same basic
@@ -58,7 +62,11 @@ expressions:
   - hexagonal_dipyramid
 - slug: tabular
   name: Tabular
-  cdl: hexagonal[6/mmm]:{0001}@1.0 + {10-10}@0.6 + {11-20}@0.2
+  cdl: |
+    #! Species: Beryl
+    #! System: Hexagonal (6/mmm)
+    #! Habit: Tabular with dominant pinacoid
+    hexagonal[6/mmm]:{0001}@1.0 + {10-10}@0.6 + {11-20}@0.2
   form_description: 'Tabular habit variant of beryl with dominant basal pinacoid giving a flat, plate-like
     appearance. This habit is less common than the typical elongated prismatic form. Often seen in morganite
     and some emerald crystals from specific localities.

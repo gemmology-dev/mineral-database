@@ -42,14 +42,22 @@ localities:
 expressions:
 - slug: octahedron
   name: Octahedron
-  cdl: cubic[m3m]:{111}
+  cdl: |
+    #! Species: Spinel
+    #! System: Cubic (m3m)
+    #! Habit: Octahedral with octahedral inclusions
+    cubic[m3m]:{111}[inclusion:octahedral]
   is_primary: true
-  form_description: Octahedral habit
+  form_description: Octahedral habit with diagnostic octahedral inclusions (negative crystals)
   forms:
   - octahedron
 - slug: macle
   name: Macle Twin
-  cdl: cubic[m3m]:{111}@1.0 + {100}@0.25 | twin(spinel_law)
+  cdl: |
+    #! Species: Spinel
+    #! System: Cubic (m3m)
+    #! Habit: Spinel-law macle twin
+    cubic[m3m]:{111}@1.0 + {100}@0.25 | twin(spinel_law)
   form_description: 'Classic spinel law twin forming a flattened triangular habit - the type example for
     this twin law. Contact twinning on {111} produces the characteristic "macle" shape, a flattened octahedron
     appearing nearly triangular in outline. This twin law is named after the mineral spinel and is also

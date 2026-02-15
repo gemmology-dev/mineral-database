@@ -36,44 +36,68 @@ localities:
 expressions:
 - slug: octahedron
   name: Octahedron
-  cdl: cubic[m3m]:{111}@1.0[trigon:dense] + {110}@0.2
+  cdl: |
+    #! Species: Diamond
+    #! System: Cubic (m3m)
+    #! Habit: Octahedral with dodecahedron truncation
+    cubic[m3m]:{111}@1.0[trigon:dense] + {110}@0.2
   is_primary: true
-  form_description: Octahedron with minor dodecahedron truncation
+  form_description: Octahedron with minor dodecahedron truncation and dense triangular trigon etch pits
+    on {111} faces
   forms:
   - octahedron
   - dodecahedron
 - slug: cube
   name: Cube
-  cdl: cubic[m3m]:{100}[etch_pit:square]
+  cdl: |
+    #! Species: Diamond
+    #! System: Cubic (m3m)
+    #! Habit: Cubic with square etch pits
+    cubic[m3m]:{100}[etch_pit:square]
   form_description: 'Cubic habit diamond - a less common crystal form typically found in industrial-grade
-    diamonds from the Democratic Republic of Congo. Cube faces often show characteristic etch patterns
-    and growth features. Pure cubic diamonds are rarer than octahedral specimens as gem material.
-
-    '
+    diamonds from the Democratic Republic of Congo. Cube faces often show characteristic square etch
+    patterns and growth features. Pure cubic diamonds are rarer than octahedral specimens as gem material.'
   forms:
   - cube
 - slug: phantom
   name: Phantom
-  cdl: cubic[m3m]:{111}@1.0[phantom:1] + {110}@0.2
+  cdl: |
+    #! Species: Diamond
+    #! System: Cubic (m3m)
+    #! Habit: Octahedron with internal phantom growth
+    cubic[m3m]:{111}@1.0[phantom:1] + {110}@0.2
   form_description: 'Diamond crystal displaying an internal phantom - a ghost-like outline of an earlier
     growth stage visible within the crystal. The phantom forms when growth temporarily pauses, allowing
     a thin layer of impurities or inclusions to settle on the crystal surface, before growth resumes.
     Phantom diamonds are prized by collectors and can provide insights into the diamond''s growth history
-    deep in the Earth''s mantle.
-
-    '
+    deep in the Earth''s mantle.'
   forms:
   - octahedron
   - dodecahedron
+- slug: nested-phantom
+  name: Nested Phantom (green)
+  cdl: |
+    #! Species: Diamond
+    #! System: Cubic (m3m)
+    #! Habit: Nested growth — green phantom inside octahedron
+    cubic[m3m]:{111}@1.0 > {111}@1.0
+  form_description: 'Diamond displaying nested growth with an internal phantom octahedron visible within
+    the outer crystal. Green phantoms are caused by natural irradiation (exposure to radioactive minerals)
+    during a growth hiatus, producing a thin green layer that marks the earlier growth stage.'
+  forms:
+  - octahedron
+  note: Green coloration from natural irradiation during growth hiatus
 - slug: macle
   name: Macle Twin
-  cdl: cubic[m3m]:{111}@1.0[trigon:sparse] + {100}@0.3 | twin(spinel_law)
+  cdl: |
+    #! Species: Diamond
+    #! System: Cubic (m3m)
+    #! Habit: Spinel-law contact twin (macle)
+    cubic[m3m]:{111}@1.0[trigon:sparse] + {100}@0.3 | twin(spinel_law)
   form_description: 'Flattened triangular twin on {111}, also called "macle" - a spinel-law contact twin
     resulting in a distinctive triangular or slightly heart-shaped outline. Macles are historically significant
     in diamond cutting as their shape and twin plane orientation require specialized sawing techniques.
-    Common in South African and Russian deposits.
-
-    '
+    Common in South African and Russian deposits.'
   forms:
   - octahedron
   - twin

@@ -47,22 +47,28 @@ localities:
 expressions:
 - slug: default
   name: Sapphire
-  cdl: trigonal[-3m]:{10-10}@1.0[striation:horizontal] + {10-11}@0.7 | elongate(c:1.8) | [silk:dense]
+  cdl: |
+    #! Species: Sapphire (Corundum)
+    #! System: Trigonal (-3m)
+    #! Habit: Barrel-shaped with horizontal striations
+    trigonal[-3m]:{10-10}@1.0[striation:horizontal] + {10-11}@0.7 | elongate(c:1.8) | [silk:dense]
   is_primary: true
-  form_description: Elongated barrel-shaped habit
+  form_description: Elongated barrel-shaped habit with horizontal striations on prism faces and dense
+    rutile silk
   forms:
   - prism
   - dipyramid
 - slug: star
   name: Star Sapphire
-  cdl: trigonal[-3m]:{10-11}@1.0[silk:dense] + {10-10}@0.6 + {0001}@0.3 | phenomenon[asterism:6]
+  cdl: |
+    #! Species: Sapphire (Corundum)
+    #! System: Trigonal (-3m)
+    #! Habit: Tabular with dense silk producing 6-ray asterism
+    trigonal[-3m]:{10-11}@1.0[silk:dense] + {10-10}@0.6 + {0001}@0.3 | phenomenon[asterism:6]
   form_description: 'Star sapphire displaying six-rayed asterism from intersecting rutile silk needles.
     Three sets of needles oriented at 60 degrees within the crystal create the star pattern visible in
     cabochon-cut stones. The Star of India (563 ct) and Star of Adam (1404 ct) are among the most famous
-    examples. Black star sapphires from Thailand and Australia owe their colour and strong star to dense
-    ilmenite inclusions.
-
-    '
+    examples.'
   forms:
   - dipyramid
   - prism

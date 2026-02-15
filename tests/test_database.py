@@ -110,18 +110,18 @@ class TestQueries:
     """Test query functions."""
 
     def test_get_preset(self):
-        """Test getting a preset by name."""
-        preset = get_preset("diamond")
+        """Test getting a preset by name (expression ID)."""
+        preset = get_preset("diamond-octahedron")
         assert preset is not None
-        assert preset["name"] == "Diamond"
+        assert "Diamond" in preset["name"]
         assert preset["system"] == "cubic"
         assert "cdl" in preset
 
     def test_get_preset_case_insensitive(self):
         """Test preset lookup is case-insensitive."""
-        preset1 = get_preset("diamond")
-        preset2 = get_preset("DIAMOND")
-        preset3 = get_preset("Diamond")
+        preset1 = get_preset("ruby")
+        preset2 = get_preset("RUBY")
+        preset3 = get_preset("Ruby")
         assert preset1 == preset2 == preset3
 
     def test_get_preset_not_found(self):
@@ -139,8 +139,8 @@ class TestQueries:
     def test_list_presets_all(self):
         """Test listing all presets."""
         presets = list_presets()
-        assert len(presets) > 50  # We have ~94 presets
-        assert "diamond" in presets
+        assert len(presets) >= 120  # ~140 expressions now
+        assert "diamond-octahedron" in presets
         assert "ruby" in presets
 
     def test_list_presets_by_system(self):
@@ -173,7 +173,7 @@ class TestQueries:
     def test_count_presets(self):
         """Test counting presets."""
         count = count_presets()
-        assert count >= 90  # We have ~94 presets
+        assert count >= 120  # ~140 expressions now
 
     def test_get_systems(self):
         """Test getting crystal systems."""
@@ -201,14 +201,14 @@ class TestCompatibility:
 
     def test_crystal_presets_getitem(self):
         """Test dict-like access with []."""
-        preset = CRYSTAL_PRESETS["diamond"]
-        assert preset["name"] == "Diamond"
+        preset = CRYSTAL_PRESETS["diamond-octahedron"]
+        assert "Diamond" in preset["name"]
 
     def test_crystal_presets_get(self):
         """Test dict-like .get() method."""
-        preset = CRYSTAL_PRESETS.get("diamond")
+        preset = CRYSTAL_PRESETS.get("diamond-octahedron")
         assert preset is not None
-        assert preset["name"] == "Diamond"
+        assert "Diamond" in preset["name"]
 
     def test_crystal_presets_get_default(self):
         """Test .get() with default."""
@@ -217,24 +217,24 @@ class TestCompatibility:
 
     def test_crystal_presets_contains(self):
         """Test 'in' operator."""
-        assert "diamond" in CRYSTAL_PRESETS
+        assert "diamond-octahedron" in CRYSTAL_PRESETS
         assert "not-real" not in CRYSTAL_PRESETS
 
     def test_crystal_presets_iter(self):
         """Test iteration."""
         names = list(CRYSTAL_PRESETS)
-        assert len(names) > 50
-        assert "diamond" in names
+        assert len(names) >= 120
+        assert "diamond-octahedron" in names
 
     def test_crystal_presets_keys(self):
         """Test .keys() method."""
         keys = CRYSTAL_PRESETS.keys()
-        assert len(keys) > 50
-        assert "diamond" in keys
+        assert len(keys) >= 120
+        assert "diamond-octahedron" in keys
 
     def test_crystal_presets_len(self):
         """Test len()."""
-        assert len(CRYSTAL_PRESETS) > 50
+        assert len(CRYSTAL_PRESETS) >= 120
 
 
 # =============================================================================
@@ -293,9 +293,9 @@ class TestInfoGroups:
 
     def test_get_info_properties(self):
         """Test getting info properties."""
-        props = get_info_properties("diamond", "basic")
+        props = get_info_properties("diamond-octahedron", "basic")
         assert "name" in props
-        assert props["name"] == "Diamond"
+        assert "Diamond" in props["name"]
 
 
 # =============================================================================
@@ -308,7 +308,7 @@ class TestIntegration:
 
     def test_diamond_preset(self):
         """Test diamond preset has expected properties."""
-        preset = get_preset("diamond")
+        preset = get_preset("diamond-octahedron")
         assert preset["system"] == "cubic"
         assert preset["point_group"] == "m3m"
         assert preset["hardness"] == 10
@@ -324,21 +324,21 @@ class TestIntegration:
 
     def test_quartz_preset(self):
         """Test quartz preset."""
-        preset = get_preset("quartz")
+        preset = get_preset("quartz-prism")
         assert preset["system"] == "trigonal"
         assert preset["chemistry"] == "SiO2"
         assert preset["hardness"] == 7
 
     def test_garnet_preset(self):
         """Test garnet preset."""
-        preset = get_preset("garnet")
+        preset = get_preset("garnet-combination")
         assert preset["system"] == "cubic"
         assert "dodecahedron" in preset.get("forms", [])
 
     def test_twinned_presets(self):
         """Test presets with twin laws."""
         twin_presets = filter_minerals(has_twin=True)
-        assert len(twin_presets) > 5  # We have multiple twinned presets
+        assert len(twin_presets) >= 3  # Plagioclase, staurolite x2
 
         # Verify they have twin laws
         for name in twin_presets[:3]:
@@ -349,4 +349,111 @@ class TestIntegration:
         """Test getting presets by crystal form."""
         octahedron_presets = get_presets_by_form("octahedron")
         assert len(octahedron_presets) > 0
-        assert "diamond" in octahedron_presets or "spinel" in octahedron_presets
+        assert any("diamond" in p for p in octahedron_presets) or any(
+            "spinel" in p for p in octahedron_presets
+        )
+
+
+# =============================================================================
+# v2 CDL Expression Tests
+# =============================================================================
+
+
+class TestV2Expressions:
+    """Test CDL v2.0 expressions: amorphous, aggregates, nested growth."""
+
+    def test_amorphous_expressions_exist(self):
+        """Test that amorphous expressions are in the database."""
+        amorphous_presets = [
+            "opal",
+            "turquoise-massive",
+            "pearl-nacre",
+            "malachite-massive",
+            "sodalite-massive",
+            "lazurite-massive",
+            "rhodochrosite-banded",
+        ]
+        for preset_id in amorphous_presets:
+            preset = get_preset(preset_id)
+            assert preset is not None, f"Amorphous preset {preset_id} not found"
+            assert "amorphous" in preset["cdl"].lower(), (
+                f"{preset_id} CDL should contain 'amorphous'"
+            )
+
+    def test_misrepresented_minerals_have_secondary(self):
+        """Test that misrepresented minerals kept crystal form as secondary."""
+        secondary_presets = [
+            "turquoise-crystal",
+            "pearl-aragonite",
+            "malachite-crystal",
+            "sodalite-crystal",
+            "lazurite-crystal",
+        ]
+        for preset_id in secondary_presets:
+            preset = get_preset(preset_id)
+            assert preset is not None, f"Secondary crystal preset {preset_id} not found"
+
+    def test_aggregate_expressions_exist(self):
+        """Test that aggregate expressions (~) are in the database."""
+        aggregate_presets = [
+            "quartz-cluster",
+            "quartz-amethyst-geode",
+            "fluorite-cluster",
+            "calcite-stacked",
+            "pyrite-cluster",
+        ]
+        for preset_id in aggregate_presets:
+            preset = get_preset(preset_id)
+            assert preset is not None, f"Aggregate preset {preset_id} not found"
+            assert "~" in preset["cdl"], f"{preset_id} CDL should contain '~' (aggregate)"
+
+    def test_nested_growth_expressions_exist(self):
+        """Test that nested growth expressions (>) are in the database."""
+        nested_presets = [
+            "quartz-scepter",
+            "quartz-phantom",
+            "diamond-nested-phantom",
+        ]
+        for preset_id in nested_presets:
+            preset = get_preset(preset_id)
+            assert preset is not None, f"Nested growth preset {preset_id} not found"
+            assert ">" in preset["cdl"], f"{preset_id} CDL should contain '>' (nested growth)"
+
+    def test_doc_comments_on_key_species(self):
+        """Test that doc comments (#!) are present on key species."""
+        key_presets = [
+            "diamond-octahedron",
+            "ruby",
+            "sapphire",
+            "emerald",
+            "garnet-combination",
+            "tourmaline-prism",
+            "quartz-prism",
+            "topaz-prism",
+            "spinel-octahedron",
+            "peridot",
+        ]
+        for preset_id in key_presets:
+            preset = get_preset(preset_id)
+            assert preset is not None, f"Key species preset {preset_id} not found"
+            assert "#!" in preset["cdl"], f"{preset_id} CDL should contain doc comments (#!)"
+
+    def test_expression_count(self):
+        """Test total expression count reflects v2 additions."""
+        count = count_presets()
+        assert count >= 135, f"Expected >= 135 expressions, got {count}"
+
+    def test_all_expressions_have_cdl(self):
+        """Test that all non-composite expressions have CDL strings."""
+        presets = list_presets()
+        empty_cdl = []
+        for preset_id in presets:
+            preset = get_preset(preset_id)
+            if preset and (not preset.get("cdl") or not preset["cdl"].strip()):
+                empty_cdl.append(preset_id)
+        # Only composites/simulants may have empty CDL
+        for name in empty_cdl:
+            assert any(
+                kw in name
+                for kw in ["doublet", "triplet", "soude", "glass", "coral", "lapis-gilson", "opal-gilson"]
+            ), f"Non-composite preset {name} has empty CDL"

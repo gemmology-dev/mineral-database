@@ -34,18 +34,31 @@ localities:
 expressions:
 - slug: default
   name: Rhodochrosite
-  cdl: trigonal[-3m]:{10-11}@1.0 + {01-12}@0.3
+  cdl: |
+    #! Species: Rhodochrosite
+    #! System: Trigonal (-3m)
+    #! Habit: Rhombohedral crystals
+    trigonal[-3m]:{10-11}@1.0 + {01-12}@0.3
   is_primary: true
   form_description: 'Manganese carbonate mineral prized for its rose-pink to deep red color. The "Alma
     King" from Colorado''s Sweet Home Mine is considered one of the finest mineral specimens ever found.
-    Well-formed rhombohedral crystals are highly sought, but rhodochrosite also occurs in attractive banded
-    massive form. Argentina produces distinctive banded material formed in Inca silver mines ("Rosa del
-    Inca").
-
-    '
+    Well-formed rhombohedral crystals are highly sought but rare.'
   forms:
   - rhombohedron
   - scalenohedron
-  - banded masses
   note: Extremely high birefringence; dissolves in warm dilute HCl with effervescence; too soft for ring
     use
+- slug: banded
+  name: Banded Massive
+  cdl: |
+    #! Species: Rhodochrosite
+    #! System: Amorphous (cryptocrystalline)
+    #! Habit: Mammillary with concentric pink banding
+    amorphous[cryptocrystalline]:{mammillary}[banding:concentric, colour:pink]
+  form_description: 'Banded massive rhodochrosite — the most common presentation, displaying attractive
+    concentric pink and white banding. Argentina produces the distinctive "Rosa del Inca" banded material
+    formed in colonial-era Inca silver mines. Often fashioned into cabochons, beads, and decorative objects.'
+  forms:
+  - mammillary
+  - banded masses
+  note: Argentine banded material ("Rosa del Inca") formed in historic Inca silver mines

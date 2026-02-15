@@ -34,20 +34,20 @@ localities:
 phenomenon: Play of color (precious opal)
 expressions:
 - slug: default
-  name: Opal
-  cdl: amorphous[none]:{}
+  name: Precious Opal
+  cdl: |
+    #! Species: Opal
+    #! System: Amorphous (mineraloid)
+    #! Habit: Botryoidal masses with play of color
+    amorphous[opalescent]:{botryoidal} | phenomenon[play_of_color:intense]
   is_primary: true
-  form_description: 'AMORPHOUS hydrated silica (mineraloid) - technically not a mineral but a mineraloid
-    due to its lack of crystalline structure. Precious opal displays "play of color" - spectral flashes
-    caused by diffraction of light from ordered arrays of silica spheres. The sphere size determines which
-    colors appear. Common opal lacks this optical phenomenon. Contains 3-21% water, making it vulnerable
-    to crazing in dry conditions.
-
-    '
+  form_description: 'Amorphous hydrated silica (mineraloid) displaying "play of color" - spectral flashes
+    caused by diffraction of light from ordered arrays of silica spheres (150-400 nm diameter). The sphere
+    size determines which colors appear. Contains 3-21% water, making it vulnerable to crazing in dry
+    conditions. Precious opal shows play of color; common opal lacks this optical phenomenon.'
   forms:
-  - amorphous (no crystal faces)
+  - botryoidal
   - nodules
   - veins
   - replacement forms
-  note: EDUCATIONAL NOTE - This is a schematic visualization only. Opal has NO true crystal structure;
-    it is amorphous.
+  note: Mineraloid — no true crystal structure; play of color from diffraction in ordered silica sphere arrays

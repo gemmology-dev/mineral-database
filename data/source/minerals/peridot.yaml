@@ -41,9 +41,13 @@ localities:
 expressions:
 - slug: default
   name: Peridot
-  cdl: orthorhombic[mmm]:{110}@1.0 + {010}@0.7 + {021}@0.5
+  cdl: |
+    #! Species: Peridot (Olivine)
+    #! System: Orthorhombic (mmm)
+    #! Habit: Short prismatic with lily pad inclusions
+    orthorhombic[mmm]:{110}@1.0[inclusion:lily_pad] + {010}@0.7 + {021}@0.5
   is_primary: true
-  form_description: Short prismatic with wedge terminations
+  form_description: Short prismatic with wedge terminations and diagnostic lily pad (discoid) inclusions
   forms:
   - prism
   - pinacoid

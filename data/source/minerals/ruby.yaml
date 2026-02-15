@@ -38,22 +38,27 @@ localities:
 expressions:
 - slug: default
   name: Ruby
-  cdl: trigonal[-3m]:{10-11}@1.0 + {0001}@0.4
+  cdl: |
+    #! Species: Ruby (Corundum)
+    #! System: Trigonal (-3m)
+    #! Habit: Tabular with dipyramid and oriented silk
+    trigonal[-3m]:{10-11}@1.0[silk:oriented] + {0001}@0.4
   is_primary: true
-  form_description: Tabular habit with prominent dipyramid
+  form_description: Tabular habit with prominent dipyramid and diagnostic oriented rutile silk inclusions
   forms:
   - dipyramid
   - pinacoid
 - slug: star
   name: Star Ruby
-  cdl: trigonal[-3m]:{10-11}@1.0[silk:dense] + {0001}@0.4 | phenomenon[asterism:6]
+  cdl: |
+    #! Species: Ruby (Corundum)
+    #! System: Trigonal (-3m)
+    #! Habit: Tabular with dense silk producing 6-ray asterism
+    trigonal[-3m]:{10-11}@1.0[silk:dense] + {0001}@0.4 | phenomenon[asterism:6]
   form_description: 'Star ruby displaying six-rayed asterism caused by dense, oriented rutile silk.
     Three sets of rutile needles intersect at 60 degrees within the basal plane, creating a six-pointed
     star visible when the stone is cut en cabochon. The finest star rubies from Myanmar show a sharp,
-    well-centred star floating above a rich red bodycolour. Transparency with strong asterism is rare
-    and commands exceptional premiums.
-
-    '
+    well-centred star floating above a rich red bodycolour.'
   forms:
   - dipyramid
   - pinacoid

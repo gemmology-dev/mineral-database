@@ -24,20 +24,35 @@ localities:
 - Russia (Urals - historic)
 - Namibia
 expressions:
-- slug: default
-  name: Malachite
-  cdl: monoclinic[2/m]:{110}@1.0 + {010}@0.7 + {100}@0.5 + {011}@0.4 | [banding:concentric]
+- slug: massive
+  name: Massive (typical)
+  cdl: |
+    #! Species: Malachite
+    #! System: Amorphous (cryptocrystalline)
+    #! Habit: Botryoidal and mammillary with concentric banding
+    amorphous[cryptocrystalline]:{botryoidal, mammillary}[banding:concentric]
   is_primary: true
   form_description: 'Copper carbonate hydroxide mineral displaying vivid green color and characteristic
-    banded patterns when cut and polished. Well-formed prismatic crystals are extremely rare - malachite
-    typically occurs in botryoidal, stalactitic, or banded massive forms. The banding results from variations
-    in growth conditions creating alternating light and dark green layers. Historically important as a
-    copper ore and ornamental stone.
-
-    '
+    banded patterns when cut and polished. Almost always occurs in botryoidal, stalactitic, or banded
+    massive forms. The banding results from variations in growth conditions creating alternating light
+    and dark green layers. Historically important as a copper ore and ornamental stone.'
+  forms:
+  - botryoidal
+  - mammillary
+  - banded masses
+  note: Reacts with dilute HCl (effervescence); often found with azurite
+- slug: crystal
+  name: Crystal form (rare)
+  cdl: |
+    #! Species: Malachite
+    #! System: Monoclinic (2/m)
+    #! Habit: Prismatic crystals (extremely rare)
+    monoclinic[2/m]:{110}@1.0 + {010}@0.7 + {100}@0.5 + {011}@0.4
+  is_primary: false
+  form_description: 'Well-formed prismatic crystals of malachite are extremely rare and highly prized
+    by collectors. When found, they typically show short prismatic habit with multiple pinacoid and prism
+    faces. Crystal specimens command high premiums over massive material.'
   forms:
   - prism
   - pinacoid
-  - botryoidal masses
-  - banded masses
-  note: Reacts with dilute HCl (effervescence); often found with azurite; crystal specimens rare and valuable
+  note: Crystal specimens extremely rare and valuable; vast majority of malachite is massive/botryoidal

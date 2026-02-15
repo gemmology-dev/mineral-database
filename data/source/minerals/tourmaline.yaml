@@ -49,16 +49,25 @@ localities:
 expressions:
 - slug: prism
   name: Prismatic
-  cdl: trigonal[32]:{10-10}@1.0[striation:parallel] + {10-11}@0.8 | elongate(c:2.5)
+  cdl: |
+    #! Species: Tourmaline
+    #! System: Trigonal (32)
+    #! Habit: Elongated prism with parallel striations
+    trigonal[32]:{10-10}@1.0[striation:parallel] + {10-11}@0.8 | elongate(c:2.5)
   is_primary: true
-  form_description: Prismatic hexagonal with dipyramid terminations
+  form_description: Prismatic hexagonal with dipyramid terminations and diagnostic parallel striations
+    on prism faces
   forms:
   - prism
   - pinacoid
   - dipyramid
 - slug: watermelon
   name: Watermelon
-  cdl: trigonal[32]:{10-10}@1.0 + {10-11}@0.8 | elongate(c:1.5) | [colour_zone:pink-green]
+  cdl: |
+    #! Species: Tourmaline (watermelon)
+    #! System: Trigonal (32)
+    #! Habit: Prismatic with pink-green colour zoning
+    trigonal[32]:{10-10}@1.0 + {10-11}@0.8 | elongate(c:1.5) | [colour_zone:pink-green]
   form_description: 'Bi-colored tourmaline variety displaying a pink core surrounded by a green rim (or
     occasionally the reverse), resembling a watermelon slice in cross- section. The color zoning results
     from compositional changes during crystal growth, typically involving variations in manganese and

@@ -33,7 +33,11 @@ localities:
 expressions:
 - slug: default
   name: Demantoid
-  cdl: cubic[m3m]:{211}@1.0[inclusion:horsetail] + {110}@0.7
+  cdl: |
+    #! Species: Demantoid (Andradite Garnet)
+    #! System: Cubic (m3m)
+    #! Habit: Trapezohedron with diagnostic horsetail inclusions
+    cubic[m3m]:{211}@1.0[inclusion:horsetail] + {110}@0.7
   is_primary: true
   form_description: 'Green variety of andradite garnet, known as the "king of garnets" for its exceptional
     brilliance and fire. Coloured by chromium, demantoid has dispersion (0.057) higher than diamond. Russian

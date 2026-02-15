@@ -6,6 +6,7 @@ import os
 import sys
 
 import cdl_parser
+from cdl_parser.models import AmorphousDescription
 import crystal_geometry
 import yaml
 
@@ -105,17 +106,22 @@ def validate_entry(entry):
         result["error"] = f"Parse error: {e}"
         return "invalid", result
 
-    # Step 2: Geometry
+    result["parsed"] = True
+
+    # Step 2: Handle amorphous descriptions (no crystal geometry)
+    if isinstance(desc, AmorphousDescription):
+        result["type"] = "amorphous"
+        result["subtype"] = desc.subtype
+        result["shapes"] = desc.shapes
+        return "valid", result
+
+    # Step 3: Geometry for crystalline descriptions
     try:
         geom = crystal_geometry.cdl_to_geometry(desc)
+        result["type"] = "crystalline"
         result["vertices"] = len(geom.vertices)
         result["faces"] = len(geom.faces)
     except Exception as e:
-        err_msg = str(e)
-        # Known issues get classified as warnings
-        if "amorphous" in cdl_str.lower() or "amorphous" in err_msg.lower():
-            result["warning"] = f"Geometry warning (amorphous - Phase 4): {e}"
-            return "warning", result
         result["warning"] = f"Geometry warning: {e}"
         return "warning", result
 
@@ -130,11 +136,26 @@ def main():
     invalid = []
     warnings = []
 
+    amorphous_count = 0
+    crystalline_count = 0
+    aggregate_count = 0
+    nested_count = 0
+
     for entry in entries:
         status, result = validate_entry(entry)
         if status == "valid":
             valid.append(result)
             icon = "OK"
+            if result.get("type") == "amorphous":
+                amorphous_count += 1
+            else:
+                crystalline_count += 1
+            # Count v2 features
+            cdl = entry["cdl"]
+            if "~" in cdl:
+                aggregate_count += 1
+            if ">" in cdl and ">" != cdl[-1]:
+                nested_count += 1
         elif status == "invalid":
             invalid.append(result)
             icon = "FAIL"
@@ -154,6 +175,12 @@ def main():
     print(f"\n{'='*70}")
     print(f"SUMMARY: {total} total | {len(valid)} valid | {len(invalid)} invalid | {len(warnings)} warnings")
     print(f"{'='*70}")
+    print(f"\nBreakdown:")
+    print(f"  Crystalline expressions:  {crystalline_count}")
+    print(f"  Amorphous expressions:    {amorphous_count}")
+    print(f"  Aggregate expressions:    {aggregate_count}")
+    print(f"  Nested growth expressions:{nested_count}")
+    print(f"  Parse success rate:       {len(valid)}/{total} ({100*len(valid)/total:.1f}%)" if total else "")
 
     report = {
         "summary": {
@@ -161,6 +188,10 @@ def main():
             "valid": len(valid),
             "invalid": len(invalid),
             "warnings": len(warnings),
+            "crystalline": crystalline_count,
+            "amorphous": amorphous_count,
+            "aggregates": aggregate_count,
+            "nested_growth": nested_count,
         },
         "valid": valid,
         "invalid": invalid,

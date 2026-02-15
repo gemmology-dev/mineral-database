@@ -31,24 +31,50 @@ localities:
 expressions:
 - slug: scalenohedron
   name: Scalenohedron
-  cdl: trigonal[-3m]:{21-31}
+  cdl: |
+    #! Species: Calcite
+    #! System: Trigonal (-3m)
+    #! Habit: Dogtooth spar (scalenohedron)
+    trigonal[-3m]:{21-31}
   is_primary: true
-  form_description: Dogtooth spar - pointed scalenohedral crystals resembling canine teeth
+  form_description: Dogtooth spar — pointed scalenohedral crystals resembling canine teeth
   forms:
   - scalenohedron
   note: Also called dogtooth spar; scalenohedron has 12 scalene triangle faces
 - slug: rhomb
   name: Rhombohedron
-  cdl: trigonal[-3m]:{10-11}
-  form_description: Perfect rhombohedral cleavage form - Iceland spar is classic example
+  cdl: |
+    #! Species: Calcite
+    #! System: Trigonal (-3m)
+    #! Habit: Rhombohedral cleavage form (Iceland spar)
+    trigonal[-3m]:{10-11}
+  form_description: Perfect rhombohedral cleavage form — Iceland spar is the classic example
   forms:
   - rhombohedron
-  note: Extreme birefringence (0.172) causes dramatic double refraction - discovered by Bartholin in 1669
+  note: Extreme birefringence (0.172) causes dramatic double refraction — discovered by Bartholin in 1669
 - slug: nailhead
   name: Nailhead
-  cdl: trigonal[-3m]:{0001}@1.0 + {10-11}@0.4
-  form_description: Nailhead spar - dominant basal pinacoid with small rhombohedral termination
+  cdl: |
+    #! Species: Calcite
+    #! System: Trigonal (-3m)
+    #! Habit: Nailhead spar (tabular with basal pinacoid)
+    trigonal[-3m]:{0001}@1.0 + {10-11}@0.4
+  form_description: Nailhead spar — dominant basal pinacoid with small rhombohedral termination
   forms:
   - pinacoid
   - rhombohedron
   note: Flat tabular habit resembles nail head; often found in limestone cavities
+- slug: stacked
+  name: Stacked Parallel Growth
+  cdl: |
+    #! Species: Calcite
+    #! System: Trigonal (-3m)
+    #! Habit: Parallel aggregate of 3 rhombohedra
+    trigonal[-3m]:rhombohedron ~ parallel[3]
+  form_description: 'Parallel growth aggregate of calcite rhombohedra — multiple crystals grown in
+    near-perfect alignment, creating a stepped or stacked appearance. Common in cave environments
+    where steady, slow growth conditions favour epitaxial nucleation.'
+  forms:
+  - rhombohedron
+  - parallel
+  note: Aggregate parallel growth; common in stalactitic environments

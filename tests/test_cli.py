@@ -84,10 +84,10 @@ class TestInfoCommand:
 
     def test_info_valid_preset(self, capsys):
         """Info command shows preset details."""
-        result = main(["--info", "diamond"])
+        result = main(["--info", "diamond-octahedron"])
         assert result == 0
         captured = capsys.readouterr()
-        assert "Preset: diamond" in captured.out
+        assert "Preset: diamond-octahedron" in captured.out
         assert "Name:" in captured.out
         assert "CDL:" in captured.out
         assert "System:" in captured.out
@@ -124,7 +124,7 @@ class TestJsonCommand:
 
     def test_json_valid_preset(self, capsys):
         """JSON command outputs valid JSON."""
-        result = main(["--json", "diamond"])
+        result = main(["--json", "diamond-octahedron"])
         assert result == 0
         captured = capsys.readouterr()
         # Should be valid JSON

@@ -37,8 +37,8 @@ garnet_matches = search_presets('garnet')
 
 ## Features
 
-- **94+ mineral presets** with accurate crystallographic data
-- **CDL notation** for crystal habit visualization
+- **140 CDL expressions** across **96 mineral families** (68 natural + 15 synthetic + 9 simulant + 4 composite)
+- **CDL v2.0 notation** for crystal habit visualization, including amorphous, nested growth, and aggregate expressions
 - **FGA-standard properties** (RI, SG, optical character, etc.)
 - **SQLite backend** for fast queries
 - **Full-text search** across mineral names and properties
@@ -57,13 +57,23 @@ The database includes presets for all major crystal systems:
 | Orthorhombic | ~10 | Topaz, Peridot, Tanzanite |
 | Monoclinic | ~10 | Kunzite, Epidote, Gypsum |
 | Triclinic | ~5 | Turquoise, Kyanite, Labradorite |
+| Amorphous | ~7 | Opal, Pearl, Malachite, Turquoise, Sodalite, Lazurite |
 | **Twins** | ~15 | Japan Law, Spinel Macle, Iron Cross |
+
+### CDL v2.0 Expressions
+
+All 140 CDL expressions parse successfully with CDL v2.0, including:
+
+- **Amorphous expressions** for materials without crystalline structure: opal (`amorphous[opalescent]:{botryoidal}`), pearl, malachite, turquoise, sodalite, lazurite, rhodochrosite (banded form)
+- **Nested growth expressions** using the `>` operator: scepter quartz, phantom quartz, diamond phantom
+- **Aggregate expressions** using the `~` operator: quartz cluster, amethyst geode druse, pyrite cluster, fluorite cluster, calcite parallel growth
+- **Doc comments** (`#!`) on major expressions documenting system, habit, and species information
 
 ## Database Completeness (Updated 2026-01-25)
 
 The mineral database has been comprehensively enriched with FGA-standard gemmological data:
 
-- **95 minerals** with complete crystallographic data
+- **96 mineral families** (68 natural + 15 synthetic + 9 simulant + 4 composite) with complete crystallographic data
 - **92/95 minerals** (96.8%) with complete RI (refractive index)
 - **94/95 minerals** (98.9%) with complete SG (specific gravity)
 - **94/95 minerals** (98.9%) with optical character classification

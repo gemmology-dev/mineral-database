@@ -33,22 +33,35 @@ localities:
 - China (freshwater)
 - Philippines
 expressions:
-- slug: default
-  name: Pearl
-  cdl: orthorhombic[mmm]:{110}@1.0 + {011}@0.7 + {101}@0.6
+- slug: nacre
+  name: Pearl (nacre)
+  cdl: |
+    #! Species: Pearl
+    #! System: Amorphous (organic aggregate)
+    #! Habit: Mammillary with concentric nacre banding
+    amorphous[waxy]:{mammillary}[banding:concentric]
   is_primary: true
   form_description: 'Organic gem produced by mollusks, composed of concentric layers of aragonite (calcium
     carbonate) crystals bound by conchiolin protein. The characteristic lustre (orient) results from light
     interference in the nacre layers. Natural pearls form around irritants; cultured pearls are nucleated
-    intentionally. This visualization represents aragonite - actual pearls are layered aggregates without
-    external crystal faces.
-
-    '
+    intentionally. Pearls are layered aggregates without external crystal faces.'
   forms:
-  - spherical
-  - baroque
-  - button
-  - drop
+  - mammillary
   - concentric layers
-  note: Organic gem; visualization shows aragonite crystal - actual pearls are layered nacre without crystal
-    faces
+  note: Organic gem — layered nacre aggregate, not a single crystal
+- slug: aragonite
+  name: Aragonite crystal
+  cdl: |
+    #! Species: Pearl (aragonite component)
+    #! System: Orthorhombic (mmm)
+    #! Habit: Prismatic aragonite — not pearl morphology
+    orthorhombic[mmm]:{110}@1.0 + {011}@0.7 + {101}@0.6
+  is_primary: false
+  form_description: 'Aragonite crystal — the mineral component of nacre. Individual aragonite crystals
+    are orthorhombic but in pearls they form as sub-micrometre platelets arranged in concentric layers
+    with conchiolin protein matrix. This visualization represents the crystal form of aragonite, not the
+    morphology of a pearl.'
+  forms:
+  - prism
+  - pinacoid
+  note: Aragonite crystal form — not pearl morphology; pearls are layered nacre aggregates

@@ -28,17 +28,25 @@ localities:
 expressions:
 - slug: cube
   name: Cube
-  cdl: cubic[m3m]:{100}[striation:parallel]
+  cdl: |
+    #! Species: Pyrite
+    #! System: Cubic (m3m)
+    #! Habit: Cubic with parallel striations
+    cubic[m3m]:{100}[striation:parallel]
   is_primary: true
-  form_description: Cubic habit with characteristic striated faces - the most common sulfide mineral
+  form_description: Cubic habit with characteristic striated faces — the most common sulfide mineral
   forms:
   - cube
-  note: Called fools gold due to superficial resemblance to gold; much lighter (SG 5 vs 19.3) and harder
+  note: Called fool's gold due to superficial resemblance to gold; much lighter (SG 5 vs 19.3) and harder
     than gold
 - slug: pyritohedron
   name: Pyritohedron
-  cdl: cubic[23]:{210}
-  form_description: Pentagonal dodecahedron - the form that gives pyrite its name
+  cdl: |
+    #! Species: Pyrite
+    #! System: Cubic (23)
+    #! Habit: Pentagonal dodecahedron (pyritohedron)
+    cubic[23]:{210}
+  form_description: Pentagonal dodecahedron — the form that gives pyrite its name
   forms:
   - pyritohedron
   note: The pyritohedron (pentagonal dodecahedron) is unique to the cubic system with lower symmetry (point
@@ -46,11 +54,29 @@ expressions:
   point_group: '23'
 - slug: iron-cross
   name: Iron Cross Twin
-  cdl: cubic[23]:{210}@1.0 + {100}@0.3 | twin(iron_cross)
-  form_description: Iron cross twin - penetration twin of two pyritohedra at 90 degrees showing cross
+  cdl: |
+    #! Species: Pyrite
+    #! System: Cubic (23)
+    #! Habit: Iron cross penetration twin
+    cubic[23]:{210}@1.0 + {100}@0.3 | twin(iron_cross)
+  form_description: Iron cross twin — penetration twin of two pyritohedra at 90 degrees showing cross
     pattern
   forms:
   - pyritohedron
   - cube
   note: Named for cross-shaped pattern visible on twin plane; highly prized by collectors
   point_group: '23'
+- slug: cluster
+  name: Crystal Cluster
+  cdl: |
+    #! Species: Pyrite
+    #! System: Cubic (m3m)
+    #! Habit: Aggregate cluster of 5 cubes
+    cubic[m3m]:{100} ~ cluster[5]
+  form_description: 'Cluster of pyrite cubes growing together on matrix — a common and attractive
+    presentation. The Spanish locality of Navajun (La Rioja) produces exceptional clusters of sharp
+    cubic crystals in marl matrix.'
+  forms:
+  - cube
+  - cluster
+  note: Aggregate cluster; Navajun (Spain) produces world-famous cubic pyrite clusters

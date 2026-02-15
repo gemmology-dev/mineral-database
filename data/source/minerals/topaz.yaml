@@ -44,16 +44,24 @@ localities:
 expressions:
 - slug: prism
   name: Prismatic
-  cdl: orthorhombic[mmm]:{110}@1.0[striation:parallel] + {120}@0.8 + {001}@0.6
+  cdl: |
+    #! Species: Topaz
+    #! System: Orthorhombic (mmm)
+    #! Habit: Prismatic with parallel striations
+    orthorhombic[mmm]:{110}@1.0[striation:parallel] + {120}@0.8 + {001}@0.6
   is_primary: true
-  form_description: Prismatic with complex dome faces
+  form_description: Prismatic with complex dome faces and diagnostic parallel striations on prism faces
   forms:
   - prism
   - dome
   - pinacoid
 - slug: tabular
   name: Tabular
-  cdl: orthorhombic[mmm]:{001}@1.0 + {110}@0.3 + {120}@0.2 | elongate(c:0.4)
+  cdl: |
+    #! Species: Topaz
+    #! System: Orthorhombic (mmm)
+    #! Habit: Tabular with dominant basal pinacoid
+    orthorhombic[mmm]:{001}@1.0 + {110}@0.3 + {120}@0.2 | elongate(c:0.4)
   form_description: Flat tabular habit with dominant basal pinacoid (common in Pakistani material)
   forms:
   - pinacoid

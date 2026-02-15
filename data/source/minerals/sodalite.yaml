@@ -28,17 +28,32 @@ localities:
 - India
 - Myanmar
 expressions:
-- slug: default
-  name: Sodalite
-  cdl: cubic[m3m]:{110}@1.0 + {100}@0.5
+- slug: massive
+  name: Massive (typical)
+  cdl: |
+    #! Species: Sodalite
+    #! System: Amorphous (cryptocrystalline)
+    #! Habit: Massive aggregates
+    amorphous[cryptocrystalline]:{massive}[colour:blue]
   is_primary: true
   form_description: 'Blue feldspathoid mineral, a member of the sodalite group. Unlike lapis lazuli (which
     contains lazurite), sodalite typically displays a more uniform royal blue color often with white calcite
-    veining. Well-formed crystals are rare - sodalite usually occurs as massive aggregates. Hackmanite,
-    a sulfur-rich variety, exhibits remarkable tenebrescence.
-
-    '
+    veining. Almost always occurs as massive aggregates. Hackmanite, a sulfur-rich variety, exhibits
+    remarkable tenebrescence (reversible photochromism).'
+  forms:
+  - massive
+  note: Distinguished from lapis lazuli by absence of pyrite and uniform color; hackmanite shows photochromism
+- slug: crystal
+  name: Crystal form (rare)
+  cdl: |
+    #! Species: Sodalite
+    #! System: Cubic (m3m)
+    #! Habit: Dodecahedral crystals (rare)
+    cubic[m3m]:{110}@1.0 + {100}@0.5
+  is_primary: false
+  form_description: 'Well-formed dodecahedral crystals of sodalite are rare. When found, they show
+    rhombic dodecahedron habit with minor cube truncation. Most gem-quality sodalite is massive material.'
   forms:
   - dodecahedron
   - cube
-  note: Distinguished from lapis lazuli by absence of pyrite and uniform color; hackmanite shows photochromism
+  note: Well-formed crystals uncommon; sodalite usually occurs as massive aggregates

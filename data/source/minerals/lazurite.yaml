@@ -24,17 +24,33 @@ localities:
 - Myanmar
 - USA (California, Colorado)
 expressions:
-- slug: default
-  name: Lazurite
-  cdl: cubic[m3m]:{110}@1.0 + {100}@0.3
+- slug: massive
+  name: Massive (typical)
+  cdl: |
+    #! Species: Lazurite
+    #! System: Amorphous (cryptocrystalline)
+    #! Habit: Massive aggregates with pyrite and calcite inclusions
+    amorphous[cryptocrystalline]:{massive}[inclusion:pyrite, inclusion:calcite]
   is_primary: true
   form_description: 'The primary blue component of lapis lazuli, lazurite is a sulfur-containing feldspathoid
-    mineral. Well-formed dodecahedral crystals are extremely rare - lazurite typically occurs as massive
-    aggregates within lapis lazuli rock along with pyrite, calcite, and other minerals. The intense blue
-    color results from sulfur radical anions (S3-) trapped in the crystal structure.
-
-    '
+    mineral. Almost always occurs as massive aggregates within lapis lazuli rock along with pyrite, calcite,
+    and other minerals. The intense blue color results from sulfur radical anions (S3-) trapped in the
+    crystal structure.'
+  forms:
+  - massive
+  note: Usually occurs massive in lapis lazuli rock with pyrite and calcite
+- slug: crystal
+  name: Crystal form (rare)
+  cdl: |
+    #! Species: Lazurite
+    #! System: Cubic (m3m)
+    #! Habit: Dodecahedral crystals (extremely rare)
+    cubic[m3m]:{110}@1.0 + {100}@0.3
+  is_primary: false
+  form_description: 'Well-formed dodecahedral crystals of lazurite are extremely rare. When found, they
+    show rhombic dodecahedron habit with minor cube. Crystal specimens are highly prized by collectors
+    and come primarily from the Badakhshan mines in Afghanistan.'
   forms:
   - dodecahedron
   - cube
-  note: Well-crystallized specimens uncommon; usually occurs massive in lapis lazuli rock
+  note: Well-crystallized specimens extremely rare; usually occurs massive in lapis lazuli rock
