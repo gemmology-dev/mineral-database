@@ -4,7 +4,6 @@ Test suite for synthetic/simulant mineral support.
 Tests the new origin classification, query functions, and backwards compatibility.
 """
 
-import json
 import sqlite3
 
 from mineral_database import (
@@ -20,17 +19,10 @@ from mineral_database import (
 )
 from mineral_database.db import (
     get_connection,
-    get_families_by_growth_method,
     get_families_by_origin,
-    get_natural_counterpart,
-    get_simulants_for_natural,
-    get_synthetics_for_natural,
     init_database,
-    insert_expression,
-    insert_family,
 )
-from mineral_database.models import INFO_GROUPS, PROPERTY_LABELS, MineralExpression
-
+from mineral_database.models import INFO_GROUPS, PROPERTY_LABELS
 
 # =============================================================================
 # Model Tests
@@ -219,10 +211,7 @@ class TestSyntheticDatabaseQueries:
         conn.row_factory = sqlite3.Row
 
         # Initialize schema
-        init_database(Path(":memory:") if False else None)
-
-        # We need to create the schema manually for in-memory
-        from mineral_database.db import get_connection
+        init_database(None)
 
         # Actually, let's just test against the real database
         return None

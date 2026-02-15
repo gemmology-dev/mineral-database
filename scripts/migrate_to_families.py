@@ -201,7 +201,7 @@ def migrate_family(
 
     # Load all member files
     member_data: dict[str, dict[str, Any]] = {}
-    for yaml_stem, slug, name, is_primary in members:
+    for yaml_stem, _slug, _name, _is_primary in members:
         yaml_path = source_dir / f"{yaml_stem}.yaml"
         if not yaml_path.exists():
             print(f"  Warning: {yaml_path} not found, skipping")
@@ -399,7 +399,7 @@ def main():
 
     # Track which files are part of families
     family_members: set[str] = set()
-    for family_id, members in FAMILY_GROUPS.items():
+    for _family_id, members in FAMILY_GROUPS.items():
         for yaml_stem, _, _, _ in members:
             family_members.add(yaml_stem)
 

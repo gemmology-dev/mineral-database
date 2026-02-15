@@ -4,11 +4,10 @@
 import json
 import os
 import sys
-import traceback
 
-import yaml
 import cdl_parser
 import crystal_geometry
+import yaml
 
 SOURCE_DIRS = {
     "minerals": "data/source/minerals",
