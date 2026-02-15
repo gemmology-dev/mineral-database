@@ -50,6 +50,23 @@ expressions:
   - dipyramid
   note: Pseudohexagonal trillings common due to cyclic twinning; cats-eye chrysoberyl is the finest chatoyant
     gem
+- slug: cats-eye
+  name: Cat's Eye
+  cdl: orthorhombic[mmm]:{110}@1.0[silk:dense] + {010}@0.8 + {111}@0.5 | phenomenon[chatoyancy]
+  form_description: 'Chrysoberyl cat''s eye (cymophane) - the finest chatoyant gemstone. A sharp,
+    silvery-white band of light moves across the cabochon surface due to dense parallel silk (needle-like
+    inclusions). The eye effect requires cutting en cabochon with the needle direction perpendicular to
+    the dome apex. Sri Lankan and Brazilian material dominates the market. "Milk and honey" effect - when
+    a light source is placed to one side, one half appears milky white and the other honey-yellow - is
+    the hallmark of exceptional cat''s eye chrysoberyl.
+
+    '
+  forms:
+  - prism
+  - pinacoid
+  - dipyramid
+  note: When the term "cat's eye" is used alone in gemmology, it refers exclusively to chrysoberyl cat's
+    eye; all other chatoyant gems must be qualified (e.g., "quartz cat's eye")
 - slug: trilling
   name: Trilling
   cdl: orthorhombic[mmm]:{1-10}@1.0 + {110}@0.9 + {010}@0.5 + {001}@0.2 | twin(trilling)

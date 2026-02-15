@@ -52,6 +52,19 @@ expressions:
     '
   forms:
   - cube
+- slug: phantom
+  name: Phantom
+  cdl: cubic[m3m]:{111}@1.0[phantom:1] + {110}@0.2
+  form_description: 'Diamond crystal displaying an internal phantom - a ghost-like outline of an earlier
+    growth stage visible within the crystal. The phantom forms when growth temporarily pauses, allowing
+    a thin layer of impurities or inclusions to settle on the crystal surface, before growth resumes.
+    Phantom diamonds are prized by collectors and can provide insights into the diamond''s growth history
+    deep in the Earth''s mantle.
+
+    '
+  forms:
+  - octahedron
+  - dodecahedron
 - slug: macle
   name: Macle Twin
   cdl: cubic[m3m]:{111}@1.0[trigon:sparse] + {100}@0.3 | twin(spinel_law)

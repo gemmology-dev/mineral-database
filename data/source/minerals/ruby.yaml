@@ -44,3 +44,16 @@ expressions:
   forms:
   - dipyramid
   - pinacoid
+- slug: star
+  name: Star Ruby
+  cdl: trigonal[-3m]:{10-11}@1.0[silk:dense] + {0001}@0.4 | phenomenon[asterism:6]
+  form_description: 'Star ruby displaying six-rayed asterism caused by dense, oriented rutile silk.
+    Three sets of rutile needles intersect at 60 degrees within the basal plane, creating a six-pointed
+    star visible when the stone is cut en cabochon. The finest star rubies from Myanmar show a sharp,
+    well-centred star floating above a rich red bodycolour. Transparency with strong asterism is rare
+    and commands exceptional premiums.
+
+    '
+  forms:
+  - dipyramid
+  - pinacoid

@@ -42,7 +42,7 @@ localities:
 expressions:
 - slug: bipyramid
   name: Hexagonal Bipyramid
-  cdl: trigonal[-3m]:{10-10}@1.0 + {10-11}@0.8 + {0001}@0.6
+  cdl: trigonal[-3m]:{10-10}@1.0[colour_zone:hex] + {10-11}@0.8 + {0001}@0.6
   is_primary: true
   form_description: Generic corundum with hexagonal prism, dipyramid and basal pinacoid - second hardest
     natural mineral

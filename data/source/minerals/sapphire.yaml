@@ -53,3 +53,17 @@ expressions:
   forms:
   - prism
   - dipyramid
+- slug: star
+  name: Star Sapphire
+  cdl: trigonal[-3m]:{10-11}@1.0[silk:dense] + {10-10}@0.6 + {0001}@0.3 | phenomenon[asterism:6]
+  form_description: 'Star sapphire displaying six-rayed asterism from intersecting rutile silk needles.
+    Three sets of needles oriented at 60 degrees within the crystal create the star pattern visible in
+    cabochon-cut stones. The Star of India (563 ct) and Star of Adam (1404 ct) are among the most famous
+    examples. Black star sapphires from Thailand and Australia owe their colour and strong star to dense
+    ilmenite inclusions.
+
+    '
+  forms:
+  - dipyramid
+  - prism
+  - pinacoid
