@@ -28,7 +28,7 @@ localities:
 expressions:
 - slug: cube
   name: Cube
-  cdl: cubic[m3m]:{100}
+  cdl: cubic[m3m]:{100}[striation:parallel]
   is_primary: true
   form_description: Cubic habit with characteristic striated faces - the most common sulfide mineral
   forms:

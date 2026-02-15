@@ -59,6 +59,20 @@ expressions:
   - rhombohedron
   - prism
   note: True scepter morphology requires two crystal generations; often prized by collectors
+- slug: phantom
+  name: Phantom
+  cdl: trigonal[32]:{10-10}@0.5 + {10-11}@1.2 + {01-11}@1.0 | elongate(c:2.0) | [phantom:3]
+  form_description: 'Quartz crystal containing visible phantom outlines - ghost-like images of earlier
+    growth stages within the crystal. Each phantom records a pause in crystal growth followed by resumption.
+    Phantoms may appear as green (chlorite), red (hematite), white (clay), or smoky outlines depending
+    on the mineral that settled on the crystal surface during the growth interruption. Multiple phantoms
+    indicate several growth episodes.
+
+    '
+  forms:
+  - prism
+  - rhombohedron
+  note: Number indicates visible phantom layers; chlorite phantoms (green) are most sought after by collectors
 - slug: faden
   name: Faden
   cdl: trigonal[32]:{0001}@1.0 + {10-10}@0.2 + {10-11}@0.3 | elongate(c:0.4) | [inclusion:thread]

@@ -38,7 +38,7 @@ phenomenon: Labradorescence
 expressions:
 - slug: default
   name: Labradorite
-  cdl: triclinic[-1]:{010}@1.0 + {001}@0.8 + {110}@0.6
+  cdl: triclinic[-1]:{010}@1.0 + {001}@0.8 + {110}@0.6 | phenomenon[labradorescence]
   is_primary: true
   form_description: 'Plagioclase feldspar displaying labradorescence - striking plays of colour including
     blue, green, gold, and purple caused by light interference from lamellar twinning. The colours appear

@@ -38,7 +38,7 @@ localities:
 expressions:
 - slug: default
   name: Alexandrite
-  cdl: orthorhombic[mmm]:{110}@1.0 + {010}@0.6 + {111}@0.4
+  cdl: orthorhombic[mmm]:{110}@1.0 + {010}@0.6 + {111}@0.4 | phenomenon[colour_change]
   is_primary: true
   form_description: Color-change chrysoberyl
   forms:

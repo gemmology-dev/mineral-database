@@ -39,7 +39,7 @@ fluorescence: Often strong (blue, green, or violet) - source of the term 'fluore
 expressions:
 - slug: cube
   name: Cube
-  cdl: cubic[m3m]:{100}
+  cdl: cubic[m3m]:{100}[colour_zone:multi]
   is_primary: true
   form_description: Perfect cubic habit - defines hardness 4 on Mohs scale
   forms:

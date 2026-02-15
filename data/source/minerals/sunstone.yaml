@@ -44,7 +44,7 @@ phenomenon: Aventurescence
 expressions:
 - slug: default
   name: Sunstone
-  cdl: triclinic[-1]:{010}@1.0 + {100}@0.9 + {001}@0.7 + {110}@0.5
+  cdl: triclinic[-1]:{010}@1.0 + {100}@0.9 + {001}@0.7 + {110}@0.5 | phenomenon[aventurescence]
   is_primary: true
   form_description: 'Plagioclase feldspar displaying aventurescence - a glittery, metallic reflection
     from included reflective platelets. Oregon sunstone is unique in containing copper platelets rather
