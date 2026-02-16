@@ -6,9 +6,9 @@ import os
 import sys
 
 import cdl_parser
-from cdl_parser.models import AmorphousDescription
 import crystal_geometry
 import yaml
+from cdl_parser.models import AmorphousDescription
 
 SOURCE_DIRS = {
     "minerals": "data/source/minerals",
@@ -175,7 +175,7 @@ def main():
     print(f"\n{'='*70}")
     print(f"SUMMARY: {total} total | {len(valid)} valid | {len(invalid)} invalid | {len(warnings)} warnings")
     print(f"{'='*70}")
-    print(f"\nBreakdown:")
+    print("\nBreakdown:")
     print(f"  Crystalline expressions:  {crystalline_count}")
     print(f"  Amorphous expressions:    {amorphous_count}")
     print(f"  Aggregate expressions:    {aggregate_count}")
