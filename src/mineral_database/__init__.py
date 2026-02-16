@@ -16,7 +16,7 @@ Example:
     >>> cubic_presets = list_presets('cubic')
 """
 
-__version__ = "1.8.1"
+__version__ = "2.0.0"
 __author__ = "Fabian Schuh"
 __email__ = "fabian@gemmology.dev"
 
