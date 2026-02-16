@@ -3,6 +3,8 @@ name: Spessartine
 crystal_system: cubic
 point_group: m3m
 chemistry: Mn3Al2(SiO4)3
+mineral_group: Garnet Group
+category: Nesosilicates
 hardness: 7-7.5
 sg: 4.12-4.20
 ri: 1.79-1.81

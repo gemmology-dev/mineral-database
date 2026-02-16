@@ -3,6 +3,8 @@ name: Diopside
 crystal_system: monoclinic
 point_group: 2/m
 chemistry: CaMgSi2O6
+mineral_group: Pyroxene Group
+category: Inosilicates
 hardness: 5.5-6.5
 sg: 3.22-3.38
 ri: 1.675-1.701

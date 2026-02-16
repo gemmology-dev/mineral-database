@@ -1,0 +1,61 @@
+id: jadeite
+name: Jadeite
+crystal_system: monoclinic
+point_group: 2/m
+chemistry: NaAlSi2O6
+mineral_group: Pyroxene Group
+category: Inosilicates
+hardness: 6.5-7
+sg: 3.25-3.36
+ri: 1.654-1.688
+birefringence: 0.013
+optical_character: Biaxial +
+dispersion: 0.012
+lustre: Vitreous to greasy
+cleavage: Good {110} at ~87°
+fracture: Splintery (tough due to interlocking fibrous texture)
+diagnostic_features: "Interlocking granular texture; high toughness; higher SG and RI than nephrite; absorption at 437nm"
+colors:
+- Imperial green
+- Lavender
+- White
+- Yellow
+- Orange
+- Black
+treatments:
+- Polymer impregnation (B jade)
+- Dyeing (C jade)
+- Wax treatment (traditional)
+inclusions:
+- Fibrous interlocking texture
+- Black chromite spots (in green)
+- Fracture fillings
+localities:
+- Myanmar (Burma)
+- Guatemala
+- Japan
+- Russia
+- USA (California)
+expressions:
+- slug: massive
+  name: Massive (gem-quality)
+  cdl: |
+    #! Species: Jadeite
+    #! System: Monoclinic (2/m)
+    #! Habit: Massive interlocking aggregate (gem quality)
+    amorphous[cryptocrystalline]:{massive}
+  is_primary: true
+  form_description: Gem-quality jadeite in its characteristic massive interlocking texture. Imperial jade — the finest vivid green jadeite from Myanmar — is among the most valued gemstones in East Asian cultures.
+  forms:
+  - massive
+- slug: crystal
+  name: Prismatic Crystal
+  cdl: |
+    #! Species: Jadeite
+    #! System: Monoclinic (2/m)
+    #! Habit: Prismatic monoclinic crystal
+    monoclinic[2/m]:{010}@1.0 + {110}@0.8 + {100}@0.6
+  form_description: Rare crystalline jadeite showing monoclinic prismatic habit. Individual crystals are rarely seen; jadeite occurs almost exclusively as interlocking aggregates.
+  forms:
+  - prism
+  - pinacoid

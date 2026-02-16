@@ -99,6 +99,14 @@ Examples:
         help="Filter --list by origin type",
     )
 
+    parser.add_argument(
+        "--groups",
+        nargs="?",
+        const="all",
+        metavar="GROUP",
+        help="List mineral groups, or list families in a specific group",
+    )
+
     return parser
 
 
@@ -176,6 +184,30 @@ def main(args: list[str] | None = None) -> int:
                     print(f"    {fid:38} - {family.name}")
         else:
             print("\n  Simulants: none")
+        return 0
+
+    if parsed_args.groups:
+        from .queries import list_families_by_group, list_mineral_groups
+
+        if parsed_args.groups == "all":
+            groups = list_mineral_groups()
+            if groups:
+                print(f"Mineral Groups ({len(groups)} total):")
+                for g in groups:
+                    families = list_families_by_group(g)
+                    print(f"  {g:25} ({len(families)} families)")
+            else:
+                print("No mineral groups found.")
+        else:
+            families = list_families_by_group(parsed_args.groups)
+            if families:
+                print(f"{parsed_args.groups} ({len(families)} families):")
+                for fid in families:
+                    family = get_family(fid)
+                    if family:
+                        print(f"  {fid:40} - {family.name}")
+            else:
+                print(f"No families found in group: {parsed_args.groups}")
         return 0
 
     if parsed_args.list:

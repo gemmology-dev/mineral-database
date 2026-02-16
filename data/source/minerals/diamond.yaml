@@ -3,6 +3,7 @@ name: Diamond
 crystal_system: cubic
 point_group: m3m
 chemistry: C
+category: Native Elements
 hardness: 10
 sg: 3.52
 ri: 2.417
@@ -11,6 +12,8 @@ dispersion: 0.044
 lustre: Adamantine
 cleavage: Perfect {111}
 fracture: Conchoidal
+fluorescence: "Variable; blue LWUV common in Type Ia, inert in Type IIa"
+diagnostic_features: "Adamantine lustre; extreme hardness (10); high dispersion (0.044); strong thermal conductivity"
 colors:
 - Colorless
 - Yellow

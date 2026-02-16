@@ -3,6 +3,7 @@ name: Tanzanite
 crystal_system: orthorhombic
 point_group: mmm
 chemistry: Ca2Al3(SiO4)(Si2O7)O(OH):V
+category: Sorosilicates
 hardness: 6.5
 sg: 3.10-3.38
 ri: 1.691-1.700
@@ -12,12 +13,13 @@ dispersion: 0.021
 lustre: Vitreous
 cleavage: Perfect in one direction
 fracture: Uneven to conchoidal
-pleochroism: Strong trichroic (blue, purple/violet, brown/burgundy)
+diagnostic_features: "Extremely strong trichroism (blue/purple/bronze); heat treatment converts brown to blue-violet"
+pleochroism: Extremely strong trichroism
 pleochroism_strength: very_strong
 pleochroism_color1: Blue
-pleochroism_color2: Purple/Violet
-pleochroism_color3: Bronze/Brown
-pleochroism_notes: Strongly trichroic; all three colors often visible
+pleochroism_color2: Purple
+pleochroism_color3: Bronze-brown
+pleochroism_notes: Strongest trichroism of any common gemstone; all three colours distinctly different
 colors:
 - Violet-blue
 - Blue

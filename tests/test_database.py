@@ -21,6 +21,7 @@ from mineral_database import (
     list_presets,
     search_presets,
 )
+from mineral_database.queries import list_families_by_group, list_mineral_groups
 
 # =============================================================================
 # Mineral Model Tests
@@ -139,7 +140,7 @@ class TestQueries:
     def test_list_presets_all(self):
         """Test listing all presets."""
         presets = list_presets()
-        assert len(presets) >= 120  # ~140 expressions now
+        assert len(presets) >= 155  # ~170+ expressions after v2.1 expansion
         assert "diamond-octahedron" in presets
         assert "ruby" in presets
 
@@ -173,7 +174,7 @@ class TestQueries:
     def test_count_presets(self):
         """Test counting presets."""
         count = count_presets()
-        assert count >= 120  # ~140 expressions now
+        assert count >= 155  # ~170+ expressions after v2.1 expansion
 
     def test_get_systems(self):
         """Test getting crystal systems."""
@@ -223,18 +224,18 @@ class TestCompatibility:
     def test_crystal_presets_iter(self):
         """Test iteration."""
         names = list(CRYSTAL_PRESETS)
-        assert len(names) >= 120
+        assert len(names) >= 155
         assert "diamond-octahedron" in names
 
     def test_crystal_presets_keys(self):
         """Test .keys() method."""
         keys = CRYSTAL_PRESETS.keys()
-        assert len(keys) >= 120
+        assert len(keys) >= 155
         assert "diamond-octahedron" in keys
 
     def test_crystal_presets_len(self):
         """Test len()."""
-        assert len(CRYSTAL_PRESETS) >= 120
+        assert len(CRYSTAL_PRESETS) >= 155
 
 
 # =============================================================================
@@ -441,7 +442,7 @@ class TestV2Expressions:
     def test_expression_count(self):
         """Test total expression count reflects v2 additions."""
         count = count_presets()
-        assert count >= 135, f"Expected >= 135 expressions, got {count}"
+        assert count >= 155, f"Expected >= 155 expressions, got {count}"
 
     def test_all_expressions_have_cdl(self):
         """Test that all non-composite expressions have CDL strings."""
@@ -465,3 +466,54 @@ class TestV2Expressions:
                     "opal-gilson",
                 ]
             ), f"Non-composite preset {name} has empty CDL"
+
+
+# =============================================================================
+# Mineral Groups Tests (v2.1)
+# =============================================================================
+
+
+class TestMineralGroups:
+    """Test mineral group queries added in v2.1."""
+
+    def test_list_mineral_groups(self):
+        """Test listing all mineral groups."""
+        groups = list_mineral_groups()
+        assert len(groups) >= 10
+        assert "Garnet Group" in groups
+        assert "Feldspar Group" in groups
+        assert "Beryl Group" in groups
+        assert "Quartz Group" in groups
+        assert "Corundum Group" in groups
+        assert "Tourmaline Group" in groups
+
+    def test_list_families_by_group_garnet(self):
+        """Test listing garnet group families."""
+        families = list_families_by_group("Garnet Group")
+        assert len(families) >= 10  # garnet + endmembers + varieties
+        assert "garnet" in families
+        assert "almandine" in families
+        assert "pyrope" in families
+
+    def test_list_families_by_group_feldspar(self):
+        """Test listing feldspar group families."""
+        families = list_families_by_group("Feldspar Group")
+        assert len(families) >= 8  # 6 original + 3 new
+        assert "orthoclase" in families
+        assert "moonstone" in families
+
+    def test_list_families_by_group_beryl(self):
+        """Test listing beryl group families."""
+        families = list_families_by_group("Beryl Group")
+        assert len(families) >= 6
+        assert "beryl" in families
+        assert "emerald" in families
+
+    def test_empty_group(self):
+        """Test listing a non-existent group returns empty."""
+        families = list_families_by_group("Nonexistent Group")
+        assert families == []
+
+    def test_classification_info_group(self):
+        """Test classification info group exists."""
+        assert "classification" in INFO_GROUPS

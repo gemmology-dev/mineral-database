@@ -1,0 +1,48 @@
+id: pyrope
+name: Pyrope
+crystal_system: cubic
+point_group: m3m
+chemistry: Mg3Al2(SiO4)3
+mineral_group: Garnet Group
+category: Nesosilicates
+hardness: 7-7.5
+sg: 3.51-3.65
+ri: 1.74-1.76
+optical_character: Isotropic
+dispersion: 0.022
+lustre: Vitreous
+cleavage: None
+fracture: Conchoidal to uneven
+pleochroism: None (isotropic)
+diagnostic_features: "Blood-red colour; relatively low SG for garnet (3.5-3.7); often inclusion-free"
+colors:
+- Blood red
+- Crimson
+- Purplish-red
+- Orangish-red (with spessartine)
+treatments:
+- None commonly applied
+inclusions:
+- Rounded crystals
+- Needle inclusions
+- Often relatively clean
+localities:
+- Czech Republic (Bohemia)
+- South Africa
+- Tanzania
+- Madagascar
+- Myanmar
+- China
+expressions:
+- slug: dodecahedron
+  name: Rhombic Dodecahedron
+  cdl: |
+    #! Species: Pyrope
+    #! System: Cubic (m3m)
+    #! Habit: Rhombic dodecahedron
+    cubic[m3m]:{110}@1.0 + {211}@0.3
+  is_primary: true
+  form_description: Pyrope garnet — the magnesium end-member of the pyralspite series. The name derives from Greek 'pyropos' meaning fire-like, referring to its deep red colour. Classic Bohemian garnets are pyrope.
+  forms:
+  - dodecahedron
+  - trapezohedron

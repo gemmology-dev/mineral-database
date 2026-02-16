@@ -3,6 +3,8 @@ name: Peridot
 crystal_system: orthorhombic
 point_group: mmm
 chemistry: (Mg,Fe)2SiO4
+mineral_group: Olivine Group
+category: Nesosilicates
 hardness: 6.5
 sg: 3.27-3.37
 ri: 1.654-1.690
@@ -12,6 +14,7 @@ dispersion: 0.02
 lustre: Vitreous to oily
 cleavage: Poor
 fracture: Conchoidal
+diagnostic_features: "Strong doubling visible through table; distinctive yellowish-green; high birefringence (0.036)"
 pleochroism: Weak (yellowish-green, green, greenish-yellow)
 pleochroism_strength: weak
 pleochroism_color1: Yellow-green

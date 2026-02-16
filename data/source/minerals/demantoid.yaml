@@ -3,6 +3,8 @@ name: Demantoid
 crystal_system: cubic
 point_group: m3m
 chemistry: Ca3Fe2(SiO4)3:Cr
+mineral_group: Garnet Group
+category: Nesosilicates
 hardness: 6.5-7
 sg: 3.82-3.85
 ri: 1.888-1.889

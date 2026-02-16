@@ -3,6 +3,7 @@ name: Galena
 crystal_system: cubic
 point_group: m3m
 chemistry: PbS
+category: Sulfides
 hardness: 2.5
 sg: 7.4-7.6
 ri: null

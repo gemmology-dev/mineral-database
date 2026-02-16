@@ -3,6 +3,8 @@ name: Azurite
 crystal_system: monoclinic
 point_group: 2/m
 chemistry: Cu3(CO3)2(OH)2
+mineral_group: Carbonate Group
+category: Carbonates
 hardness: 3.5-4
 sg: 3.77-3.89
 ri: 1.730-1.838

@@ -3,6 +3,8 @@ name: Emerald
 crystal_system: hexagonal
 point_group: 6/mmm
 chemistry: Be3Al2(SiO3)6:Cr
+mineral_group: Beryl Group
+category: Cyclosilicates
 hardness: 7.5
 sg: 2.72
 ri: 1.577-1.583
@@ -12,6 +14,8 @@ dispersion: 0.014
 lustre: Vitreous
 cleavage: Indistinct {0001}
 fracture: Conchoidal to uneven
+fluorescence: "Usually inert; weak red in some Colombian (LWUV)"
+diagnostic_features: "Three-phase inclusions (Colombian); jardin; Chelsea filter reaction in Cr-bearing"
 pleochroism: Distinct (blue-green/yellow-green)
 pleochroism_strength: moderate
 pleochroism_color1: Blue-green

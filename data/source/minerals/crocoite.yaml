@@ -3,6 +3,7 @@ name: Crocoite
 crystal_system: monoclinic
 point_group: 2/m
 chemistry: PbCrO4
+category: Chromates
 hardness: 2.5-3
 sg: 5.97-6.02
 ri: 2.31-2.66

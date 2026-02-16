@@ -3,6 +3,8 @@ name: Aragonite
 crystal_system: orthorhombic
 point_group: mmm
 chemistry: CaCO3
+mineral_group: Carbonate Group
+category: Carbonates
 hardness: 3.5-4
 sg: 2.93-2.95
 ri: 1.530-1.685

@@ -3,6 +3,8 @@ name: Alexandrite
 crystal_system: orthorhombic
 point_group: mmm
 chemistry: BeAl2O4:Cr
+mineral_group: Chrysoberyl Group
+category: Oxides
 hardness: 8.5
 sg: 3.71-3.75
 ri: 1.746-1.755
@@ -12,12 +14,14 @@ dispersion: 0.015
 lustre: Vitreous
 cleavage: Good in one direction
 fracture: Conchoidal to uneven
+fluorescence: "Weak red (LWUV)"
+diagnostic_features: "Colour change (daylight green to incandescent red); strong pleochroism (three colours)"
 pleochroism: Strong trichroic (green, orange, purple-red)
-pleochroism_strength: very_strong
+pleochroism_strength: strong
 pleochroism_color1: Green
-pleochroism_color2: Orange
-pleochroism_color3: Purple-red
-pleochroism_notes: Strong trichroism distinct from color change effect
+pleochroism_color2: Orange-yellow
+pleochroism_color3: Red-purple
+pleochroism_notes: Three distinct pleochroic colours visible through dichroscope; separate from colour-change
 colors:
 - Green to blue-green (daylight)
 - Red to purple-red (incandescent)

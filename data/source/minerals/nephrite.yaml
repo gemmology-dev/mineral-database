@@ -1,0 +1,50 @@
+id: nephrite
+name: Nephrite
+crystal_system: monoclinic
+point_group: 2/m
+chemistry: Ca2(Mg,Fe)5Si8O22(OH)2
+mineral_group: Amphibole Group
+category: Inosilicates
+hardness: 6-6.5
+sg: 2.90-3.10
+ri: 1.600-1.627
+birefringence: 0.027
+optical_character: Aggregate
+lustre: Greasy to waxy
+cleavage: Good {110} at 56° (in individual fibres)
+fracture: Splintery (extremely tough)
+diagnostic_features: "Lower RI and SG than jadeite; extremely tough; fibrous tremolite-actinolite; no 437nm absorption"
+colors:
+- Green (varies from pale to dark)
+- White (mutton fat)
+- Grey
+- Brown
+- Black
+- Yellow
+treatments:
+- Wax treatment
+- Dyeing
+- Polymer impregnation
+inclusions:
+- Fibrous interlocking texture (tremolite-actinolite)
+- Black magnetite/chromite specks
+- Tremolite fibres
+localities:
+- New Zealand
+- China (Khotan)
+- Canada (British Columbia)
+- Russia (Siberia)
+- Australia
+- Taiwan
+expressions:
+- slug: massive
+  name: Massive (gem-quality)
+  cdl: |
+    #! Species: Nephrite
+    #! System: Monoclinic (2/m)
+    #! Habit: Massive interlocking fibrous aggregate
+    amorphous[cryptocrystalline]:{massive}
+  is_primary: true
+  form_description: Nephrite jade in its characteristic massive form with interlocking fibrous tremolite-actinolite crystals. Nephrite is the toughest natural gemstone, used for carved objects and tools since the Neolithic period.
+  forms:
+  - massive

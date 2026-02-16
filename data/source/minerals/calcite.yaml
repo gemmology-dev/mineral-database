@@ -3,6 +3,8 @@ name: Calcite
 crystal_system: trigonal
 point_group: -3m
 chemistry: CaCO3
+mineral_group: Carbonate Group
+category: Carbonates
 hardness: 3
 sg: '2.71'
 ri: 1.486-1.658
@@ -12,6 +14,8 @@ dispersion: 0.017
 lustre: Vitreous
 cleavage: Perfect rhombohedral {10-11}
 fracture: Conchoidal
+fluorescence: "Variable; red, pink, blue, or green depending on activator ions"
+diagnostic_features: "Extreme birefringence (0.172); perfect rhombohedral cleavage; effervesces in cold HCl"
 pleochroism: None
 colors:
 - Colourless

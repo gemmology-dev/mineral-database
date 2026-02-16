@@ -3,6 +3,7 @@ name: Halite
 crystal_system: cubic
 point_group: m3m
 chemistry: NaCl
+category: Halides
 hardness: 2.5
 sg: 2.17
 ri: 1.544

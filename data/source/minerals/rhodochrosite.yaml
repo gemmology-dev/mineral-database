@@ -3,6 +3,8 @@ name: Rhodochrosite
 crystal_system: trigonal
 point_group: -3m
 chemistry: MnCO3
+mineral_group: Carbonate Group
+category: Carbonates
 hardness: 3.5-4
 sg: 3.45-3.70
 ri: 1.597-1.817

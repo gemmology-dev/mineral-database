@@ -1,0 +1,60 @@
+id: chalcedony
+name: Chalcedony
+crystal_system: trigonal
+point_group: '32'
+chemistry: SiO2
+mineral_group: Quartz Group
+category: Tectosilicates
+hardness: 6.5-7
+sg: 2.58-2.64
+ri: 1.530-1.540
+birefringence: 0.004
+optical_character: Aggregate
+lustre: Waxy to vitreous
+cleavage: None
+fracture: Conchoidal
+diagnostic_features: "Cryptocrystalline; waxy lustre; banded (agate) or uniform colour; lower RI than crystalline quartz"
+colors:
+- Blue (chalcedony)
+- Red-orange (carnelian)
+- Green (chrysoprase)
+- Banded (agate)
+- Black (onyx)
+- Brown (sard)
+treatments:
+- Dyeing
+- Heat treatment
+- Sugar-acid treatment (onyx)
+inclusions:
+- Banding patterns
+- Moss-like dendritic inclusions (moss agate)
+- Plume inclusions (plume agate)
+localities:
+- Brazil
+- Uruguay
+- India
+- Madagascar
+- USA
+- Germany (Idar-Oberstein)
+expressions:
+- slug: massive
+  name: Massive
+  cdl: |
+    #! Species: Chalcedony
+    #! System: Trigonal (32)
+    #! Habit: Massive cryptocrystalline
+    amorphous[cryptocrystalline]:{massive}
+  is_primary: true
+  form_description: Chalcedony — cryptocrystalline variety of quartz composed of microscopic fibrous crystals. Encompasses many important gem varieties including agate, carnelian, chrysoprase, and onyx.
+  forms:
+  - massive
+- slug: botryoidal
+  name: Botryoidal
+  cdl: |
+    #! Species: Chalcedony
+    #! System: Trigonal (32)
+    #! Habit: Botryoidal grape-like form
+    amorphous[cryptocrystalline]:{botryoidal}
+  form_description: Botryoidal chalcedony forming grape-like rounded masses, typical of chalcedony deposits lining cavities.
+  forms:
+  - botryoidal

@@ -1,0 +1,47 @@
+id: colour-change-garnet
+name: Colour-Change Garnet
+crystal_system: cubic
+point_group: m3m
+chemistry: (Mg,Mn)3Al2(SiO4)3
+mineral_group: Garnet Group
+category: Nesosilicates
+hardness: 7-7.5
+sg: 3.65-3.84
+ri: 1.74-1.76
+optical_character: Isotropic
+dispersion: 0.022-0.027
+lustre: Vitreous
+cleavage: None
+fracture: Conchoidal to uneven
+pleochroism: None (isotropic)
+diagnostic_features: "Alexandrite-like colour change (daylight green/blue to incandescent red/purple); pyrope-spessartine composition"
+colors:
+- Blue-green (daylight)
+- Purplish-red (incandescent)
+- Green to red change
+treatments:
+- None commonly applied
+inclusions:
+- Rutile needles
+- Crystal inclusions
+- Fingerprints
+localities:
+- Madagascar
+- Tanzania
+- Sri Lanka
+- Kenya
+- Norway
+expressions:
+- slug: combination
+  name: Combination
+  cdl: |
+    #! Species: Colour-Change Garnet (pyrope-spessartine)
+    #! System: Cubic (m3m)
+    #! Habit: Dodecahedron-trapezohedron combination
+    cubic[m3m]:{110}@1.0 + {211}@0.5
+  is_primary: true
+  form_description: Colour-change garnet displaying an alexandrite-like shift from green or blue-green in daylight to purplish-red under incandescent light. A pyrope-spessartine solid solution with vanadium and/or chromium chromophores.
+  forms:
+  - dodecahedron
+  - trapezohedron
+  note: Vanadium and chromium cause the colour-change effect

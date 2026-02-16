@@ -3,6 +3,8 @@ name: Hiddenite
 crystal_system: monoclinic
 point_group: 2/m
 chemistry: LiAlSi2O6:Cr
+mineral_group: Spodumene Group
+category: Inosilicates
 hardness: 6.5-7
 sg: 3.15-3.21
 ri: 1.660-1.676

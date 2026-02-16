@@ -3,6 +3,8 @@ name: Corundum
 crystal_system: trigonal
 point_group: -3m
 chemistry: Al2O3
+mineral_group: Corundum Group
+category: Oxides
 hardness: 9
 sg: 3.99-4.01
 ri: 1.762-1.770
@@ -12,6 +14,7 @@ dispersion: 0.018
 lustre: Vitreous to adamantine
 cleavage: None (parting on twin planes)
 fracture: Conchoidal to uneven
+fluorescence: "Variable depending on colour variety"
 pleochroism: Distinct to strong (depends on colour)
 pleochroism_strength: strong
 pleochroism_color1: Body color (darker)

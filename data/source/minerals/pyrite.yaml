@@ -3,6 +3,7 @@ name: Pyrite
 crystal_system: cubic
 point_group: m3m
 chemistry: FeS2
+category: Sulfides
 hardness: 6.5
 sg: 4.95-5.10
 ri: Metallic (opaque)

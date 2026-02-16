@@ -1,0 +1,52 @@
+id: padparadscha
+name: Padparadscha Sapphire
+crystal_system: trigonal
+point_group: '-3m'
+chemistry: Al2O3
+mineral_group: Corundum Group
+category: Oxides
+hardness: 9
+sg: 3.99-4.02
+ri: 1.762-1.770
+birefringence: 0.008
+optical_character: Uniaxial -
+dispersion: 0.018
+lustre: Adamantine to vitreous
+cleavage: None (parting on {0001} and {10-11})
+fracture: Conchoidal
+fluorescence: Moderate orange-pink (LWUV)
+pleochroism: Moderate
+pleochroism_strength: moderate
+pleochroism_color1: Pinkish-orange
+pleochroism_color2: Yellowish-orange
+colors:
+- Pinkish-orange
+- Orangish-pink
+- Salmon pink
+treatments:
+- Heat treatment (common, some lattice diffusion)
+- Beryllium diffusion (controversial)
+inclusions:
+- Silk (rutile needles)
+- Fingerprints
+- Crystals
+- Growth zoning
+localities:
+- Sri Lanka
+- Madagascar
+- Tanzania
+- Myanmar
+expressions:
+- slug: bipyramid
+  name: Bipyramidal
+  cdl: |
+    #! Species: Padparadscha Sapphire
+    #! System: Trigonal (-3m)
+    #! Habit: Bipyramidal with minor basal pinacoid
+    trigonal[-3m]:{10-11}@1.0 + {0001}@0.4
+  is_primary: true
+  form_description: Padparadscha — the rarest and most prized fancy sapphire, displaying a delicate pink-orange colour reminiscent of a lotus blossom. Named from Sinhalese 'padmaraga'. Colour from combined Cr and Fe chromophores.
+  forms:
+  - bipyramid
+  - pinacoid
+  note: Strict colour definition debated; generally requires both pink and orange components

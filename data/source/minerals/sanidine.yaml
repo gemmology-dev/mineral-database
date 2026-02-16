@@ -1,0 +1,42 @@
+id: sanidine
+name: Sanidine
+crystal_system: monoclinic
+point_group: 2/m
+chemistry: (K,Na)AlSi3O8
+mineral_group: Feldspar Group
+category: Tectosilicates
+hardness: 6
+sg: 2.52-2.62
+ri: 1.518-1.527
+birefringence: 0.007
+optical_character: Biaxial -
+lustre: Vitreous
+cleavage: Perfect {001} and good {010}
+fracture: Uneven to conchoidal
+colors:
+- Colorless
+- Pale yellow
+- Grey
+treatments:
+- None
+inclusions:
+- Twin lamellae (Carlsbad twin common)
+localities:
+- Germany (Eifel)
+- Italy (Vesuvius)
+- Madagascar
+- Mexico
+expressions:
+- slug: tabular
+  name: Tabular
+  cdl: |
+    #! Species: Sanidine
+    #! System: Monoclinic (2/m)
+    #! Habit: Tabular on {010} with Carlsbad twinning
+    monoclinic[2/m]:{010}@1.0 + {001}@0.8 + {110}@0.6
+  is_primary: true
+  form_description: Sanidine — the high-temperature polymorph of potassium feldspar found in volcanic rocks. Sometimes displays a glassy transparency prized by collectors. Carlsbad twinning is very common.
+  forms:
+  - pinacoid
+  - prism
+  note: High-temperature polymorph; orthoclase is the medium-temperature equivalent

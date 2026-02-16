@@ -3,6 +3,8 @@ name: Amazonite
 crystal_system: triclinic
 point_group: '-1'
 chemistry: KAlSi3O8
+mineral_group: Feldspar Group
+category: Tectosilicates
 hardness: 6-6.5
 sg: 2.56-2.58
 ri: 1.522-1.530

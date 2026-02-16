@@ -1,0 +1,44 @@
+id: andesine
+name: Andesine
+crystal_system: triclinic
+point_group: '-1'
+chemistry: (Ca,Na)(Al,Si)4O8
+mineral_group: Feldspar Group
+category: Tectosilicates
+hardness: 6-6.5
+sg: 2.65-2.69
+ri: 1.543-1.553
+birefringence: 0.008
+optical_character: Biaxial -
+lustre: Vitreous
+cleavage: Perfect {001} and good {010}
+fracture: Uneven to conchoidal
+colors:
+- Red
+- Orange-red
+- Green
+- Yellow-green
+treatments:
+- Copper diffusion (controversial, for red colour)
+inclusions:
+- Twin lamellae
+- Schiller inclusions
+localities:
+- Tibet (China)
+- Mongolia
+- Oregon (USA)
+- Democratic Republic of Congo
+expressions:
+- slug: tabular
+  name: Tabular
+  cdl: |
+    #! Species: Andesine
+    #! System: Triclinic (-1)
+    #! Habit: Tabular on {010}
+    triclinic[-1]:{010}@1.0 + {001}@0.8 + {110}@0.6
+  is_primary: true
+  form_description: Andesine — an intermediate plagioclase feldspar (An30-An50). Red andesine from Tibet and Oregon has become popular as a gemstone, though some material has been treated by copper diffusion.
+  forms:
+  - pinacoid
+  - prism
+  note: Red andesine origin and treatment status frequently debated in gem trade

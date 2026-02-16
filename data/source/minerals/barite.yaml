@@ -3,6 +3,7 @@ name: Barite
 crystal_system: orthorhombic
 point_group: mmm
 chemistry: BaSO4
+category: Sulfates
 hardness: 3
 sg: 4.3-4.5
 ri: 1.636-1.648
@@ -12,6 +13,7 @@ dispersion: 0.016
 lustre: Vitreous to resinous
 cleavage: Perfect {001}, good {210}
 fracture: Uneven
+fluorescence: "Moderate to strong white, yellow, or orange"
 pleochroism: Weak
 colors:
 - Colourless

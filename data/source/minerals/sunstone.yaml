@@ -3,6 +3,8 @@ name: Sunstone
 crystal_system: triclinic
 point_group: '-1'
 chemistry: (Na,Ca)(Al,Si)4O8
+mineral_group: Feldspar Group
+category: Tectosilicates
 hardness: 6-6.5
 sg: 2.62-2.67
 ri: 1.537-1.547

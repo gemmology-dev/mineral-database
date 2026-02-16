@@ -3,6 +3,8 @@ name: Quartz
 crystal_system: trigonal
 point_group: '32'
 chemistry: SiO2
+mineral_group: Quartz Group
+category: Tectosilicates
 hardness: 7
 sg: '2.65'
 ri: 1.544-1.553
@@ -12,6 +14,7 @@ dispersion: 0.013
 lustre: Vitreous
 cleavage: None
 fracture: Conchoidal
+diagnostic_features: "Conchoidal fracture; lacks cleavage; hexagonal cross-section with horizontal striations on prism"
 pleochroism: None (in colourless)
 colors:
 - Colourless (rock crystal)

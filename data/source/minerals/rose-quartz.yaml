@@ -1,0 +1,61 @@
+id: rose-quartz
+name: Rose Quartz
+crystal_system: trigonal
+point_group: '32'
+chemistry: SiO2
+mineral_group: Quartz Group
+category: Tectosilicates
+hardness: 7
+sg: '2.65'
+ri: 1.544-1.553
+birefringence: 0.009
+optical_character: Uniaxial +
+dispersion: 0.013
+lustre: Vitreous
+cleavage: None
+fracture: Conchoidal
+pleochroism: Weak
+pleochroism_strength: weak
+pleochroism_color1: Pink
+pleochroism_color2: Paler pink
+diagnostic_features: "Translucent pink; rarely forms visible crystals; asterism in some cabochons (star rose quartz)"
+colors:
+- Pale pink
+- Rose pink
+- Deep pink
+- Lavender pink
+treatments:
+- Irradiation (to deepen colour)
+inclusions:
+- Rutile needles (cause asterism)
+- Dumortierite fibres
+- Rose-coloured cloudy appearance
+localities:
+- Brazil
+- Madagascar
+- India
+- South Dakota (USA)
+- Mozambique
+expressions:
+- slug: massive
+  name: Massive
+  cdl: |
+    #! Species: Rose Quartz
+    #! System: Trigonal (32)
+    #! Habit: Massive anhedral
+    amorphous[cryptocrystalline]:{massive}
+  is_primary: true
+  form_description: Rose quartz in its characteristic massive habit — rarely forms discrete crystals. Pink colour from trace phosphorus and aluminium creating colour centres, or from fibrous dumortierite inclusions.
+  forms:
+  - massive
+- slug: star
+  name: Star Rose Quartz
+  cdl: |
+    #! Species: Rose Quartz (Star)
+    #! System: Trigonal (32)
+    #! Habit: Massive with asterism from rutile silk
+    amorphous[cryptocrystalline]:{massive} | phenomenon[asterism:six_ray]
+  form_description: Star rose quartz displaying six-rayed asterism when cut en cabochon, caused by oriented rutile needle inclusions following the trigonal symmetry.
+  forms:
+  - massive
+  note: Six-rayed star from oriented rutile needles; best in transmitted light

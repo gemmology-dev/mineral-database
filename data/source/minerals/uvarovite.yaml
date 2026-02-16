@@ -1,0 +1,43 @@
+id: uvarovite
+name: Uvarovite
+crystal_system: cubic
+point_group: m3m
+chemistry: Ca3Cr2(SiO4)3
+mineral_group: Garnet Group
+category: Nesosilicates
+hardness: 6.5-7
+sg: '3.77'
+ri: '1.87'
+optical_character: Isotropic
+dispersion: 0.027
+lustre: Vitreous
+cleavage: None
+fracture: Conchoidal to uneven
+pleochroism: None (isotropic)
+diagnostic_features: "Vivid emerald-green; chromium-bearing; typically too small for faceting; drusy crusts"
+colors:
+- Emerald green
+treatments:
+- None
+inclusions:
+- Typically too small for inclusion study
+localities:
+- Russia (Urals)
+- Finland
+- Turkey
+- South Africa
+- Canada
+expressions:
+- slug: druse
+  name: Drusy Crust
+  cdl: |
+    #! Species: Uvarovite
+    #! System: Cubic (m3m)
+    #! Habit: Drusy crust of small dodecahedra
+    cubic[m3m]:{110}@1.0 + {211}@0.4 ~ druse[30]
+  is_primary: true
+  form_description: Uvarovite — the rarest garnet end-member, a vivid emerald-green chromium garnet. Typically found as small drusy crystals on chromite ore, rarely large enough for faceting. Named after Count Uvarov.
+  forms:
+  - dodecahedron
+  - trapezohedron
+  - druse

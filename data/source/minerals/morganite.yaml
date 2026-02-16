@@ -3,6 +3,8 @@ name: Morganite
 crystal_system: hexagonal
 point_group: 6/mmm
 chemistry: Be3Al2(SiO3)6:Mn
+mineral_group: Beryl Group
+category: Cyclosilicates
 hardness: 7.5-8
 sg: 2.67-2.78
 ri: 1.577-1.583
@@ -12,6 +14,7 @@ dispersion: 0.014
 lustre: Vitreous
 cleavage: Imperfect basal
 fracture: Conchoidal to uneven
+fluorescence: "Weak pink in some specimens"
 pleochroism: Weak to moderate (pale pink to deeper pink)
 pleochroism_strength: weak
 pleochroism_color1: Pale pink

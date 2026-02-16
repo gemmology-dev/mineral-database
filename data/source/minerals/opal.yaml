@@ -3,6 +3,7 @@ name: Opal
 crystal_system: amorphous
 point_group: none
 chemistry: SiO2.nH2O
+category: Mineraloid
 hardness: 5.5-6.5
 sg: 1.98-2.25
 ri: 1.37-1.47
@@ -11,6 +12,7 @@ optical_character: Isotropic
 lustre: Vitreous to resinous
 cleavage: None
 fracture: Conchoidal
+diagnostic_features: "Play of colour (precious); amorphous; low hardness (5.5-6.5); hydrated silica"
 pleochroism: None (amorphous)
 colors:
 - White body (white opal)

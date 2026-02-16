@@ -3,6 +3,7 @@ name: Scheelite
 crystal_system: tetragonal
 point_group: 4/m
 chemistry: CaWO4
+category: Tungstates
 hardness: 4.5-5
 sg: 5.9-6.1
 ri: 1.918-1.937

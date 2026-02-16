@@ -1,0 +1,49 @@
+id: enstatite
+name: Enstatite
+crystal_system: orthorhombic
+point_group: mmm
+chemistry: MgSiO3
+mineral_group: Pyroxene Group
+category: Inosilicates
+hardness: 5-6
+sg: 3.20-3.30
+ri: 1.656-1.669
+birefringence: 0.010
+optical_character: Biaxial +
+dispersion: 0.010
+lustre: Vitreous to submetallic
+cleavage: Good {210} at ~88°
+fracture: Uneven
+pleochroism: Weak to moderate
+pleochroism_strength: moderate
+pleochroism_color1: Green
+pleochroism_color2: Brownish-green
+colors:
+- Brownish-green
+- Green
+- Yellow-green
+- Bronze (bronzite)
+treatments:
+- None commonly applied
+inclusions:
+- Metallic platelets (bronzite)
+- Two-phase inclusions
+localities:
+- Myanmar
+- Sri Lanka
+- India
+- Tanzania
+- South Africa
+expressions:
+- slug: prism
+  name: Prismatic
+  cdl: |
+    #! Species: Enstatite
+    #! System: Orthorhombic (mmm)
+    #! Habit: Prismatic orthorhombic
+    orthorhombic[mmm]:{010}@1.0 + {210}@0.8 + {100}@0.6
+  is_primary: true
+  form_description: Enstatite — the magnesium end-member of the orthopyroxene series. Gem varieties include chrome-green enstatite and bronzite with its submetallic bronze schiller.
+  forms:
+  - prism
+  - pinacoid

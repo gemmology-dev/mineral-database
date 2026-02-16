@@ -3,6 +3,8 @@ name: Red Beryl
 crystal_system: hexagonal
 point_group: 6/mmm
 chemistry: Be3Al2(SiO3)6:Mn3+
+mineral_group: Beryl Group
+category: Cyclosilicates
 hardness: 7.5-8
 sg: 2.66-2.70
 ri: 1.564-1.574

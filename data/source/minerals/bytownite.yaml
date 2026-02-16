@@ -1,0 +1,43 @@
+id: bytownite
+name: Bytownite
+crystal_system: triclinic
+point_group: '-1'
+chemistry: (Ca,Na)(Al,Si)4O8
+mineral_group: Feldspar Group
+category: Tectosilicates
+hardness: 6-6.5
+sg: 2.72-2.74
+ri: 1.563-1.572
+birefringence: 0.009
+optical_character: Biaxial +
+lustre: Vitreous
+cleavage: Perfect {001} and good {010}
+fracture: Uneven to conchoidal
+colors:
+- Yellow
+- Golden
+- Brownish-yellow
+- Pale yellow
+treatments:
+- None commonly applied
+inclusions:
+- Twin lamellae
+- Exsolution features
+localities:
+- Mexico
+- Oregon (USA)
+- Canada
+- Japan
+expressions:
+- slug: tabular
+  name: Tabular
+  cdl: |
+    #! Species: Bytownite
+    #! System: Triclinic (-1)
+    #! Habit: Tabular on {010}
+    triclinic[-1]:{010}@1.0 + {001}@0.8 + {110}@0.6
+  is_primary: true
+  form_description: Bytownite — a calcic plagioclase feldspar (An70-An90). Golden to yellow gem-quality bytownite from Mexico is occasionally faceted.
+  forms:
+  - pinacoid
+  - prism

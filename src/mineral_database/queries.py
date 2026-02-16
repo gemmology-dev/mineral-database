@@ -509,6 +509,37 @@ def list_by_origin(origin: str) -> list[str]:
         return [f.id for f in families]
 
 
+def list_mineral_groups() -> list[str]:
+    """List all distinct mineral groups in the database.
+
+    Returns:
+        Sorted list of mineral group names
+    """
+    with get_connection(_db_path) as conn:
+        cursor = conn.execute(
+            "SELECT DISTINCT mineral_group FROM mineral_families "
+            "WHERE mineral_group IS NOT NULL ORDER BY mineral_group"
+        )
+        return [row[0] for row in cursor.fetchall()]
+
+
+def list_families_by_group(group: str) -> list[str]:
+    """List all mineral family IDs in a mineral group.
+
+    Args:
+        group: Mineral group name (e.g., 'Garnet Group')
+
+    Returns:
+        List of family IDs in the group
+    """
+    with get_connection(_db_path) as conn:
+        cursor = conn.execute(
+            "SELECT id FROM mineral_families WHERE mineral_group = ? ORDER BY name",
+            (group,),
+        )
+        return [row[0] for row in cursor.fetchall()]
+
+
 def get_family(name: str) -> MineralFamily | None:
     """Get a MineralFamily object by ID.
 

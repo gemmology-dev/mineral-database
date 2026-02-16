@@ -1,0 +1,57 @@
+id: almandine
+name: Almandine
+crystal_system: cubic
+point_group: m3m
+chemistry: Fe3Al2(SiO4)3
+mineral_group: Garnet Group
+category: Nesosilicates
+hardness: 7-7.5
+sg: 4.05-4.30
+ri: 1.78-1.81
+optical_character: Isotropic
+dispersion: 0.024
+lustre: Vitreous to resinous
+cleavage: None
+fracture: Conchoidal to uneven
+pleochroism: None (isotropic)
+colors:
+- Deep red
+- Brownish-red
+- Purplish-red
+- Dark red
+treatments:
+- None commonly applied
+inclusions:
+- Rutile needles (silk)
+- Rounded crystals
+- Fingerprint inclusions
+localities:
+- India
+- Sri Lanka
+- Brazil
+- Madagascar
+- USA (Idaho)
+- Mozambique
+expressions:
+- slug: combination
+  name: Combination
+  cdl: |
+    #! Species: Almandine
+    #! System: Cubic (m3m)
+    #! Habit: Dodecahedron-trapezohedron combination
+    cubic[m3m]:{110}@1.0 + {211}@0.5
+  is_primary: true
+  form_description: Classic almandine garnet displaying combined dodecahedral and trapezohedral faces. The most common garnet in metamorphic rocks, almandine is the iron-aluminium end-member of the pyralspite series.
+  forms:
+  - dodecahedron
+  - trapezohedron
+- slug: dodecahedron
+  name: Rhombic Dodecahedron
+  cdl: |
+    #! Species: Almandine
+    #! System: Cubic (m3m)
+    #! Habit: Rhombic dodecahedron
+    cubic[m3m]:{110}
+  form_description: Pure dodecahedral almandine — the most common habit for this species in mica schists and gneisses.
+  forms:
+  - dodecahedron

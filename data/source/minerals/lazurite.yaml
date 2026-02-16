@@ -3,6 +3,8 @@ name: Lazurite
 crystal_system: cubic
 point_group: m3m
 chemistry: Na3Ca(Al3Si3O12)S
+mineral_group: Sodalite Group
+category: Tectosilicates
 hardness: 5-5.5
 sg: 2.38-2.45
 ri: 1.5

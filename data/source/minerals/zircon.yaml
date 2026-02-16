@@ -3,6 +3,7 @@ name: Zircon
 crystal_system: tetragonal
 point_group: 4/mmm
 chemistry: ZrSiO4
+category: Nesosilicates
 hardness: 7.5
 sg: 4.6-4.7
 ri: 1.925-1.984
@@ -12,6 +13,8 @@ dispersion: 0.039
 lustre: Adamantine to vitreous
 cleavage: Imperfect
 fracture: Conchoidal
+fluorescence: "Usually inert; some weak yellow-orange"
+diagnostic_features: "Very high RI and dispersion; strong doubling (high type); metamict varieties exist"
 pleochroism: Weak (varies with colour)
 pleochroism_strength: weak
 pleochroism_color1: Body color

@@ -3,6 +3,8 @@ name: Rhodolite
 crystal_system: cubic
 point_group: m3m
 chemistry: (Mg,Fe)3Al2(SiO4)3
+mineral_group: Garnet Group
+category: Nesosilicates
 hardness: 7-7.5
 sg: 3.84
 ri: 1.76

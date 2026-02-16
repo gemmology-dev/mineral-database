@@ -1,0 +1,46 @@
+id: andradite
+name: Andradite
+crystal_system: cubic
+point_group: m3m
+chemistry: Ca3Fe2(SiO4)3
+mineral_group: Garnet Group
+category: Nesosilicates
+hardness: 6.5-7
+sg: 3.82-3.90
+ri: 1.855-1.895
+optical_character: Isotropic
+dispersion: 0.057
+lustre: Adamantine to vitreous
+cleavage: None
+fracture: Conchoidal to uneven
+pleochroism: None (isotropic)
+diagnostic_features: "Highest dispersion of any garnet (0.057); adamantine lustre; very high RI"
+colors:
+- Green (demantoid)
+- Yellow-green (topazolite)
+- Black (melanite)
+- Brown
+treatments:
+- None commonly applied
+inclusions:
+- Horsetail (chrysotile) in demantoid
+- Crystal inclusions
+localities:
+- Russia (Urals)
+- Namibia
+- Madagascar
+- Iran
+- Italy
+expressions:
+- slug: dodecahedron
+  name: Rhombic Dodecahedron
+  cdl: |
+    #! Species: Andradite
+    #! System: Cubic (m3m)
+    #! Habit: Dodecahedron with trapezohedron
+    cubic[m3m]:{110}@1.0 + {211}@0.7
+  is_primary: true
+  form_description: Andradite garnet — the calcium-iron end-member of the ugrandite series. Notable for containing demantoid, the most valuable garnet variety, prized for its exceptional dispersion exceeding diamond.
+  forms:
+  - dodecahedron
+  - trapezohedron

@@ -1,0 +1,53 @@
+id: pink-sapphire
+name: Pink Sapphire
+crystal_system: trigonal
+point_group: '-3m'
+chemistry: Al2O3
+mineral_group: Corundum Group
+category: Oxides
+hardness: 9
+sg: 3.99-4.02
+ri: 1.762-1.770
+birefringence: 0.008
+optical_character: Uniaxial -
+dispersion: 0.018
+lustre: Adamantine to vitreous
+cleavage: None (parting on {0001} and {10-11})
+fracture: Conchoidal
+fluorescence: Moderate to strong pink-red (LWUV)
+pleochroism: Moderate
+pleochroism_strength: moderate
+pleochroism_color1: Pink
+pleochroism_color2: Paler pink
+colors:
+- Light pink
+- Vivid pink
+- Hot pink
+- Purplish-pink
+treatments:
+- Heat treatment (common)
+- Beryllium diffusion (rare)
+inclusions:
+- Silk (rutile needles)
+- Fingerprints
+- Crystals
+- Colour zoning
+localities:
+- Sri Lanka
+- Madagascar
+- Myanmar
+- Tanzania
+- Vietnam
+expressions:
+- slug: bipyramid
+  name: Bipyramidal
+  cdl: |
+    #! Species: Pink Sapphire
+    #! System: Trigonal (-3m)
+    #! Habit: Bipyramidal with basal pinacoid
+    trigonal[-3m]:{10-11}@1.0 + {0001}@0.4
+  is_primary: true
+  form_description: Pink sapphire — corundum coloured by lower concentrations of chromium than ruby. The boundary between pink sapphire and ruby is debated; generally, pink sapphire lacks the red fluorescence intensity of ruby.
+  forms:
+  - bipyramid
+  - pinacoid

@@ -149,7 +149,7 @@ def parse_and_validate(
 
     # Build parsed representation
     forms = []
-    for form in desc.forms:
+    for form in desc.flat_forms():
         miller_str, miller_tuple = format_miller(form.miller)
         forms.append(
             ParsedForm(
@@ -210,7 +210,7 @@ def parse_and_validate(
 
     # Phase 5: Miller index notation check
     uses_4_index = desc.system in ("hexagonal", "trigonal")
-    for form in desc.forms:
+    for form in desc.flat_forms():
         miller = form.miller
         has_i_index = miller.i is not None
 

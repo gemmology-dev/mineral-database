@@ -3,6 +3,7 @@ name: Cuprite
 crystal_system: cubic
 point_group: m3m
 chemistry: Cu2O
+category: Oxides
 hardness: 3.5-4
 sg: 6.0-6.14
 ri: 2.848

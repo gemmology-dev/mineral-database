@@ -16,7 +16,7 @@ Example:
     >>> cubic_presets = list_presets('cubic')
 """
 
-__version__ = "2.0.0"
+__version__ = "2.1.0"
 __author__ = "Fabian Schuh"
 __email__ = "fabian@gemmology.dev"
 
@@ -60,8 +60,10 @@ from .queries import (
     get_presets_by_form,
     get_systems,
     list_by_origin,
+    list_families_by_group,
     list_heat_treatable,
     list_preset_categories,
+    list_mineral_groups,
     list_presets,
     list_shape_factors,
     list_simulants,
@@ -106,6 +108,8 @@ __all__ = [
     "list_simulants",
     "get_counterparts",
     "list_by_origin",
+    "list_mineral_groups",
+    "list_families_by_group",
     "get_family",
     # Data classes
     "Mineral",

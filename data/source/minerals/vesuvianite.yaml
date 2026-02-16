@@ -3,6 +3,7 @@ name: Vesuvianite
 crystal_system: tetragonal
 point_group: 4/mmm
 chemistry: Ca19(Al,Mg)13(SiO4)10(Si2O7)4(OH,F)10
+category: Nesosilicates
 hardness: 6.5
 sg: 3.32-3.42
 ri: 1.700-1.752

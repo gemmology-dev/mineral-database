@@ -3,6 +3,7 @@ name: Sphene (Titanite)
 crystal_system: monoclinic
 point_group: 2/m
 chemistry: CaTiSiO5
+category: Nesosilicates
 hardness: 5-5.5
 sg: 3.52-3.54
 ri: 1.900-2.034
@@ -12,12 +13,13 @@ dispersion: 0.051
 lustre: Adamantine to resinous
 cleavage: Distinct {110}
 fracture: Subconchoidal
+diagnostic_features: "Very high dispersion (0.051); strong birefringence; adamantine lustre; monoclinic wedge-shaped"
 pleochroism: Strong trichroic (colorless/yellow, green/orange, red/brown)
-pleochroism_strength: very_strong
-pleochroism_color1: Colorless/Yellow
-pleochroism_color2: Green/Orange
-pleochroism_color3: Red/Brown
-pleochroism_notes: Strongly trichroic; combined with high dispersion creates complex optical effects
+pleochroism_strength: moderate
+pleochroism_color1: Colourless to yellow
+pleochroism_color2: Greenish-yellow
+pleochroism_color3: Reddish-yellow
+pleochroism_notes: Moderate trichroism; often masked by high dispersion
 colors:
 - Yellow
 - Green

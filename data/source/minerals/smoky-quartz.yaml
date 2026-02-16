@@ -1,0 +1,59 @@
+id: smoky-quartz
+name: Smoky Quartz
+crystal_system: trigonal
+point_group: '32'
+chemistry: SiO2
+mineral_group: Quartz Group
+category: Tectosilicates
+hardness: 7
+sg: '2.65'
+ri: 1.544-1.553
+birefringence: 0.009
+optical_character: Uniaxial +
+dispersion: 0.013
+lustre: Vitreous
+cleavage: None
+fracture: Conchoidal
+diagnostic_features: "Brown to black from natural radiation; aluminium colour centres; fades with heat"
+colors:
+- Light brown
+- Dark brown
+- Greyish-brown
+- Nearly black (morion)
+treatments:
+- Irradiation (to produce or deepen colour)
+- Heat treatment (lightens colour)
+inclusions:
+- Two-phase fluid inclusions
+- Rutile needles
+- Negative crystals
+localities:
+- Brazil
+- Switzerland (Alps)
+- Scotland (Cairngorm)
+- Madagascar
+- USA (Colorado)
+expressions:
+- slug: prism
+  name: Prismatic
+  cdl: |
+    #! Species: Smoky Quartz
+    #! System: Trigonal (32)
+    #! Habit: Hexagonal prism with rhombohedral terminations
+    trigonal[32]:{10-10}@0.5[striation:horizontal] + {10-11}@1.2 + {01-11}@1.0 | elongate(c:2.0)
+  is_primary: true
+  form_description: Smoky quartz prismatic crystal with hexagonal prism and rhombohedral terminations. Brown colour caused by natural irradiation activating aluminium substitution colour centres in the quartz structure.
+  forms:
+  - prism
+  - rhombohedron
+- slug: morion
+  name: Morion
+  cdl: |
+    #! Species: Smoky Quartz (Morion)
+    #! System: Trigonal (32)
+    #! Habit: Short prismatic, nearly opaque
+    trigonal[32]:{10-10}@0.4 + {10-11}@1.2 + {01-11}@1.0
+  form_description: Morion — very dark to nearly opaque smoky quartz. Intense irradiation produces the extreme dark brown to black colour. Named from the Greek 'mormorion'.
+  forms:
+  - prism
+  - rhombohedron

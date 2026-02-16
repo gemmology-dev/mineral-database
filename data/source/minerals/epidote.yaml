@@ -3,6 +3,7 @@ name: Epidote
 crystal_system: monoclinic
 point_group: 2/m
 chemistry: Ca2(Al,Fe)3(SiO4)3(OH)
+category: Sorosilicates
 hardness: 6-7
 sg: 3.35-3.50
 ri: 1.729-1.768

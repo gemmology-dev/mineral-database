@@ -3,6 +3,7 @@ name: Cassiterite
 crystal_system: tetragonal
 point_group: 4/mmm
 chemistry: SnO2
+category: Oxides
 hardness: 6.5
 sg: 6.85-7.04
 ri: 1.997-2.100

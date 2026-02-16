@@ -3,6 +3,8 @@ name: Sapphire
 crystal_system: trigonal
 point_group: -3m
 chemistry: Al2O3:Fe,Ti
+mineral_group: Corundum Group
+category: Oxides
 hardness: 9
 sg: 3.99-4.01
 ri: 1.762-1.770
@@ -12,11 +14,13 @@ dispersion: 0.018
 lustre: Vitreous to adamantine
 cleavage: None (parting along twin planes)
 fracture: Conchoidal to uneven
+fluorescence: "Variable; blue often inert; chalky blue-green SWUV in some Sri Lankan"
+diagnostic_features: "Hexagonal growth zoning; colour banding; silk (rutile needles at 60°); iron absorption bands"
 pleochroism: Distinct to strong (varies with colour)
 pleochroism_strength: strong
-pleochroism_color1: Violet-blue
+pleochroism_color1: Violetish-blue
 pleochroism_color2: Greenish-blue
-pleochroism_notes: Varies with color saturation; blue sapphire shows distinct dichroism
+pleochroism_notes: Stronger in darker stones; best observed through dichroscope
 colors:
 - Blue
 - Yellow

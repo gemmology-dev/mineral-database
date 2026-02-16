@@ -1,0 +1,43 @@
+id: tremolite
+name: Tremolite
+crystal_system: monoclinic
+point_group: 2/m
+chemistry: Ca2Mg5Si8O22(OH)2
+mineral_group: Amphibole Group
+category: Inosilicates
+hardness: 5-6
+sg: 2.90-3.10
+ri: 1.599-1.628
+birefringence: 0.027
+optical_character: Biaxial -
+lustre: Vitreous to silky
+cleavage: Perfect {110} at 56°
+fracture: Splintery to uneven
+colors:
+- White
+- Grey
+- Pale green
+- Colorless
+treatments:
+- None
+inclusions:
+- Fibrous structure
+localities:
+- Switzerland (Alps)
+- Italy
+- Canada
+- USA
+- Tanzania
+expressions:
+- slug: prism
+  name: Prismatic
+  cdl: |
+    #! Species: Tremolite
+    #! System: Monoclinic (2/m)
+    #! Habit: Elongated prismatic to bladed
+    monoclinic[2/m]:{010}@1.0 + {110}@0.8 + {100}@0.4 | elongate(c:3.0)
+  is_primary: true
+  form_description: Tremolite — the magnesian end-member of the tremolite-actinolite series. Fibrous varieties constitute nephrite jade. Named after Val Tremola in the Swiss Alps.
+  forms:
+  - prism
+  - pinacoid

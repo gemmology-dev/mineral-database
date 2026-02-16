@@ -3,6 +3,8 @@ name: Kunzite
 crystal_system: monoclinic
 point_group: 2/m
 chemistry: LiAlSi2O6:Mn
+mineral_group: Spodumene Group
+category: Inosilicates
 hardness: 6.5
 sg: 3.15-3.21
 ri: 1.660-1.676
@@ -12,6 +14,7 @@ dispersion: 0.017
 lustre: Vitreous
 cleavage: Perfect in two directions
 fracture: Uneven to splintery
+fluorescence: "Strong orange-pink (LWUV); notable phosphorescence"
 pleochroism: Strong trichroic (pink, purplish-pink, colorless)
 pleochroism_strength: strong
 pleochroism_color1: Pink

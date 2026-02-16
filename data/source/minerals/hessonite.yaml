@@ -1,0 +1,49 @@
+id: hessonite
+name: Hessonite
+crystal_system: cubic
+point_group: m3m
+chemistry: Ca3Al2(SiO4)3
+mineral_group: Garnet Group
+category: Nesosilicates
+hardness: 6.5-7
+sg: 3.57-3.67
+ri: 1.742-1.748
+optical_character: Isotropic
+dispersion: 0.027
+lustre: Vitreous to resinous
+cleavage: None
+fracture: Conchoidal to uneven
+pleochroism: None (isotropic)
+diagnostic_features: "Distinctive roiled or 'heat-haze' internal appearance; orange to cinnamon colour; grossular variety"
+colors:
+- Cinnamon orange
+- Honey yellow
+- Orange-brown
+- Reddish-orange
+treatments:
+- None commonly applied
+inclusions:
+- Roiled appearance (diagnostic)
+- Diopside crystals
+- Apatite
+- Zircon crystals
+localities:
+- Sri Lanka
+- India
+- Tanzania
+- Brazil
+- Canada
+- Madagascar
+expressions:
+- slug: trapezohedron
+  name: Trapezohedron
+  cdl: |
+    #! Species: Hessonite (Grossular variety)
+    #! System: Cubic (m3m)
+    #! Habit: Trapezohedron with dodecahedron
+    cubic[m3m]:{211}@1.0 + {110}@0.5
+  is_primary: true
+  form_description: Hessonite — the cinnamon-orange variety of grossular garnet. Named from Greek 'hesson' meaning inferior, as it was considered softer than other garnets. Diagnostic roiled internal appearance.
+  forms:
+  - trapezohedron
+  - dodecahedron

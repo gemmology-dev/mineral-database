@@ -3,6 +3,7 @@ name: Fluorite
 crystal_system: cubic
 point_group: m3m
 chemistry: CaF2
+category: Halides
 hardness: 4
 sg: '3.18'
 ri: '1.434'
@@ -12,6 +13,7 @@ dispersion: 0.007
 lustre: Vitreous
 cleavage: Perfect octahedral {111}
 fracture: Subconchoidal to uneven
+diagnostic_features: "Perfect octahedral cleavage {111}; strong fluorescence; isotropic; low hardness (4)"
 pleochroism: None
 colors:
 - Purple (most common)

@@ -3,6 +3,7 @@ name: Apatite
 crystal_system: hexagonal
 point_group: 6/mmm
 chemistry: Ca5(PO4)3(F,Cl,OH)
+category: Phosphates
 hardness: 5
 sg: 3.16-3.22
 ri: 1.628-1.649
@@ -12,6 +13,8 @@ dispersion: 0.013
 lustre: Vitreous to subresinous
 cleavage: Poor {0001}
 fracture: Conchoidal to uneven
+fluorescence: "Variable; yellow, orange, or blue depending on activator"
+diagnostic_features: "Hexagonal crystals; moderate hardness (5); wide range of fluorescence colours"
 pleochroism: Weak to moderate in coloured varieties
 pleochroism_strength: weak
 pleochroism_color1: Body color

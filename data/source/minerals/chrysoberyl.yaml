@@ -3,6 +3,8 @@ name: Chrysoberyl
 crystal_system: orthorhombic
 point_group: mmm
 chemistry: BeAl2O4
+mineral_group: Chrysoberyl Group
+category: Oxides
 hardness: 8.5
 sg: 3.70-3.78
 ri: 1.746-1.755

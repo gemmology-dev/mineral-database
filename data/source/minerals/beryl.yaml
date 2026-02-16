@@ -3,6 +3,8 @@ name: Beryl
 crystal_system: hexagonal
 point_group: 6/mmm
 chemistry: Be3Al2Si6O18
+mineral_group: Beryl Group
+category: Cyclosilicates
 hardness: 7.5-8
 sg: 2.67-2.78
 ri: 1.577-1.583

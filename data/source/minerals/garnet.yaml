@@ -3,6 +3,8 @@ name: Garnet
 crystal_system: cubic
 point_group: m3m
 chemistry: X3Y2(SiO4)3
+mineral_group: Garnet Group
+category: Nesosilicates
 hardness: 6.5-7.5
 sg: 3.50-4.30
 ri: 1.73-1.89
@@ -11,6 +13,7 @@ dispersion: 0.027-0.057
 lustre: Vitreous to resinous
 cleavage: None
 fracture: Conchoidal to uneven
+diagnostic_features: "Isotropic; no cleavage; high SG (3.5-4.3); dodecahedral/trapezohedral habit"
 pleochroism: None (isotropic)
 colors:
 - Red (almandine, pyrope)

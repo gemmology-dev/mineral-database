@@ -260,6 +260,7 @@ class MineralFamily:
     point_group: str | None = None
     chemistry: str | None = None
     category: str | None = None
+    mineral_group: str | None = None
 
     # Physical properties
     hardness_min: float | None = None
@@ -330,6 +331,7 @@ class MineralFamily:
             "point_group",
             "chemistry",
             "category",
+            "mineral_group",
             "hardness_min",
             "hardness_max",
             "sg_min",
@@ -449,6 +451,7 @@ class MineralFamily:
             point_group=data.get("point_group"),
             chemistry=data.get("chemistry"),
             category=data.get("category"),
+            mineral_group=data.get("mineral_group"),
             hardness_min=data.get("hardness_min", hardness_min),
             hardness_max=data.get("hardness_max", hardness_max),
             sg_min=sg_min,
@@ -649,6 +652,7 @@ INFO_GROUPS = {
         "cleavage",
         "pleochroism",
     ],
+    "classification": ["category", "mineral_group", "origin"],
     "synthetic": [
         "name",
         "origin",
@@ -689,6 +693,7 @@ PROPERTY_LABELS = {
     "heat_treatment_temp_min": "Heat Treat Min (°C)",
     "heat_treatment_temp_max": "Heat Treat Max (°C)",
     "origin": "Origin",
+    "mineral_group": "Mineral Group",
     "growth_method": "Growth Method",
     "natural_counterpart_id": "Natural Counterpart",
     "target_minerals": "Target Minerals",

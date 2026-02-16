@@ -170,6 +170,7 @@ def init_database(db_path: Path | None = None) -> None:
         point_group TEXT,              -- Hermann-Mauguin notation
         chemistry TEXT,
         category TEXT,
+        mineral_group TEXT,
 
         -- Physical properties (shared across all expressions)
         hardness_min REAL,
@@ -274,6 +275,7 @@ def init_database(db_path: Path | None = None) -> None:
     CREATE INDEX IF NOT EXISTS idx_families_sg_max ON mineral_families(sg_max);
     CREATE INDEX IF NOT EXISTS idx_families_origin ON mineral_families(origin);
     CREATE INDEX IF NOT EXISTS idx_families_growth_method ON mineral_families(growth_method);
+    CREATE INDEX IF NOT EXISTS idx_families_mineral_group ON mineral_families(mineral_group);
 
     -- Backwards compatibility view (maintains existing API)
     -- This view makes family+expression data look like the flat minerals table
@@ -988,7 +990,7 @@ def insert_family(conn: sqlite3.Connection, family: MineralFamily) -> None:
     """
     sql = """
     INSERT OR REPLACE INTO mineral_families (
-        id, name, crystal_system, point_group, chemistry, category,
+        id, name, crystal_system, point_group, chemistry, category, mineral_group,
         hardness_min, hardness_max, sg_min, sg_max,
         ri_min, ri_max, birefringence, dispersion, optical_character,
         pleochroism, pleochroism_strength, pleochroism_color1, pleochroism_color2,
@@ -1002,7 +1004,7 @@ def insert_family(conn: sqlite3.Connection, family: MineralFamily) -> None:
         manufacturer, year_first_produced, diagnostic_synthetic_features,
         updated_at
     ) VALUES (
-        ?, ?, ?, ?, ?, ?,
+        ?, ?, ?, ?, ?, ?, ?,
         ?, ?, ?, ?,
         ?, ?, ?, ?, ?,
         ?, ?, ?, ?,
@@ -1027,6 +1029,7 @@ def insert_family(conn: sqlite3.Connection, family: MineralFamily) -> None:
             family.point_group,
             family.chemistry,
             family.category,
+            family.mineral_group,
             family.hardness_min,
             family.hardness_max,
             family.sg_min,
@@ -1136,6 +1139,7 @@ def row_to_family(row: sqlite3.Row) -> MineralFamily:
         point_group=row["point_group"],
         chemistry=row["chemistry"],
         category=row["category"],
+        mineral_group=row["mineral_group"] if "mineral_group" in row.keys() else None,
         hardness_min=row["hardness_min"],
         hardness_max=row["hardness_max"],
         sg_min=row["sg_min"],

@@ -3,6 +3,7 @@ name: Pearl
 crystal_system: orthorhombic
 point_group: mmm
 chemistry: CaCO3 (aragonite) + conchiolin
+category: Mineraloid
 hardness: 2.5-4.5
 sg: 2.60-2.85
 ri: 1.52-1.69

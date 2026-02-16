@@ -1,0 +1,48 @@
+id: grossular
+name: Grossular
+crystal_system: cubic
+point_group: m3m
+chemistry: Ca3Al2(SiO4)3
+mineral_group: Garnet Group
+category: Nesosilicates
+hardness: 6.5-7
+sg: 3.57-3.73
+ri: 1.73-1.76
+optical_character: Isotropic
+dispersion: 0.027
+lustre: Vitreous to resinous
+cleavage: None
+fracture: Conchoidal to uneven
+pleochroism: None (isotropic)
+colors:
+- Green (tsavorite)
+- Orange (hessonite)
+- Yellow
+- Pink (rosolite)
+- Colorless (leuco garnet)
+treatments:
+- None commonly applied
+inclusions:
+- Roiled appearance (hessonite)
+- Diopside crystals
+- Apatite needles
+localities:
+- Kenya
+- Tanzania
+- Sri Lanka
+- Canada
+- Italy
+- Mexico
+expressions:
+- slug: trapezohedron
+  name: Trapezohedron
+  cdl: |
+    #! Species: Grossular
+    #! System: Cubic (m3m)
+    #! Habit: Trapezohedron dominant
+    cubic[m3m]:{211}@1.0 + {110}@0.4
+  is_primary: true
+  form_description: Grossular garnet — the calcium-aluminium member of the ugrandite series. Produces several important gem varieties including tsavorite (green) and hessonite (orange).
+  forms:
+  - trapezohedron
+  - dodecahedron

@@ -3,6 +3,7 @@ name: Celestine
 crystal_system: orthorhombic
 point_group: mmm
 chemistry: SrSO4
+category: Sulfates
 hardness: 3-3.5
 sg: 3.95-3.97
 ri: 1.619-1.632
@@ -12,6 +13,7 @@ dispersion: 0.016
 lustre: Vitreous to pearly
 cleavage: Perfect {001}, good {210}
 fracture: Uneven
+fluorescence: "Weak to moderate blue-white"
 pleochroism: Weak in colored specimens (pale blue shades)
 colors:
 - Celestial blue (pale blue)

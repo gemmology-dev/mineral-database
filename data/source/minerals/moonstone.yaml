@@ -3,6 +3,8 @@ name: Moonstone
 crystal_system: monoclinic
 point_group: 2/m
 chemistry: KAlSi3O8
+mineral_group: Feldspar Group
+category: Tectosilicates
 hardness: 6-6.5
 sg: 2.56-2.59
 ri: 1.518-1.526
@@ -12,6 +14,7 @@ dispersion: 0.012
 lustre: Vitreous to pearly
 cleavage: Perfect in two directions at ~90 degrees
 fracture: Uneven to conchoidal
+fluorescence: "Weak bluish-white in some specimens"
 pleochroism: None to weak
 colors:
 - Colorless with blue sheen

@@ -1,0 +1,56 @@
+id: elbaite
+name: Elbaite
+crystal_system: trigonal
+point_group: 3m
+chemistry: Na(Li,Al)3Al6(BO3)3Si6O18(OH)4
+mineral_group: Tourmaline Group
+category: Cyclosilicates
+hardness: 7-7.5
+sg: 2.90-3.10
+ri: 1.615-1.638
+birefringence: 0.019
+optical_character: Uniaxial -
+dispersion: 0.017
+lustre: Vitreous
+cleavage: Indistinct
+fracture: Uneven to conchoidal
+pleochroism: Strong
+pleochroism_strength: strong
+pleochroism_color1: Dark tone of body colour
+pleochroism_color2: Light tone of body colour
+pleochroism_notes: Strong absorption difference; cut with table perpendicular to c-axis for best colour
+fluorescence: Usually inert; weak pink in some rubellite
+colors:
+- Pink (rubellite)
+- Green (verdelite)
+- Blue (indicolite)
+- Colorless (achroite)
+- Watermelon (pink-green)
+- Paraíba (neon blue-green, Cu-bearing)
+treatments:
+- Heat treatment
+- Irradiation
+inclusions:
+- Growth tubes parallel to c-axis
+- Colour zoning
+- Thread-like inclusions
+localities:
+- Brazil (Minas Gerais, Paraíba)
+- Afghanistan
+- Nigeria
+- Mozambique
+- Madagascar
+- USA (California, Maine)
+expressions:
+- slug: prism
+  name: Prismatic
+  cdl: |
+    #! Species: Elbaite
+    #! System: Trigonal (3m)
+    #! Habit: Elongated trigonal prism with striations
+    trigonal[3m]:{10-10}@1.0[striation:parallel] + {10-11}@0.8 | elongate(c:2.5)
+  is_primary: true
+  form_description: Elbaite — the lithium-bearing tourmaline species producing most gem-quality tourmaline. Named after Elba island, Italy. Includes rubellite, indicolite, verdelite, achroite, and Paraíba varieties.
+  forms:
+  - prism
+  - dipyramid

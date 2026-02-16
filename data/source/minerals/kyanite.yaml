@@ -3,6 +3,7 @@ name: Kyanite
 crystal_system: triclinic
 point_group: '-1'
 chemistry: Al2SiO5
+category: Nesosilicates
 hardness: 4-7 (variable)
 sg: 3.53-3.68
 ri: 1.716-1.731
@@ -12,12 +13,12 @@ dispersion: 0.02
 lustre: Vitreous to pearly
 cleavage: Perfect {100}, good {010}
 fracture: Splintery
+diagnostic_features: "Directional hardness (4-7); blue bladed crystals; triclinic; perfect cleavage {100}"
 pleochroism: Moderate dichroic (colorless, dark blue, violet-blue in blue material)
-pleochroism_strength: moderate
-pleochroism_color1: Near colorless
-pleochroism_color2: Dark blue
-pleochroism_color3: Violet-blue
-pleochroism_notes: Trichroic; color zoning may complicate observation
+pleochroism_strength: strong
+pleochroism_color1: Colourless to pale blue
+pleochroism_color2: Deep blue
+pleochroism_notes: Strong pleochroism visible in different crystallographic directions
 colors:
 - Blue (classic)
 - Blue with colorless zones

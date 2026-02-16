@@ -1,0 +1,40 @@
+id: augite
+name: Augite
+crystal_system: monoclinic
+point_group: 2/m
+chemistry: (Ca,Na)(Mg,Fe,Al)(Si,Al)2O6
+mineral_group: Pyroxene Group
+category: Inosilicates
+hardness: 5.5-6
+sg: 3.20-3.56
+ri: 1.680-1.735
+birefringence: 0.023
+optical_character: Biaxial +
+lustre: Vitreous to resinous
+cleavage: Good {110} at ~87°
+fracture: Uneven to conchoidal
+colors:
+- Dark green
+- Black
+- Brown
+treatments:
+- None
+inclusions:
+- Exsolution lamellae
+localities:
+- Worldwide (common rock-forming mineral)
+- Italy (Vesuvius)
+- Canada
+expressions:
+- slug: prism
+  name: Prismatic
+  cdl: |
+    #! Species: Augite
+    #! System: Monoclinic (2/m)
+    #! Habit: Short prismatic monoclinic
+    monoclinic[2/m]:{010}@1.0 + {110}@0.8 + {100}@0.6 + {001}@0.4
+  is_primary: true
+  form_description: Augite — the most common clinopyroxene, a major rock-forming mineral in mafic igneous rocks. Short prismatic crystals with characteristic octagonal cross-section.
+  forms:
+  - prism
+  - pinacoid

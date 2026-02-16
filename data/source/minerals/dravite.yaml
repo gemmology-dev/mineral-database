@@ -1,0 +1,50 @@
+id: dravite
+name: Dravite
+crystal_system: trigonal
+point_group: 3m
+chemistry: NaMg3Al6(BO3)3Si6O18(OH)4
+mineral_group: Tourmaline Group
+category: Cyclosilicates
+hardness: 7-7.5
+sg: 2.98-3.10
+ri: 1.612-1.632
+birefringence: 0.018
+optical_character: Uniaxial -
+dispersion: 0.017
+lustre: Vitreous
+cleavage: Indistinct
+fracture: Uneven to conchoidal
+pleochroism: Strong
+pleochroism_strength: strong
+pleochroism_color1: Dark brown
+pleochroism_color2: Light yellowish-brown
+colors:
+- Brown
+- Dark brown
+- Yellow-brown
+- Orange-brown
+treatments:
+- Heat treatment (rare)
+inclusions:
+- Growth tubes
+- Needle inclusions
+localities:
+- Australia
+- Brazil
+- Sri Lanka
+- Kenya
+- Tanzania
+- Canada
+expressions:
+- slug: prism
+  name: Prismatic
+  cdl: |
+    #! Species: Dravite
+    #! System: Trigonal (3m)
+    #! Habit: Elongated trigonal prism with striations
+    trigonal[3m]:{10-10}@1.0[striation:parallel] + {10-11}@0.8 | elongate(c:2.0)
+  is_primary: true
+  form_description: Dravite — the magnesium-bearing tourmaline end-member. Named after the Drava river area in Austria. Brown to yellowish-brown colour; occasionally produces attractive orange-brown gems.
+  forms:
+  - prism
+  - dipyramid

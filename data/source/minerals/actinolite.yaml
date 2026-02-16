@@ -1,0 +1,47 @@
+id: actinolite
+name: Actinolite
+crystal_system: monoclinic
+point_group: 2/m
+chemistry: Ca2(Mg,Fe)5Si8O22(OH)2
+mineral_group: Amphibole Group
+category: Inosilicates
+hardness: 5-6
+sg: 3.00-3.44
+ri: 1.613-1.646
+birefringence: 0.022
+optical_character: Biaxial -
+lustre: Vitreous to silky
+cleavage: Perfect {110} at 56°
+fracture: Splintery
+pleochroism: Moderate
+pleochroism_strength: moderate
+pleochroism_color1: Yellow-green
+pleochroism_color2: Deep green
+colors:
+- Green
+- Dark green
+- Grey-green
+treatments:
+- None commonly applied
+inclusions:
+- Fibrous structure
+- Magnetite inclusions
+localities:
+- Tanzania
+- Madagascar
+- Canada
+- New Zealand
+- Taiwan
+expressions:
+- slug: prism
+  name: Prismatic
+  cdl: |
+    #! Species: Actinolite
+    #! System: Monoclinic (2/m)
+    #! Habit: Elongated prismatic
+    monoclinic[2/m]:{010}@1.0 + {110}@0.8 + {100}@0.4 | elongate(c:3.0)
+  is_primary: true
+  form_description: Actinolite in elongated prismatic habit. Forms a solid solution series with tremolite (Mg-rich) and ferro-actinolite (Fe-rich). Cat's eye actinolite is known from some localities.
+  forms:
+  - prism
+  - pinacoid

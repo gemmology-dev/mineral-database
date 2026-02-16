@@ -3,6 +3,7 @@ name: Orpiment
 crystal_system: monoclinic
 point_group: 2/m
 chemistry: As2S3
+category: Sulfides
 hardness: 1.5-2
 sg: 3.46-3.49
 ri: 2.4-3.0

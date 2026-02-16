@@ -3,6 +3,7 @@ name: Spinel
 crystal_system: cubic
 point_group: m3m
 chemistry: MgAl2O4
+category: Oxides
 hardness: 8
 sg: 3.58-3.61
 ri: 1.712-1.720
@@ -12,6 +13,8 @@ dispersion: 0.02
 lustre: Vitreous
 cleavage: Imperfect octahedral (rarely seen)
 fracture: Conchoidal
+fluorescence: "Weak to moderate red (LWUV) in Cr-bearing; strong red in some"
+diagnostic_features: "Isotropic; octahedral habit; lacks dichroism unlike ruby; often confused with corundum historically"
 pleochroism: None
 colors:
 - Red

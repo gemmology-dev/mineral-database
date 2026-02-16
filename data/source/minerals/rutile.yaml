@@ -3,6 +3,7 @@ name: Rutile
 crystal_system: tetragonal
 point_group: 4/mmm
 chemistry: TiO2
+category: Oxides
 hardness: 6
 sg: 4.23-4.26
 ri: 2.616-2.903

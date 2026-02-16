@@ -3,6 +3,7 @@ name: Magnetite
 crystal_system: cubic
 point_group: m3m
 chemistry: Fe3O4
+category: Oxides
 hardness: 5.5-6.5
 sg: 5.17-5.18
 ri: null

@@ -3,6 +3,8 @@ name: Citrine
 crystal_system: trigonal
 point_group: '32'
 chemistry: SiO2:Fe
+mineral_group: Quartz Group
+category: Tectosilicates
 hardness: 7
 sg: '2.65'
 ri: 1.544-1.553

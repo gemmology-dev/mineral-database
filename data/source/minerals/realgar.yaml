@@ -3,6 +3,7 @@ name: Realgar
 crystal_system: monoclinic
 point_group: 2/m
 chemistry: As4S4
+category: Sulfides
 hardness: 1.5-2
 sg: 3.52-3.56
 ri: 2.538-2.684

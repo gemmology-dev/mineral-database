@@ -3,6 +3,7 @@ name: Staurolite
 crystal_system: orthorhombic
 point_group: mmm
 chemistry: Fe2Al9O6(SiO4)4(O,OH)2
+category: Nesosilicates
 hardness: 7-7.5
 sg: 3.65-3.79
 ri: 1.736-1.762
@@ -12,6 +13,7 @@ dispersion: 0.021
 lustre: Vitreous to resinous
 cleavage: Poor {010}
 fracture: Subconchoidal to uneven
+diagnostic_features: "Distinctive cross-shaped penetration twins (60° and 90°); brown colour; high hardness (7-7.5)"
 pleochroism: Trichroic - yellow, reddish-brown, dark red
 pleochroism_strength: strong
 pleochroism_color1: Yellow

@@ -3,6 +3,7 @@ name: Turquoise
 crystal_system: triclinic
 point_group: '-1'
 chemistry: CuAl6(PO4)4(OH)8.4H2O
+category: Phosphates
 hardness: 5-6
 sg: 2.60-2.85
 ri: 1.61-1.65

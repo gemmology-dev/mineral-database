@@ -1,0 +1,46 @@
+id: schorl
+name: Schorl
+crystal_system: trigonal
+point_group: 3m
+chemistry: NaFe3Al6(BO3)3Si6O18(OH)4
+mineral_group: Tourmaline Group
+category: Cyclosilicates
+hardness: 7-7.5
+sg: 3.10-3.25
+ri: 1.635-1.655
+birefringence: 0.020
+optical_character: Uniaxial -
+lustre: Vitreous to subvitreous
+cleavage: Indistinct
+fracture: Uneven to conchoidal
+pleochroism: Strong but often obscured by dark colour
+pleochroism_strength: strong
+pleochroism_color1: Dark brown-black
+pleochroism_color2: Lighter brown
+colors:
+- Black
+- Very dark brown
+treatments:
+- None
+inclusions:
+- Growth tubes
+- Needle inclusions
+localities:
+- Worldwide (most common tourmaline species)
+- Brazil
+- Germany
+- Afghanistan
+- USA
+expressions:
+- slug: prism
+  name: Prismatic
+  cdl: |
+    #! Species: Schorl
+    #! System: Trigonal (3m)
+    #! Habit: Elongated trigonal prism with striations
+    trigonal[3m]:{10-10}@1.0[striation:parallel] + {10-11}@0.8 | elongate(c:2.5)
+  is_primary: true
+  form_description: Schorl — the iron-bearing tourmaline end-member and the most common tourmaline species. Black colour from high iron content. The most abundant boron mineral.
+  forms:
+  - prism
+  - dipyramid

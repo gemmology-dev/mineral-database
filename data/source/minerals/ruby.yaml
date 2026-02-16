@@ -3,6 +3,8 @@ name: Ruby
 crystal_system: trigonal
 point_group: -3m
 chemistry: Al2O3:Cr
+mineral_group: Corundum Group
+category: Oxides
 hardness: 9
 sg: 4.0
 ri: 1.762-1.770
@@ -12,6 +14,8 @@ dispersion: 0.018
 lustre: Vitreous to adamantine
 cleavage: None (parting on {0001})
 fracture: Conchoidal to uneven
+fluorescence: "Moderate to strong red (LWUV); weaker under SWUV"
+diagnostic_features: "Strong red fluorescence (LWUV); silk (rutile needles at 60°); absorption at 694nm doublet"
 pleochroism: Strong (purplish-red/orange-red)
 pleochroism_strength: strong
 pleochroism_color1: Purplish-red

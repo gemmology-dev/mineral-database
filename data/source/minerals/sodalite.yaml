@@ -3,6 +3,8 @@ name: Sodalite
 crystal_system: cubic
 point_group: m3m
 chemistry: Na8(Al6Si6O24)Cl2
+mineral_group: Sodalite Group
+category: Tectosilicates
 hardness: 5.5-6
 sg: 2.27-2.33
 ri: 1.483-1.487
@@ -12,6 +14,7 @@ dispersion: 0.018
 lustre: Vitreous to greasy
 cleavage: Poor {110}
 fracture: Conchoidal to uneven
+fluorescence: "Strong orange (LWUV); tenebrescent (hackmanite variety)"
 pleochroism: None (isotropic)
 colors:
 - Royal blue

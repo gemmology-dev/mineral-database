@@ -3,6 +3,8 @@ name: Malachite
 crystal_system: monoclinic
 point_group: 2/m
 chemistry: Cu2(CO3)(OH)2
+mineral_group: Carbonate Group
+category: Carbonates
 hardness: 3.5-4
 sg: 3.6-4.0
 ri: 1.655-1.909
