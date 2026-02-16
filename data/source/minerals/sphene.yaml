@@ -35,7 +35,11 @@ localities:
 expressions:
 - slug: default
   name: Sphene (Titanite)
-  cdl: monoclinic[2/m]:{100}@1.0 + {110}@0.6 + {111}@0.5 + {001}@0.3
+  cdl: |
+    #! Species: Sphene (Titanite)
+    #! System: Monoclinic (2/m)
+    #! Habit: Characteristic wedge shape with extreme dispersion
+    monoclinic[2/m]:{100}@1.0[pleochroism:strong] + {110}@0.6 + {111}@0.5 + {001}@0.3
   is_primary: true
   form_description: 'Calcium titanium silicate forming characteristic wedge or envelope-shaped crystals
     (Greek "sphenos" = wedge). Sphene possesses the highest dispersion of any common gemstone (0.051),

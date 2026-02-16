@@ -33,7 +33,11 @@ localities:
 expressions:
 - slug: default
   name: Vesuvianite
-  cdl: tetragonal[4/mmm]:{100}@1.0 + {110}@0.8 + {001}@0.6
+  cdl: |
+    #! Species: Vesuvianite (Idocrase)
+    #! System: Tetragonal (4/mmm)
+    #! Habit: Prismatic with pinacoid
+    tetragonal[4/mmm]:{100}@1.0 + {110}@0.8 + {001}@0.6
   is_primary: true
   form_description: Complex tetragonal prism combination - also known as idocrase
   forms:

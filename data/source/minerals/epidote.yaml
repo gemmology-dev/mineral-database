@@ -34,7 +34,11 @@ localities:
 expressions:
 - slug: default
   name: Epidote
-  cdl: monoclinic[2/m]:{100}@1.0 + {001}@0.8 + {010}@0.7 + {110}@0.5
+  cdl: |
+    #! Species: Epidote
+    #! System: Monoclinic (2/m)
+    #! Habit: Elongated prismatic with characteristic striations
+    monoclinic[2/m]:{100}@1.0[striation:parallel] + {001}@0.8 + {010}@0.7 + {110}@0.5
   is_primary: true
   form_description: 'Calcium-aluminum-iron silicate forming elongated prismatic crystals, typically striated
     parallel to the b-axis. Epidote displays a distinctive pistachio to yellowish-green color (the "epidote

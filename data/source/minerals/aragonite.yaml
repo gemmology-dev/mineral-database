@@ -31,7 +31,11 @@ localities:
 expressions:
 - slug: default
   name: Aragonite
-  cdl: orthorhombic[mmm]:{110}@1.0 + {010}@0.7 + {011}@0.6 + {021}@0.4
+  cdl: |
+    #! Species: Aragonite
+    #! System: Orthorhombic (mmm)
+    #! Habit: Prismatic with multiple dome faces
+    orthorhombic[mmm]:{110}@1.0 + {010}@0.7 + {011}@0.6 + {021}@0.4
   is_primary: true
   form_description: 'Calcium carbonate polymorph forming orthorhombic crystals - the less stable but higher-pressure
     form compared to trigonal calcite. Pseudohexagonal cyclic twins are extremely common, creating apparently

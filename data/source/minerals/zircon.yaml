@@ -43,7 +43,11 @@ localities:
 expressions:
 - slug: default
   name: Zircon
-  cdl: tetragonal[4/mmm]:{100}@1.0 + {101}@0.8
+  cdl: |
+    #! Species: Zircon
+    #! System: Tetragonal (4/mmm)
+    #! Habit: Tetragonal prism with dipyramid
+    tetragonal[4/mmm]:{100}@1.0 + {101}@0.8
   is_primary: true
   form_description: Tetragonal prism with dipyramid
   forms:

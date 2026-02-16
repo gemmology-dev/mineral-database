@@ -40,7 +40,11 @@ localities:
 expressions:
 - slug: default
   name: Apatite
-  cdl: hexagonal[6/mmm]:{10-10}@1.0 + {10-11}@0.8 + {0001}@0.5
+  cdl: |
+    #! Species: Apatite
+    #! System: Hexagonal (6/mmm)
+    #! Habit: Hexagonal prism with dipyramid and pinacoid
+    hexagonal[6/mmm]:{10-10}@1.0 + {10-11}@0.8 + {0001}@0.5
   is_primary: true
   form_description: Hexagonal prism with dipyramid and pinacoid - defines hardness 5 on Mohs scale
   forms:

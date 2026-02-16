@@ -36,7 +36,11 @@ localities:
 expressions:
 - slug: default
   name: Red Beryl
-  cdl: hexagonal[6/mmm]:{10-10}@1.0 + {0001}@0.5 + {11-20}@0.2 | elongate(c:0.6)
+  cdl: |
+    #! Species: Red Beryl (Bixbite)
+    #! System: Hexagonal (6/mmm)
+    #! Habit: Short prismatic to tabular, red
+    hexagonal[6/mmm]:{10-10}@1.0 + {0001}@0.5 + {11-20}@0.2 | elongate(c:0.6)
   is_primary: true
   form_description: 'Extremely rare red variety of beryl, coloured by manganese (Mn3+). Also known as
     bixbite or scarlet emerald. Found in commercial quantities only in the Wah Wah Mountains of Utah,

@@ -33,6 +33,10 @@ fluorescence: Usually strong red (LW UV), weak to inert (SW UV)
 expressions:
   - slug: crystal
     name: Crystal
-    cdl: "hexagonal[6/mmm]:{10-10}@1.0 + {0001}@0.3"
+    cdl: |
+      #! Species: Flux-Grown Emerald
+      #! System: Hexagonal (6/mmm)
+      #! Habit: Prismatic crystal from flux growth
+      hexagonal[6/mmm]:{10-10}@1.0 + {0001}@0.3
     is_primary: true
     form_description: Prismatic crystal from flux growth

@@ -28,6 +28,10 @@ fluorescence: Weak orange
 expressions:
   - slug: faceted
     name: Faceted
-    cdl: "cubic[m3m]:{110}@1.0 + {211}@0.6"
+    cdl: |
+      #! Species: GGG (Gadolinium Gallium Garnet)
+      #! System: Cubic (m3m)
+      #! Habit: Garnet-type dodecahedron with trapezohedron
+      cubic[m3m]:{110}@1.0 + {211}@0.6
     is_primary: true
     form_description: Garnet-type crystal habit (dodecahedron + trapezohedron)

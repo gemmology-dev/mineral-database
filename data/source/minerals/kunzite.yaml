@@ -40,7 +40,11 @@ localities:
 expressions:
 - slug: default
   name: Kunzite
-  cdl: monoclinic[2/m]:{110}@1.0 + {100}@0.8 + {010}@0.6 + {001}@1.2
+  cdl: |
+    #! Species: Kunzite (Spodumene)
+    #! System: Monoclinic (2/m)
+    #! Habit: Elongated prismatic with strong pink pleochroism
+    monoclinic[2/m]:{110}@1.0 + {100}@0.8 + {010}@0.6 + {001}@1.2[pleochroism:strong]
   is_primary: true
   form_description: Elongated spodumene crystal
   forms:

@@ -37,7 +37,11 @@ localities:
 expressions:
 - slug: default
   name: Cassiterite
-  cdl: tetragonal[4/mmm]:{100}@0.8 + {101}@1.0 + {111}@0.4
+  cdl: |
+    #! Species: Cassiterite
+    #! System: Tetragonal (4/mmm)
+    #! Habit: Short prismatic with dominant dipyramid
+    tetragonal[4/mmm]:{100}@0.8[striation:parallel] + {101}@1.0 + {111}@0.4
   is_primary: true
   form_description: Short prismatic with dominant dipyramid - primary ore of tin
   forms:

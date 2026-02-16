@@ -41,7 +41,11 @@ localities:
 expressions:
 - slug: default
   name: Citrine
-  cdl: trigonal[32]:{10-10}@0.5 + {10-11}@1.2 + {01-11}@1.0 | elongate(c:2.0)
+  cdl: |
+    #! Species: Citrine (Quartz)
+    #! System: Trigonal (32)
+    #! Habit: Prismatic with sector colour zoning
+    trigonal[32]:{10-10}@0.5 + {10-11}@1.2[colour_zone:sector] + {01-11}@1.0 | elongate(c:2.0)
   is_primary: true
   form_description: Yellow to orange variety of quartz, often formed by heat treatment of amethyst
   forms:

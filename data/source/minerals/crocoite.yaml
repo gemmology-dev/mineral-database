@@ -27,7 +27,11 @@ localities:
 expressions:
 - slug: default
   name: Crocoite
-  cdl: monoclinic[2/m]:{110}@1.0 + {100}@0.7 + {001}@0.5 | elongate(c:3.0)
+  cdl: |
+    #! Species: Crocoite
+    #! System: Monoclinic (2/m)
+    #! Habit: Elongated prismatic with adamantine lustre
+    monoclinic[2/m]:{110}@1.0 + {100}@0.7 + {001}@0.5 | elongate(c:3.0)
   is_primary: true
   form_description: 'Lead chromate mineral forming spectacular elongated prismatic crystals with a vivid
     orange-red to red color. The most highly prized mineral specimens come from Tasmania, Australia, where

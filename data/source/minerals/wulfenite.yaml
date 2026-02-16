@@ -28,7 +28,11 @@ localities:
 expressions:
 - slug: default
   name: Wulfenite
-  cdl: tetragonal[4/m]:{001}@1.0 + {101}@0.4
+  cdl: |
+    #! Species: Wulfenite
+    #! System: Tetragonal (4/m)
+    #! Habit: Thin tabular square plates
+    tetragonal[4/m]:{001}@1.0 + {101}@0.4
   is_primary: true
   form_description: 'Lead molybdate mineral forming characteristically thin, tabular, square crystals
     with brilliant orange to red colors and adamantine lustre. The thin crystal habit and exceptional

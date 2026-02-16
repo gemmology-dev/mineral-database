@@ -30,6 +30,10 @@ fluorescence: Inert to weak blue (LW UV)
 expressions:
   - slug: crystal
     name: Crystal
-    cdl: "trigonal[3m]:{10-10}@1.0 + {01-11}@0.7"
+    cdl: |
+      #! Species: Lab-Grown Paraíba Tourmaline (Hydrothermal)
+      #! System: Trigonal (3m)
+      #! Habit: Prismatic crystal from hydrothermal growth
+      trigonal[3m]:{10-10}@1.0 + {01-11}@0.7
     is_primary: true
     form_description: Prismatic crystal from hydrothermal growth

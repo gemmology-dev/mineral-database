@@ -27,6 +27,10 @@ fluorescence: Variable
 expressions:
   - slug: faceted
     name: Faceted
-    cdl: "cubic[m3m]:{110}@1.0 + {211}@0.8"
+    cdl: |
+      #! Species: YAG (Yttrium Aluminium Garnet)
+      #! System: Cubic (m3m)
+      #! Habit: Garnet-type dodecahedron with trapezohedron
+      cubic[m3m]:{110}@1.0 + {211}@0.8
     is_primary: true
     form_description: Garnet-type crystal habit (dodecahedron + trapezohedron)

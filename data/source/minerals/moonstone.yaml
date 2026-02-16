@@ -37,7 +37,11 @@ phenomenon: Adularescence
 expressions:
 - slug: default
   name: Moonstone
-  cdl: monoclinic[2/m]:{010}@1.0 + {110}@0.8 + {001}@0.7 + {100}@0.5 | phenomenon[adularescence]
+  cdl: |
+    #! Species: Moonstone (Orthoclase Feldspar)
+    #! System: Monoclinic (2/m)
+    #! Habit: Prismatic with adularescence phenomenon
+    monoclinic[2/m]:{010}@1.0 + {110}@0.8 + {001}@0.7 + {100}@0.5 | phenomenon[adularescence]
   is_primary: true
   form_description: 'Feldspar variety displaying adularescence - a soft, billowy glow that appears to
     float just below the surface. The effect is caused by light scattering from alternating layers of

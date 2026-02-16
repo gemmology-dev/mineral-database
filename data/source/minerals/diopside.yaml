@@ -37,7 +37,11 @@ fluorescence: Strong blue to bluish-white (SWUV)
 expressions:
 - slug: default
   name: Diopside
-  cdl: monoclinic[2/m]:{110}@1.0 + {100}@0.6 + {010}@0.5 + {001}@0.9
+  cdl: |
+    #! Species: Diopside
+    #! System: Monoclinic (2/m)
+    #! Habit: Short prismatic with well-developed pinacoid
+    monoclinic[2/m]:{110}@1.0 + {100}@0.6 + {010}@0.5 + {001}@0.9
   is_primary: true
   form_description: 'Calcium-magnesium pyroxene forming short prismatic crystals with characteristic near-90-degree
     cleavage angles. Chrome diopside from Russia displays intense emerald-green color rivaling tsavorite

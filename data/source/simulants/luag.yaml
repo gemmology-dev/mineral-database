@@ -28,6 +28,10 @@ fluorescence: Weak
 expressions:
   - slug: faceted
     name: Faceted
-    cdl: "cubic[m3m]:{110}@1.0 + {211}@0.7"
+    cdl: |
+      #! Species: LuAG (Lutetium Aluminium Garnet)
+      #! System: Cubic (m3m)
+      #! Habit: Garnet-type dodecahedron with trapezohedron
+      cubic[m3m]:{110}@1.0 + {211}@0.7
     is_primary: true
     form_description: Garnet-type crystal habit (dodecahedron + trapezohedron)

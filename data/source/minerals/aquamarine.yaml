@@ -37,7 +37,11 @@ localities:
 expressions:
 - slug: default
   name: Aquamarine
-  cdl: hexagonal[6/mmm]:{10-10}@1.0 + {0001}@0.5 | elongate(c:2.5)
+  cdl: |
+    #! Species: Aquamarine (Beryl)
+    #! System: Hexagonal (6/mmm)
+    #! Habit: Elongated hexagonal prism
+    hexagonal[6/mmm]:{10-10}@1.0 + {0001}@0.5 | elongate(c:2.5)
   is_primary: true
   form_description: Tall hexagonal prism with small pinacoid terminations
   forms:

@@ -27,7 +27,11 @@ localities:
 expressions:
 - slug: default
   name: Realgar
-  cdl: monoclinic[2/m]:{110}@1.0 + {010}@0.8 + {120}@0.6 + {011}@0.5 + {101}@0.4
+  cdl: |
+    #! Species: Realgar
+    #! System: Monoclinic (2/m)
+    #! Habit: Short prismatic with multiple dome forms
+    monoclinic[2/m]:{110}@1.0 + {010}@0.8 + {120}@0.6 + {011}@0.5 + {101}@0.4
   is_primary: true
   form_description: 'Arsenic sulfide mineral with a distinctive red to orange-red color, also known as
     "ruby sulfur." Realgar forms striking prismatic crystals often striated parallel to the c-axis. It

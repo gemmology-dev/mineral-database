@@ -35,7 +35,11 @@ localities:
 expressions:
 - slug: default
   name: Kyanite
-  cdl: triclinic[-1]:{100}@1.0 + {010}@0.4 + {001}@1.5 + {110}@0.6
+  cdl: |
+    #! Species: Kyanite
+    #! System: Triclinic (-1)
+    #! Habit: Bladed with directional colour zoning
+    triclinic[-1]:{100}@1.0[colour_zone:directional] + {010}@0.4 + {001}@1.5 + {110}@0.6
   is_primary: true
   form_description: 'Aluminum silicate polymorph (with andalusite and sillimanite) famous for its extreme
     directional hardness variation - hardness 4-5 parallel to the c-axis but 6-7 perpendicular to it.

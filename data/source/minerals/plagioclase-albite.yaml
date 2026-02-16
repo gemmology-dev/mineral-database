@@ -28,7 +28,11 @@ twin_law: Albite Law (polysynthetic)
 expressions:
 - slug: default
   name: Plagioclase (Albite Twin)
-  cdl: triclinic[-1]:{010}@1.0 + {001}@0.8 + {100}@0.5 + {110}@0.4 | twin(albite)
+  cdl: |
+    #! Species: Plagioclase (Albite)
+    #! System: Triclinic (-1)
+    #! Habit: Tabular with polysynthetic albite twinning
+    triclinic[-1]:{010}@1.0 + {001}@0.8 + {100}@0.5 + {110}@0.4 | twin(albite)
   is_primary: true
   form_description: 'Polysynthetic lamellar twinning on {010}, the most common twinning in plagioclase
     feldspars. Albite law twins form parallel sets of thin lamellae that create characteristic striations

@@ -28,6 +28,10 @@ fluorescence: Weak orange (LW UV)
 expressions:
   - slug: faceted
     name: Faceted
-    cdl: "hexagonal[6mm]:{10-10}@1.0 + {0001}@0.6"
+    cdl: |
+      #! Species: Moissanite
+      #! System: Hexagonal (6mm)
+      #! Habit: Hexagonal prism terminated by pinacoid
+      hexagonal[6mm]:{10-10}@1.0 + {0001}@0.6
     is_primary: true
     form_description: Hexagonal prism terminated by pinacoid

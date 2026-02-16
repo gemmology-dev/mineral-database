@@ -28,6 +28,10 @@ fluorescence: Inert
 expressions:
   - slug: faceted
     name: Faceted
-    cdl: "cubic[m3m]:{100}"
+    cdl: |
+      #! Species: Strontium Titanate
+      #! System: Cubic (m3m)
+      #! Habit: Perovskite cube
+      cubic[m3m]:{100}
     is_primary: true
     form_description: Perovskite cube crystal habit

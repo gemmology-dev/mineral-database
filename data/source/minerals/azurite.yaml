@@ -31,7 +31,11 @@ localities:
 expressions:
 - slug: default
   name: Azurite
-  cdl: monoclinic[2/m]:{001}@1.0 + {110}@0.8 + {100}@0.7 + {011}@0.5 + {111}@0.4
+  cdl: |
+    #! Species: Azurite
+    #! System: Monoclinic (2/m)
+    #! Habit: Tabular to prismatic with complex faces
+    monoclinic[2/m]:{001}@1.0 + {110}@0.8 + {100}@0.7 + {011}@0.5 + {111}@0.4
   is_primary: true
   form_description: 'Copper carbonate hydroxide mineral with an intense deep azure blue color that has
     made it prized since antiquity as a pigment (known as "mountain blue"). Unlike malachite, azurite

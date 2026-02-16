@@ -39,7 +39,11 @@ localities:
 expressions:
 - slug: default
   name: Hiddenite
-  cdl: monoclinic[2/m]:{110}@1.0 + {100}@0.7 + {001}@1.0
+  cdl: |
+    #! Species: Hiddenite (Spodumene)
+    #! System: Monoclinic (2/m)
+    #! Habit: Prismatic with strong green pleochroism
+    monoclinic[2/m]:{110}@1.0 + {100}@0.7 + {001}@1.0[pleochroism:strong]
   is_primary: true
   form_description: 'The green chromium-bearing variety of spodumene, named after William Earl Hidden
     who discovered it in North Carolina. True hiddenite derives its color from chromium and is extremely

@@ -30,6 +30,10 @@ fluorescence: Strong red (LW and SW UV)
 expressions:
   - slug: boule
     name: Boule
-    cdl: "trigonal[-3m]:{10-11}@1.0 + {0001}@0.4"
+    cdl: |
+      #! Species: Synthetic Ruby (Verneuil)
+      #! System: Trigonal (-3m)
+      #! Habit: Corundum habit from flame fusion boule
+      trigonal[-3m]:{10-11}@1.0 + {0001}@0.4
     is_primary: true
     form_description: Corundum crystal habit (growth form is cylindrical boule)

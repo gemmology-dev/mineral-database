@@ -34,7 +34,11 @@ localities:
 expressions:
 - slug: default
   name: Tsavorite
-  cdl: cubic[m3m]:{110}@1.0 + {211}@0.6
+  cdl: |
+    #! Species: Tsavorite (Grossular Garnet)
+    #! System: Cubic (m3m)
+    #! Habit: Dodecahedron-trapezohedron combination
+    cubic[m3m]:{110}@1.0 + {211}@0.6
   is_primary: true
   form_description: 'Vivid green variety of grossular garnet, coloured by vanadium and/or chromium. Named
     by Tiffany''s Henry Platt after Tsavo National Park in Kenya. One of the most valuable garnets, fine

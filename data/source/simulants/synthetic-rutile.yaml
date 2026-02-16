@@ -28,6 +28,10 @@ fluorescence: Inert
 expressions:
   - slug: faceted
     name: Faceted
-    cdl: "tetragonal[4/mmm]:{110}@1.0 + {100}@0.8 + {101}@0.6"
+    cdl: |
+      #! Species: Synthetic Rutile
+      #! System: Tetragonal (4/mmm)
+      #! Habit: Tetragonal prism with dipyramid
+      tetragonal[4/mmm]:{110}@1.0 + {100}@0.8 + {101}@0.6
     is_primary: true
     form_description: Rutile tetragonal prism with dipyramid

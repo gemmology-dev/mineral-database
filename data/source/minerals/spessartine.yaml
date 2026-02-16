@@ -38,7 +38,11 @@ localities:
 expressions:
 - slug: default
   name: Spessartine
-  cdl: cubic[m3m]:{211}@1.0 + {110}@0.6
+  cdl: |
+    #! Species: Spessartine (Garnet)
+    #! System: Cubic (m3m)
+    #! Habit: Trapezohedron with dodecahedron
+    cubic[m3m]:{211}@1.0 + {110}@0.6
   is_primary: true
   form_description: 'Manganese aluminium garnet known for its vibrant orange to reddish-orange colours.
     Fine vivid orange specimens are marketed as "Mandarin" or "Fanta" garnet. Nigerian material is particularly

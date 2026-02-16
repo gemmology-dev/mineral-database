@@ -34,7 +34,11 @@ localities:
 expressions:
 - slug: default
   name: Barite
-  cdl: orthorhombic[mmm]:{001}@1.0 + {210}@0.8 + {110}@0.5
+  cdl: |
+    #! Species: Barite
+    #! System: Orthorhombic (mmm)
+    #! Habit: Tabular with prominent basal face
+    orthorhombic[mmm]:{001}@1.0 + {210}@0.8 + {110}@0.5
   is_primary: true
   form_description: Tabular with complex prism faces - heavy spar, notable for high density
   forms:

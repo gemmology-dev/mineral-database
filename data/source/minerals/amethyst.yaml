@@ -42,7 +42,11 @@ localities:
 expressions:
 - slug: default
   name: Amethyst
-  cdl: trigonal[32]:{10-10}@0.5 + {10-11}@1.2 + {01-11}@1.0 | elongate(c:2.0)
+  cdl: |
+    #! Species: Amethyst (Quartz)
+    #! System: Trigonal (32)
+    #! Habit: Prismatic with angular colour zoning
+    trigonal[32]:{10-10}@0.5 + {10-11}@1.2 + {01-11}@1.0[colour_zone:angular] | elongate(c:2.0)
   is_primary: true
   form_description: Quartz with both rhombohedra visible
   forms:

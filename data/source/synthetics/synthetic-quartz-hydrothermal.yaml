@@ -27,6 +27,10 @@ fluorescence: Inert
 expressions:
   - slug: crystal
     name: Crystal
-    cdl: "trigonal[32]:{10-10}@1.0 + {10-11}@0.8 + {01-11}@0.6"
+    cdl: |
+      #! Species: Hydrothermal Quartz
+      #! System: Trigonal (32)
+      #! Habit: Prismatic crystal from hydrothermal growth
+      trigonal[32]:{10-10}@1.0 + {10-11}@0.8 + {01-11}@0.6
     is_primary: true
     form_description: Prismatic crystal from hydrothermal growth

@@ -35,7 +35,11 @@ localities:
 expressions:
 - slug: default
   name: Tanzanite
-  cdl: orthorhombic[mmm]:{100}@1.0 + {010}@0.9 + {001}@1.2 + {110}@0.7
+  cdl: |
+    #! Species: Tanzanite (Zoisite)
+    #! System: Orthorhombic (mmm)
+    #! Habit: Prismatic with extreme trichroism
+    orthorhombic[mmm]:{100}@1.0[pleochroism:strong] + {010}@0.9 + {001}@1.2 + {110}@0.7
   is_primary: true
   form_description: Prismatic zoisite variety
   forms:

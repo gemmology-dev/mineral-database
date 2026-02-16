@@ -28,6 +28,10 @@ fluorescence: Variable, often yellowish-green (LW UV)
 expressions:
   - slug: brilliant
     name: Faceted (Brilliant Cut)
-    cdl: "cubic[m3m]:{111}@1.0 + {100}@0.8"
+    cdl: |
+      #! Species: Cubic Zirconia
+      #! System: Cubic (m3m)
+      #! Habit: Fluorite-type octahedron modified by cube
+      cubic[m3m]:{111}@1.0 + {100}@0.8
     is_primary: true
     form_description: Fluorite-type crystal habit (octahedron modified by cube)

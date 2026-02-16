@@ -38,7 +38,11 @@ localities:
 expressions:
 - slug: default
   name: Rhodolite
-  cdl: cubic[m3m]:{110}@1.0 + {211}@0.7
+  cdl: |
+    #! Species: Rhodolite (Pyrope-Almandine Garnet)
+    #! System: Cubic (m3m)
+    #! Habit: Dodecahedron-trapezohedron combination
+    cubic[m3m]:{110}@1.0 + {211}@0.7
   is_primary: true
   form_description: 'Pyrope-almandine intermediate garnet with a distinctive purplish-red to raspberry
     colour. The composition is approximately 70% pyrope and 30% almandine. Popular for its attractive

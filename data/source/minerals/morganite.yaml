@@ -41,7 +41,11 @@ localities:
 expressions:
 - slug: default
   name: Morganite
-  cdl: hexagonal[6/mmm]:{10-10}@1.0 + {0001}@0.5 + {11-20}@0.2 | elongate(c:0.9)
+  cdl: |
+    #! Species: Morganite (Beryl)
+    #! System: Hexagonal (6/mmm)
+    #! Habit: Short prismatic to tabular, pink
+    hexagonal[6/mmm]:{10-10}@1.0 + {0001}@0.5 + {11-20}@0.2 | elongate(c:0.9)
   is_primary: true
   form_description: 'Pink to peach variety of beryl, coloured by manganese (Mn2+/Mn3+). Increasingly popular
     in fine jewellery, morganite offers excellent clarity and is available in larger sizes than many other

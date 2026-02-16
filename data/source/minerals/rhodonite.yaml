@@ -31,7 +31,11 @@ localities:
 expressions:
 - slug: default
   name: Rhodonite
-  cdl: triclinic[-1]:{110}@1.0 + {010}@0.8 + {001}@0.6
+  cdl: |
+    #! Species: Rhodonite
+    #! System: Triclinic (-1)
+    #! Habit: Tabular to prismatic, pink with black manganese oxide veins
+    triclinic[-1]:{110}@1.0 + {010}@0.8 + {001}@0.6
   is_primary: true
   form_description: Manganese inosilicate - rose-red colour with characteristic black manganese oxide
     veins

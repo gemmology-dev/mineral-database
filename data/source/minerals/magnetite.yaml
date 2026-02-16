@@ -26,7 +26,11 @@ localities:
 expressions:
 - slug: default
   name: Magnetite
-  cdl: cubic[m3m]:{111}
+  cdl: |
+    #! Species: Magnetite
+    #! System: Cubic (m3m)
+    #! Habit: Octahedral
+    cubic[m3m]:{111}
   is_primary: true
   form_description: 'Strongly magnetic iron oxide mineral forming perfect octahedral crystals. One of
     the most magnetic of all naturally-occurring minerals on Earth. Magnetite is opaque with a metallic

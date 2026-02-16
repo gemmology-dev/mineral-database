@@ -42,7 +42,11 @@ localities:
 expressions:
 - slug: bipyramid
   name: Hexagonal Bipyramid
-  cdl: trigonal[-3m]:{10-10}@1.0[colour_zone:hex] + {10-11}@0.8 + {0001}@0.6
+  cdl: |
+    #! Species: Corundum
+    #! System: Trigonal (-3m)
+    #! Habit: Hexagonal bipyramid with colour zoning
+    trigonal[-3m]:{10-10}@1.0[colour_zone:hex] + {10-11}@0.8 + {0001}@0.6
   is_primary: true
   form_description: Generic corundum with hexagonal prism, dipyramid and basal pinacoid - second hardest
     natural mineral
@@ -52,7 +56,11 @@ expressions:
   - pinacoid
 - slug: barrel
   name: Barrel
-  cdl: trigonal[-3m]:{10-11}@1.2 + {10-10}@0.6 + {0001}@0.2 | elongate(c:1.2)
+  cdl: |
+    #! Species: Corundum
+    #! System: Trigonal (-3m)
+    #! Habit: Barrel-shaped with horizontal striations (Mogok type)
+    trigonal[-3m]:{10-11}@1.2[striation:horizontal] + {10-10}@0.6 + {0001}@0.2 | elongate(c:1.2)
   form_description: Barrel-shaped habit with tapered prism - typical of Mogok (Myanmar) rubies
   forms:
   - dipyramid

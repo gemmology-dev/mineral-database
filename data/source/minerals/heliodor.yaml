@@ -41,7 +41,11 @@ localities:
 expressions:
 - slug: default
   name: Heliodor
-  cdl: hexagonal[6/mmm]:{10-10}@1.0 + {0001}@0.3 + {11-20}@0.2 | elongate(c:2.0)
+  cdl: |
+    #! Species: Heliodor (Beryl)
+    #! System: Hexagonal (6/mmm)
+    #! Habit: Elongated hexagonal prism with second-order prism
+    hexagonal[6/mmm]:{10-10}@1.0 + {0001}@0.3 + {11-20}@0.2 | elongate(c:2.0)
   is_primary: true
   form_description: 'Yellow to golden variety of beryl, coloured by iron (Fe3+). The name derives from
     Greek "helios" (sun) and "doron" (gift). Heliodor typically forms elongated prismatic crystals and

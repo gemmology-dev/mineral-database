@@ -27,7 +27,11 @@ localities:
 expressions:
 - slug: default
   name: Cuprite
-  cdl: cubic[m3m]:{111}@1.0 + {100}@0.5
+  cdl: |
+    #! Species: Cuprite
+    #! System: Cubic (m3m)
+    #! Habit: Octahedron with cube truncation
+    cubic[m3m]:{111}@1.0 + {100}@0.5
   is_primary: true
   form_description: 'Copper oxide mineral forming deep red octahedral crystals with exceptional adamantine
     lustre. Cuprite has one of the highest refractive indices of any gemstone (2.848), exceeding diamond.

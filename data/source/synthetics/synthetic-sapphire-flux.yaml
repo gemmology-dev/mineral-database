@@ -30,6 +30,10 @@ fluorescence: Inert to weak
 expressions:
   - slug: crystal
     name: Crystal
-    cdl: "trigonal[-3m]:{10-10}@1.0 + {10-11}@0.8 + {0001}@0.5"
+    cdl: |
+      #! Species: Flux-Grown Sapphire
+      #! System: Trigonal (-3m)
+      #! Habit: Tabular crystal from flux growth
+      trigonal[-3m]:{10-10}@1.0 + {10-11}@0.8 + {0001}@0.5
     is_primary: true
     form_description: Tabular crystal from flux growth

@@ -31,7 +31,11 @@ fluorescence: Strong blue-white (SWUV) - diagnostic
 expressions:
 - slug: default
   name: Scheelite
-  cdl: tetragonal[4/m]:{112}@1.0 + {011}@0.7 + {001}@0.4
+  cdl: |
+    #! Species: Scheelite
+    #! System: Tetragonal (4/m)
+    #! Habit: Dipyramidal with strong fluorescence
+    tetragonal[4/m]:{112}@1.0 + {011}@0.7 + {001}@0.4
   is_primary: true
   form_description: 'Calcium tungstate mineral known for its brilliant blue-white fluorescence under shortwave
     UV light - one of the most spectacular fluorescent minerals. Scheelite forms dipyramidal crystals

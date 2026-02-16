@@ -30,7 +30,11 @@ localities:
 expressions:
 - slug: default
   name: Celestine
-  cdl: orthorhombic[mmm]:{001}@1.0 + {011}@0.8 + {210}@0.5 + {102}@0.4
+  cdl: |
+    #! Species: Celestine
+    #! System: Orthorhombic (mmm)
+    #! Habit: Tabular to prismatic with multiple dome faces
+    orthorhombic[mmm]:{001}@1.0 + {011}@0.8 + {210}@0.5 + {102}@0.4
   is_primary: true
   form_description: 'Strontium sulfate mineral named for its characteristic celestial blue color (from
     Latin "caelestis" meaning heavenly). Celestine forms beautiful tabular to prismatic crystals often

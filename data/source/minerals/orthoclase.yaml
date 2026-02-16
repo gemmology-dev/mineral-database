@@ -31,7 +31,11 @@ localities:
 expressions:
 - slug: prismatic
   name: Prismatic
-  cdl: monoclinic[2/m]:{010}@1.0 + {001}@0.8 + {100}@0.9 + {110}@0.6
+  cdl: |
+    #! Species: Orthoclase (K-Feldspar)
+    #! System: Monoclinic (2/m)
+    #! Habit: Prismatic with multiple pinacoids
+    monoclinic[2/m]:{010}@1.0 + {001}@0.8 + {100}@0.9 + {110}@0.6
   is_primary: true
   form_description: 'Potassium feldspar (K-feldspar) forming prismatic monoclinic crystals, often in granite
     and pegmatite. The name refers to the nearly 90-degree cleavage angle (Greek "orthos" = right, "klasis"
@@ -46,7 +50,11 @@ expressions:
   - Manebach twins
 - slug: carlsbad
   name: Carlsbad Twin
-  cdl: monoclinic[2/m]:{010}@1.0 + {100}@0.95 + {001}@0.7 + {110}@0.4 | twin(carlsbad)
+  cdl: |
+    #! Species: Orthoclase (K-Feldspar)
+    #! System: Monoclinic (2/m)
+    #! Habit: Carlsbad penetration twin
+    monoclinic[2/m]:{010}@1.0 + {100}@0.95 + {001}@0.7 + {110}@0.4 | twin(carlsbad)
   form_description: 'Penetration twin with the c-axis as twin axis, creating an apparent symmetrical crystal
     from two interpenetrating monoclinic individuals. Named for Karlovy Vary (Carlsbad) in the Czech Republic
     where classic examples occur. Carlsbad twins are very common in granite and related igneous rocks.
@@ -57,3 +65,17 @@ expressions:
   - prism
   - pinacoid
   - twin
+- slug: baveno
+  name: Baveno Twin
+  cdl: |
+    #! Species: Orthoclase (K-Feldspar)
+    #! System: Monoclinic (2/m)
+    #! Habit: Baveno contact twin
+    monoclinic[2/m]:{010}@1.0 + {001}@0.8 + {100}@0.7 + {110}@0.5 | twin(baveno)
+  form_description: >
+    Baveno contact twin on {021} — a common twin law in potassium feldspars producing
+    a near-symmetrical butterfly-like shape. Named after specimens from Baveno, Italy.
+  forms:
+    - pinacoid
+    - prism
+    - twin

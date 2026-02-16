@@ -32,6 +32,10 @@ fluorescence: Strong red (LW and SW UV)
 expressions:
   - slug: crystal
     name: Crystal
-    cdl: "trigonal[-3m]:{10-10}@1.0 + {10-11}@0.8 + {0001}@0.5"
+    cdl: |
+      #! Species: Flux-Grown Ruby
+      #! System: Trigonal (-3m)
+      #! Habit: Tabular to prismatic from flux growth
+      trigonal[-3m]:{10-10}@1.0 + {10-11}@0.8 + {0001}@0.5
     is_primary: true
     form_description: Tabular to prismatic crystal from flux growth
