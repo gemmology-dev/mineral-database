@@ -1316,7 +1316,7 @@ def get_family_count(conn: sqlite3.Connection) -> int:
         Number of families
     """
     cursor = conn.execute("SELECT COUNT(*) FROM mineral_families")
-    return cursor.fetchone()[0]
+    return int(cursor.fetchone()[0])
 
 
 def get_expression_count(conn: sqlite3.Connection) -> int:
@@ -1329,7 +1329,7 @@ def get_expression_count(conn: sqlite3.Connection) -> int:
         Number of expressions
     """
     cursor = conn.execute("SELECT COUNT(*) FROM mineral_expressions")
-    return cursor.fetchone()[0]
+    return int(cursor.fetchone()[0])
 
 
 def get_families_with_expression_counts(
