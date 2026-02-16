@@ -5,9 +5,8 @@ Tests fluorescence, diagnostic features, new minerals,
 mineral group assignments, and category population.
 """
 
-from mineral_database import get_family, get_preset
-from mineral_database.queries import list_families_by_group, list_mineral_groups
-
+from mineral_database import get_family
+from mineral_database.queries import list_families_by_group
 
 # =============================================================================
 # Fluorescence Tests
