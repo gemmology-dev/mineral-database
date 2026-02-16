@@ -118,14 +118,29 @@ def _import_family_yaml(
         expression_id = f"{family_id}-{slug}" if slug != "default" else family_id
 
         # Build a flat mineral dict combining family + expression data
+        expr_name = expr_data.get("name", slug.title())
+        if slug != "default":
+            # Avoid stutter: if expression name already starts with the family name,
+            # use it as-is (e.g., "Pearl (nacre)" not "Pearl (Pearl (nacre))")
+            if expr_name.startswith(family.name):
+                display_name = expr_name
+            else:
+                display_name = f"{family.name} ({expr_name})"
+        else:
+            display_name = family.name
+
+        # Determine crystal system from CDL if it's amorphous, else use family
+        cdl_text = expr_data.get("cdl", "").strip()
+        cdl_line = cdl_text.split("\n")[-1].strip() if cdl_text else ""
+        if cdl_line.startswith("amorphous"):
+            expr_system = "amorphous"
+        else:
+            expr_system = family.crystal_system
+
         mineral_data = {
-            "name": (
-                f"{family.name} ({expr_data.get('name', slug.title())})"
-                if slug != "default"
-                else family.name
-            ),
+            "name": display_name,
             "cdl": expr_data["cdl"],
-            "system": family.crystal_system,
+            "system": expr_system,
             "point_group": expr_data.get("point_group") or family.point_group,
             "chemistry": family.chemistry,
             "hardness": family.hardness_min,  # Use min for backwards compat
