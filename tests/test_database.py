@@ -455,5 +455,13 @@ class TestV2Expressions:
         for name in empty_cdl:
             assert any(
                 kw in name
-                for kw in ["doublet", "triplet", "soude", "glass", "coral", "lapis-gilson", "opal-gilson"]
+                for kw in [
+                    "doublet",
+                    "triplet",
+                    "soude",
+                    "glass",
+                    "coral",
+                    "lapis-gilson",
+                    "opal-gilson",
+                ]
             ), f"Non-composite preset {name} has empty CDL"

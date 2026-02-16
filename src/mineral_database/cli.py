@@ -122,7 +122,11 @@ def main(args: list[str] | None = None) -> int:
         method = None if parsed_args.synthetics == "all" else parsed_args.synthetics
         ids = list_synthetics(method)
         if ids:
-            label = f"Synthetic Minerals ({parsed_args.synthetics})" if method else "All Synthetic Minerals"
+            label = (
+                f"Synthetic Minerals ({parsed_args.synthetics})"
+                if method
+                else "All Synthetic Minerals"
+            )
             print(f"{label} ({len(ids)} total):")
             for fid in ids:
                 family = get_family(fid)
@@ -142,7 +146,11 @@ def main(args: list[str] | None = None) -> int:
             for fid in ids:
                 family = get_family(fid)
                 if family:
-                    counterpart = f" → {family.natural_counterpart_id}" if family.natural_counterpart_id else ""
+                    counterpart = (
+                        f" → {family.natural_counterpart_id}"
+                        if family.natural_counterpart_id
+                        else ""
+                    )
                     print(f"  {fid:40} - {family.name}{counterpart}")
         else:
             print("No simulants found.")
@@ -191,7 +199,11 @@ def main(args: list[str] | None = None) -> int:
                     for name in presets:
                         preset = get_preset(name)
                         if preset:
-                            origin_tag = f" [{preset['origin']}]" if preset.get("origin", "natural") != "natural" else ""
+                            origin_tag = (
+                                f" [{preset['origin']}]"
+                                if preset.get("origin", "natural") != "natural"
+                                else ""
+                            )
                             print(f"    {name:25} - {preset['name']}{origin_tag}")
         else:
             presets = list_presets(parsed_args.list)
@@ -200,7 +212,11 @@ def main(args: list[str] | None = None) -> int:
                 for name in presets:
                     preset = get_preset(name)
                     if preset:
-                        origin_tag = f" [{preset['origin']}]" if preset.get("origin", "natural") != "natural" else ""
+                        origin_tag = (
+                            f" [{preset['origin']}]"
+                            if preset.get("origin", "natural") != "natural"
+                            else ""
+                        )
                         print(f"  {name:25} - {preset['name']}{origin_tag}")
             else:
                 print(f"No presets found for category: {parsed_args.list}")

@@ -515,7 +515,9 @@ def row_to_mineral(row: sqlite3.Row) -> Mineral:
     heat_max = row["heat_treatment_temp_max"] if "heat_treatment_temp_max" in row.keys() else None
 
     # Extract pleochroism columns (may not exist in older databases)
-    pleochroism_strength = row["pleochroism_strength"] if "pleochroism_strength" in row.keys() else None
+    pleochroism_strength = (
+        row["pleochroism_strength"] if "pleochroism_strength" in row.keys() else None
+    )
     pleochroism_color1 = row["pleochroism_color1"] if "pleochroism_color1" in row.keys() else None
     pleochroism_color2 = row["pleochroism_color2"] if "pleochroism_color2" in row.keys() else None
     pleochroism_color3 = row["pleochroism_color3"] if "pleochroism_color3" in row.keys() else None
@@ -524,7 +526,9 @@ def row_to_mineral(row: sqlite3.Row) -> Mineral:
     # Extract synthetic/simulant columns (may not exist in older databases)
     origin = row["origin"] if "origin" in row.keys() else "natural"
     growth_method = row["growth_method"] if "growth_method" in row.keys() else None
-    natural_counterpart_id = row["natural_counterpart_id"] if "natural_counterpart_id" in row.keys() else None
+    natural_counterpart_id = (
+        row["natural_counterpart_id"] if "natural_counterpart_id" in row.keys() else None
+    )
 
     return Mineral(
         id=row["id"],
@@ -822,9 +826,16 @@ def get_cut_shape_factors(conn: sqlite3.Connection) -> list[dict[str, str | floa
     Returns:
         List of dicts with id, name, factor, description
     """
-    cursor = conn.execute("SELECT id, name, factor, description FROM cut_shape_factors ORDER BY name")
+    cursor = conn.execute(
+        "SELECT id, name, factor, description FROM cut_shape_factors ORDER BY name"
+    )
     return [
-        {"id": row["id"], "name": row["name"], "factor": row["factor"], "description": row["description"]}
+        {
+            "id": row["id"],
+            "name": row["name"],
+            "factor": row["factor"],
+            "description": row["description"],
+        }
         for row in cursor.fetchall()
     ]
 
@@ -836,7 +847,9 @@ def get_volume_shape_factors(conn: sqlite3.Connection) -> list[dict[str, str | f
         List of dicts with id, name, factor
     """
     cursor = conn.execute("SELECT id, name, factor FROM volume_shape_factors ORDER BY name")
-    return [{"id": row["id"], "name": row["name"], "factor": row["factor"]} for row in cursor.fetchall()]
+    return [
+        {"id": row["id"], "name": row["name"], "factor": row["factor"]} for row in cursor.fetchall()
+    ]
 
 
 def get_thresholds(conn: sqlite3.Connection, category: str) -> list[dict[str, str | float | None]]:
@@ -1157,11 +1170,19 @@ def row_to_family(row: sqlite3.Row) -> MineralFamily:
         fluorescence=row["fluorescence"],
         origin=row["origin"] if "origin" in row.keys() else "natural",
         growth_method=row["growth_method"] if "growth_method" in row.keys() else None,
-        natural_counterpart_id=row["natural_counterpart_id"] if "natural_counterpart_id" in row.keys() else None,
-        target_minerals=json.loads(row["target_minerals_json"] or "[]") if "target_minerals_json" in row.keys() else [],
+        natural_counterpart_id=row["natural_counterpart_id"]
+        if "natural_counterpart_id" in row.keys()
+        else None,
+        target_minerals=json.loads(row["target_minerals_json"] or "[]")
+        if "target_minerals_json" in row.keys()
+        else [],
         manufacturer=row["manufacturer"] if "manufacturer" in row.keys() else None,
-        year_first_produced=row["year_first_produced"] if "year_first_produced" in row.keys() else None,
-        diagnostic_synthetic_features=row["diagnostic_synthetic_features"] if "diagnostic_synthetic_features" in row.keys() else None,
+        year_first_produced=row["year_first_produced"]
+        if "year_first_produced" in row.keys()
+        else None,
+        diagnostic_synthetic_features=row["diagnostic_synthetic_features"]
+        if "diagnostic_synthetic_features" in row.keys()
+        else None,
     )
 
 
@@ -1208,9 +1229,7 @@ def get_family_by_id(conn: sqlite3.Connection, family_id: str) -> MineralFamily 
     Returns:
         MineralFamily or None if not found
     """
-    cursor = conn.execute(
-        "SELECT * FROM mineral_families WHERE id = ?", (family_id.lower(),)
-    )
+    cursor = conn.execute("SELECT * FROM mineral_families WHERE id = ?", (family_id.lower(),))
     row = cursor.fetchone()
     if row:
         return row_to_family(row)
@@ -1247,9 +1266,7 @@ def get_families_by_system(conn: sqlite3.Connection, system: str) -> list[Minera
     return [row_to_family(row) for row in cursor.fetchall()]
 
 
-def get_expressions_for_family(
-    conn: sqlite3.Connection, family_id: str
-) -> list[MineralExpression]:
+def get_expressions_for_family(conn: sqlite3.Connection, family_id: str) -> list[MineralExpression]:
     """Get all expressions for a mineral family.
 
     Args:
@@ -1270,9 +1287,7 @@ def get_expressions_for_family(
     return [row_to_expression(row) for row in cursor.fetchall()]
 
 
-def get_expression_by_id(
-    conn: sqlite3.Connection, expression_id: str
-) -> MineralExpression | None:
+def get_expression_by_id(conn: sqlite3.Connection, expression_id: str) -> MineralExpression | None:
     """Get a mineral expression by its ID.
 
     Args:
@@ -1450,9 +1465,7 @@ def get_all_expressions(conn: sqlite3.Connection) -> list[MineralExpression]:
 # =============================================================================
 
 
-def get_families_by_origin(
-    conn: sqlite3.Connection, origin: str
-) -> list[MineralFamily]:
+def get_families_by_origin(conn: sqlite3.Connection, origin: str) -> list[MineralFamily]:
     """Get mineral families filtered by origin.
 
     Args:
@@ -1469,9 +1482,7 @@ def get_families_by_origin(
     return [row_to_family(row) for row in cursor.fetchall()]
 
 
-def get_synthetics_for_natural(
-    conn: sqlite3.Connection, natural_id: str
-) -> list[MineralFamily]:
+def get_synthetics_for_natural(conn: sqlite3.Connection, natural_id: str) -> list[MineralFamily]:
     """Get all synthetic versions of a natural mineral.
 
     Args:
@@ -1492,9 +1503,7 @@ def get_synthetics_for_natural(
     return [row_to_family(row) for row in cursor.fetchall()]
 
 
-def get_simulants_for_natural(
-    conn: sqlite3.Connection, natural_id: str
-) -> list[MineralFamily]:
+def get_simulants_for_natural(conn: sqlite3.Connection, natural_id: str) -> list[MineralFamily]:
     """Get all simulants that imitate a natural mineral.
 
     Args:
@@ -1517,9 +1526,7 @@ def get_simulants_for_natural(
     return [row_to_family(row) for row in cursor.fetchall()]
 
 
-def get_natural_counterpart(
-    conn: sqlite3.Connection, family_id: str
-) -> MineralFamily | None:
+def get_natural_counterpart(conn: sqlite3.Connection, family_id: str) -> MineralFamily | None:
     """Get the natural counterpart for a synthetic or simulant.
 
     Args:
@@ -1539,9 +1546,7 @@ def get_natural_counterpart(
     return None
 
 
-def get_families_by_growth_method(
-    conn: sqlite3.Connection, method: str
-) -> list[MineralFamily]:
+def get_families_by_growth_method(conn: sqlite3.Connection, method: str) -> list[MineralFamily]:
     """Get mineral families by growth method.
 
     Args:

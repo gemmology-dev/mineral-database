@@ -363,7 +363,8 @@ def main():
         help="Show what would be done without making changes",
     )
     parser.add_argument(
-        "--verbose", "-v",
+        "--verbose",
+        "-v",
         action="store_true",
         help="Print detailed progress",
     )

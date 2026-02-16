@@ -327,17 +327,41 @@ class MineralFamily:
 
         # Add optional scalar fields
         optional = [
-            "point_group", "chemistry", "category",
-            "hardness_min", "hardness_max", "sg_min", "sg_max",
-            "ri_min", "ri_max", "birefringence", "dispersion", "optical_character",
-            "pleochroism", "pleochroism_strength", "pleochroism_color1",
-            "pleochroism_color2", "pleochroism_color3", "pleochroism_notes",
-            "lustre", "cleavage", "fracture",
-            "description", "notes", "diagnostic_features", "common_inclusions",
-            "heat_treatment_temp_min", "heat_treatment_temp_max",
-            "twin_law", "phenomenon", "fluorescence",
-            "growth_method", "natural_counterpart_id",
-            "manufacturer", "year_first_produced", "diagnostic_synthetic_features",
+            "point_group",
+            "chemistry",
+            "category",
+            "hardness_min",
+            "hardness_max",
+            "sg_min",
+            "sg_max",
+            "ri_min",
+            "ri_max",
+            "birefringence",
+            "dispersion",
+            "optical_character",
+            "pleochroism",
+            "pleochroism_strength",
+            "pleochroism_color1",
+            "pleochroism_color2",
+            "pleochroism_color3",
+            "pleochroism_notes",
+            "lustre",
+            "cleavage",
+            "fracture",
+            "description",
+            "notes",
+            "diagnostic_features",
+            "common_inclusions",
+            "heat_treatment_temp_min",
+            "heat_treatment_temp_max",
+            "twin_law",
+            "phenomenon",
+            "fluorescence",
+            "growth_method",
+            "natural_counterpart_id",
+            "manufacturer",
+            "year_first_produced",
+            "diagnostic_synthetic_features",
         ]
         for key in optional:
             value = getattr(self, key)
@@ -530,9 +554,17 @@ class MineralExpression:
 
         # Add optional fields
         optional = [
-            "point_group", "form_description", "habit",
-            "svg_path", "gltf_path", "stl_path", "thumbnail_path",
-            "model_svg", "model_gltf", "models_generated_at", "note",
+            "point_group",
+            "form_description",
+            "habit",
+            "svg_path",
+            "gltf_path",
+            "stl_path",
+            "thumbnail_path",
+            "model_svg",
+            "model_gltf",
+            "models_generated_at",
+            "note",
         ]
         for key in optional:
             value = getattr(self, key)
@@ -575,7 +607,9 @@ class MineralExpression:
             slug=slug,
             cdl=expression_data.get("cdl") or "",
             point_group=expression_data.get("point_group"),
-            form_description=expression_data.get("form_description", expression_data.get("description")),
+            form_description=expression_data.get(
+                "form_description", expression_data.get("description")
+            ),
             habit=expression_data.get("habit"),
             forms=expression_data.get("forms"),
             svg_path=expression_data.get("svg_path"),

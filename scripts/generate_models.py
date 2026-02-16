@@ -225,9 +225,7 @@ def generate_all_expression_models(
         for i, expr in enumerate(expressions, 1):
             print(f"[{i}/{total}] {expr.id}: {expr.name} (family: {expr.family_id})")
 
-            svg, stl, gltf = generate_models_for_cdl(
-                expr.id, expr.cdl, verbose=verbose
-            )
+            svg, stl, gltf = generate_models_for_cdl(expr.id, expr.cdl, verbose=verbose)
 
             if svg or stl or gltf:
                 timestamp = datetime.now(timezone.utc).isoformat()
@@ -357,7 +355,8 @@ Examples:
         help="Generate model for a specific expression",
     )
     mode_group.add_argument(
-        "-m", "--mineral",
+        "-m",
+        "--mineral",
         type=str,
         metavar="ID",
         help="Generate model for a specific mineral (legacy)",
@@ -388,9 +387,7 @@ Examples:
                 sys.exit(1)
 
             print(f"Generating models for {expression.id}: {expression.name}")
-            svg, stl, gltf = generate_models_for_cdl(
-                expression.id, expression.cdl, verbose=True
-            )
+            svg, stl, gltf = generate_models_for_cdl(expression.id, expression.cdl, verbose=True)
 
             if svg or stl or gltf:
                 timestamp = datetime.now(timezone.utc).isoformat()

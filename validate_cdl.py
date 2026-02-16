@@ -42,39 +42,45 @@ def collect_cdl_strings():
 
             # Top-level cdl field (if any)
             if data.get("cdl"):
-                entries.append({
-                    "mineral": mineral_name,
-                    "mineral_id": mineral_id,
-                    "file": fname,
-                    "category": category,
-                    "cdl": data["cdl"],
-                    "source": "cdl",
-                })
+                entries.append(
+                    {
+                        "mineral": mineral_name,
+                        "mineral_id": mineral_id,
+                        "file": fname,
+                        "category": category,
+                        "cdl": data["cdl"],
+                        "source": "cdl",
+                    }
+                )
 
             # Expressions array
             for i, expr in enumerate(data.get("expressions", [])):
                 cdl_str = expr.get("cdl", "")
                 if not cdl_str or not cdl_str.strip():
-                    entries.append({
+                    entries.append(
+                        {
+                            "mineral": mineral_name,
+                            "mineral_id": mineral_id,
+                            "file": fname,
+                            "category": category,
+                            "cdl": "",
+                            "source": f"expressions[{i}]",
+                            "expr_name": expr.get("name", ""),
+                            "empty": True,
+                        }
+                    )
+                    continue
+                entries.append(
+                    {
                         "mineral": mineral_name,
                         "mineral_id": mineral_id,
                         "file": fname,
                         "category": category,
-                        "cdl": "",
+                        "cdl": cdl_str.strip(),
                         "source": f"expressions[{i}]",
                         "expr_name": expr.get("name", ""),
-                        "empty": True,
-                    })
-                    continue
-                entries.append({
-                    "mineral": mineral_name,
-                    "mineral_id": mineral_id,
-                    "file": fname,
-                    "category": category,
-                    "cdl": cdl_str.strip(),
-                    "source": f"expressions[{i}]",
-                    "expr_name": expr.get("name", ""),
-                })
+                    }
+                )
 
     return entries
 
@@ -172,15 +178,21 @@ def main():
 
     # Summary
     total = len(valid) + len(invalid) + len(warnings)
-    print(f"\n{'='*70}")
-    print(f"SUMMARY: {total} total | {len(valid)} valid | {len(invalid)} invalid | {len(warnings)} warnings")
-    print(f"{'='*70}")
+    print(f"\n{'=' * 70}")
+    print(
+        f"SUMMARY: {total} total | {len(valid)} valid | {len(invalid)} invalid | {len(warnings)} warnings"
+    )
+    print(f"{'=' * 70}")
     print("\nBreakdown:")
     print(f"  Crystalline expressions:  {crystalline_count}")
     print(f"  Amorphous expressions:    {amorphous_count}")
     print(f"  Aggregate expressions:    {aggregate_count}")
     print(f"  Nested growth expressions:{nested_count}")
-    print(f"  Parse success rate:       {len(valid)}/{total} ({100*len(valid)/total:.1f}%)" if total else "")
+    print(
+        f"  Parse success rate:       {len(valid)}/{total} ({100 * len(valid) / total:.1f}%)"
+        if total
+        else ""
+    )
 
     report = {
         "summary": {
