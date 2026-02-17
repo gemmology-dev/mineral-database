@@ -17,7 +17,7 @@ Example:
 """
 
 __version__ = "2.1.2"
-__author__ = "Fabian Schuh"
+__author__ = "Bissbert"
 __email__ = "fabian@gemmology.dev"
 
 # Core query functions
