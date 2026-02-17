@@ -72,12 +72,7 @@ def generate_models_for_cdl(
         import matplotlib.pyplot as plt
         import numpy as np
         from crystal_renderer.data import HABIT_COLOURS
-        from crystal_renderer.projection import (
-            calculate_axis_origin,
-            calculate_vertex_visibility,
-            calculate_view_bounds,
-        )
-        from crystal_renderer.rendering import draw_crystallographic_axes
+        from crystal_renderer.projection import calculate_vertex_visibility
         from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 
         # Create figure
@@ -127,29 +122,24 @@ def generate_models_for_cdl(
                 zorder=5,
             )
 
-        # Draw axes
-        axis_origin, axis_length = calculate_axis_origin(geometry.vertices, elev, azim)
-        draw_crystallographic_axes(ax, axis_origin, axis_length)
-
-        # Calculate view bounds including axes
-        center, half_extent = calculate_view_bounds(geometry.vertices, axis_origin, axis_length)
+        # Calculate view bounds (crystal only, no axes)
+        verts = geometry.vertices
+        center = verts.mean(axis=0)
+        half_extent = np.abs(verts - center).max() * 1.15
 
         # Set axis limits
         ax.set_xlim([center[0] - half_extent, center[0] + half_extent])
         ax.set_ylim([center[1] - half_extent, center[1] + half_extent])
         ax.set_zlim([center[2] - half_extent, center[2] + half_extent])
 
-        # Clean up axes
-        ax.set_xlabel("")
-        ax.set_ylabel("")
-        ax.set_zlabel("")
-        ax.set_xticklabels([])
-        ax.set_yticklabels([])
-        ax.set_zticklabels([])
+        # Hide all axes, grid, and panes
+        ax.set_axis_off()
 
-        # Save to buffer
+        # Save to buffer with transparent background
+        fig.patch.set_alpha(0)
+        ax.patch.set_alpha(0)
         plt.tight_layout()
-        plt.savefig(svg_buffer, format="svg", dpi=100, bbox_inches="tight")
+        plt.savefig(svg_buffer, format="svg", dpi=100, bbox_inches="tight", transparent=True)
         plt.close(fig)
 
         svg_string = svg_buffer.getvalue().decode("utf-8")
