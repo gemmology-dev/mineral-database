@@ -35,7 +35,7 @@ expressions:
     #! Species: Tremolite
     #! System: Monoclinic (2/m)
     #! Habit: Elongated prismatic to bladed
-    monoclinic[2/m]:{010}@1.0 + {110}@0.8 + {100}@0.4 | elongate(c:3.0)
+    monoclinic[2/m]:{110}@1.0 + {010}@0.8 + {100}@0.4 + {001}@0.9 | elongate(c:3.0)
   is_primary: true
   form_description: Tremolite — the magnesian end-member of the tremolite-actinolite series. Fibrous varieties constitute nephrite jade. Named after Val Tremola in the Swiss Alps.
   forms:

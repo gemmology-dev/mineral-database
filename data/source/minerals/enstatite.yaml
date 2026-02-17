@@ -41,7 +41,7 @@ expressions:
     #! Species: Enstatite
     #! System: Orthorhombic (mmm)
     #! Habit: Prismatic orthorhombic
-    orthorhombic[mmm]:{010}@1.0 + {210}@0.8 + {100}@0.6
+    orthorhombic[mmm]:{210}@1.0 + {010}@0.8 + {100}@0.6 + {001}@0.9
   is_primary: true
   form_description: Enstatite — the magnesium end-member of the orthopyroxene series. Gem varieties include chrome-green enstatite and bronzite with its submetallic bronze schiller.
   forms:

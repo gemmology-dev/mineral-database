@@ -43,7 +43,7 @@ expressions:
     #! Species: Spodumene
     #! System: Monoclinic (2/m)
     #! Habit: Elongated prismatic with flat faces
-    monoclinic[2/m]:{010}@1.0 + {110}@0.8 + {100}@0.4 | elongate(c:3.0)
+    monoclinic[2/m]:{110}@1.0 + {010}@0.8 + {100}@0.4 + {001}@1.2 | elongate(c:3.0)
   is_primary: true
   form_description: Spodumene — a lithium pyroxene that produces the gem varieties kunzite (pink-violet) and hiddenite (chrome-green). Known for its perfect cleavage which makes cutting challenging.
   forms:
