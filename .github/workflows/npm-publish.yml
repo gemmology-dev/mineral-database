@@ -1,4 +1,7 @@
 # Publish @gemmology/mineral-data to npm on release
+# Uses OIDC trusted publishing (no NPM_TOKEN required).
+# Trusted publisher must be configured on npmjs.com:
+#   org/user: gemmology-dev   repo: mineral-database   workflow: npm-publish.yml
 
 name: Publish to npm
 
@@ -9,6 +12,9 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write   # mint short-lived OIDC token for npm
+      contents: read
 
     steps:
       - uses: actions/checkout@v4
@@ -19,7 +25,8 @@ jobs:
           node-version: '20'
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Publish to npm
-        run: npm publish ./npm-package --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Upgrade npm to a version with trusted-publishing support
+        run: npm install -g npm@latest
+
+      - name: Publish to npm with provenance
+        run: npm publish ./npm-package --access public --provenance
