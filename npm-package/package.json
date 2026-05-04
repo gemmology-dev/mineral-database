@@ -1,6 +1,6 @@
 {
   "name": "@gemmology/mineral-data",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Pre-built SQLite database of 159 mineral families (116 natural + 19 synthetic + 20 simulant + 4 composite) with 216 expressions, mineral groups, Dana categories, fluorescence, and diagnostic features",
   "main": "index.js",
   "types": "index.d.ts",
