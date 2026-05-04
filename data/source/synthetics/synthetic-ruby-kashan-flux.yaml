@@ -1,0 +1,61 @@
+id: synthetic-ruby-kashan-flux
+name: Kashan Flux Ruby
+crystal_system: trigonal
+point_group: "-3m"
+chemistry: Al2O3:Cr
+category: synthetic corundum
+origin: synthetic
+growth_method: flux (molybdate-based flux in platinum crucible; slow-cooling crystallisation; independently developed from Chatham process)
+natural_counterpart_id: ruby
+manufacturer: Kashan Inc. (produced 1968-1996; associated with Inamori/Kyocera technology)
+year_first_produced: "1968"
+diagnostic_synthetic_features: >
+  Angular flux fingerprints (Kashan flux residue forms angular, more geometric fingerprint
+  textures rather than the wispy cloud-like veils of Chatham/Knischka — angular, partially
+  solidified flux inclusions visible under dark-field illumination); platinum platelets
+  (flat hexagonal to irregular Pt metal from Pt crucible; same as other Pt-crucible flux
+  products; diagnostic for all flux-grown corundum); absence of twinning (Kashan rubies
+  rarely show polysynthetic twinning lamellae typical of natural Burmese ruby); absence of
+  rutile silk (no fine straight rutile needles as in natural Mogok ruby); molybdenum trace
+  (Mo from flux detectable by EDXRF; natural ruby has no Mo; highly diagnostic chemical
+  signature); strong Cr fluorescence (both LWUV and SWUV; intense red from pure Cr3+
+  environment; natural Burma ruby also strong, but combination with Mo trace and Pt platelets
+  is conclusive); absorption spectrum shows strong doublet at 692/694 nm (Cr3+ R-lines);
+  no 450 nm Fe band (natural ruby often has Fe-related absorption at 450 nm from Thai/Cambodian origin)
+hardness: "9"
+sg: "3.99-4.01"
+ri: "1.762-1.770"
+birefringence: 0.008
+optical_character: Uniaxial -
+dispersion: 0.018
+lustre: Vitreous to adamantine
+cleavage: None (parting on {0001} and {10-11})
+fracture: Conchoidal
+pleochroism: Strong dichroism
+pleochroism_strength: strong
+pleochroism_color1: purplish-red
+pleochroism_color2: orangey-red
+colors: [Red, Pinkish-red]
+inclusions: [Angular flux fingerprints (geometric; Kashan-specific), Platinum platelets, Absence of rutile silk]
+fluorescence: Very strong red (LW and SW UV; characteristic of pure Cr3+ environment)
+notes: >
+  Kashan flux ruby distinguishes from generic flux ruby (Chatham/Knischka/Ramaura) by angular
+  flux fingerprint geometry (Chatham = wispy veils); from generic flux ruby.yaml in DB.
+  Two API-verified papers: Burch 1984, Journal of Gemmology 19(1):54
+  (DOI 10.15506/jog.1984.19.1.54) [VERIFIED]: "Some Observations on a Kashan Synthetic Ruby"
+  — Pt platelets and angular flux fingerprints documented. Muhlmeister et al. 1998,
+  Gems & Gemology 34(2):80 (DOI 10.5741/gems.34.2.80) [VERIFIED]: "flux-grown rubies in
+  general show extremely strong red fluorescence under both longwave and shortwave UV."
+  Mo trace by EDXRF: absent in natural ruby — chemical confirmation. Production 1968-1996;
+  Inamori (Kyocera) technology. Distinguishes from hydrothermal (no Pt, chevron zoning)
+  and from Verneuil (curved striae, gas bubbles, no Pt).
+expressions:
+  - slug: crystal
+    name: Crystal
+    cdl: |
+      #! Species: Kashan Flux Ruby
+      #! System: Trigonal (-3m)
+      #! Habit: Tabular to prismatic from Pt-crucible flux growth
+      trigonal[-3m]:{10-10}@1.0 + {10-11}@0.8 + {0001}@0.5
+    is_primary: true
+    form_description: Flux-grown ruby in Pt crucible; angular flux fingerprints and Pt platelets are diagnostic; Mo trace by EDXRF is confirmatory.

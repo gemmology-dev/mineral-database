@@ -1,0 +1,60 @@
+id: ametrine
+name: Ametrine
+crystal_system: trigonal
+point_group: "32"
+chemistry: SiO2
+mineral_group: Quartz group
+category: Tectosilicates
+origin: natural
+hardness: 7
+sg: 2.65
+ri: 1.544-1.553
+birefringence: 0.009
+optical_character: Uniaxial +
+dispersion: 0.013
+lustre: Vitreous
+cleavage: None
+fracture: Conchoidal
+diagnostic_features: "Bicolour quartz with distinct amethyst (purple) and citrine (yellow-orange) sectors; sharp colour boundary; uniaxial positive; RI 1.544-1.553; SG 2.65; hardness 7; Bolivia Anahí mine as primary natural source"
+pleochroism: Weak (purple/pale in amethyst sectors; near-absent in citrine sectors)
+pleochroism_strength: weak
+pleochroism_color1: Purple
+pleochroism_color2: Pale violet to colourless
+colors:
+- Bicolour purple/violet (amethyst sector) and yellow to orange (citrine sector)
+treatments:
+- Thermal/irradiation treatment of amethyst can produce synthetic ametrine; natural ametrine from Bolivia has specific inclusions distinguishing it from treated material
+localities:
+- Bolivia (Anahí mine, Santa Cruz province; primary and most celebrated source)
+- Brazil (minor; bicolour quartz from various localities)
+- India (minor occurrences)
+inclusions:
+- Two-phase fluid inclusions in both sectors
+- Growth zone planes parallel to rhombohedral faces
+- Sharp colour sector boundaries (diagnostic of natural bicolour growth)
+notes: >
+  Bicolour variety of quartz showing amethyst (purple; Fe4+/Fe3+ colour centre) and citrine
+  (yellow-orange; Fe3+ in different coordination) growth sectors in a single crystal.
+  The Bolivia Anahí mine is documented as the primary commercial source by Sunagawa et al. 1999
+  (DOI 10.1016/s0022-0248(99)00866-0) [VERIFIED] and Fritsch & Shigley 1994, Gems & Gemology
+  (DOI 10.5741/gems.30.1.4) [VERIFIED]. Crystal system trigonal 32 (same as quartz and amethyst/
+  citrine). RI and SG from Read 7th ed. (DOI 10.4324/9780080507224) [PARTIALLY_SUPPORTED].
+  Distinction from heat-treated bicolour quartz: natural ametrine has sharp sector boundaries
+  and specific inclusion suite from the Anahí mine.
+expressions:
+- slug: default
+  name: Ametrine
+  cdl: |
+    #! Species: Ametrine (bicolour Quartz)
+    #! System: Trigonal (32)
+    #! Habit: Prismatic hexagonal crystal with amethyst/citrine colour sectors
+    trigonal[32]:{10-10}@1.0 + {10-11}@0.8 + {0001}@0.3
+  is_primary: true
+  form_description: >
+    Bicolour quartz crystal with amethyst (purple, Fe4+) and citrine (yellow, Fe3+) growth sectors
+    separated by a sharp planar boundary. Bolivia Anahí mine is the benchmark natural source.
+    CDL identical to quartz/amethyst/citrine; the bicolour character is a growth phenomenon.
+  forms:
+  - prism
+  - rhombohedron
+  - pinacoid

@@ -1,0 +1,59 @@
+id: coral
+name: Coral
+crystal_system: amorphous
+point_group: none
+chemistry: CaCO3 (calcareous; polycrystalline calcite + organic matrix); black coral = gorgonin protein
+mineral_group: Organic gem (biomineral)
+category: Organic gems
+origin: natural
+hardness: 3-4
+sg: 2.60-2.70
+ri: 1.486-1.658
+birefringence: null
+optical_character: AGG
+lustre: Waxy to sub-vitreous
+cleavage: None (polycrystalline aggregate)
+fracture: Uneven to splintery
+diagnostic_features: "Longitudinal growth striations (most diagnostic); effervescence in HCl (calcareous coral); SG 2.60-2.70; low RI on spot reading; wood-like organic microstructure under magnification"
+pleochroism: None
+colors:
+- Red (oxblood/rosso grade)
+- Orange-red
+- Pale pink (angel skin)
+- White
+- Black (black coral)
+treatments:
+- Dyeing and colour enhancement
+- Bleaching and re-dyeing
+- Resin impregnation
+localities:
+- Mediterranean Sea (Tunisia, Algeria, Morocco, Italy - Torre del Greco)
+- Japan and Taiwan (Corallium japonicum and related species)
+- Hawaii (Pleurocorallium secundum)
+- Midway Atoll (deep-water gold coral)
+inclusions:
+- Growth tubes and structural voids
+- Organic matrix bands
+notes: >
+  Not an IMA mineral species; biomineral product of Corallium rubrum (Mediterranean) and related
+  colonial organisms. Calcareous skeleton composed of polycrystalline calcite + organic scleroprotein
+  matrix. CITES Appendix II (regulated trade). SG and RI per Read 7th ed. (DOI 10.4324/9780080507224);
+  species identification methods confirmed by Lendvay et al. 2020 (DOI 10.1038/s41598-020-64582-4)
+  and Vielzeuf et al. 2021 (DOI 10.15506/jog.2021.37.6.596).
+  IMA-approved: N/A (biological organism).
+expressions:
+- slug: default
+  name: Precious Coral (Calcareous)
+  cdl: |
+    #! Species: Coral (Corallium rubrum)
+    #! System: Amorphous (biomineral aggregate)
+    #! Habit: Arborescent colonial growth; polycrystalline calcareous skeleton
+    amorphous[waxy]:{massive} | phenomenon[organic:coral]
+  is_primary: true
+  form_description: >
+    Colonial biomineral; arborescent (tree-like) skeleton of polycrystalline calcite with organic
+    scleroprotein matrix. Gem material is polished branch sections or cabochons. Not a single crystal;
+    CDL is an approximation for the amorphous biomineral aggregate.
+  forms:
+  - massive
+  - arborescent

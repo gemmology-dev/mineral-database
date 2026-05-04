@@ -1,0 +1,80 @@
+id: serpentine
+name: Serpentine
+crystal_system: monoclinic
+point_group: 2/m
+chemistry: Mg3Si2O5(OH)4
+mineral_group: Serpentine group (phyllosilicates)
+category: Phyllosilicates
+origin: natural
+hardness: 2.5-5
+sg: 2.44-2.62
+ri: 1.55-1.57
+birefringence: null
+optical_character: AGG
+dispersion: null
+lustre: Waxy to greasy
+cleavage: Perfect (single plane in antigorite); fracture conchoidal to uneven in massive material
+fracture: Conchoidal to uneven
+diagnostic_features: "Waxy lustre (most distinctive visual feature); low hardness H 2.5-5 (scratched by knife — critical separator from true jade); RI 1.55-1.57 (much lower than jadeite 1.66 or nephrite 1.62); low SG 2.44-2.62 (lighter than jadeite 3.34 or nephrite 2.90-3.10); chromite inclusions in williamsite"
+pleochroism: None
+colors:
+- Apple green to yellow-green (bowenite; Fe2+/Fe3+ chromophore)
+- Oil-green to chrome-green (williamsite; Cr3+ substituting Mg)
+- Grey-green to mottled green, white, pale bluish-green (various antigorite)
+- Veined/patterned (serpentinite rock with magnetite or chromite veining)
+treatments:
+- Wax/oil impregnation (common)
+- Dyeing (green colour enhancement)
+- Polymer stabilisation
+localities:
+- Rhode Island, USA (Smithfield; type locality for bowenite; named after George T. Bowen)
+- New Zealand (Maori pounamu; bowenite alongside nephrite)
+- Afghanistan (Kandahar; translucent apple-green bowenite)
+- Pennsylvania and Maryland, USA (williamsite; Chrome, Chester County)
+- Cornwall, England
+- Connemara, Ireland (Connemara marble; green serpentine marble)
+- Pakistan, India, China, Korea, South Africa
+inclusions:
+- Chromite grains (black to brown; diagnostic in bowenite/williamsite)
+- Magnetite granules
+- Antigorite plate-like crystal bundles
+- Talc patches
+- Chrysotile veinlets
+notes: >
+  Principal IMA-approved gem species is antigorite (monoclinic 2/m); lizardite is trigonal
+  (-3m) — both formula Mg3Si2O5(OH)4 with Mg:Fe and Cr substitution. Gem material is invariably
+  polycrystalline massive aggregate; crystal system given for the dominant antigorite (bowenite)
+  phase. Chrysotile (fibrous asbestiform variety) is NOT used as gem material.
+  Chemical formula and mineral group confirmed by Ross & Shannon 1962, USGS Professional Paper
+  384-A (DOI 10.3133/pp384a) [VERIFIED]. RI and SG from Read 7th ed. (DOI 10.4324/9780080507224)
+  [PARTIALLY_SUPPORTED]. Serpentine as jade simulant ("New jade" trade name) documented by
+  Hobbs 1982, Gems & Gemology (DOI 10.5741/gems.18.1.3) [VERIFIED].
+  Trade name "New jade" is misleading; material is not jadeite or nephrite.
+expressions:
+- slug: bowenite
+  name: Bowenite (Gem Serpentine)
+  cdl: |
+    #! Species: Serpentine (Antigorite/Bowenite variety)
+    #! System: Monoclinic (2/m)
+    #! Habit: Massive aggregate; waxy green
+    monoclinic[2/m]:{001}@1.0 + {100}@0.7
+  is_primary: true
+  form_description: >
+    Bowenite variety of antigorite; translucent apple-green massive aggregate with waxy lustre.
+    Polycrystalline — CDL represents the dominant antigorite phase. Used as jade simulant but
+    easily distinguished by low RI, SG, and hardness.
+  forms:
+  - massive
+- slug: williamsite
+  name: Williamsite (Chromian Serpentine)
+  cdl: |
+    #! Species: Williamsite (Cr-bearing serpentine)
+    #! System: Monoclinic (2/m)
+    #! Habit: Massive aggregate; oil-green with chromite inclusions
+    monoclinic[2/m]:{001}@1.0 + {100}@0.5[inclusion:chromite]
+  is_primary: false
+  form_description: >
+    Chromian variety of antigorite (williamsite); oil-green colour from Cr3+ substitution;
+    black chromite grain inclusions diagnostic. Pennsylvania, USA type locality.
+  forms:
+  - massive

@@ -1,0 +1,80 @@
+id: andalusite
+name: Andalusite
+crystal_system: orthorhombic
+point_group: mmm
+chemistry: Al2SiO5
+mineral_group: Al2SiO5 polymorph group (with kyanite and sillimanite)
+category: Nesosilicates
+origin: natural
+hardness: 7-7.5
+sg: 3.13-3.17
+ri: 1.629-1.650
+birefringence: 0.007-0.013
+optical_character: Biaxial -
+dispersion: 0.016
+lustre: Vitreous
+cleavage: Distinct prismatic {110} in two directions at ~90°
+fracture: Uneven to conchoidal
+diagnostic_features: "Strong trichroism (dark red/reddish-brown + olive green to yellowish-green + orange to brownish-yellow) — the single most diagnostic optical feature; chiastolite cross-section (carbonaceous inclusions in symmetrical cross pattern in some crystals)"
+pleochroism: Strong trichroism
+pleochroism_strength: strong
+pleochroism_color1: Dark red to reddish-brown
+pleochroism_color2: Olive green to yellowish-green
+pleochroism_notes: Third direction orange to brownish-yellow; trichroism visible in dichroscope; "The strong trichroism of andalusite — with dark red, olive green, and orange-yellow visible through the dichroscope — is the single most diagnostic optical feature of this species"
+colors:
+- Yellow-green
+- Olive green
+- Brownish-red
+- Reddish-orange
+- Greenish-brown
+treatments:
+- Generally not treated
+localities:
+- Brazil (Minas Gerais; primary source of transparent gem-quality)
+- Sri Lanka (alluvial; lighter tone)
+- Spain (Almeria, Castile; chiastolite variety)
+- Madagascar
+- USA (California; chiastolite variety)
+inclusions:
+- Chiastolite: carbonaceous (graphite-rich) inclusions forming the diagnostic cross pattern
+- Gem-quality: occasional two-phase fluid inclusions
+- Apatite or mica inclusions (metamorphic paragenesis)
+notes: >
+  Al2SiO5 nesosilicate; one of three Al2SiO5 polymorphs (andalusite, kyanite, sillimanite).
+  Orthorhombic mmm; biaxial negative with 2V ~85°. Strong trichroism (X = dark red,
+  Y = olive green, Z = orange-yellow) is primary diagnostic. Chiastolite is the carbonaceous
+  variety showing a symmetrical cross in cross-section. Gemmological constants confirmed by
+  Fernandes & Choudhary 2009, Gems & Gemology 45(2):120-129 (DOI 10.5741/gems.45.2.120)
+  [VERIFIED]. Colour cause: Fe3+ substitution producing pleochroic absorption pattern.
+  Two cleavage directions at ~90°; avoid hard impacts. Standard gem material from Brazil;
+  chiastolite as collector's item from Spain.
+expressions:
+- slug: default
+  name: Andalusite
+  cdl: |
+    #! Species: Andalusite
+    #! System: Orthorhombic (mmm)
+    #! Habit: Coarse prismatic with square cross-section
+    orthorhombic[mmm]:{110}@1.0 + {010}@0.7 + {001}@0.4
+  is_primary: true
+  form_description: >
+    Coarse prismatic crystals with near-square cross-section; {110} prism dominant. Strong trichroism
+    (red/olive-green/orange-yellow) is the diagnostic optical feature. Gem quality from Brazil
+    (Minas Gerais). Biaxial negative with 2V ~85°.
+  forms:
+  - prism
+  - pinacoid
+- slug: chiastolite
+  name: Chiastolite (Andalusite variety)
+  cdl: |
+    #! Species: Chiastolite (carbonaceous Andalusite)
+    #! System: Orthorhombic (mmm)
+    #! Habit: Prismatic with cross-shaped carbonaceous inclusions
+    orthorhombic[mmm]:{110}@1.0 + {010}@0.7[inclusion:carbonaceous_cross]
+  is_primary: false
+  form_description: >
+    Variety of andalusite containing carbonaceous (graphite-rich) inclusions arranged in a
+    symmetrical cross parallel to the prism faces; visible in cross-section cabochons.
+    Grey, brown, and white body colour. Spain and California localities.
+  forms:
+  - prism

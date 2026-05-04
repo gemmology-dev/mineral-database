@@ -1,0 +1,47 @@
+id: french-jet
+name: French Jet (Black Glass)
+crystal_system: amorphous
+point_group: none
+chemistry: Soda-lime or lead glass; coloured black with iron oxide, manganese oxide, or carbon black; may be lead-rich for higher density and lustre
+category: jet simulant
+origin: simulant
+target_minerals_json: '["jet"]'
+year_first_produced: "1800"
+hardness: "5-5.5"
+sg: "2.40-3.50"
+ri: "1.48-1.70"
+birefringence: 0
+optical_character: Isotropic
+lustre: Vitreous to brilliant
+cleavage: None
+fracture: Conchoidal
+colors: [Uniform black (no brown tinge unlike vulcanite)]
+inclusions: [Possible gas bubbles; conchoidal fracture on broken edges]
+fluorescence: Variable
+notes: >
+  Black glass jet simulant; popular 1840s-1900s for Victorian mourning jewellery.
+  "French jet" is primarily Bohemian and French glass industry production, not only French.
+  Key diagnostic: high SG 2.40-3.50 (jet = 1.30-1.35; French jet sinks rapidly in liquids
+  that float jet). Cold to touch (glass has high thermal conductivity). Conchoidal fracture
+  on broken edges. No smell on hot-point (vs jet = aromatic coal; vulcanite = sulfur/rubber).
+  Harder than jet (H 5-5.5 vs jet 2.5-4). Dictionary of Gems and Gemology (Springer)
+  (DOI 10.1007/978-3-540-72816-0_8882) [PARTIALLY_SUPPORTED — catalogue record only].
+  Read 7th ed. p.330 (DOI 10.4324/9780080507224) [PARTIALLY_SUPPORTED].
+  VERIFIED.md status [PARTIALLY_SUPPORTED] per S-014. Included as curriculum-standard simulant.
+diagnostic_synthetic_features: >
+  High SG 2.40-3.50 vs jet 1.30-1.35 (definitive hydrostatic test); cold to touch (glass
+  thermal conductivity); conchoidal fracture; no smell on hot-point; harder than jet;
+  possible gas bubbles under magnification; no organic microstructure (jet shows wood-grain)
+expressions:
+  - slug: default
+    name: French Jet (Black Glass)
+    cdl: |
+      #! Species: French Jet (black glass; jet simulant)
+      #! System: Amorphous (glass)
+      #! Habit: Moulded/faceted black glass
+      amorphous[glassy]:{massive}
+    is_primary: true
+    form_description: >
+      Black glass (soda-lime or lead glass coloured with iron oxide, manganese, or carbon black).
+      Amorphous; isotropic. Very high SG (2.40-3.50) vs jet (1.30-1.35) is the primary diagnostic.
+      Cold to touch; conchoidal fracture; no hot-point smell. Victorian mourning jewellery simulant.

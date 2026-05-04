@@ -1,0 +1,61 @@
+id: hydrogrossular
+name: Hydrogrossular
+crystal_system: cubic
+point_group: m3m
+chemistry: Ca3Al2(SiO4)3-x(OH)4x
+mineral_group: Garnet group (grossular-hydrogrossular series)
+category: Nesosilicates
+origin: natural
+hardness: 6.5-7
+sg: 3.36-3.55
+ri: 1.710-1.730
+birefringence: 0
+optical_character: Isotropic
+dispersion: null
+lustre: Waxy to sub-vitreous
+cleavage: None (garnet; granular aggregate)
+fracture: Splintery to uneven
+diagnostic_features: "Isotropic (singly refractive on polariscope) — jadeite and nephrite are both anisotropic aggregates; SG 3.36-3.55 (heavier than jadeite 3.34, much heavier than nephrite 2.90-3.03); FTIR shows OH absorption bands diagnostic of hydrogarnet substitution; chromite inclusions in Cr-bearing Transvaal material"
+pleochroism: None (isotropic)
+colors:
+- Green (Cr3+ and/or V3+ chromophores; resembles jadeite)
+- Pink/mauve (Mn2+ substitution; Bushveld, South Africa)
+- White (pure; colourless)
+treatments:
+- May be dyed to enhance colour
+localities:
+- South Africa (Transvaal/Bushveld Complex; primary source of green and pink material)
+- Pakistan (Chagai district; white material)
+- New Zealand (minor)
+- USA, California (minor)
+inclusions:
+- Opaque black spots (chromite inclusions; common in Cr-bearing Transvaal material)
+- Granular interlocking texture under magnification (coarser and more rounded than jadeite fabric)
+notes: >
+  Grossular garnet with OH replacing SiO4 groups (hydrogarnet substitution):
+  Ca3Al2(SiO4)3-x(OH)4x. Cubic m3m; IMA-approved compositional variety of grossular.
+  Trade names: "Transvaal jade," "South African jade," "African jade" — misleading;
+  not true jade. Separation from jadeite confirmed by Hobbs 1982, Gems & Gemology
+  18(1):3-19 (DOI 10.5741/gems.18.1.3) [VERIFIED]: isotropic (garnet) vs anisotropic
+  aggregate (jadeite/nephrite); SG difference. Chelsea filter: Cr-bearing hydrogrossular
+  shows red under CCF — same as Cr jadeite; NOT diagnostic for separation. RI ~1.71-1.73
+  (isotropic but cryptocrystalline aggregate gives imprecise readings); FTIR OH absorption
+  bands diagnostic for hydrogarnet substitution. Constants from Read 7th ed.
+  (DOI 10.4324/9780080507224) [PARTIALLY_SUPPORTED].
+expressions:
+- slug: default
+  name: Hydrogrossular (Green; Transvaal Jade)
+  cdl: |
+    #! Species: Hydrogrossular (grossular-hydrogarnet series)
+    #! System: Cubic (m3m)
+    #! Habit: Massive cryptocrystalline aggregate; green
+    cubic[m3m]:{110}@1.0 + {100}@0.5
+  is_primary: true
+  form_description: >
+    Grossular garnet with (OH) substituting SiO4; cubic m3m; massive granular aggregate.
+    Green colour from Cr3+/V3+; pink from Mn2+. Isotropic on polariscope (unlike jadeite or
+    nephrite). "Transvaal jade" trade name is misleading — not IMA jade species.
+    South Africa (Bushveld) is the primary gem source.
+  forms:
+  - massive
+  - granular

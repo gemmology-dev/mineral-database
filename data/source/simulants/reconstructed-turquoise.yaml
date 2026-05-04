@@ -1,0 +1,51 @@
+id: reconstructed-turquoise
+name: Reconstructed Turquoise
+crystal_system: triclinic
+point_group: "-1"
+chemistry: CuAl6(PO4)4(OH)8.4H2O (turquoise powder bound with PMMA acrylic or other resin binder)
+category: turquoise simulant
+origin: simulant
+target_minerals_json: '["turquoise"]'
+year_first_produced: "1970"
+hardness: "4-5.5"
+sg: "2.30-2.60"
+ri: "1.61-1.65"
+birefringence: null
+optical_character: AGG
+lustre: Waxy to sub-vitreous
+cleavage: None (aggregate)
+fracture: Conchoidal
+colors: [Blue to blue-green (same turquoise colour range); may appear more uniform in colour than natural]
+inclusions: [Matrix-like structure may appear uniform; polymer binder visible by FTIR]
+fluorescence: Variable
+notes: >
+  Reconstructed turquoise (also "reconstituted turquoise") is made from genuine turquoise
+  powder or low-quality turquoise material bound with a polymeric binder (commonly PMMA
+  acrylic). Chemistry given for the turquoise component (triclinic -1); the reconstruction
+  is the simulant aspect. Crystal system is triclinic (same as turquoise) but the material
+  is a composite powder + binder aggregate. Blumentritt et al. 2023, Journal of Gemmology
+  38(5):443 (DOI 10.15506/jog.2023.38.5.443) [VERIFIED]: "A New Reconstructed Turquoise
+  Imitation Composed of Turquoise Powder with a PMMA (Acrylic) Binder" — documents
+  identification by FTIR (acrylic C-H bands distinct from natural turquoise). SG typically
+  lower than natural turquoise 2.60-2.90 (due to porous binder fill). FTIR is the primary
+  analytical tool: acrylic C-H stretching bands around 2950-3000 cm-1 are absent in natural
+  turquoise. Webster 1962 (DOI 10.15506/jog.1962.8.8.286) [VERIFIED] covers turquoise
+  simulants broadly. Property values (SG, RI) vary depending on binder fraction.
+diagnostic_synthetic_features: >
+  FTIR: acrylic/PMMA C-H stretching bands ~2950-3000 cm-1 (absent in natural turquoise);
+  SG typically 2.30-2.60 (lower than natural turquoise 2.60-2.90 due to porous binder);
+  overly uniform colour distribution under magnification (vs natural colour distribution);
+  hot-point test: acrylic smell from binder
+expressions:
+  - slug: default
+    name: Reconstructed Turquoise
+    cdl: |
+      #! Species: Reconstructed Turquoise (turquoise powder + PMMA binder)
+      #! System: Triclinic (-1; turquoise mineral phase)
+      #! Habit: Massive aggregate (powder + polymer binder)
+      triclinic[-1]:{010}@1.0 + {100}@0.6
+    is_primary: true
+    form_description: >
+      Genuine turquoise powder bound with acrylic (PMMA) or other polymeric binder to form
+      a more homogeneous and workable material. Triclinic crystal system reflects the turquoise
+      mineral phase. FTIR detection of acrylic binder is the primary analytical method.

@@ -1,0 +1,62 @@
+id: synthetic-emerald-lechleitner
+name: Lechleitner Emerald (Overgrowth)
+crystal_system: hexagonal
+point_group: 6/mmm
+chemistry: Be3Al2Si6O18:Cr,V
+category: synthetic emerald (overgrowth on natural seed)
+origin: synthetic
+growth_method: hydrothermal-overgrowth-on-natural-seed (synthetic hydrothermal Cr+V-rich beryl overgrowth deposited on natural colourless beryl seed — goshenite or pale aquamarine)
+natural_counterpart_id: emerald
+manufacturer: Johann Lechleitner (Innsbruck, Austria)
+year_first_produced: "1960"
+diagnostic_synthetic_features: >
+  Colourless beryl core visible under 10x loupe (transmitted light) — the most immediately
+  apparent feature; lighter colourless goshenite/aquamarine core visible inside green rim;
+  crackled interface — at junction between natural seed and synthetic hydrothermal overgrowth
+  a characteristic crackled or crazing texture develops ("crackled skin" in gemmological
+  literature); different inclusion suites in core vs overgrowth — natural beryl core retains
+  own inclusions (two-phase, growth tubes); synthetic skin shows hydrothermal features
+  (nail-head spicules, chevron zoning); Cr distribution concentrated in outer zone only
+  (Schmetzer et al. 1981 — Cr content analysis confirms synthetic origin of colouring layer);
+  UV fluorescence: mosaic or patchy response possible (natural core vs synthetic skin);
+  FTIR: seed beryl and overgrowth may show different water-related absorptions
+hardness: "7.5-8"
+sg: "2.67-2.72"
+ri: "1.565-1.602"
+birefringence: 0.006-0.009
+optical_character: Uniaxial -
+dispersion: 0.014
+lustre: Vitreous
+cleavage: Imperfect basal
+fracture: Conchoidal
+pleochroism: Strong dichroism
+pleochroism_strength: strong
+pleochroism_color1: Vivid green (ordinary ray)
+pleochroism_color2: Bluish-green to colourless (extraordinary ray)
+colors: [Vivid green (Cr + V chromophores in hydrothermal overgrowth)]
+inclusions: [Colourless beryl core (diagnostic), Crackled interface between core and overgrowth, Natural inclusions in core; hydrothermal features (nail-head spicules) in synthetic skin]
+fluorescence: Patchy UV response possible (core and overgrowth differ)
+notes: >
+  CRITICAL CHEMISTRY FIX per VERIFIED.md Conflict 2 (F-01/REJ-02): R10 source listed
+  incorrect formula Be3Al2(SiO3)6:Cr+V — this is a chain-silicate notation and is
+  chemically incorrect for beryl (a cyclosilicate). Correct formula: Be3Al2Si6O18:Cr,V.
+  Applied here per mandatory correction. Multiple API-verified papers: Schmetzer, Bank &
+  Stahle 1981, Gems & Gemology 17(2):98 (DOI 10.5741/gems.17.2.98) [VERIFIED]: "The
+  Chromium Content of Lechleitner Synthetic Emerald Overgrowth" — Cr concentrated in outer
+  synthetic zone. Journal of Gemmology 1964 (DOI 10.15506/jog.1964.9.8.267) [VERIFIED];
+  Eppler 1968 (DOI 10.15506/jog.1968.11.4.120) [VERIFIED]; Schmetzer & Bank 1988
+  (DOI 10.15506/jog.1988.21.2.95) [VERIFIED]. Colourless core is definitive diagnostic
+  — absent in natural emerald. Crackled interface is definitive — absent in natural.
+expressions:
+  - slug: crystal
+    name: Overgrowth Crystal
+    cdl: |
+      #! Species: Lechleitner Emerald (synthetic overgrowth on natural beryl seed)
+      #! System: Hexagonal (6/mmm)
+      #! Habit: Colourless natural beryl core with green synthetic hydrothermal skin
+      hexagonal[6/mmm]:{10-10}@1.0 + {0001}@0.6 > {10-10}@1.1 + {0001}@0.7
+    is_primary: true
+    form_description: >
+      Natural colourless beryl (goshenite/aquamarine) seed with synthetic hydrothermal Cr+V-rich
+      beryl overgrowth. Nested CDL notation represents core (inner) and synthetic skin (outer).
+      Colourless core and crackled interface are definitive diagnostics.

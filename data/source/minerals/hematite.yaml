@@ -1,0 +1,71 @@
+id: hematite
+name: Hematite
+crystal_system: trigonal
+point_group: "-3m"
+chemistry: Fe2O3
+mineral_group: Oxide group (corundum group; hematite-ilmenite series)
+category: Oxides
+origin: natural
+hardness: 5.5-6.5
+sg: 5.0-5.3
+ri: null
+birefringence: null
+optical_character: Opaque (metallic)
+dispersion: null
+lustre: Metallic (specularite); sub-metallic to dull (earthy)
+cleavage: None (parting in some directions)
+fracture: Conchoidal to uneven
+diagnostic_features: "Red streak on unglazed porcelain tile (primary diagnostic despite metallic grey appearance); high SG 5.0-5.3; non-magnetic (contrast with hematine which IS magnetic); metallic mirror lustre; isostructural with corundum"
+pleochroism: None (opaque)
+colors:
+- Steel-grey to black (specularite/gem-quality)
+- Red to red-brown (earthy/powdered form always red)
+treatments:
+- Hematine (pressed simulant, strongly magnetic — not a treatment of hematite itself but a common trade confusion)
+localities:
+- Brazil (Minas Gerais; iron quadrangle; major specularite source)
+- Cumberland, England (Cleator Moor; historically significant)
+- Elba, Italy (historical source; type locality for fine crystals)
+- Lake Superior (USA/Canada; iron ore deposits)
+- Namibia, Morocco (commercial)
+inclusions:
+- Lamellar ilmenite intergrowths
+- Concentric internal growth banding (botryoidal kidney ore)
+notes: >
+  Fe2O3; trigonal -3m; isostructural with corundum (Al2O3). Red streak is diagnostic despite metallic
+  grey appearance. RI not measurable on refractometer (opaque). Non-magnetic — contrast with hematine
+  (pressed iron powder simulant, strongly attracted to neodymium magnet). Castroviejo (2023)
+  mineralogical reference (DOI 10.1007/978-3-031-12654-3_60) [VERIFIED] confirms crystal system,
+  chemistry, and oxide group classification. SG and hardness from Read 7th ed.
+  (DOI 10.4324/9780080507224) [PARTIALLY_SUPPORTED]. Gem material is the specular silvery variety
+  (specularite); kidney ore is botryoidal. Hematine (synthetic/pressed) is the common simulant —
+  detected by strong magnetism.
+expressions:
+- slug: specularite
+  name: Hematite (Specularite)
+  cdl: |
+    #! Species: Hematite (Fe2O3)
+    #! System: Trigonal (-3m)
+    #! Habit: Tabular to platy crystals; massive specularite
+    trigonal[-3m]:{0001}@1.0 + {10-10}@0.5
+  is_primary: true
+  form_description: >
+    Gem-quality hematite as specularite — massive compact material with mirror-like metallic lustre.
+    In crystal form: rhombohedral or tabular plates on {0001}; also botryoidal (kidney ore).
+    Red streak is the single most important diagnostic feature.
+  forms:
+  - tabular
+  - massive
+  - botryoidal
+- slug: kidney-ore
+  name: Hematite (Kidney Ore / Botryoidal)
+  cdl: |
+    #! Species: Hematite - Kidney ore
+    #! System: Trigonal (-3m)
+    #! Habit: Botryoidal reniform masses
+    trigonal[-3m]:{0001}@1.0 ~ radial[cluster] @compact
+  is_primary: false
+  form_description: Botryoidal (kidney-shaped) reniform habit with concentric internal growth banding.
+  forms:
+  - botryoidal
+  - reniform

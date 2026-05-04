@@ -1,0 +1,58 @@
+id: jet
+name: Jet
+crystal_system: amorphous
+point_group: none
+chemistry: Complex aromatic hydrocarbons (polycyclic aromatics + aliphatic components; compact lignite/bituminite); no fixed formula
+mineral_group: Organic gem (sedimentary carbonaceous mineraloid)
+category: Organic gems
+origin: natural
+hardness: 2.5-4
+sg: 1.19-1.35
+ri: 1.64-1.68
+birefringence: null
+optical_character: Isotropic to near-isotropic (AGG)
+lustre: Greasy to sub-vitreous
+cleavage: None
+fracture: Conchoidal (glossy fracture)
+diagnostic_features: "Aromatic coal smell on hot-point test (primary diagnostic; distinguishes from French jet = no smell, vulcanite = sulfur smell); static electricity on rubbing (attracts tissue paper); SG 1.30-1.35 (very low); deformed wood-grain texture under microscope; RI ~1.66"
+pleochroism: None
+colors:
+- Intense black (only gem colour; occasionally very dark brown)
+treatments:
+- Carnauba wax/polish (surface)
+- Lacquer coating (occasional)
+localities:
+- Whitby, North Yorkshire, England (primary source; Jurassic age ~175 Ma; Victorian mourning jewellery)
+- Asturias, Spain (azabache; Santiago de Compostela pilgrimage jewellery)
+- Phu Quoc Island, Vietnam (SG 1.24 and RI 1.66 confirmed)
+- Turkey (Oltu, Erzurum; Oltu stone)
+- Siberia, Russia
+- USA (Utah, Colorado)
+inclusions:
+- Wood-cell texture (compressed vascular tissue; visible at high magnification)
+- Micro-cracks following wood grain
+- Rare plant cell fossils
+notes: >
+  Not an IMA mineral species; compact variety of lignite (sub-bituminous coal) derived from
+  fossilised Araucaria-family driftwood. IMA-approved: N/A. SG 1.24 and RI 1.66 confirmed
+  in Phu Quoc specimens by Le et al. 2022 (DOI 10.32508/stdj.v25i3.3968) [VERIFIED].
+  Wood-grain texture diagnostic: "deformed wood grain texture is visible under a microscope
+  (400x and 100x)" — Le et al. 2022. Hot-point aromatic smell and static electricity tests
+  from Read 7th ed. (DOI 10.4324/9780080507224) [PARTIALLY_SUPPORTED].
+  Key lookalikes: French jet (glass; no smell, high SG ~2.4-3.5), vulcanite (rubber;
+  sulfur smell, SG ~1.15), bog oak (lighter, dark brown).
+expressions:
+- slug: default
+  name: Jet
+  cdl: |
+    #! Species: Jet (fossilised lignite)
+    #! System: Amorphous (organic mineraloid)
+    #! Habit: Massive compact carbonaceous material
+    amorphous[resinous]:{massive}
+  is_primary: true
+  form_description: >
+    Compact fossilised lignite; amorphous carbonaceous mineraloid with greasy to sub-vitreous lustre
+    and glossy conchoidal fracture. Wood-grain microstructure visible under magnification. Primary gem
+    material from Whitby, England (Jurassic). Diagnostic aromatic coal smell on hot-point test.
+  forms:
+  - massive

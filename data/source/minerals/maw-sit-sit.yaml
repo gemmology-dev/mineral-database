@@ -1,0 +1,57 @@
+id: maw-sit-sit
+name: Maw-Sit-Sit
+crystal_system: monoclinic
+point_group: 2/m
+chemistry: Multi-mineral rock aggregate; dominant phases kosmochlor (NaCrSi2O6) + jadeite (NaAlSi2O6) + albite (NaAlSi3O8) + chromite (FeCr2O4)
+mineral_group: Jade group (multi-mineral pyroxene rock)
+category: Ornamental rocks
+origin: natural
+hardness: 6-7
+sg: 3.00-3.40
+ri: 1.52-1.68
+birefringence: null
+optical_character: AGG
+lustre: Waxy to vitreous
+cleavage: None (polycrystalline aggregate)
+fracture: Splintery to uneven
+diagnostic_features: "Vivid emerald-green matrix with black to dark green spots or streaks (chromite inclusions); Chelsea filter strongly red (Cr3+); RI aggregate reading typically 1.52-1.68 (varies by phase); SG 3.00-3.40 (heavier than jadeite 3.34 average due to chromite); Myanmar (Kachin State) as only commercial source"
+pleochroism: None (aggregate)
+colors:
+- Vivid emerald-green to bright green (kosmochlor/jadeite matrix; Cr3+ chromophore)
+- With black to dark green spots and veins (chromite + kosmochlor-rich zones)
+treatments:
+- Generally not treated; waxing occasionally for surface stabilisation
+localities:
+- Myanmar (Kachin State, Tawmaw area; only commercial source)
+inclusions:
+- Chromite crystals (diagnostic black to dark green spots)
+- Albite-rich feldspar patches
+- Kosmochlor-jadeite intergrowths
+notes: >
+  Multi-mineral decorative rock; NOT a single IMA mineral species. Dominant mineralogy:
+  kosmochlor (NaCrSi2O6, a chromium pyroxene, monoclinic 2/m) + jadeite (NaAlSi2O6,
+  monoclinic 2/m) + albite + chromite. Crystal system assigned as monoclinic (dominant
+  pyroxene phase). First described by Gübelin 1965, Journal of Gemmology
+  (DOI 10.15506/jog.1965.9.10.329) [VERIFIED]. Mineralogical composition confirmed by
+  Harlow et al. 2000 (DOI 10.15506/jog.2000.27.2.87) [VERIFIED] and Ou Yang et al. 2025
+  (DOI 10.3390/cryst15110983) [VERIFIED].
+  CAUTION: This is a polycrystalline multi-mineral rock aggregate — RI, SG, and hardness
+  are composite values depending on the mix of phases. The Chelsea filter red reaction is
+  from Cr3+ in kosmochlor. Often confused with jadeite but the chromite spots and higher Cr
+  content distinguish it. Not a standard jade variety.
+expressions:
+- slug: default
+  name: Maw-Sit-Sit
+  cdl: |
+    #! Species: Maw-Sit-Sit (kosmochlor-jadeite rock)
+    #! System: Monoclinic (2/m; dominant pyroxene phase proxy)
+    #! Habit: Massive aggregate; vivid green with black chromite inclusions
+    monoclinic[2/m]:{110}@1.0 + {010}@0.5[inclusion:chromite]
+  is_primary: true
+  form_description: >
+    Polycrystalline multi-mineral rock (kosmochlor + jadeite + albite + chromite) from Kachin State,
+    Myanmar. Vivid emerald-green matrix with black to dark green chromite spots. CDL represents the
+    dominant monoclinic pyroxene (kosmochlor/jadeite) phase as proxy for the aggregate. Not an IMA
+    mineral species; included as gem material per FGA/Diploma curriculum coverage.
+  forms:
+  - massive

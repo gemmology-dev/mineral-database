@@ -1,0 +1,47 @@
+id: copal
+name: Copal (Amber Simulant)
+crystal_system: amorphous
+point_group: none
+chemistry: Partially polymerised plant resin (labdanoid diterpenes; younger resin; not fully matured/polymerised)
+category: amber simulant (natural material)
+origin: simulant
+target_minerals_json: '["amber"]'
+year_first_produced: "0"
+hardness: "1.5-2.5"
+sg: "1.04-1.10"
+ri: "1.530-1.545"
+birefringence: 0
+optical_character: Isotropic
+lustre: Resinous
+cleavage: None
+fracture: Conchoidal
+colors: [Yellow to yellow-orange (similar to amber); pale yellow; transparent to translucent]
+inclusions: [Modern insects (fresh appearance, not desiccated; diagnostic of recent origin); plant matter (less degraded than amber inclusions)]
+fluorescence: Often intense (LWUV; typically brighter than amber, but variable)
+notes: >
+  Partially polymerised plant resin (<40 Ma; often Holocene to Neogene); not fully matured.
+  Key distinction from amber: acetone test — copal becomes tacky/sticky within seconds;
+  amber (fully polymerised) is unaffected. FTIR: lacks the "Baltic shoulder" at ~1150 cm-1
+  characteristic of mature succinite amber. Rao et al. 2013, Science China Physics,
+  Mechanics & Astronomy (DOI 10.1007/s11433-013-5144-z) [VERIFIED]: amber vs copal by
+  UV-VIS, infrared and Raman spectroscopy — acetone test and FTIR spectral fingerprint
+  confirmed as diagnostic. Commercial sources: Colombia, Madagascar, East Africa, New Zealand.
+  RI essentially identical to amber (1.530-1.545); SG overlaps amber (1.05-1.10);
+  refractometer and float tests cannot reliably distinguish — acetone and FTIR are required.
+diagnostic_synthetic_features: >
+  Acetone test: surface becomes tacky/sticky in seconds (amber unaffected — definitive field
+  test); softens at lower temperature (~100-150 C vs amber ~200-250 C); FTIR lacks Baltic
+  amber "shoulder" ~1150 cm-1; inclusions appear fresh/undesiccated; surface crazing develops
+  faster; fluorescence often more intense than amber
+expressions:
+  - slug: default
+    name: Copal
+    cdl: |
+      #! Species: Copal (partially polymerised plant resin; amber simulant)
+      #! System: Amorphous (natural resin)
+      #! Habit: Irregular nodular masses; resinous
+      amorphous[resinous]:{nodular}
+    is_primary: true
+    form_description: >
+      Partially polymerised plant resin; amorphous. Similar to amber in appearance but younger and
+      less polymerised. Acetone test (copal tacky; amber unaffected) is the definitive field test.

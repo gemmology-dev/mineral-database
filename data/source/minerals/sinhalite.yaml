@@ -1,0 +1,59 @@
+id: sinhalite
+name: Sinhalite
+crystal_system: orthorhombic
+point_group: mmm
+chemistry: MgAlBO4
+mineral_group: Borates (olivine-structure type)
+category: Borates
+origin: natural
+hardness: 6.5
+sg: 3.46-3.50
+ri: 1.668-1.707
+birefringence: 0.038
+optical_character: Biaxial -
+dispersion: null
+lustre: Vitreous
+cleavage: Imperfect
+fracture: Conchoidal
+diagnostic_features: "Biaxial negative (peridot is biaxial positive — the key optic-sign diagnostic); higher SG 3.46-3.50 vs peridot 3.27-3.37; high birefringence 0.038; differentiated from peridot by optic sign, SG, and absorption spectrum differences (Fe2+ band profile differs)"
+pleochroism: Moderate
+pleochroism_strength: moderate
+pleochroism_color1: Brownish-green
+pleochroism_color2: Pale green to yellowish
+colors:
+- Pale yellow-brown
+- Brownish-green
+- Greenish-brown
+- Rarely yellowish
+treatments:
+- None known
+localities:
+- Sri Lanka (primary; alluvial gem gravels, Ratnapura district)
+- Myanmar (Burma; minor)
+- Tanzania (trace occurrences)
+inclusions:
+- Generally clean; fluid inclusions possible
+notes: >
+  MgAlBO4; orthorhombic mmm; olivine-structure type borate. Named from Sinhala (= Sri Lanka).
+  Formally described as a distinct mineral species in 1952; previously confused with brown peridot.
+  Key distinction from peridot: biaxial negative optic sign (peridot is biaxial positive); higher
+  SG 3.46-3.50 (peridot 3.27-3.37). Sri Lanka alluvial occurrence confirmed by Zwaan 1982,
+  Gems & Gemology 18(2):62-71 (DOI 10.5741/gems.18.2.62) [VERIFIED] and Shigley et al. 2000
+  (DOI 10.5741/gems.36.4.292) [VERIFIED]. Constants from Read 7th ed.
+  (DOI 10.4324/9780080507224) [PARTIALLY_SUPPORTED].
+expressions:
+- slug: default
+  name: Sinhalite
+  cdl: |
+    #! Species: Sinhalite (MgAlBO4)
+    #! System: Orthorhombic (mmm)
+    #! Habit: Prismatic; olivine-structure type
+    orthorhombic[mmm]:{110}@1.0 + {010}@0.7 + {021}@0.5
+  is_primary: true
+  form_description: >
+    Orthorhombic borate with olivine-type structure. Pale yellow-brown to brownish-green gem.
+    Biaxial negative (key distinction from biaxial positive peridot). Sri Lanka alluvials are the
+    primary source. High birefringence (0.038) produces visible doubling in deeper stones.
+  forms:
+  - prism
+  - pinacoid

@@ -1,0 +1,63 @@
+id: benitoite
+name: Benitoite
+crystal_system: hexagonal
+point_group: "-6m2"
+chemistry: BaTiSi3O9
+mineral_group: Benitoite group (cyclosilicates)
+category: Cyclosilicates
+origin: natural
+hardness: 6-6.5
+sg: 3.65-3.68
+ri: 1.757-1.804
+birefringence: 0.047
+optical_character: Uniaxial +
+dispersion: 0.044
+lustre: Adamantine to vitreous
+cleavage: Poor {1010}
+fracture: Conchoidal
+diagnostic_features: "Intense blue fluorescence under shortwave UV (SWUV) — the most immediately diagnostic field test; strong dichroism (vivid blue / colourless in dichroscope); very high birefringence 0.047 (strong fire and doubling); RI above standard refractometer range (1.79 limit); only commercial source: New Idria district, San Benito County, California"
+pleochroism: Strong dichroism
+pleochroism_strength: strong
+pleochroism_color1: Vivid blue (ordinary ray perpendicular to c-axis)
+pleochroism_color2: Colourless to pale blue (extraordinary ray along c-axis)
+colors:
+- Vivid blue (primary gem colour)
+- Colourless
+- Rarely pinkish-orange
+treatments:
+- None known
+localities:
+- San Benito County, California, USA (the only commercial source worldwide; gem-quality crystals in natrolite vein in blueschist)
+- Non-gem occurrences in Japan, Belgium, Australia, Czech Republic
+inclusions:
+- Generally clean
+- Occasional two-phase fluid inclusions
+- Neptunite crystals (black associated mineral in matrix specimens)
+notes: >
+  BaTiSi3O9; barium titanium cyclosilicate; hexagonal point group -6m2 (ditrigonal dipyramidal).
+  Crystals have a triangular (not hexagonal) outline due to this point group. State gemstone
+  of California since 1985. Primary gemmological reference: Laurs, Rohtert & Gray 1997,
+  Gems & Gemology 33(3):166-187 (DOI 10.5741/gems.33.3.166) [VERIFIED via live API].
+  SWUV fluorescence mechanism confirmed by Vigier, Fritsch et al. 2023, Minerals 13(1):104
+  (DOI 10.3390/min13010104) [VERIFIED via live API]: colour from O2- to Ti4+ ligand-to-metal
+  charge transfer in TiO6 groups. Fluorescence characterisation by Zhang & Shen 2023
+  (DOI 10.3390/min13050626) [VERIFIED]. Dispersion 0.044 is equal to diamond; confirmed per
+  VERIFIED.md Conflict 8 (no conflict; both values accurate). RI 1.757-1.804 is above standard
+  refractometer range; SG measurable hydrostatically.
+expressions:
+- slug: default
+  name: Benitoite (Tabular Crystal)
+  cdl: |
+    #! Species: Benitoite (BaTiSi3O9)
+    #! System: Hexagonal (-6m2, ditrigonal dipyramidal)
+    #! Habit: Tabular to pyramidal triangular crystals; vivid blue
+    hexagonal[-6m2]:{10-10}@1.0 + {11-20}@0.6 + {10-11}@0.8
+  is_primary: true
+  form_description: >
+    Barium titanium cyclosilicate; hexagonal point group -6m2. Crystals characteristically
+    triangular in outline (not hexagonal). Vivid blue from O2- to Ti4+ charge transfer.
+    Intense SWUV fluorescence is the primary field diagnostic. Only facetable gem source:
+    San Benito County, California. Uniaxial positive; birefringence 0.047.
+  forms:
+  - dipyramid
+  - prism

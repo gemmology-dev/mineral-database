@@ -1,0 +1,73 @@
+id: obsidian
+name: Obsidian
+crystal_system: amorphous
+point_group: none
+chemistry: SiO2 (55-75 wt%) + Al2O3, FeO, MgO, CaO, Na2O, K2O (rhyolitic volcanic glass; variable)
+mineral_group: Mineraloid / Natural glass
+category: Mineraloids
+origin: natural
+hardness: 5-5.5
+sg: 2.33-2.50
+ri: 1.48-1.51
+birefringence: null
+optical_character: Isotropic (ADR in stressed varieties)
+lustre: Vitreous to sub-vitreous
+cleavage: None
+fracture: Conchoidal (sharp edges; most diagnostic macroscopic feature)
+diagnostic_features: "Conchoidal fracture (primary); flow banding under magnification; RI 1.48-1.51; SG 2.33-2.50 (lower than most gem minerals); isotropic under polariscope"
+pleochroism: None
+colors:
+- Black (magnetite crystallites)
+- Mahogany (red-brown hematite patches in black matrix)
+- Snowflake (cristobalite spherulites in black matrix)
+- Golden or silver sheen (oriented gas bubble layers)
+- Rainbow/fire (thin-film interference in layered glass)
+treatments:
+- Surface coatings (occasional; detected by acetone test)
+localities:
+- Mexico (Hidalgo, Jalisco, Michoacan; rainbow and snowflake varieties)
+- USA (Glass Buttes Oregon; Obsidian Cliff Wyoming)
+- Armenia (Satanakar, Geghasar; major prehistoric trade source)
+- Iceland (Hekla volcano)
+- Italy (Lipari, Sardinia)
+- Ethiopia (Hareri region; East African Rift)
+- New Zealand (Mayor Island)
+inclusions:
+- Sub-microscopic magnetite/hematite crystallites
+- Cristobalite spherulites (snowflake obsidian)
+- Oriented gas bubble layers (sheen varieties)
+- Flow banding
+- Phenocryst fragments (sanidine, plagioclase, pyroxene)
+notes: >
+  Not an IMA mineral species; natural volcanic glass (mineraloid) formed by rapid solidification
+  of rhyolitic to rhyodacitic lava. IMA-approved: N/A. Flow banding and conchoidal fracture
+  confirmed by Zook (1973) Journal of Gemmology (DOI 10.15506/jog.1973.13.6.220) [VERIFIED].
+  Van Nostrand's Scientific Encyclopedia chapter (DOI 10.1002/0471743984.vse5189) [VERIFIED].
+  RI and SG from Read 7th ed. (DOI 10.4324/9780080507224) [PARTIALLY_SUPPORTED].
+  Snowflake obsidian: cristobalite variety. Sheen: oriented gas bubble interference.
+expressions:
+- slug: default
+  name: Obsidian
+  cdl: |
+    #! Species: Obsidian (volcanic glass)
+    #! System: Amorphous (mineraloid)
+    #! Habit: Massive with conchoidal fracture; flow structures
+    amorphous[glassy]:{massive}
+  is_primary: true
+  form_description: >
+    Natural volcanic glass; amorphous silicic mineraloid. Massive habit with diagnostic conchoidal
+    fracture and flow banding. Varieties include snowflake (cristobalite spherulites),
+    mahogany (hematite), sheen (gas bubbles), and rainbow (thin-film layering).
+  forms:
+  - massive
+- slug: snowflake
+  name: Snowflake Obsidian
+  cdl: |
+    #! Species: Snowflake Obsidian
+    #! System: Amorphous
+    #! Habit: Black glass matrix with white cristobalite spherulites
+    amorphous[glassy]:{massive}[inclusion:spherulitic]
+  is_primary: false
+  form_description: Black obsidian with white to grey cristobalite spherulite inclusions forming snowflake pattern.
+  forms:
+  - massive

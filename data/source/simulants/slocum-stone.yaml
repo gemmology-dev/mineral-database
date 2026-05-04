@@ -1,0 +1,49 @@
+id: slocum-stone
+name: Slocum Stone
+crystal_system: amorphous
+point_group: none
+chemistry: Borosilicate glass with internal laminated metallic interference layers
+category: opal simulant (glass-based)
+origin: simulant
+target_minerals_json: '["opal", "precious-opal"]'
+manufacturer: John Slocum (USA); later Kyocera/Inamori produced similar imitation opal products
+year_first_produced: "1974"
+hardness: "5-5.5"
+sg: "2.40-2.50"
+ri: "1.48-1.52"
+birefringence: 0
+optical_character: Isotropic
+lustre: Vitreous
+cleavage: None
+fracture: Conchoidal
+colors: [Colourless with metallic iridescent colour play (interference colours from metallic lamellae)]
+inclusions: [Flat lath-like metallic laminae (critical; visible at 30-60x)]
+fluorescence: None (glass; no OH absorption)
+notes: >
+  Borosilicate glass with deposited thin metallic film laminations internally; proprietary
+  process. Directly API-verified: Farn 1979, Journal of Gemmology 16(5):295
+  (DOI 10.15506/jog.1979.16.5.295) [VERIFIED]: "Imitation Opal — Slocum Stone" — metallic
+  lath/scaly appearance documented explicitly. Key diagnostic suite versus opal: (1) scaly
+  metallic laminae visible at 30-60x (vs mosaic patchwork of sphere stacks in natural opal
+  and Gilson synthetic opal); (2) high SG 2.40-2.50 vs natural opal 2.00-2.20 and Gilson
+  ~2.07 — hydrostatic SG measurement is immediately diagnostic; (3) no OH/water absorption
+  in FTIR (natural opal is hydrous 5-10% H2O; Slocum has none); (4) conchoidal fracture on
+  edges (glass substrate). Note on manufacturer: Slocum original patent 1974; Kyocera/Inamori
+  produced similar products. Target: precious opal (play-of-colour).
+diagnostic_synthetic_features: >
+  Lath-like scaly metallic laminae visible at 30-60x magnification (vs mosaic sphere-stack
+  domains in natural and Gilson opal); high SG 2.40-2.50 (floats opal; sinks in di-iodomethane);
+  no FTIR OH absorption; glass substrate conchoidal fracture; no hot-point odour; isotropic
+expressions:
+  - slug: default
+    name: Slocum Stone (Imitation Opal)
+    cdl: |
+      #! Species: Slocum Stone (borosilicate glass opal simulant)
+      #! System: Amorphous (glass)
+      #! Habit: Massive glass with internal metallic interference lamellae
+      amorphous[glassy]:{massive} | phenomenon[play_of_color:metallic_lamellae]
+    is_primary: true
+    form_description: >
+      Borosilicate glass with internal metallic film laminations producing iridescent colour play
+      mimicking precious opal. Metallic lath/scaly appearance under microscope is definitive.
+      High SG 2.40-2.50 immediately distinguishes from all opals.
