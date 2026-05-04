@@ -37,7 +37,7 @@ garnet_matches = search_presets('garnet')
 
 ## Features
 
-- **140 CDL expressions** across **96 mineral families** (68 natural + 15 synthetic + 9 simulant + 4 composite)
+- **216 CDL expressions** across **159 mineral families** (116 natural + 19 synthetic + 20 simulant + 4 composite)
 - **CDL v2.0 notation** for crystal habit visualization, including amorphous, nested growth, and aggregate expressions
 - **FGA-standard properties** (RI, SG, optical character, etc.)
 - **SQLite backend** for fast queries
@@ -73,7 +73,7 @@ All 140 CDL expressions parse successfully with CDL v2.0, including:
 
 The mineral database has been comprehensively enriched with FGA-standard gemmological data:
 
-- **96 mineral families** (68 natural + 15 synthetic + 9 simulant + 4 composite) with complete crystallographic data
+- **159 mineral families** (116 natural + 19 synthetic + 20 simulant + 4 composite) with complete crystallographic data
 - **92/95 minerals** (96.8%) with complete RI (refractive index)
 - **94/95 minerals** (98.9%) with complete SG (specific gravity)
 - **94/95 minerals** (98.9%) with optical character classification
