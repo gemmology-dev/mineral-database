@@ -1,0 +1,63 @@
+id: chrysocolla
+name: Chrysocolla
+crystal_system: amorphous
+point_group: none
+chemistry: (Cu,Al)2H2Si2O5(OH)4.nH2O
+mineral_group: Phyllosilicate (layer silicate; amorphous to cryptocrystalline)
+category: Phyllosilicates
+origin: natural
+hardness: 2.5-7
+sg: 1.93-2.65
+ri: 1.46-1.57
+birefringence: null
+optical_character: Isotropic (amorphous) to anomalous in cryptocrystalline
+dispersion: null
+lustre: Waxy to vitreous (gem silica vitreous; earthy in massive low-quality)
+cleavage: None
+fracture: Conchoidal
+diagnostic_features: "Very low SG 1.93-2.40 (pure material; much lower than turquoise 2.60-2.90); waxy lustre; Cu2+ blue-green colour (idiochromatic); spot RI typically ~1.50 (vs turquoise ~1.61-1.65); stabilised and polymer-impregnated material common"
+pleochroism: None
+colors:
+- Blue-green (most common; Cu2+ idiochromatic)
+- Turquoise-blue
+- Cyan
+- Rarely pure blue or pure green
+treatments:
+- Stabilisation with resin (common for soft material)
+- Polymer impregnation
+localities:
+- Peru (Lily mine, Pisco region; gem silica — highest gem quality blue chalcedony with chrysocolla)
+- Arizona, USA (Globe-Miami district; gem silica and chrysocolla-malachite)
+- Chile (Atacama; copper deposits)
+- Democratic Republic of Congo (Katanga; massive material)
+- Israel (Timna / Eilat stone; chrysocolla + turquoise + malachite mix)
+inclusions:
+- Massive; inclusions not relevant for identification
+- Gem silica: cryptocrystalline quartz mosaic with blue chrysocolla in interstices
+notes: >
+  Hydrous copper aluminium silicate; amorphous to cryptocrystalline. Crystal system set to
+  amorphous per database convention (same as opal). Structural and chemical characterisation
+  confirmed by Frost & Xi 2013, Vibrational Spectroscopy 63:33-38
+  (DOI 10.1016/j.vibspec.2012.10.001) [VERIFIED]: "Chrysocolla...is variably described as
+  amorphous or cryptocrystalline." Hardness extremely variable (2.5-7); gem silica
+  (quartz-impregnated variety) reaches 6-7. Cu2+ idiochromatic blue-green colour.
+  Gem silica = blue-green chalcedony with interstital chrysocolla; highest gem quality from
+  Peru. Acid-sensitive (dissolves in HCl). Water-sensitive (dehydration may cause cracking).
+  Constants (SG, RI) from Read 7th ed. (DOI 10.4324/9780080507224) [PARTIALLY_SUPPORTED].
+expressions:
+- slug: default
+  name: Chrysocolla
+  cdl: |
+    #! Species: Chrysocolla (hydrous copper aluminosilicate)
+    #! System: Amorphous (cryptocrystalline)
+    #! Habit: Massive botryoidal to earthy; blue-green
+    amorphous[waxy]:{botryoidal}
+  is_primary: true
+  form_description: >
+    Hydrous copper aluminium silicate; amorphous to cryptocrystalline. Vivid Cu2+ blue-green colour.
+    Massive habit; botryoidal surfaces. Very low SG (1.93-2.40) is primary physical diagnostic.
+    Gem silica variety is quartz-impregnated chrysocolla reaching hardness 6-7.
+  forms:
+  - botryoidal
+  - massive
+  - earthy

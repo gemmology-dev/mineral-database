@@ -1,0 +1,79 @@
+id: scapolite
+name: Scapolite
+crystal_system: tetragonal
+point_group: 4/m
+chemistry: (Na,Ca)4Al3(Al,Si)3Si6O24(Cl,CO3,SO4)
+mineral_group: Scapolite group (tectosilicates / feldspathoid-related)
+category: Tectosilicates
+origin: natural
+hardness: 5.5-6
+sg: 2.50-2.78
+ri: 1.536-1.600
+birefringence: 0.004-0.037
+optical_character: Uniaxial -
+dispersion: null
+lustre: Vitreous
+cleavage: Distinct prismatic in two directions {100} and {110}
+fracture: Conchoidal to uneven
+diagnostic_features: "Uniaxial negative; strong LWUV fluorescence (yellow to orange in yellow stones; diagnostic — chrysoberyl cat's-eye does not fluoresce strongly); moderate birefringence; cat's-eye variety from Myanmar is celebrated; SG 2.50-2.78"
+pleochroism: Weak to moderate (uniaxial; dichroic; colourless/yellow in yellow stones; stronger in violet)
+pleochroism_strength: weak
+pleochroism_color1: Yellow to orange
+pleochroism_color2: Colourless to pale yellow
+colors:
+- Yellow (most common gem colour; colour centres)
+- Pink/lilac/violet (Tanzania)
+- Colourless (marialite-rich)
+- Cat's-eye (chatoyant; parallel hollow tubes)
+treatments:
+- Not routinely treated; some material reportedly irradiated to enhance colour
+localities:
+- Myanmar (Burma; fine cat's-eye scapolite)
+- Madagascar (Ihosy; yellow transparent)
+- Tanzania (pink and violet)
+- Sri Lanka (various including cat's-eye)
+- Brazil (colourless to yellow)
+- Kenya
+inclusions:
+- Cat's-eye: dense parallel hollow tubes/fibrous inclusions
+- Two-phase fluid inclusions; growth planes
+- Myanmar material: parallel needle inclusions
+notes: >
+  Na-Ca aluminosilicate solid solution series (marialite to meionite); tetragonal 4/m.
+  Yellow scapolite from Madagascar confirmed by Superchi et al. 2010, Gems & Gemology
+  46(4):274-279 (DOI 10.5741/gems.46.4.274) [VERIFIED]. Cat's-eye and unusual properties
+  from Sri Lanka confirmed by Zwaan 1996, Gems & Gemology 32(4):262-269
+  (DOI 10.5741/gems.32.4.262) [VERIFIED]. Colour cause in yellow stones: colour centres
+  (F-centres; not transition metal ions) — Fritsch & Rossman 1988
+  (DOI 10.5741/gems.24.1.3) [VERIFIED]. Strong LWUV fluorescence (yellow-orange) is a
+  key diagnostic. Two prismatic cleavage directions complicate faceting.
+expressions:
+- slug: prismatic
+  name: Scapolite (Prismatic)
+  cdl: |
+    #! Species: Scapolite (Marialite-Meionite series)
+    #! System: Tetragonal (4/m)
+    #! Habit: Prismatic tetragonal crystals
+    tetragonal[4/m]:{110}@1.0 + {100}@0.6 + {001}@0.4
+  is_primary: true
+  form_description: >
+    Tetragonal prismatic crystals; Na-Ca aluminosilicate solid-solution series (marialite–meionite).
+    Strong LWUV fluorescence in yellow material is diagnostic. Cat's-eye variety from Myanmar
+    (Burma) is most prized. Uniaxial negative optic character.
+  forms:
+  - prism
+  - dipyramid
+  - pinacoid
+- slug: cats-eye
+  name: Cat's-Eye Scapolite
+  cdl: |
+    #! Species: Cat's-Eye Scapolite
+    #! System: Tetragonal (4/m)
+    #! Habit: Prismatic; fibrous inclusions produce chatoyancy in cabochon
+    tetragonal[4/m]:{110}@1.0 + {100}@0.6[inclusion:fibrous_tubes]
+  is_primary: false
+  form_description: >
+    Chatoyant variety; dense parallel hollow tubes and/or fibrous inclusions produce a sharp
+    cat's-eye in cabochon cut. Burma (Myanmar) is the reference locality for gem-quality cat's-eye.
+  forms:
+  - prism

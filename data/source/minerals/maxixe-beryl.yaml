@@ -1,0 +1,65 @@
+id: maxixe-beryl
+name: Maxixe-type Beryl
+crystal_system: hexagonal
+point_group: 6/mmm
+chemistry: Be3Al2Si6O18
+mineral_group: Beryl group
+category: Cyclosilicates
+origin: natural
+hardness: 7.5-8
+sg: 2.68-2.76
+ri: 1.563-1.578
+birefringence: 0.005-0.008
+optical_character: Uniaxial -
+dispersion: 0.014
+lustre: Vitreous
+cleavage: Imperfect basal
+fracture: Conchoidal
+diagnostic_features: "Deep navy to inky blue much more saturated than aquamarine; strong dichroism deep blue/colourless (stronger than aquamarine blue-green/colourless); CRITICAL: colour FADES on prolonged light exposure (sunlight/UV) — aquamarine does NOT fade; absorption spectrum differs from aquamarine (CO3-related bands ~575, 610, 650-700 nm vs Fe2+ in aquamarine)"
+pleochroism: Strong dichroism
+pleochroism_strength: strong
+pleochroism_color1: Deep blue (ordinary ray)
+pleochroism_color2: Colourless to pale blue (extraordinary ray)
+colors:
+- Deep navy to inky blue (much more saturated than aquamarine)
+treatments:
+- The colour itself IS a treatment in commercially sold Maxixe-type (artificial irradiation of colourless or pale beryl)
+- DISCLOSURE OBLIGATION: must be disclosed as irradiated colour that fades; failure is a trade ethics violation
+localities:
+- Brazil (Maxixe mine, Minas Gerais; type locality for naturally irradiated blue beryl; mostly exhausted)
+- Russia (Ural; possible occurrence per Andersson 2011)
+- Any beryl from any locality can produce Maxixe-type colour by artificial irradiation treatment
+inclusions:
+- Natural Maxixe beryl: natural fluid inclusions typical of Brazilian beryl
+- Irradiated Maxixe-type: inclusions of the host beryl
+notes: >
+  Irradiation-induced deep blue colour variety of beryl (Be3Al2Si6O18). Chemistry per
+  VERIFIED.md conflict resolution F-01: correct cyclosilicate formula Be3Al2Si6O18
+  (NOT Be3Al2(SiO3)6). Colour centre: CO3^2- or NO3^- ions in beryl channels are
+  irradiated to create the colour centre. NOT caused by Fe2+ (as in aquamarine).
+  Confirmed by Adamo, Pavese et al. 2008, Gems & Gemology 44(3):214-226
+  (DOI 10.5741/gems.44.3.214) [VERIFIED via live API]: primary modern reference
+  differentiating Maxixe-type from aquamarine and synthetic blue beryl. Also Andersson 2011,
+  Journal of Gemmology 32(5):145 (DOI 10.15506/jog.2011.32.5.145) [VERIFIED].
+  Colour centre mechanism: Fritsch & Rossman 1988 (DOI 10.5741/gems.24.1.3) [VERIFIED].
+  CRITICAL TRADE ISSUE: Maxixe-type colour FADES upon prolonged light exposure (UV/sunlight).
+  Aquamarine does NOT fade. This is the single most critical trade distinction.
+  UV lamp test (24-48 hours): Maxixe-type shows noticeable fading; aquamarine unchanged.
+  Disclosure as irradiated fading colour is mandatory. Store in dark; warn customer.
+expressions:
+- slug: default
+  name: Maxixe-type Beryl (Irradiated Blue)
+  cdl: |
+    #! Species: Maxixe-type Beryl (Be3Al2Si6O18; irradiated colour variety)
+    #! System: Hexagonal (6/mmm)
+    #! Habit: Prismatic hexagonal; deep navy-blue irradiation colour centre
+    hexagonal[6/mmm]:{10-10}@1.0 + {0001}@0.6
+  is_primary: true
+  form_description: >
+    Deep navy-blue variety of beryl; colour from irradiation-induced CO3/NO3 colour centre.
+    Identical crystal habit to aquamarine/goshenite (hexagonal prismatic). Strong dichroism
+    (deep blue / colourless). Colour fades in light — critical disclosure obligation.
+    Maxixe mine, Minas Gerais, Brazil is the type natural locality.
+  forms:
+  - prism
+  - pinacoid

@@ -1,0 +1,62 @@
+id: moldavite
+name: Moldavite
+crystal_system: amorphous
+point_group: none
+chemistry: SiO2-rich glass (>70 wt% SiO2) + Al2O3, MgO, FeO, CaO, K2O, Na2O (natural impact glass; composition variable)
+mineral_group: Tektites (impactites)
+category: Mineraloids
+origin: natural
+hardness: 5-5.5
+sg: 2.32-2.38
+ri: 1.480-1.510
+birefringence: null
+optical_character: Isotropic
+dispersion: null
+lustre: Vitreous to greasy
+cleavage: None
+fracture: Conchoidal
+diagnostic_features: "Characteristic wrinkled/pitted/sculptured surface (aerodynamic ablation during atmospheric flight after Ries impact); schlieren (flow banding) under magnification; elongated gas bubbles; SG 2.32-2.38 (lower than obsidian 2.40-2.55); RI 1.480-1.510; bottle-green colour from Fe2+"
+pleochroism: None
+colors:
+- Bottle green to olive green (Fe2+ in glass)
+- Brownish-green
+- Rarely pale green
+treatments:
+- Minimal (cleaning and polishing)
+- Fakes: manufactured green glass and pressed pieces from chips — distinguished by sculptured surface (natural) vs uniform surface (fake)
+localities:
+- Czech Republic (south and west Bohemia, southern Moravia; primary strewn field)
+- Germany (Ries crater area, Bavaria; Nördlingen Ries bolide impact ~14.7 Ma)
+- Poland (rare re-deposited specimens)
+inclusions:
+- Lechatelierite (pure silica glass schlieren and tubes; diagnostic of high-temperature fusion)
+- Gas bubbles (round to elongated)
+- Occasional relict mineral grains (zircon, chromite) from target rocks
+notes: >
+  Natural tektite (impactite glass); NOT an IMA mineral species (tektites are not crystalline
+  minerals per IMA definition). Formed by Nördlingen Ries bolide impact, southeastern Germany,
+  ~14.7 Ma; strewn field in Bohemia and Moravia, Czech Republic.
+  Included in mineral-DB as gem material per FGA Foundation/Diploma curriculum coverage.
+  Per VERIFIED.md decision: ship as amorphous entry with clear notes that it is a non-IMA
+  species (same convention as opal which is also amorphous). IMA-approved: No.
+  Tektite strewn-field research: (DOI 10.3190/jgeosci.214) [PARTIALLY_SUPPORTED].
+  Gem localities context: Shigley et al. 2000 (DOI 10.5741/gems.36.4.292) [VERIFIED].
+  SG 2.32-2.38 lower than obsidian (2.40-2.55); RI 1.480-1.510 from Read 7th ed.
+  (DOI 10.4324/9780080507224) [PARTIALLY_SUPPORTED].
+expressions:
+- slug: natural
+  name: Moldavite (Natural Tektite)
+  cdl: |
+    #! Species: Moldavite (tektite glass; non-IMA)
+    #! System: Amorphous (impactite glass)
+    #! Habit: Irregular sculptured masses from aerodynamic ablation
+    amorphous[glassy]:{massive}
+  is_primary: true
+  form_description: >
+    Natural tektite glass from the Nördlingen Ries impact event (~14.7 Ma). Amorphous; isotropic.
+    Characteristic sculptured/pitted surface from aerodynamic ablation. Bottle-green colour from
+    Fe2+. NOT an IMA mineral species — included as gem material per FGA curriculum coverage.
+    Lechatelierite schlieren and gas bubbles are diagnostic internal features.
+  forms:
+  - massive
+  - irregular

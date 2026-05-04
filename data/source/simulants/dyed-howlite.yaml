@@ -1,0 +1,49 @@
+id: dyed-howlite
+name: Dyed Howlite (Turquoise Simulant)
+crystal_system: monoclinic
+point_group: 2/m
+chemistry: Ca2B5SiO9(OH)5 (calcium borosilicate hydroxide; dyed blue to simulate turquoise)
+category: turquoise simulant
+origin: simulant
+target_minerals_json: '["turquoise"]'
+year_first_produced: "1960"
+hardness: "3-3.5"
+sg: "2.53-2.59"
+ri: "1.583-1.608"
+birefringence: 0.022
+optical_character: Biaxial -
+lustre: Sub-vitreous to waxy
+cleavage: None (but howlite is porous)
+fracture: Conchoidal
+colors: [Blue to blue-green (dyed); also sold undyed as white howlite]
+inclusions: [Dye bleeding at fractures and vugs (diagnostic under loupe)]
+fluorescence: Variable
+notes: >
+  Howlite (Ca2B5SiO9(OH)5) is a natural calcium borosilicate hydroxide mineral; monoclinic 2/m.
+  When dyed blue it closely resembles turquoise. The dye is the simulant aspect.
+  Webster 1962, Journal of Gemmology 8(8):286 (DOI 10.15506/jog.1962.8.8.286) [VERIFIED]:
+  "A New Turquoise Simulant" — first documented dyed howlite as turquoise simulant.
+  Key diagnostics: (1) dye bleeding at fractures/vugs (visible under 10x loupe — natural
+  turquoise shows even colour); (2) hardness 3-3.5 (scratched by copper coin; turquoise H 5-6);
+  (3) acetone swab removes blue dye (natural turquoise colour is intrinsic); (4) FTIR shows
+  borosilicate spectrum (vs phosphate spectrum of turquoise); (5) birefringence 0.022 on flat
+  face (turquoise birefringence too small to observe). Also marketed as "white buffalo turquoise"
+  (undyed) or simply "turquoise" (when dyed). Primarily from California, USA and Canada.
+diagnostic_synthetic_features: >
+  Dye bleeding at fractures and vugs under 10x loupe; hardness 3-3.5 (scratched by copper coin
+  vs turquoise H 5-6); acetone swab removes blue dye; FTIR borosilicate spectrum vs turquoise
+  phosphate; Chelsea filter reaction differs from natural turquoise; birefringence 0.022 measurable
+expressions:
+  - slug: dyed
+    name: Dyed Howlite (Blue)
+    cdl: |
+      #! Species: Dyed Howlite (Ca2B5SiO9(OH)5; turquoise simulant)
+      #! System: Monoclinic (2/m)
+      #! Habit: Massive; porous; dye concentrates at fractures
+      monoclinic[2/m]:{010}@1.0 + {110}@0.5
+    is_primary: true
+    form_description: >
+      Howlite (calcium borosilicate hydroxide; monoclinic 2/m) dyed blue to simulate turquoise.
+      Porous structure causes dye to concentrate at fractures and vugs (visible under loupe).
+      Much softer than turquoise (H 3-3.5 vs 5-6). Borosilicate FTIR spectrum vs turquoise
+      phosphate spectrum is definitive analytical distinction.

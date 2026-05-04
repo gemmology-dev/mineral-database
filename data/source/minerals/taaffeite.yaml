@@ -1,0 +1,69 @@
+id: taaffeite
+name: Taaffeite
+crystal_system: hexagonal
+point_group: "-3m"
+chemistry: BeMgAl4O8
+mineral_group: Taaffeite group (spinel supergroup)
+category: Oxides
+origin: natural
+hardness: 8-8.5
+sg: 3.60-3.62
+ri: 1.717-1.730
+birefringence: 0.004-0.009
+optical_character: Uniaxial -
+dispersion: null
+lustre: Vitreous
+cleavage: None
+fracture: Conchoidal
+diagnostic_features: "Doubly refractive (uniaxial negative) — primary diagnostic; immediately separates from spinel (singly refractive, isotropic on polariscope). SG 3.60-3.62 overlaps spinel (3.58-3.65) making SG alone insufficient for separation. FTIR and Raman spectroscopy are the modern definitive identification tools (distinguish from musgravite)."
+pleochroism: Weak (violet specimens may show slight dichroism colourless/pale violet)
+pleochroism_strength: weak
+pleochroism_color1: Pale violet
+pleochroism_color2: Colourless
+colors:
+- Mauve to pale violet (most common gem colour)
+- Pink
+- Red
+- Blue-green (rare)
+- Colourless (rare)
+treatments:
+- None known
+localities:
+- Sri Lanka (historic and primary; alluvial gem gravels, Ratnapura)
+- Myanmar (Burma/Mogok; small amounts)
+- Tanzania
+- China (very minor)
+inclusions:
+- Generally very clean; FTIR and Raman are the most reliable modern ID tools
+notes: >
+  BeMgAl4O8; hexagonal, rhombohedral subgroup, point group -3m. IMA revised name:
+  magnesiotaaffeite-2N'2S per Armbruster 2002 (DOI 10.1127/0935-1221/2002/0014-0389)
+  [VERIFIED via live API]. Gemmological constants and analytical identification confirmed by
+  Thongnopkun 2024 (DOI 10.1016/j.vibspec.2024.103733) [VERIFIED via live API].
+  CRITICAL DIAGNOSTIC NOTE (per VERIFIED.md Conflict 7 + flag F-05): Doubly refractive
+  (uniaxial negative) — this is the primary and immediate separation from spinel (isotropic).
+  SG 3.60-3.62 overlaps spinel (3.58-3.65); SG alone is NOT sufficient for separation.
+  RI 1.717-1.730 also overlaps with some spinel specimens. The polariscope (DR test) is the
+  definitive field separation. ATR-FTIR and Raman distinguish taaffeite from musgravite
+  (magnesiotaaffeite-6N'3S) by vibrational band positions. Musgravite: higher SG ~3.61-3.68,
+  higher RI ~1.723-1.736; see separate musgravite.yaml entry. Historical note: Edward Taaffe
+  purchased the original stone in a Dublin gem dealer's parcel in 1945, believing it spinel;
+  the double refraction was noticed and confirmed as a new species in 1951.
+  Gem localities confirmed by Shigley et al. 2000 (DOI 10.5741/gems.36.4.292) [VERIFIED].
+expressions:
+- slug: default
+  name: Taaffeite
+  cdl: |
+    #! Species: Taaffeite (magnesiotaaffeite-2N'2S)
+    #! System: Hexagonal (-3m; rhombohedral)
+    #! Habit: Rounded to subhedral from alluvial reworking
+    trigonal[-3m]:{10-10}@1.0 + {0001}@0.5 + {10-11}@0.7
+  is_primary: true
+  form_description: >
+    One of the rarest gem minerals; BeMgAl4O8; hexagonal (trigonal rhombohedral symmetry).
+    Birefringent (uniaxial negative) unlike isotropic spinel — polariscope DR test is the
+    primary separation. Most gem material is alluvially reworked (Sri Lanka, Myanmar).
+    FTIR/Raman required to distinguish from musgravite (magnesiotaaffeite-6N'3S).
+  forms:
+  - rhombohedron
+  - prism

@@ -1,0 +1,67 @@
+id: chrome-diopside
+name: Chrome Diopside
+crystal_system: monoclinic
+point_group: 2/m
+chemistry: CaMg1-xCrxSi2O6
+mineral_group: Pyroxene group
+category: Inosilicates
+origin: natural
+hardness: 5.5-6.5
+sg: 3.22-3.38
+ri: 1.664-1.701
+birefringence: 0.024-0.031
+optical_character: Biaxial +
+dispersion: 0.013-0.020
+lustre: Vitreous
+cleavage: Two perfect {110} pyroxene cleavages at ~90°
+fracture: Conchoidal
+diagnostic_features: "Biaxial positive (distinguishes from emerald biaxial negative, chrome tourmaline uniaxial negative, tsavorite isotropic); moderate birefringence 0.024-0.031 (visible doubling in deeper stones); RI 1.664-1.701 (higher than emerald 1.565-1.602, much lower than tsavorite 1.734-1.759); Chelsea filter red (Cr3+ — same as emerald, NOT diagnostic for separation); Inagli deposit Yakutia as primary source"
+pleochroism: Weak to moderate trichroism
+pleochroism_strength: weak
+pleochroism_color1: Vivid green
+pleochroism_color2: Pale green
+pleochroism_notes: Three shades of green; less dramatic than tourmaline or alexandrite
+colors:
+- Vivid emerald-green to medium green
+treatments:
+- Generally not treated
+- Low-quality material may be fracture-filled (rare)
+localities:
+- Russia (Inagli deposit, Yakutia/Sakha Republic; also described as Sayan Mountains in trade; primary world source)
+- Finland (minor green diopside)
+- Pakistan (chromiferous diopside)
+- Myanmar (minor)
+- Canada (Ontario, Quebec; minor chrome diopside in kimberlites)
+inclusions:
+- Silicate and sulfate melt inclusions (from Inagli deposit)
+- Two-phase fluid inclusions
+- Occasional chromite crystals
+notes: >
+  Chromiferous variety of diopside (CaMgSi2O6); Cr3+ substitutes for Mg2+ in M1 site.
+  Colour from Cr3+ (same chromophore as ruby and emerald, but different field strength
+  producing green). Monoclinic 2/m. Note: this file is the chromiferous variety;
+  diopside.yaml is the general species entry. Use id: chrome-diopside to avoid collision.
+  Inagli deposit as primary source confirmed by Naumov, Kamenetsky et al. 2008, Geochemistry
+  International 46(6) (DOI 10.1134/s0016702908060025) [VERIFIED]: silicate and sulfate
+  melt inclusions in chrome diopside from Inagli, Yakutia. Gem localities confirmed by
+  Shigley et al. 2000 (DOI 10.5741/gems.36.4.292) [VERIFIED]. Constants from Read 7th ed.
+  (DOI 10.4324/9780080507224) [PARTIALLY_SUPPORTED].
+  Key separation from lookalikes: biaxial positive optic sign (emerald biaxial negative;
+  tsavorite isotropic; tourmaline uniaxial negative). RI 1.664-1.701 is intermediate.
+expressions:
+- slug: default
+  name: Chrome Diopside
+  cdl: |
+    #! Species: Chrome Diopside (CaMgSi2O6:Cr)
+    #! System: Monoclinic (2/m)
+    #! Habit: Short prismatic; vivid green from Cr3+
+    monoclinic[2/m]:{110}@1.0 + {010}@0.7 + {001}@0.4
+  is_primary: true
+  form_description: >
+    Chromiferous pyroxene; monoclinic 2/m. Vivid emerald-green from Cr3+ in M1 site.
+    Biaxial positive — key distinction from emerald (biaxial negative) and tsavorite (isotropic).
+    Two perfect pyroxene cleavages at ~90°; protect from impacts. Primary source: Inagli,
+    Yakutia, Russia.
+  forms:
+  - prism
+  - pinacoid

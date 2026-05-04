@@ -1,0 +1,65 @@
+id: musgravite
+name: Musgravite
+crystal_system: hexagonal
+point_group: "-3m"
+chemistry: BeMg2Al6O12
+mineral_group: Taaffeite group (spinel supergroup)
+category: Oxides
+origin: natural
+hardness: 8-8.5
+sg: 3.61-3.68
+ri: 1.719-1.736
+birefringence: 0.004-0.012
+optical_character: Uniaxial -
+dispersion: null
+lustre: Vitreous
+cleavage: None
+fracture: Conchoidal
+diagnostic_features: "Doubly refractive (uniaxial negative) — separates from spinel (isotropic); slightly higher RI and SG than taaffeite (SG overlap exists); ATR-FTIR and Raman spectroscopy give definitive separation from taaffeite by vibrational band positions. One of the rarest gem minerals."
+pleochroism: Weak
+pleochroism_strength: weak
+pleochroism_color1: Grey-green
+pleochroism_color2: Colourless to pale olive
+colors:
+- Grey-green
+- Olive green
+- Violet
+- Colourless (extremely rare)
+treatments:
+- None known
+localities:
+- Australia (Musgrave Ranges, South Australia; type locality; 1967 discovery)
+- Sri Lanka (several reported stones)
+- Madagascar
+- Tanzania
+- Greenland (minor)
+inclusions:
+- Generally very clean
+notes: >
+  BeMg2Al6O12; hexagonal, rhombohedral, point group -3m. IMA revised name:
+  magnesiotaaffeite-6N'3S per Armbruster 2002 (DOI 10.1127/0935-1221/2002/0014-0389)
+  [VERIFIED via live API]. ATR-FTIR and Raman distinction from taaffeite confirmed by
+  Thongnopkun 2024 (DOI 10.1016/j.vibspec.2024.103733) [VERIFIED via live API]:
+  "ATR-FTIR and Raman spectroscopy efficiently distinguish musgravite from taaffeite
+  using diagnostic vibrational band positions." Higher RI (1.719-1.736) and SG (3.61-3.68)
+  than taaffeite (RI 1.717-1.730, SG 3.60-3.62) but ranges overlap; FTIR/Raman is
+  definitive. Colour cause: Cr, Fe or V substitution (not firmly established for all colours;
+  per VERIFIED.md REJ-07, do not present as confirmed fact). Type locality: Musgrave Ranges,
+  South Australia; fewer than 10 faceted stones known before 2000.
+  Note: musgravite is a separate IMA species from taaffeite, not merely a variety.
+expressions:
+- slug: default
+  name: Musgravite
+  cdl: |
+    #! Species: Musgravite (magnesiotaaffeite-6N'3S)
+    #! System: Hexagonal (-3m; rhombohedral)
+    #! Habit: Alluvial rounded to subhedral grains
+    trigonal[-3m]:{10-10}@1.0 + {0001}@0.5 + {10-11}@0.7
+  is_primary: true
+  form_description: >
+    BeMg2Al6O12; hexagonal (trigonal rhombohedral). One of the rarest faceted gem minerals.
+    Birefringent (uniaxial negative); distinguishes from spinel (isotropic) on polariscope.
+    Separated from taaffeite by FTIR/Raman; slightly higher RI and SG but ranges overlap.
+    Type locality: Musgrave Ranges, South Australia (1967).
+  forms:
+  - rhombohedron

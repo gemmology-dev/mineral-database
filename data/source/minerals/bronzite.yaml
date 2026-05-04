@@ -1,0 +1,78 @@
+id: bronzite
+name: Bronzite
+crystal_system: orthorhombic
+point_group: mmm
+chemistry: (Mg,Fe)2Si2O6
+mineral_group: Pyroxene group (orthopyroxene)
+category: Inosilicates
+origin: natural
+hardness: 5-6
+sg: 3.20-3.50
+ri: 1.653-1.710
+birefringence: 0.008-0.011
+optical_character: Biaxial +
+dispersion: null
+lustre: Sub-metallic (bronzite schiller); vitreous to sub-vitreous (enstatite)
+cleavage: Two {110} pyroxene cleavages at ~90° (good)
+fracture: Uneven
+diagnostic_features: "Bronze sub-metallic schiller from oriented iron-oxide exsolution lamellae (diagnostic for bronzite variety); cat's-eye variety (fibrous hollow tube inclusions); biaxial positive; SG 3.20-3.50"
+pleochroism: Weak trichroism
+pleochroism_strength: weak
+pleochroism_color1: Brownish-yellow
+pleochroism_color2: Pale brown
+pleochroism_notes: Weak trichroism in Fe-bearing material
+colors:
+- Brownish-green to bronze-coloured with metallic schiller (bronzite)
+- Pale grey to pale green, yellowish-brown (enstatite)
+- Grey-green (cat's-eye enstatite)
+treatments:
+- None known
+localities:
+- Sri Lanka (cat's-eye enstatite; Embilipitiya and alluvial areas)
+- India (Tamil Nadu; associated with corundum)
+- Myanmar (in gem gravels)
+inclusions:
+- Exsolution lamellae of iron oxides (produce bronzite schiller)
+- Cat's-eye: fibrous hollow tubes parallel to c-axis
+- Chromite and other ultramafic minerals
+notes: >
+  Enstatite (Mg2Si2O6) with significant Fe2+ substitution (bronzite ~10-30 mol% Fe as
+  ferrosilite end-member); formula (Mg,Fe)2Si2O6. Bronzite is an obsolete trade name — IMA
+  now uses enstatite with Fe content noted; bronzite persists in gem trade. Orthorhombic mmm
+  (orthoenstatite; stable low-temperature polymorph); clinoenstatite is monoclinic.
+  Cat's-eye enstatite from Sri Lanka (Embilipitiya) confirmed by Zwaan 1996, Gems & Gemology
+  32(4):262-269 (DOI 10.5741/gems.32.4.262) [VERIFIED]: "Enstatite, Cordierite, Kornerupine,
+  and Scapolite with Unusual Properties from Embilipitiya, Sri Lanka." Sri Lanka gem island
+  overview: Zwaan 1982 (DOI 10.5741/gems.18.2.62) [VERIFIED]. Constants from Read 7th ed.
+  (DOI 10.4324/9780080507224) [PARTIALLY_SUPPORTED]. Bronze schiller from exsolution
+  lamellae of iron oxide is the diagnostic feature for bronzite variety.
+expressions:
+- slug: bronzite
+  name: Bronzite (Schiller variety)
+  cdl: |
+    #! Species: Bronzite (Fe-enstatite variety; orthopyroxene)
+    #! System: Orthorhombic (mmm)
+    #! Habit: Massive; bronze schiller from exsolution lamellae
+    orthorhombic[mmm]:{110}@1.0 + {010}@0.6[inclusion:exsolution_lamellae]
+  is_primary: true
+  form_description: >
+    Fe-bearing orthopyroxene (bronzite variety); orthorhombic mmm. Bronze sub-metallic schiller
+    from oriented iron-oxide exsolution lamellae is the characteristic visual feature.
+    Sri Lanka (Embilipitiya) produces unusual cat's-eye enstatite variety.
+  forms:
+  - prism
+  - massive
+- slug: cats-eye-enstatite
+  name: Cat's-Eye Enstatite
+  cdl: |
+    #! Species: Cat's-Eye Enstatite (orthopyroxene)
+    #! System: Orthorhombic (mmm)
+    #! Habit: Fibrous hollow tube inclusions parallel to c-axis; chatoyancy
+    orthorhombic[mmm]:{110}@1.0 + {001}@0.4[inclusion:fibrous_tubes]
+  is_primary: false
+  form_description: >
+    Chatoyant variety of enstatite; fibrous hollow tube inclusions parallel to c-axis produce
+    a sharp cat's-eye in cabochon cut. Sri Lanka (Embilipitiya) is the primary source.
+    Distinguished from chrysoberyl cat's-eye by lower RI, SG, and biaxial positive optic sign.
+  forms:
+  - prism

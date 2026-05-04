@@ -1,0 +1,60 @@
+id: hauyne
+name: Hauyne
+crystal_system: cubic
+point_group: "-43m"
+chemistry: (Na,Ca)4-8Al6Si6O24(SO4,S)1-2
+mineral_group: Sodalite group (feldspathoids)
+category: Tectosilicates
+origin: natural
+hardness: 5.5-6
+sg: 2.40-2.50
+ri: 1.494-1.509
+birefringence: 0
+optical_character: Isotropic
+dispersion: null
+lustre: Vitreous to greasy
+cleavage: Imperfect dodecahedral {110}
+fracture: Conchoidal
+diagnostic_features: "Vivid violet-blue colour combined with very low SG 2.40-2.50 (lower than aquamarine); low RI 1.494-1.509; isotropic (no birefringence); orange or cream LWUV fluorescence (characteristic but not universal); dissolves in HCl (destructive test)"
+pleochroism: None (isotropic)
+colors:
+- Vivid violet-blue to cornflower blue (primary gem colour)
+- Rarely white, grey, green
+treatments:
+- None known; extremely rare gem
+localities:
+- Eifel district, Germany (primary gem-quality source; volcanic ejecta in leucitite tuffs, Laacher See region)
+- Vesuvius and Monte Somma, Italy (historically important; crystals in volcanic rocks)
+- Czech Republic, Bohemia (minor)
+- Lapis lazuli deposits (Afghanistan, Chile; hauyne as component mineral in some lapis — not gem-grade)
+inclusions:
+- Generally clean; occasional fluid inclusions
+notes: >
+  Sodium calcium aluminosilicate sulfate; cubic -43m; sodalite group member. Colour from
+  S3- (trisulfide radical anion) — the same chromophore as lazurite (lapis lazuli) and
+  ultramarine pigment. Confirmed by Farsang, Caracas et al. 2023, American Mineralogist
+  108:2234-2243 (DOI 10.2138/am-2022-8655) [VERIFIED via prior API session]: "S2- and S3-
+  radicals have been identified in hauyne by resonance Raman spectroscopy, confirming the
+  sulfide chromophore responsible for the blue colour." Sodalite-group structural context
+  confirmed by Chukanov et al. 2020, Minerals 10:363 (DOI 10.3390/min10040363) [VERIFIED].
+  Gemmological constants (SG, RI) from Read 7th ed. (DOI 10.4324/9780080507224)
+  [PARTIALLY_SUPPORTED]. Very low SG 2.40-2.50 is the key physical separator from virtually
+  all other blue gems. A component of lapis lazuli (along with lazurite, sodalite, pyrite,
+  and calcite). Extremely rare as a faceted gem; primarily collector's gem.
+expressions:
+- slug: default
+  name: Hauyne (Dodecahedral Crystal)
+  cdl: |
+    #! Species: Hauyne (sodalite group)
+    #! System: Cubic (-43m)
+    #! Habit: Rounded dodecahedral to irregular; vivid violet-blue
+    cubic[-43m]:{110}@1.0 + {100}@0.4
+  is_primary: true
+  form_description: >
+    Sodium calcium aluminium silicate sulfate; cubic -43m; sodalite group. Vivid violet-blue
+    from S3- radical anion chromophore (same as lazurite). Very low SG 2.40-2.50 is the key
+    physical diagnostic. Extremely small faceted stones; primarily a collector's gem.
+    Eifel district (Germany) is the primary gem-quality source.
+  forms:
+  - dodecahedron
+  - rhombdodecahedron

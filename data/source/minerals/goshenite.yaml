@@ -1,0 +1,56 @@
+id: goshenite
+name: Goshenite
+crystal_system: hexagonal
+point_group: 6/mmm
+chemistry: Be3Al2Si6O18
+mineral_group: Beryl group
+category: Cyclosilicates
+origin: natural
+hardness: 7.5-8
+sg: 2.68-2.80
+ri: 1.564-1.600
+birefringence: 0.005-0.008
+optical_character: Uniaxial -
+dispersion: 0.014
+lustre: Vitreous
+cleavage: Imperfect basal
+fracture: Conchoidal
+diagnostic_features: "Colourless beryl; uniaxial negative; RI 1.564-1.600; SG 2.68-2.80; hardness 7.5-8; separates from colourless topaz (biaxial +; SG 3.50), colourless sapphire (uniaxial -; much higher SG 4.00), and phenakite (uniaxial +; lower SG 2.95)"
+pleochroism: None
+colors:
+- Colourless (pure; no chromophore)
+treatments:
+- Not routinely treated; occasionally irradiated to produce aquamarine or Maxixe-type colour
+localities:
+- Goshen, Massachusetts, USA (type locality)
+- Brazil (Minas Gerais; major source)
+- Pakistan (Gilgit-Baltistan)
+- Nigeria, Namibia
+- China
+inclusions:
+- Two-phase fluid inclusions
+- Growth tubes parallel to c-axis
+- Occasional negative crystals
+notes: >
+  Colourless variety of beryl (Be3Al2Si6O18). Chemistry per VERIFIED.md conflict resolution
+  F-01: correct cyclosilicate formula Be3Al2Si6O18 (NOT Be3Al2(SiO3)6). Beryl formula
+  confirmed by Read 7th ed. (DOI 10.4324/9780080507224) and Turner & Groat (ch. 5)
+  (DOI 10.3749/9780921294696.ch05) [VERIFIED]. Goshenite is the pure beryl end-member,
+  colourless due to absence of chromophores. Named after Goshen, Massachusetts.
+  May contain colourless beryl seed cores in synthetic emerald Lechleitner overgrowth production.
+expressions:
+- slug: default
+  name: Goshenite (Colourless Beryl)
+  cdl: |
+    #! Species: Goshenite (Beryl, colourless variety)
+    #! System: Hexagonal (6/mmm)
+    #! Habit: Prismatic hexagonal crystals; colourless
+    hexagonal[6/mmm]:{10-10}@1.0 + {0001}@0.6
+  is_primary: true
+  form_description: >
+    Colourless variety of beryl; hexagonal prismatic habit with basal pinacoid terminations.
+    End-member beryl composition with no chromophore ions. Distinguished from other colourless
+    gems by uniaxial negative optic character and RI/SG range.
+  forms:
+  - prism
+  - pinacoid

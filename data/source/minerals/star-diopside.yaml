@@ -1,0 +1,57 @@
+id: star-diopside
+name: Star Diopside
+crystal_system: monoclinic
+point_group: 2/m
+chemistry: CaMgSi2O6
+mineral_group: Pyroxene group
+category: Inosilicates
+origin: natural
+hardness: 5.5-6
+sg: 3.27-3.38
+ri: 1.664-1.701
+birefringence: 0.024-0.031
+optical_character: Biaxial +
+dispersion: null
+lustre: Sub-vitreous
+cleavage: Two perfect {110} pyroxene cleavages at ~90°
+fracture: Uneven
+diagnostic_features: "Four-rayed star (NOT six-rayed as in corundum) in reflected light; very dark to black body colour from dense magnetite needles; strongly magnetic (attracted to neodymium magnet — from magnetite inclusions; highly diagnostic); biaxial positive (unlike star garnet which is isotropic)"
+pleochroism: None (opaque to near-opaque)
+colors:
+- Black to very dark green body colour (dense magnetite needle inclusions)
+- White to grey four-rayed star in reflected light
+treatments:
+- None (natural star)
+localities:
+- India (primary and essentially exclusive commercial source; Tamil Nadu, Madhya Pradesh, Mysore/Karnataka area)
+inclusions:
+- Dense magnetite (Fe3O4) needle inclusions in two crystallographic directions perpendicular to c-axis and in the (100) plane
+- The two-direction magnetite arrangement (not three as in corundum) produces the four-rayed (not six-rayed) star
+notes: >
+  Black star diopside; variety of diopside (CaMgSi2O6) with dense magnetite (Fe3O4) needle
+  inclusions producing a four-rayed asterism in cabochon cut. Monoclinic 2/m (same crystal
+  system as chrome-diopside.yaml and main diopside.yaml entry). Note: this file is the star
+  variety; diopside.yaml is the general species entry. Use id: star-diopside to avoid collision.
+  Four-rayed star (not six-rayed) because monoclinic symmetry gives two sets of magnetite needle
+  orientations rather than three (as in hexagonal corundum). Strongly magnetic due to magnetite
+  inclusions — use neodymium magnet for rapid identification. India as primary source confirmed
+  by Shigley et al. 2000 (DOI 10.5741/gems.36.4.292) [VERIFIED]. Unusual properties of
+  diopside/enstatite from Sri Lanka confirmed by Zwaan 1996
+  (DOI 10.5741/gems.32.4.262) [VERIFIED]. Constants from Read 7th ed.
+  (DOI 10.4324/9780080507224) [PARTIALLY_SUPPORTED].
+expressions:
+- slug: star-cabochon
+  name: Star Diopside (Cabochon)
+  cdl: |
+    #! Species: Star Diopside (CaMgSi2O6)
+    #! System: Monoclinic (2/m)
+    #! Habit: Massive; magnetite needles in two directions produce four-rayed star
+    monoclinic[2/m]:{110}@1.0 + {010}@0.5[inclusion:magnetite_needles]
+  is_primary: true
+  form_description: >
+    Black star diopside; monoclinic 2/m pyroxene. Asterism from magnetite needle inclusions in two
+    crystallographic directions — produces four-rayed star (not six-rayed as in corundum).
+    Very dark to black body colour. Strongly magnetic (neodymium magnet test is rapid diagnostic).
+    Almost exclusively from India (Tamil Nadu/Madhya Pradesh).
+  forms:
+  - massive

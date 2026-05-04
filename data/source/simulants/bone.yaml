@@ -1,0 +1,53 @@
+id: bone
+name: Bone (Ivory Simulant)
+crystal_system: amorphous
+point_group: none
+chemistry: Ca5(PO4)3(OH) (hydroxyapatite; same general composition as ivory dentine) in collagen matrix; technically microcrystalline hydroxyapatite but gemologically treated as amorphous/aggregate biomineral
+category: ivory simulant
+origin: simulant
+target_minerals_json: '["ivory"]'
+year_first_produced: "0"
+hardness: "2-3"
+sg: "1.70-2.00"
+ri: "1.54-1.57"
+birefringence: null
+optical_character: AGG
+lustre: Waxy to dull
+cleavage: None
+fracture: Conchoidal to splintery
+colors: [White to cream-white; yellowing with age from collagen degradation; may be bleached]
+inclusions: [Haversian canals (osteon structure; parallel pore-like dots in cross-section; diagnostic of bone; ABSENT in ivory); absent Schreger lines (ivory has them; bone does not)]
+fluorescence: White-blue (LWUV; similar to ivory; not diagnostic for separation)
+notes: >
+  Skeletal bone from domestic animals (cattle, pigs, horses); carved, bleached and polished
+  as ivory simulant. Crystal system set to amorphous (same convention as other organic/
+  biomineral entries). Note: technically hydroxyapatite is hexagonal, but bone as a whole is
+  a composite biomineral (amorphous collagen + microcrystalline apatite) — gemologically
+  treated as amorphous aggregate. Primary separation from ivory confirmed by Jha et al. 2017,
+  Journal of Institute of Science and Technology 22(1):17745
+  (DOI 10.3126/jist.v22i1.17745) [VERIFIED]: "The presence of Schreger line is the
+  identifying feature of an elephant tusk" — Schreger lines ABSENT in bone; Haversian
+  canals ABSENT in ivory. These are the definitive microscopical diagnostics.
+  SG 1.70-2.00 is lower than ivory (1.85-1.95; slight overlap). Hot-point: both give
+  "burnt bone" smell (not diagnostic for separating bone from ivory; but distinguishes
+  from plastic and vegetable ivory). CITES context: unlike elephant ivory, bone from
+  domestic animals has no trade restriction — but fraudulent substitution is an issue.
+diagnostic_synthetic_features: >
+  Haversian canals (osteon/concentric ring microstructure around central channel; visible
+  at 10x-40x) PRESENT in bone; ABSENT in ivory; absence of Schreger lines in bone (ivory
+  has characteristic cross-hatch arcs at 100-130 degrees in cross-section); SG 1.70-2.00
+  (slightly lower than ivory 1.85-1.95)
+expressions:
+  - slug: default
+    name: Bone (carved; ivory simulant)
+    cdl: |
+      #! Species: Bone (biomineral; ivory simulant)
+      #! System: Amorphous (composite biomineral: apatite + collagen)
+      #! Habit: Massive; carved and polished
+      amorphous[waxy]:{massive}
+    is_primary: true
+    form_description: >
+      Domestic animal skeletal bone; composite biomineral (hydroxyapatite + collagen matrix).
+      Haversian canal microstructure (osteon system) visible under 10x-40x is the definitive
+      diagnostic distinguishing bone from ivory (which shows Schreger lines, not Haversian canals).
+      Included as gem material per FGA curriculum coverage of organic simulants.

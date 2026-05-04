@@ -1,0 +1,50 @@
+id: dyed-magnesite
+name: Dyed Magnesite (Turquoise Simulant)
+crystal_system: trigonal
+point_group: "-3m"
+chemistry: MgCO3 (magnesite; magnesium carbonate; dyed blue)
+category: turquoise simulant
+origin: simulant
+target_minerals_json: '["turquoise"]'
+year_first_produced: "1980"
+hardness: "3.5-4.5"
+sg: "2.98-3.05"
+ri: "1.509-1.700"
+birefringence: 0.191
+optical_character: Uniaxial -
+lustre: Vitreous to pearly
+cleavage: Perfect rhombohedral {1011}
+fracture: Conchoidal
+colors: [Blue to blue-green (dyed); white when undyed]
+inclusions: [Dye bleeding at fractures and vugs]
+fluorescence: Variable
+notes: >
+  Natural magnesite (MgCO3) dyed blue to simulate turquoise; trigonal -3m (calcite structure
+  type). Produced primarily in China and Eastern Europe. No dedicated peer-reviewed DOI
+  resolved for dyed magnesite specifically; curriculum-standard simulant knowledge from
+  Read 7th ed. (DOI 10.4324/9780080507224) [PARTIALLY_SUPPORTED]. Key diagnostic features:
+  (1) high birefringence 0.191 (vs turquoise which shows very low birefringence); refractometer
+  shows double shadow edge or two RI values (e~1.509, w~1.700) if flat face available;
+  (2) effervescence with warm dilute HCl (MgCO3 is a carbonate; turquoise phosphate does not
+  effervesce) — destructive but definitive; (3) dye bleeding at fractures; (4) acetone swab
+  removes dye; (5) FTIR carbonate spectrum (~1400 cm-1 strong CO3 absorption vs phosphate of
+  turquoise); (6) SG ~3.00 HEAVIER than turquoise 2.60-2.90 (opposite direction vs howlite).
+  Note: SG relationship is reversed from dyed howlite — magnesite sinks where turquoise and
+  howlite float in similar heavy liquids.
+diagnostic_synthetic_features: >
+  Very high birefringence 0.191 (double shadow on refractometer; unique identifier); effervescence
+  in warm dilute HCl (carbonate vs phosphate turquoise); SG ~3.00 heavier than turquoise 2.60-2.90;
+  dye bleeding at fractures; acetone removes dye; FTIR carbonate absorption ~1400 cm-1
+expressions:
+  - slug: dyed
+    name: Dyed Magnesite (Blue)
+    cdl: |
+      #! Species: Dyed Magnesite (MgCO3; turquoise simulant)
+      #! System: Trigonal (-3m)
+      #! Habit: Massive granular; dyed blue
+      trigonal[-3m]:{10-10}@1.0 + {0001}@0.4
+    is_primary: true
+    form_description: >
+      Magnesite (MgCO3; trigonal -3m; calcite-type structure) dyed blue to simulate turquoise.
+      Very high birefringence (0.191) is the most diagnostic refractometer feature.
+      Heavier than turquoise (SG ~3.00 vs 2.60-2.90). Effervesces in HCl (carbonate test).

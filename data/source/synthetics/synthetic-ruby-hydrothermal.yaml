@@ -1,0 +1,57 @@
+id: synthetic-ruby-hydrothermal
+name: Hydrothermal Ruby
+crystal_system: trigonal
+point_group: "-3m"
+chemistry: Al2O3:Cr
+category: synthetic corundum
+origin: synthetic
+growth_method: hydrothermal (autoclave; aqueous HF/chloride mineraliser; Cr dopant; seed plate of natural or synthetic corundum; 400-500 degrees C / >1 kbar)
+natural_counterpart_id: ruby
+manufacturer: Tairus Joint Enterprise (Novosibirsk, Russia); Biron (Perth, Australia)
+year_first_produced: "1985"
+diagnostic_synthetic_features: >
+  Hexagonal seed plate — clearly visible junction between seed crystal and hydrothermal
+  overgrowth; the seed may have different colour intensity or inclusion suite; plate is
+  typically hexagonally oriented parallel to c-axis of corundum; chevron (herringbone) Cr
+  zoning — Cr colour distributed in chevron-pattern waves perpendicular to growth direction;
+  two-phase inclusions (feathers) — liquid + gas forming irregular feather patterns; differ
+  from natural marble-hosted ruby feathers (which contain calcite or apatite daughters);
+  nail-head spicules — short perpendicular needles with rounded heads from hydrothermal
+  overpressure; absence of natural ruby inclusions (no rutile silk, no calcite, no apatite,
+  no zircon, no natural negative crystals); trace element: very low Fe (<50 ppm typically;
+  natural ruby always >100 ppm Fe); occasionally Nb trace from autoclave walls
+hardness: "9"
+sg: "3.99-4.01"
+ri: "1.762-1.770"
+birefringence: 0.008
+optical_character: Uniaxial -
+dispersion: 0.018
+lustre: Vitreous to adamantine
+cleavage: None (parting on {0001} and {10-11})
+fracture: Conchoidal
+pleochroism: Strong dichroism
+pleochroism_strength: strong
+pleochroism_color1: purplish-red
+pleochroism_color2: orangey-red
+colors: [Red, Pinkish-red]
+inclusions: [Hexagonal seed plate junction, Chevron Cr colour zoning, Nail-head spicules (two-phase), Two-phase fluid feathers]
+fluorescence: Strong red (LW and SW UV; same as natural Burma ruby)
+notes: >
+  Hydrothermal ruby from Tairus (Novosibirsk) and Biron (Perth). Two API-verified papers:
+  Peretti et al. 1997, Journal of Gemmology 25(8):540 (DOI 10.15506/jog.1997.25.8.540)
+  [VERIFIED]: inclusions in hydrothermal rubies from Tairus; seed plate, nail-head spicules,
+  chevron zoning documented. Muhlmeister et al. 1998, Gems & Gemology 34(2):80
+  (DOI 10.5741/gems.34.2.80) [VERIFIED]: "Hydrothermal rubies can be separated from natural
+  rubies by their low iron content and by trace amounts of niobium that are sometimes present
+  from the autoclave walls." Distinguishes from Kashan flux ruby (Pt platelets, angular flux
+  masses, Mo trace) and from Verneuil (curved striae, gas bubbles).
+expressions:
+  - slug: crystal
+    name: Crystal
+    cdl: |
+      #! Species: Hydrothermal Ruby
+      #! System: Trigonal (-3m)
+      #! Habit: Tabular to prismatic; seed plate base; chevron Cr zoning
+      trigonal[-3m]:{10-10}@1.0 + {10-11}@0.8 + {0001}@0.5
+    is_primary: true
+    form_description: Autoclave-grown ruby with hexagonal seed plate junction, chevron Cr colour zoning, and nail-head spicule inclusions.

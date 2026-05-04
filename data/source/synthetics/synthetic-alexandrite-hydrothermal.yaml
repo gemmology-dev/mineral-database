@@ -1,0 +1,56 @@
+id: synthetic-alexandrite-hydrothermal
+name: Hydrothermal Alexandrite
+crystal_system: orthorhombic
+point_group: mmm
+chemistry: BeAl2O4:Cr
+category: synthetic chrysoberyl
+origin: synthetic
+growth_method: hydrothermal (autoclave; aqueous mineraliser solution; seed plate of natural or synthetic chrysoberyl; growth over weeks at high T/P)
+natural_counterpart_id: alexandrite
+manufacturer: Tairus Joint Enterprise (Novosibirsk, Russia); Biron (Australia); Regency (Thailand/Australia)
+year_first_produced: "1990"
+diagnostic_synthetic_features: >
+  Chevron (herringbone) zoning — most characteristic growth feature; Cr colour zoning follows
+  chevron growth fronts of autoclave-grown crystal in a V-pattern parallel to seed plate;
+  visible under microscope with diffuse lighting; seed plate — visible (or implied by growth
+  geometry) junction between seed and overgrown material; nail-head spicules — short
+  nail-head-shaped two-phase inclusions (liquid + gas) oriented perpendicular to growth
+  layers; characteristic of hydrothermal growth under high pressure; absence of flux
+  inclusions (no Pt platelets; no flux veils — distinguishes from flux-grown);
+  wavy growth planes (hydrothermal growth planes visible as wavy parallel lines under
+  immersion); EDXRF: high purity; absence of Fe distinguishes from natural and Czochralski
+hardness: "8.5"
+sg: "3.70-3.73"
+ri: "1.746-1.755"
+birefringence: 0.009-0.010
+optical_character: Biaxial +
+dispersion: 0.015
+lustre: Vitreous
+cleavage: Distinct {110} in two directions
+fracture: Conchoidal
+pleochroism: Strong trichroism
+pleochroism_strength: strong
+pleochroism_color1: Green (daylight/fluorescent)
+pleochroism_color2: Red to purplish-red (incandescent)
+colors: [Green (daylight), Red to purplish-red (incandescent)]
+inclusions: [Chevron growth zoning (Cr colour), Seed plate junction, Nail-head spicules (two-phase)]
+fluorescence: Weak to moderate red (LW UV)
+notes: >
+  Hydrothermal alexandrite from Tairus (Novosibirsk), Biron (Australia), and Regency.
+  Peretti, Mullis, Mouawad & Guggenheim 1997, Journal of Gemmology 25(8):540
+  (DOI 10.15506/jog.1997.25.8.540) [VERIFIED]: inclusions in hydrothermal rubies and
+  sapphires from Tairus (Novosibirsk); diagnostic suite applies by analogy to hydrothermal
+  alexandrite from same manufacturer. Russian flux-grown alexandrite diagnostics confirmed
+  by Schmetzer et al. 1996 (DOI 10.5741/gems.32.3.186) [VERIFIED] for comparison.
+  Three-way distinction: Czochralski (curved striae + iridium inclusions); flux (Pt platelets
+  + flux veils); hydrothermal (chevron zoning + nail-head spicules + seed plate).
+expressions:
+  - slug: crystal
+    name: Crystal
+    cdl: |
+      #! Species: Hydrothermal Alexandrite
+      #! System: Orthorhombic (mmm)
+      #! Habit: Tabular; chevron zoning from autoclave growth
+      orthorhombic[mmm]:{110}@1.0 + {010}@0.6 + {001}@0.3
+    is_primary: true
+    form_description: Autoclave-grown crystal with chevron Cr zoning, nail-head spicules, and seed plate junction.

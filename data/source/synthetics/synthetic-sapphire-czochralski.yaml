@@ -1,0 +1,54 @@
+id: synthetic-sapphire-czochralski
+name: Czochralski Sapphire
+crystal_system: trigonal
+point_group: "-3m"
+chemistry: Al2O3
+category: synthetic corundum
+origin: synthetic
+growth_method: Czochralski (melt pulling; seed rod pulled upward from melt surface under rotation)
+natural_counterpart_id: sapphire
+manufacturer: Linde Division (Union Carbide, USA); Kyocera Corp. (Japan); Crystal Systems Inc.; Rubicon Technology; Saint-Gobain
+year_first_produced: "1958"
+diagnostic_synthetic_features: >
+  Tight curved growth striae (finer and more closely spaced than Verneuil; concentric arcs
+  around growth axis under immersion); absence of gas-bubble trains (characteristic of
+  Verneuil but absent in Czochralski); absence of curved colour banding; platinum-group
+  metal (PGM) rod-like inclusions from seed holder (highly diagnostic of Linde boules);
+  no natural inclusion suite (no rutile silk, no zircon, no negative crystals); Linde star
+  sapphire: artificially precipitated rutile needles (too perfect and uniformly spaced under
+  magnification; typically on flat-back synthetic dome)
+hardness: "9"
+sg: "3.99-4.01"
+ri: "1.762-1.770"
+birefringence: 0.008
+optical_character: Uniaxial -
+dispersion: 0.018
+lustre: Vitreous to adamantine
+cleavage: None (parting on {0001} and {10-11})
+fracture: Conchoidal
+pleochroism: Weak dichroism (same as natural corundum)
+pleochroism_strength: weak
+pleochroism_color1: Blue
+pleochroism_color2: Pale blue to colourless
+colors: [Blue, Colourless, Various (by doping)]
+inclusions: [Tight curved growth striae, Platinum-group metal rod inclusions (PGM from seed holder), Absence of natural inclusions (no rutile silk)]
+fluorescence: Weak to inert (Linde blue may show weak orange-red under SWUV)
+notes: >
+  Czochralski sapphire grown from melt pulled upward on rotating seed rod; produces a boule
+  rather than Verneuil pear-shaped boule. Key distinction from Verneuil: tighter curved striae
+  (vs broader curves in Verneuil); no gas-bubble trains; PGM inclusions from seed holder.
+  EDXRF/LA-ICP-MS: extremely low trace elements (Ga typically below detection in natural
+  sapphire >1 ppm). Linde star ruby/sapphire: Ti-doped then annealed to precipitate rutile.
+  Gemmological properties and growth method from Read 7th ed. pp.193-195
+  (DOI 10.4324/9780080507224) [PARTIALLY_SUPPORTED]. No dedicated peer-reviewed
+  gemmological paper for Czochralski sapphire identification retrieved via API.
+expressions:
+  - slug: crystal
+    name: Crystal
+    cdl: |
+      #! Species: Czochralski Sapphire
+      #! System: Trigonal (-3m)
+      #! Habit: Cylindrical boule with prismatic habit
+      trigonal[-3m]:{10-10}@1.0 + {10-11}@0.8 + {0001}@0.5
+    is_primary: true
+    form_description: Czochralski-pulled boule; prismatic to cylindrical crystal from melt pulling process.

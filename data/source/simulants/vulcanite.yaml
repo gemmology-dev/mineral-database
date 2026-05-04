@@ -1,0 +1,50 @@
+id: vulcanite
+name: Vulcanite (Jet Simulant)
+crystal_system: amorphous
+point_group: none
+chemistry: Sulfur-vulcanised natural rubber (polyisoprene cross-linked by S-S bonds; ~30-35% sulfur content in hard vulcanite/ebonite)
+category: jet simulant
+origin: simulant
+target_minerals_json: '["jet"]'
+manufacturer: Multiple 19th-early 20th century manufacturers (Victorian era jewellery production)
+year_first_produced: "1843"
+hardness: "2.5-3.5"
+sg: "1.10-1.20"
+ri: "1.66"
+birefringence: 0
+optical_character: Isotropic
+lustre: Brilliant to waxy
+cleavage: None
+fracture: Uneven
+colors: [Black (body colour); brown surface tinge developing with age from sulfur oxidation]
+inclusions: [Mould seams visible at edges (Victorian moulded pieces)]
+fluorescence: Inert
+notes: >
+  Vulcanisation process (rubber + sulfur heated under pressure) invented by Goodyear/Hancock
+  1843; jewellery use 1850s-1920s for Victorian mourning jewellery as jet simulant.
+  Diagnostic: sulfurous/rubber smell on hot-point test (acrid; vs jet which gives aromatic
+  coal smell). Brown surface tinge from sulfur oxidation in old pieces (true jet stays black).
+  SG 1.10-1.20 lower than jet 1.30-1.35. RI ~1.66 (similar to jet; not diagnostic for
+  separation). Read 7th ed. pp.329-330 (DOI 10.4324/9780080507224) [PARTIALLY_SUPPORTED].
+  VERIFIED.md status [UNVERIFIED] for dedicated peer-reviewed paper — classified per S-013.
+  Included as curriculum-standard simulant (gemmological teaching content).
+  Key three-way separation: jet = aromatic coal smell + SG 1.30-1.35; vulcanite = sulfur/
+  rubber smell + SG 1.10-1.20 + brown tinge; French jet = no smell + cold feel + SG 2.40-3.50.
+diagnostic_synthetic_features: >
+  Sulfur/rubber smell on hot-point test (definitive vs jet coal smell); brown surface tinge
+  from oxidised sulfur (absent in jet and French jet); SG 1.10-1.20 (lower than jet 1.30-1.35);
+  warm to touch (low thermal conductivity); mould seams visible on Victorian pieces;
+  may brown with UV exposure
+expressions:
+  - slug: default
+    name: Vulcanite (Hardened Rubber)
+    cdl: |
+      #! Species: Vulcanite (vulcanised rubber; jet simulant)
+      #! System: Amorphous (polymer)
+      #! Habit: Moulded masses; black with brown oxidation tinge
+      amorphous[resinous]:{massive}
+    is_primary: true
+    form_description: >
+      Sulfur-vulcanised natural rubber (ebonite); amorphous polymer. Victorian mourning jewellery
+      simulant for jet. Sulfurous rubber smell on hot-point is the definitive separation from jet.
+      Brown surface tinge from aging is characteristic.

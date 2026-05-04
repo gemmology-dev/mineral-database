@@ -1,0 +1,77 @@
+id: kornerupine
+name: Kornerupine
+crystal_system: orthorhombic
+point_group: mmm
+chemistry: (Mg,Fe2+)4Al6(Si,Al,B)5O21(OH)
+mineral_group: Kornerupine group
+category: Boroaluminosilicates
+origin: natural
+hardness: 6.5-7
+sg: 3.27-3.45
+ri: 1.661-1.683
+birefringence: 0.010-0.013
+optical_character: Biaxial -
+dispersion: null
+lustre: Vitreous
+cleavage: Imperfect parallel to prism
+fracture: Conchoidal to uneven
+diagnostic_features: "Strong trichroism (green/yellow/red-brown) — primary diagnostic; clearly visible in dichroscope; biaxial negative; SG 3.27-3.45; RI 1.661-1.683; cat's-eye variety from Sri Lanka and Tanzania"
+pleochroism: Strong trichroism
+pleochroism_strength: strong
+pleochroism_color1: Green
+pleochroism_color2: Yellow
+pleochroism_notes: Third direction red-brown; Sri Lanka material may show green/colourless/yellow-brown trichroism
+colors:
+- Green
+- Yellowish-green
+- Brown
+- Rarely colourless
+treatments:
+- None known in trade
+localities:
+- Sri Lanka (primary; alluvial gravels, Elahera, Ratnapura)
+- Madagascar (gem-quality transparent green)
+- Tanzania (gem material; cat's-eye variety)
+- Myanmar (Burma; minor)
+- Greenland (type locality; large crystals mostly opaque; named for geological explorer Kornerup)
+inclusions:
+- Cat's-eye material: dense parallel hollow tubes or fibrous inclusions
+- Liquid inclusions; growth planes
+- Occasional mineral inclusions
+notes: >
+  Mg-Al-Fe boroaluminosilicate; orthorhombic mmm; complex formula with IMA species kornerupine
+  (<=0.5 B per formula unit) and prismatine (>0.5 B; separate IMA species since 1997).
+  Optical constants and cat's-eye kornerupine from Sri Lanka confirmed by Zwaan 1996,
+  Gems & Gemology 32(4):262-269 (DOI 10.5741/gems.32.4.262) [VERIFIED].
+  Elahera gem field confirmed by Gunawardene & Rupasinghe 1986 (DOI 10.5741/gems.22.2.80)
+  [VERIFIED]. Gem localities by Shigley et al. 2000 (DOI 10.5741/gems.36.4.292) [VERIFIED].
+  Strong trichroism (green/yellow/red-brown) is the primary field diagnostic;
+  "immediately recognisable under the dichroscope." Colour cause: Fe2+ (green); Cr3+ in
+  intensely green stones. Cat's-eye variety: fibrous hollow tubes parallel to c-axis.
+expressions:
+- slug: default
+  name: Kornerupine
+  cdl: |
+    #! Species: Kornerupine
+    #! System: Orthorhombic (mmm)
+    #! Habit: Elongated prismatic with strong trichroism
+    orthorhombic[mmm]:{110}@1.0 + {010}@0.6 + {001}@0.4
+  is_primary: true
+  form_description: >
+    Orthorhombic Mg-Al boroaluminosilicate; elongated prismatic habit. Strong trichroism
+    (green/yellow/red-brown) visible in dichroscope is the primary diagnostic. Sri Lanka and
+    Madagascar are the main gem sources. Biaxial negative.
+  forms:
+  - prism
+  - pinacoid
+- slug: cats-eye
+  name: Cat's-Eye Kornerupine
+  cdl: |
+    #! Species: Cat's-Eye Kornerupine
+    #! System: Orthorhombic (mmm)
+    #! Habit: Fibrous inclusions parallel to c-axis produce chatoyancy
+    orthorhombic[mmm]:{110}@1.0 + {001}@0.5[inclusion:fibrous_tubes]
+  is_primary: false
+  form_description: Chatoyant variety; fine fibrous hollow tube inclusions parallel to c-axis.
+  forms:
+  - prism

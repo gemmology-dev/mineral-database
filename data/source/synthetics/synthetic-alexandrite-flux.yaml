@@ -1,0 +1,55 @@
+id: synthetic-alexandrite-flux
+name: Flux-Grown Alexandrite
+crystal_system: orthorhombic
+point_group: mmm
+chemistry: BeAl2O4:Cr
+category: synthetic chrysoberyl
+origin: synthetic
+growth_method: flux (molybdate or vanadium-based flux solvent in platinum crucible; slow-cooling crystallisation)
+natural_counterpart_id: alexandrite
+manufacturer: Chatham Created Gems (San Francisco, USA); Creative Crystals Inc. (USA); Russian laboratory production
+year_first_produced: "1964"
+diagnostic_synthetic_features: >
+  Flux fingerprints (wispy veils following crystal growth sector boundaries; smoky diffuse
+  appearance — unlike natural fingerprints which follow healed fracture planes); platinum
+  platelets (flat hexagonal to irregular Pt metal from Pt crucible; bright mirror-like
+  under dark-field — highly diagnostic); flux feather inclusions (irregular solidified flux
+  masses); absence of twinning planes (natural Russian alexandrite shows polysynthetic
+  twinning); absence of natural inclusions (no negative crystals, no two-phase natural fluid
+  inclusions); Mo or V trace contamination from flux detectable by EDXRF
+hardness: "8.5"
+sg: "3.70-3.73"
+ri: "1.746-1.755"
+birefringence: 0.009-0.010
+optical_character: Biaxial +
+dispersion: 0.015
+lustre: Vitreous
+cleavage: Distinct {110} in two directions
+fracture: Conchoidal
+pleochroism: Strong trichroism
+pleochroism_strength: strong
+pleochroism_color1: Green (daylight/fluorescent)
+pleochroism_color2: Red to purplish-red (incandescent)
+colors: [Green (daylight), Red to purplish-red (incandescent)]
+inclusions: [Flux fingerprints (wispy veils), Platinum platelets (Pt from crucible), Flux feather inclusions]
+fluorescence: Moderate red (LW UV)
+notes: >
+  Note: existing synthetic-alexandrite-czochralski.yaml already in DB; this file covers
+  the flux-grown variety only (Chatham/Creative Crystals). Do not confuse with Czochralski.
+  Schmetzer, Peretti, Medenbach & Bernhardt 1996, Gems & Gemology 32(3):186
+  (DOI 10.5741/gems.32.3.186) [VERIFIED]: Russian flux-grown alexandrite diagnostics.
+  Platinum platelets are definitive — absent in all natural alexandrite.
+  Flux veils differ from natural fingerprints by their growth-sector relationship.
+  EDXRF: very low trace elements; Mo or V trace from flux; no significant Fe; no Ga.
+  Distinguishes from hydrothermal (chevron zoning + nail-head spicules) and Czochralski
+  (curved striae + iridium inclusions).
+expressions:
+  - slug: crystal
+    name: Crystal
+    cdl: |
+      #! Species: Flux-Grown Alexandrite
+      #! System: Orthorhombic (mmm)
+      #! Habit: Tabular from flux growth
+      orthorhombic[mmm]:{110}@1.0 + {010}@0.7 + {001}@0.4
+    is_primary: true
+    form_description: Tabular to prismatic crystal from flux growth in Pt crucible; contains characteristic flux veils and Pt platelets.
