@@ -4,10 +4,10 @@ crystal_system: orthorhombic
 point_group: mmm
 chemistry: Ca2Al3(SiO4)(Si2O7)O(OH):V
 category: Sorosilicates
-hardness: 6.5
+hardness: 6-7
 sg: 3.10-3.38
 ri: 1.691-1.700
-birefringence: 0.008-0.013
+birefringence: 0.006-0.013
 optical_character: Biaxial +
 dispersion: 0.021
 lustre: Vitreous

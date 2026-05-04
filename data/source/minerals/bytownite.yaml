@@ -9,7 +9,7 @@ hardness: 6-6.5
 sg: 2.72-2.74
 ri: 1.563-1.572
 birefringence: 0.009
-optical_character: Biaxial +
+optical_character: Biaxial -
 lustre: Vitreous
 cleavage: Perfect {001} and good {010}
 fracture: Uneven to conchoidal

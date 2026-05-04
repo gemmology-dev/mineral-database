@@ -24,7 +24,7 @@ cleavage: None
 fracture: Conchoidal
 colors: [Blue, Red, Colourless, Green, Yellow, Pink]
 inclusions: [Gas bubbles, Curved striae, Strain patterns]
-fluorescence: Variable (blue shows strong red under LW UV due to cobalt)
+fluorescence: Variable (red shows strong red under LW UV due to Cr trace impurity)
 expressions:
   - slug: boule
     name: Boule

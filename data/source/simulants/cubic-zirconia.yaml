@@ -10,11 +10,11 @@ natural_counterpart_id: diamond
 target_minerals: [diamond]
 year_first_produced: 1976
 diagnostic_synthetic_features: >
-  Higher SG than diamond (5.65-5.95 vs 3.52), lower hardness (8-8.5),
+  Higher SG than diamond (5.65-6.00 vs 3.52), lower hardness (8-8.5),
   higher dispersion (0.060 vs 0.044), singly refractive, thermal probe reads non-diamond,
   orange flash under crossed filters
 hardness: "8-8.5"
-sg: "5.65-5.95"
+sg: "5.65-6.00"
 ri: "2.15-2.18"
 birefringence: 0
 optical_character: Isotropic

@@ -2,7 +2,7 @@ id: synthetic-emerald-flux
 name: Flux-Grown Emerald
 crystal_system: hexagonal
 point_group: 6/mmm
-chemistry: Be3Al2(SiO3)6:Cr
+chemistry: Be3Al2Si6O18:Cr
 category: synthetic beryl
 origin: synthetic
 growth_method: flux

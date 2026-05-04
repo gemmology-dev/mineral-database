@@ -9,7 +9,7 @@ hardness: 6-6.5
 sg: 2.69-2.72
 ri: 1.559-1.568
 birefringence: 0.008-0.010
-optical_character: Biaxial +
+optical_character: Biaxial -
 dispersion: 0.012
 lustre: Vitreous to pearly
 cleavage: Perfect in two directions at ~90 degrees

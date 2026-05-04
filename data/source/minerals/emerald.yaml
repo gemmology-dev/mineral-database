@@ -2,13 +2,13 @@ id: emerald
 name: Emerald
 crystal_system: hexagonal
 point_group: 6/mmm
-chemistry: Be3Al2(SiO3)6:Cr
+chemistry: Be3Al2Si6O18:Cr
 mineral_group: Beryl Group
 category: Cyclosilicates
-hardness: 7.5
+hardness: 7.5-8
 sg: 2.72
-ri: 1.577-1.583
-birefringence: 0.006
+ri: 1.565-1.600
+birefringence: 0.005-0.009
 optical_character: Uniaxial -
 dispersion: 0.014
 lustre: Vitreous
@@ -39,6 +39,7 @@ localities:
 - Zambia
 - Brazil
 - Ethiopia
+- Zimbabwe (Sandawana)
 expressions:
 - slug: default
   name: Emerald

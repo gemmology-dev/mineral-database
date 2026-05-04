@@ -8,7 +8,7 @@ origin: simulant
 growth_method: czochralski
 natural_counterpart_id: diamond
 target_minerals: [diamond]
-year_first_produced: 1960
+year_first_produced: 1964
 diagnostic_synthetic_features: >
   Lower RI than diamond (1.833 vs 2.417), lower dispersion (0.028 vs 0.044),
   lower hardness (8 vs 10), singly refractive, thermal probe reads non-diamond

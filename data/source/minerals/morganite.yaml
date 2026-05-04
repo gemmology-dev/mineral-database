@@ -2,7 +2,7 @@ id: morganite
 name: Morganite
 crystal_system: hexagonal
 point_group: 6/mmm
-chemistry: Be3Al2(SiO3)6:Mn
+chemistry: Be3Al2Si6O18:Mn
 mineral_group: Beryl Group
 category: Cyclosilicates
 hardness: 7.5-8
