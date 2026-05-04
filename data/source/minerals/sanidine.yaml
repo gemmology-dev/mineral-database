@@ -11,7 +11,7 @@ ri: 1.518-1.527
 birefringence: 0.007
 optical_character: Biaxial -
 lustre: Vitreous
-cleavage: Perfect {001} and good {010}
+cleavage: Perfect {001} and {010} at ~90°
 fracture: Uneven to conchoidal
 colors:
 - Colorless

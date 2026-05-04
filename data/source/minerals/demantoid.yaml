@@ -7,7 +7,7 @@ mineral_group: Garnet Group
 category: Nesosilicates
 hardness: 6.5-7
 sg: 3.82-3.85
-ri: 1.888-1.889
+ri: 1.880-1.895
 optical_character: Isotropic
 dispersion: 0.057
 lustre: Adamantine to vitreous
@@ -23,7 +23,7 @@ treatments:
 - Heat treatment (rare, can improve colour)
 - Generally not treated
 inclusions:
-- Horsetail (byssolite/chrysotile fibres)
+- Horsetail (chrysotile fibres)
 - Diopside crystals
 - Magnetite octahedra
 localities:

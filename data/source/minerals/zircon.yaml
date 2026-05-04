@@ -4,9 +4,13 @@ crystal_system: tetragonal
 point_group: 4/mmm
 chemistry: ZrSiO4
 category: Nesosilicates
-hardness: 7.5
-sg: 4.6-4.7
-ri: 1.925-1.984
+hardness: 6.0-7.5
+sg: 3.9-4.7
+ri: 1.78-1.99
+notes: |
+  Two populations: high (crystalline) ri 1.925-1.984, sg 4.6-4.7,
+  hardness 7.5; low (metamict) ri 1.78-1.85, sg 3.9-4.1, hardness ~6.0.
+  Green/heated stones often metamict.
 birefringence: 0.059
 optical_character: Uniaxial +
 dispersion: 0.039

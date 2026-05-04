@@ -5,11 +5,11 @@ point_group: mmm
 chemistry: (Mg,Fe)2SiO4
 mineral_group: Olivine Group
 category: Nesosilicates
-hardness: 6.5
+hardness: 6.5-7
 sg: 3.27-3.37
 ri: 1.654-1.690
 birefringence: 0.035-0.038
-optical_character: Biaxial +
+optical_character: Biaxial +/-
 dispersion: 0.02
 lustre: Vitreous to oily
 cleavage: Poor

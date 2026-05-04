@@ -12,7 +12,7 @@ birefringence: 0.008
 optical_character: Uniaxial -
 dispersion: 0.018
 lustre: Vitreous to adamantine
-cleavage: None (parting on {0001})
+cleavage: None (parting on {10-11} and {0001})
 fracture: Conchoidal to uneven
 fluorescence: "Moderate to strong red (LWUV); weaker under SWUV"
 diagnostic_features: "Strong red fluorescence (LWUV); silk (rutile needles at 60°); absorption at 694nm doublet"
