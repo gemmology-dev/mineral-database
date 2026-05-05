@@ -46,7 +46,7 @@ expressions:
     #! Species: Star Diopside (CaMgSi2O6)
     #! System: Monoclinic (2/m)
     #! Habit: Massive; magnetite needles in two directions produce four-rayed star
-    monoclinic[2/m]:{110}@1.0 + {010}@0.5[inclusion:magnetite_needles]
+    monoclinic[2/m]:{110}@1.0 + {010}@0.5[inclusion:magnetite_needles] + {001}@0.7
   is_primary: true
   form_description: >
     Black star diopside; monoclinic 2/m pyroxene. Asterism from magnetite needle inclusions in two

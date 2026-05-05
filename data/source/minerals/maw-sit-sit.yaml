@@ -46,7 +46,7 @@ expressions:
     #! Species: Maw-Sit-Sit (kosmochlor-jadeite rock)
     #! System: Monoclinic (2/m; dominant pyroxene phase proxy)
     #! Habit: Massive aggregate; vivid green with black chromite inclusions
-    monoclinic[2/m]:{110}@1.0 + {010}@0.5[inclusion:chromite]
+    monoclinic[2/m]:{110}@1.0 + {010}@0.5[inclusion:chromite] + {001}@0.7
   is_primary: true
   form_description: >
     Polycrystalline multi-mineral rock (kosmochlor + jadeite + albite + chromite) from Kachin State,

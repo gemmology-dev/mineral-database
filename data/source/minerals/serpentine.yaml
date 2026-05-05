@@ -57,7 +57,7 @@ expressions:
     #! Species: Serpentine (Antigorite/Bowenite variety)
     #! System: Monoclinic (2/m)
     #! Habit: Massive aggregate; waxy green
-    monoclinic[2/m]:{001}@1.0 + {100}@0.7
+    monoclinic[2/m]:{001}@1.0 + {100}@0.7 + {010}@0.7
   is_primary: true
   form_description: >
     Bowenite variety of antigorite; translucent apple-green massive aggregate with waxy lustre.
@@ -71,7 +71,7 @@ expressions:
     #! Species: Williamsite (Cr-bearing serpentine)
     #! System: Monoclinic (2/m)
     #! Habit: Massive aggregate; oil-green with chromite inclusions
-    monoclinic[2/m]:{001}@1.0 + {100}@0.5[inclusion:chromite]
+    monoclinic[2/m]:{001}@1.0 + {100}@0.5[inclusion:chromite] + {010}@0.7
   is_primary: false
   form_description: >
     Chromian variety of antigorite (williamsite); oil-green colour from Cr3+ substitution;

@@ -63,7 +63,7 @@ expressions:
     #! Species: Hematite - Kidney ore
     #! System: Trigonal (-3m)
     #! Habit: Botryoidal reniform masses
-    trigonal[-3m]:{0001}@1.0 ~ radial[cluster] @compact
+    trigonal[-3m]:{0001}@1.0 + {10-10}@0.7
   is_primary: false
   form_description: Botryoidal (kidney-shaped) reniform habit with concentric internal growth banding.
   forms:

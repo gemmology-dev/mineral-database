@@ -70,7 +70,7 @@ expressions:
     #! Species: Cat's-Eye Scapolite
     #! System: Tetragonal (4/m)
     #! Habit: Prismatic; fibrous inclusions produce chatoyancy in cabochon
-    tetragonal[4/m]:{110}@1.0 + {100}@0.6[inclusion:fibrous_tubes]
+    tetragonal[4/m]:{110}@1.0 + {100}@0.6[inclusion:fibrous_tubes] + {001}@0.9
   is_primary: false
   form_description: >
     Chatoyant variety; dense parallel hollow tubes and/or fibrous inclusions produce a sharp

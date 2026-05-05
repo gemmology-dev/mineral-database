@@ -70,7 +70,7 @@ expressions:
     #! Species: Chiastolite (carbonaceous Andalusite)
     #! System: Orthorhombic (mmm)
     #! Habit: Prismatic with cross-shaped carbonaceous inclusions
-    orthorhombic[mmm]:{110}@1.0 + {010}@0.7[inclusion:carbonaceous_cross]
+    orthorhombic[mmm]:{110}@1.0 + {010}@0.7[inclusion:carbonaceous_cross] + {001}@0.9
   is_primary: false
   form_description: >
     Variety of andalusite containing carbonaceous (graphite-rich) inclusions arranged in a

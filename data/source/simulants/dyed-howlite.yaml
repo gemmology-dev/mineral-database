@@ -40,7 +40,7 @@ expressions:
       #! Species: Dyed Howlite (Ca2B5SiO9(OH)5; turquoise simulant)
       #! System: Monoclinic (2/m)
       #! Habit: Massive; porous; dye concentrates at fractures
-      monoclinic[2/m]:{010}@1.0 + {110}@0.5
+      monoclinic[2/m]:{010}@1.0 + {110}@0.5 + {001}@0.7
     is_primary: true
     form_description: >
       Howlite (calcium borosilicate hydroxide; monoclinic 2/m) dyed blue to simulate turquoise.

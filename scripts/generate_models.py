@@ -160,8 +160,20 @@ def generate_models_for_cdl(
     # Generate glTF
     gltf_string = None
     try:
+        import numpy as np
+
+        class _NumpyJSONEncoder(json.JSONEncoder):
+            def default(self, obj):  # type: ignore[override]
+                if isinstance(obj, np.integer):
+                    return int(obj)
+                if isinstance(obj, np.floating):
+                    return float(obj)
+                if isinstance(obj, np.ndarray):
+                    return obj.tolist()
+                return super().default(obj)
+
         gltf_dict = geometry_to_gltf(geometry.vertices, geometry.faces, name=item_id)
-        gltf_string = json.dumps(gltf_dict)
+        gltf_string = json.dumps(gltf_dict, cls=_NumpyJSONEncoder)
         if verbose:
             print(f"  glTF: {len(gltf_string)} bytes")
     except Exception as e:

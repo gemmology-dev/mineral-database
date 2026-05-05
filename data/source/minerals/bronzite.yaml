@@ -53,7 +53,7 @@ expressions:
     #! Species: Bronzite (Fe-enstatite variety; orthopyroxene)
     #! System: Orthorhombic (mmm)
     #! Habit: Massive; bronze schiller from exsolution lamellae
-    orthorhombic[mmm]:{110}@1.0 + {010}@0.6[inclusion:exsolution_lamellae]
+    orthorhombic[mmm]:{110}@1.0 + {010}@0.6[inclusion:exsolution_lamellae] + {001}@0.9
   is_primary: true
   form_description: >
     Fe-bearing orthopyroxene (bronzite variety); orthorhombic mmm. Bronze sub-metallic schiller
