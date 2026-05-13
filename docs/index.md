@@ -2,7 +2,10 @@
 
 **Mineral Database** - A comprehensive database of mineral crystal habits with CDL notation and gemmological properties for visualization applications.
 
-Part of the [Gemmology Project](https://gemmology.dev).
+!!! tip "Interactive companion"
+    See live examples in the [Mineral Database](https://gemmology.dev/minerals/),
+    browse 96+ rendered presets in the [Crystal Gallery](https://gemmology.dev/gallery/),
+    or take a [practice quiz](https://gemmology.dev/quiz/) on related material.
 
 ## Overview
 
